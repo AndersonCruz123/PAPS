@@ -598,3 +598,105 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1445899358.381
     'REQUEST_TIME' => 1445899358
 ]
+2015-10-27 01:19:40 [127.0.0.1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/Connection.php:579
+Stack trace:
+#0 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '36392274', NULL)
+#1 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#3 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/Command.php(216): yii\db\Connection->getSlavePdo()
+#5 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#6 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#8 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#10 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/ActiveRecord.php(294): yii\db\Schema->getTableSchema('<span class="st...')
+#11 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/ActiveRecord.php(327): yii\db\ActiveRecord::getTableSchema()
+#12 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(422): yii\db\ActiveRecord->attributes()
+#13 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(241): yii\db\BaseActiveRecord->hasAttribute('<span class="st...')
+#14 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/validators/Validator.php(237): yii\db\BaseActiveRecord->__get('<span class="st...')
+#15 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/base/Model.php(352): yii\validators\Validator->validateAttributes(Object(app\models\UsuarioSearch), '[<span class="s...')
+#16 /opt/lampp/htdocs/PAPS/yii2-app-basic/models/UsuarioSearch.php(52): yii\base\Model->validate()
+#17 /opt/lampp/htdocs/PAPS/yii2-app-basic/controllers/UsuarioController.php(36): app\models\UsuarioSearch->search('[<span class="s...')
+#18 [internal function]: app\controllers\UsuarioController->actionIndex()
+#19 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#20 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#21 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#22 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#23 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#24 /opt/lampp/htdocs/PAPS/yii2-app-basic/web/index.php(12): yii\base\Application->run()
+#25 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/Connection.php:534
+Stack trace:
+#0 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/Connection.php(836): yii\db\Connection->open()
+#1 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/Command.php(216): yii\db\Connection->getSlavePdo()
+#3 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#4 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/Command.php(359): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/mysql/Schema.php(198): yii\db\Command->queryAll()
+#6 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/mysql/Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/Schema.php(146): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#8 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/ActiveRecord.php(294): yii\db\Schema->getTableSchema('<span class="st...')
+#9 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/ActiveRecord.php(327): yii\db\ActiveRecord::getTableSchema()
+#10 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(422): yii\db\ActiveRecord->attributes()
+#11 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/db/BaseActiveRecord.php(241): yii\db\BaseActiveRecord->hasAttribute('<span class="st...')
+#12 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/validators/Validator.php(237): yii\db\BaseActiveRecord->__get('<span class="st...')
+#13 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/base/Model.php(352): yii\validators\Validator->validateAttributes(Object(app\models\UsuarioSearch), '[<span class="s...')
+#14 /opt/lampp/htdocs/PAPS/yii2-app-basic/models/UsuarioSearch.php(52): yii\base\Model->validate()
+#15 /opt/lampp/htdocs/PAPS/yii2-app-basic/controllers/UsuarioController.php(36): app\models\UsuarioSearch->search('[<span class="s...')
+#16 [internal function]: app\controllers\UsuarioController->actionIndex()
+#17 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#18 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/base/Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#19 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/base/Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#20 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#21 /opt/lampp/htdocs/PAPS/yii2-app-basic/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /opt/lampp/htdocs/PAPS/yii2-app-basic/web/index.php(12): yii\base\Application->run()
+#23 {main}
+Additional Information:
+
+2015-10-27 01:19:40 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'usuario/index'
+]
+
+$_COOKIE = [
+    '_csrf' => 'faba0d289e51da26e95d3ef7473796e0a188b215c05e688058a54cadc9f0529da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"0Ih1aqOMdDxCFCj233c1pFxi6DCt88ue\";}'
+    'PHPSESSID' => '2tndvgio22fsa1s390c3kfksc0'
+    '_identity' => '65a00506fef7a359c626d51dbb446f70ba529e4c16da6cfc44edaa91dead9e60a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Vi7DHH8AAQEAACIdQxgAAAAB'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.125 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=faba0d289e51da26e95d3ef7473796e0a188b215c05e688058a54cadc9f0529da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%220Ih1aqOMdDxCFCj233c1pFxi6DCt88ue%22%3B%7D; PHPSESSID=2tndvgio22fsa1s390c3kfksc0; _identity=65a00506fef7a359c626d51dbb446f70ba529e4c16da6cfc44edaa91dead9e60a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A28%3A%22%5B%22100%22%2C%22test100key%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'LD_LIBRARY_PATH' => '/opt/lampp/lib:/opt/lampp/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Unix) OpenSSL/1.0.1m PHP/5.6.8 mod_perl/2.0.8-dev Perl/v5.16.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/opt/lampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/opt/lampp/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/opt/lampp/htdocs/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '36029'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=usuario%2Findex'
+    'REQUEST_URI' => '/PAPS/yii2-app-basic/web/index.php?r=usuario%2Findex'
+    'SCRIPT_NAME' => '/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1445905180.704
+    'REQUEST_TIME' => 1445905180
+]
