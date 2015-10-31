@@ -24,9 +24,9 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 
-        <?= $form->field($model, 'username') ?>
+        <?= $form->field($model, 'cpf') ?>
 
-        <?= $form->field($model, 'password')->passwordInput() ?>
+        <?= $form->field($model, 'senha')->passwordInput() ?>
 
         <?= $form->field($model, 'rememberMe')->checkbox([
             'template' => "<div class=\"col-lg-offset-1 col-lg-3\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",
@@ -42,6 +42,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="col-lg-offset-1" style="color:#999;">
         You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>
-        To modify the username/password, please check out the code <code>app\models\User::$users</code>.
+        To modify the cpf/senha, please check out the code <code>app\models\User::$users</code>.
     </div>
 </div>

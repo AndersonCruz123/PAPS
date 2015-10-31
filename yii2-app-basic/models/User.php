@@ -1,38 +1,94 @@
 <?php
 
+
+
 namespace app\models;
 
-class User extends \yii\base\Object implements \yii\web\IdentityInterface
+use Yii;
+use yii\web\IdentityInterface;
+/**
+ * This is the model class for table "user".
+ *
+ * @property string $cpf
+ * @property string $email
+ * @property string $senha
+ * @property integer $idTipoUsuario
+ *
+ * @property Ocorrencia[] $ocorrencias
+ * @property Tipousuario $idTipoUsuario0
+ */
+class User extends \yii\db\ActiveRecord implements IdentityInterface
 {
-    public $id;
-    public $username;
-    public $password;
-    public $authKey;
-    public $accessToken;
-
-    private static $users = [
-        '100' => [
-            'id' => '100',
-            'username' => 'admin',
-            'password' => 'admin',
-            'authKey' => 'test100key',
-            'accessToken' => '100-token',
-        ],
-        '101' => [
-            'id' => '101',
-            'username' => 'demo',
-            'password' => 'demo',
-            'authKey' => 'test101key',
-            'accessToken' => '101-token',
-        ],
-    ];
+    /**
+     * @inheritdoc
+     */
+    public static function tableName()
+    {
+        return 'user';
+    }
 
     /**
      * @inheritdoc
      */
+    public function rules()
+    {
+        return [
+            [['cpf', 'email', 'senha', 'idTipoUsuario'], 'required'],
+            [['idTipoUsuario'], 'integer'],
+            [['cpf'], 'string', 'max' => 11],
+            [['email'], 'string', 'max' => 50],
+            [['senha'], 'string', 'max' => 16]
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'cpf' => 'Cpf',
+            'email' => 'Email',
+            'senha' => 'Senha',
+            'idTipoUsuario' => 'Id Tipo Usuario',
+        ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+
+    public static function findByCpf($cpf)
+    {
+
+      if (($model = User::findOne($cpf)) !== null) {
+            return $model;
+        } else {
+            //throw new NotFoundHttpException('The requested page does not exist.');
+        }
+        return null;
+    }
+
+    public function validateAuthKey($authKey)
+    {
+        return $this->senha === $authKey;
+    }
+
+    public function validatesenha($password)
+    {
+        return $this->senha === $password;
+    }
+
     public static function findIdentity($id)
     {
-        return isset(self::$users[$id]) ? new static(self::$users[$id]) : null;
+        $dbUser = self::find()
+            ->where(["cpf" => $id])
+            ->one();
+        if (!count($dbUser)) {
+            return null;
+        }
+        return $dbUser;
+  
     }
 
     /**
@@ -49,29 +105,9 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
         return null;
     }
 
-    /**
-     * Finds user by username
-     *
-     * @param  string      $username
-     * @return static|null
-     */
-    public static function findByUsername($username)
-    {
-        foreach (self::$users as $user) {
-            if (strcasecmp($user['username'], $username) === 0) {
-                return new static($user);
-            }
-        }
-
-        return null;
-    }
-
-    /**
-     * @inheritdoc
-     */
     public function getId()
     {
-        return $this->id;
+        return $this->cpf;
     }
 
     /**
@@ -79,25 +115,22 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
      */
     public function getAuthKey()
     {
-        return $this->authKey;
+        return $this->cpf.'100';
+    }
+
+
+
+
+    public function getOcorrencias()
+    {
+        return $this->hasMany(Ocorrencia::className(), ['cpfUsuario' => 'cpf']);
     }
 
     /**
-     * @inheritdoc
+     * @return \yii\db\ActiveQuery
      */
-    public function validateAuthKey($authKey)
+    public function getIdTipoUsuario0()
     {
-        return $this->authKey === $authKey;
-    }
-
-    /**
-     * Validates password
-     *
-     * @param  string  $password password to validate
-     * @return boolean if password provided is valid for current user
-     */
-    public function validatePassword($password)
-    {
-        return $this->password === $password;
+        return $this->hasOne(Tipousuario::className(), ['idTipo' => 'idTipoUsuario']);
     }
 }
