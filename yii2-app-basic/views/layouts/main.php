@@ -20,6 +20,16 @@ AppAsset::register($this);
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <style> 
+          .navbar
+          {
+            background-color: #228B22;
+            
+            }
+
+
+            
+        </style>
 </head>
 <body>
 <?php $this->beginBody() ?>
@@ -27,7 +37,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'SOS - UFAM',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -59,6 +69,19 @@ AppAsset::register($this);
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'Locais', 'url' => ['/local/index']],
+            ['label' => 'Categorias', 'url' => ['/categoria/index']],
+             ['label' => 'Usuário',
+            'items' => [
+                 ['label' => 'Gerenciar Usuário', 'url' => ['/user/index']],
+                 ['label' => 'Gerenciar Tipos de Usuário ', 'url' => ['/tipousuario/index']]]],
+            ['label' => 'Ocorrências',
+            'items' => [
+                 ['label' => 'Gerenciar Ocorrência', 'url' => ['/ocorrencia/index']],
+                 ['label' => 'Ocorrências Abertas', 'url' => ['/ocorrencia/index']],
+                 ['label' => 'Registrar Ocorrências', 'url' => ['/ocorrencia/index']],
+                  ['label' => 'Natureza das Ocorrências', 'url' => ['/naturezaocorrencia/index']],
+                 ['label' => 'Fechar Ocorrências ', 'url' => ['/ocorrencia/index']]]],
   
                      Yii::$app->user->isGuest ?
                         ['label' => 'Login', 'url' => ['/site/login']] :

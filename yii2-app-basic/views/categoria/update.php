@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Categoria */
 
-$this->title = 'Update Categoria: ' . ' ' . $model->idCategoria;
+$this->title = 'Editar Categoria: ' . ' ' . $model->Nome;
 $this->params['breadcrumbs'][] = ['label' => 'Categorias', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->idCategoria, 'url' => ['view', 'id' => $model->idCategoria]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Editar';
 ?>
 <div class="categoria-update">
 

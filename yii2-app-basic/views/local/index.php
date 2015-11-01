@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\LocalSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Locals';
+$this->title = 'Locais';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="local-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Local', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Novo Local', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

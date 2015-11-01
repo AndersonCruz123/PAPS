@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\NaturezaocorrenciaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Naturezaocorrencias';
+$this->title = 'Natureza das ocorrencias';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="naturezaocorrencia-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Naturezaocorrencia', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Nova Natureza', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([

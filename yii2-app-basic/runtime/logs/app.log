@@ -9451,3 +9451,2712 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1446340095.619
     'REQUEST_TIME' => 1446340095
 ]
+2015-11-01 17:00:56 [::1][-][jh6q9mfnoq3g0hph68063d6j84][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:00:55 [::1][-][jh6q9mfnoq3g0hph68063d6j84][info][application] $_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'jh6q9mfnoq3g0hph68063d6j84'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=jh6q9mfnoq3g0hph68063d6j84'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57692'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446393655.144
+    'REQUEST_TIME' => 1446393655
+]
+2015-11-01 17:01:06 [::1][-][jh6q9mfnoq3g0hph68063d6j84][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:01:06 [::1][-][jh6q9mfnoq3g0hph68063d6j84][info][application] $_GET = [
+    'r' => 'site/about'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'jh6q9mfnoq3g0hph68063d6j84'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fabout'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=jh6q9mfnoq3g0hph68063d6j84'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57698'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fabout'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fabout'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446393666.492
+    'REQUEST_TIME' => 1446393666
+]
+2015-11-01 17:01:07 [::1][-][jh6q9mfnoq3g0hph68063d6j84][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:01:06 [::1][-][jh6q9mfnoq3g0hph68063d6j84][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'jh6q9mfnoq3g0hph68063d6j84'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fabout'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=jh6q9mfnoq3g0hph68063d6j84'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57698'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446393666.721
+    'REQUEST_TIME' => 1446393666
+]
+2015-11-01 17:01:10 [::1][-][jh6q9mfnoq3g0hph68063d6j84][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:01:09 [::1][-][jh6q9mfnoq3g0hph68063d6j84][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'jh6q9mfnoq3g0hph68063d6j84'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=jh6q9mfnoq3g0hph68063d6j84'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57700'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446393669.92
+    'REQUEST_TIME' => 1446393669
+]
+2015-11-01 17:01:10 [::1][-][jh6q9mfnoq3g0hph68063d6j84][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:01:10 [::1][-][jh6q9mfnoq3g0hph68063d6j84][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'jh6q9mfnoq3g0hph68063d6j84'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=jh6q9mfnoq3g0hph68063d6j84'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57700'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446393670.144
+    'REQUEST_TIME' => 1446393670
+]
+2015-11-01 17:01:19 [::1][-][jh6q9mfnoq3g0hph68063d6j84][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:01:19 [::1][-][jh6q9mfnoq3g0hph68063d6j84][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'jh6q9mfnoq3g0hph68063d6j84'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=jh6q9mfnoq3g0hph68063d6j84'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57702'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446393679.569
+    'REQUEST_TIME' => 1446393679
+]
+2015-11-01 17:01:40 [::1][-][jh6q9mfnoq3g0hph68063d6j84][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:01:40 [::1][-][jh6q9mfnoq3g0hph68063d6j84][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'ZEJFM0pOQXEXIAwBfR4tMgsSPWAbKwsCVScEawF7MSUjJ3AHMCtyQg=='
+    'LoginForm' => [
+        'cpf' => 'admin'
+        'senha' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'jh6q9mfnoq3g0hph68063d6j84'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '188'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=jh6q9mfnoq3g0hph68063d6j84'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57707'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446393699.973
+    'REQUEST_TIME' => 1446393699
+]
+2015-11-01 17:09:14 [::1][-][jh6q9mfnoq3g0hph68063d6j84][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:09:14 [::1][-][jh6q9mfnoq3g0hph68063d6j84][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'jh6q9mfnoq3g0hph68063d6j84'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=jh6q9mfnoq3g0hph68063d6j84'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57804'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446394154.206
+    'REQUEST_TIME' => 1446394154
+]
+2015-11-01 17:12:10 [::1][-][jh6q9mfnoq3g0hph68063d6j84][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:12:10 [::1][-][jh6q9mfnoq3g0hph68063d6j84][info][application] $_GET = [
+    'r' => 'site/about'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'jh6q9mfnoq3g0hph68063d6j84'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fabout'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=jh6q9mfnoq3g0hph68063d6j84'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57821'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fabout'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fabout'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446394330.583
+    'REQUEST_TIME' => 1446394330
+]
+2015-11-01 17:12:11 [::1][-][jh6q9mfnoq3g0hph68063d6j84][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:12:10 [::1][-][jh6q9mfnoq3g0hph68063d6j84][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'jh6q9mfnoq3g0hph68063d6j84'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fabout'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=jh6q9mfnoq3g0hph68063d6j84'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57821'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446394330.787
+    'REQUEST_TIME' => 1446394330
+]
+2015-11-01 17:12:48 [::1][1][0sk31tqvb0628jdofu1b4trqg1][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:12:48 [::1][1][0sk31tqvb0628jdofu1b4trqg1][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'Z0NSeUpSUHMUIRtLfQI8MAgTKiobNxoAViYTIQFnICcgJmdNMDdjQA=='
+    'LoginForm' => [
+        'cpf' => '1'
+        'senha' => '1'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'jh6q9mfnoq3g0hph68063d6j84'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fabout'
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '180'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=jh6q9mfnoq3g0hph68063d6j84'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57827'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446394368.424
+    'REQUEST_TIME' => 1446394368
+]
+2015-11-01 17:12:49 [::1][1][0sk31tqvb0628jdofu1b4trqg1][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:12:48 [::1][1][0sk31tqvb0628jdofu1b4trqg1][info][application] $_GET = [
+    'r' => 'site/about'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    '_identity' => 'a997b4e1d156f4284d5679da290930842aa54cc2db2f8592cb5c0d40e0df7518a:2:{i:0;s:9:\"_identity\";i:1;s:20:\"[\"1\",\"1100\",2592000]\";}'
+    'PHPSESSID' => '0sk31tqvb0628jdofu1b4trqg1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fabout'
+    '__id' => '1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; _identity=a997b4e1d156f4284d5679da290930842aa54cc2db2f8592cb5c0d40e0df7518a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A20%3A%22%5B%221%22%2C%221100%22%2C2592000%5D%22%3B%7D; PHPSESSID=0sk31tqvb0628jdofu1b4trqg1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57827'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fabout'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fabout'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446394368.927
+    'REQUEST_TIME' => 1446394368
+]
+2015-11-01 17:12:52 [::1][1][0sk31tqvb0628jdofu1b4trqg1][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:12:52 [::1][1][0sk31tqvb0628jdofu1b4trqg1][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    '_identity' => 'a997b4e1d156f4284d5679da290930842aa54cc2db2f8592cb5c0d40e0df7518a:2:{i:0;s:9:\"_identity\";i:1;s:20:\"[\"1\",\"1100\",2592000]\";}'
+    'PHPSESSID' => '0sk31tqvb0628jdofu1b4trqg1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fabout'
+    '__id' => '1'
+    '__captcha/site/captcha' => 'majokwg'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fabout'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; _identity=a997b4e1d156f4284d5679da290930842aa54cc2db2f8592cb5c0d40e0df7518a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A20%3A%22%5B%221%22%2C%221100%22%2C2592000%5D%22%3B%7D; PHPSESSID=0sk31tqvb0628jdofu1b4trqg1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57830'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446394372.205
+    'REQUEST_TIME' => 1446394372
+]
+2015-11-01 17:12:53 [::1][-][0sk31tqvb0628jdofu1b4trqg1][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:12:53 [::1][-][0sk31tqvb0628jdofu1b4trqg1][info][application] $_GET = [
+    'r' => 'site/captcha'
+    'v' => '56363a04d2d0f'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => '0sk31tqvb0628jdofu1b4trqg1'
+    '_identity' => 'a997b4e1d156f4284d5679da290930842aa54cc2db2f8592cb5c0d40e0df7518a:2:{i:0;s:9:\"_identity\";i:1;s:20:\"[\"1\",\"1100\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fabout'
+    '__id' => '1'
+    '__captcha/site/captcha' => 'majokwg'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'image/webp,image/*,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=0sk31tqvb0628jdofu1b4trqg1; _identity=a997b4e1d156f4284d5679da290930842aa54cc2db2f8592cb5c0d40e0df7518a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A20%3A%22%5B%221%22%2C%221100%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57830'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcaptcha&v=56363a04d2d0f'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fcaptcha&v=56363a04d2d0f'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446394373.102
+    'REQUEST_TIME' => 1446394373
+]
+2015-11-01 17:12:57 [::1][1][0sk31tqvb0628jdofu1b4trqg1][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:12:57 [::1][1][0sk31tqvb0628jdofu1b4trqg1][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    '_identity' => 'a997b4e1d156f4284d5679da290930842aa54cc2db2f8592cb5c0d40e0df7518a:2:{i:0;s:9:\"_identity\";i:1;s:20:\"[\"1\",\"1100\",2592000]\";}'
+    'PHPSESSID' => '0sk31tqvb0628jdofu1b4trqg1'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fabout'
+    '__id' => '1'
+    '__captcha/site/captcha' => 'majokwg'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; _identity=a997b4e1d156f4284d5679da290930842aa54cc2db2f8592cb5c0d40e0df7518a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A20%3A%22%5B%221%22%2C%221100%22%2C2592000%5D%22%3B%7D; PHPSESSID=0sk31tqvb0628jdofu1b4trqg1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57830'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446394377.6
+    'REQUEST_TIME' => 1446394377
+]
+2015-11-01 17:13:00 [::1][-][0sk31tqvb0628jdofu1b4trqg1][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:13:00 [::1][-][0sk31tqvb0628jdofu1b4trqg1][info][application] $_GET = [
+    'r' => 'site/logout'
+]
+
+$_POST = [
+    '_csrf' => 'MU1sNjFxWXRCLyUEBiE1N14dFGVgFBMHACgtbnpEKSB2KFkCSxRqRw=='
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => '0sk31tqvb0628jdofu1b4trqg1'
+    '_identity' => 'a997b4e1d156f4284d5679da290930842aa54cc2db2f8592cb5c0d40e0df7518a:2:{i:0;s:9:\"_identity\";i:1;s:20:\"[\"1\",\"1100\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '66'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=0sk31tqvb0628jdofu1b4trqg1; _identity=a997b4e1d156f4284d5679da290930842aa54cc2db2f8592cb5c0d40e0df7518a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A20%3A%22%5B%221%22%2C%221100%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57834'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogout'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Flogout'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446394380.018
+    'REQUEST_TIME' => 1446394380
+]
+2015-11-01 17:13:00 [::1][-][irghtc4u3va2mo26ulbdfqjei1][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:13:00 [::1][-][irghtc4u3va2mo26ulbdfqjei1][info][application] $_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'irghtc4u3va2mo26ulbdfqjei1'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=irghtc4u3va2mo26ulbdfqjei1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57834'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446394380.286
+    'REQUEST_TIME' => 1446394380
+]
+2015-11-01 17:16:03 [::1][-][irghtc4u3va2mo26ulbdfqjei1][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: PHP Notice 'yii\base\ErrorException' with message 'unserialize(): Error at offset 10157 of 14507 bytes' 
+
+in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php:86
+
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(8, 'unserialize(): ...', 'C:\\xampp\\htdocs...', 86, Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(86): unserialize('a:50:{s:13:"563...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(61): yii\debug\LogTarget->updateIndexFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export()
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#6 [internal function]: yii\log\Logger->flush(true)
+#7 {main}
+2015-11-01 17:16:02 [::1][-][irghtc4u3va2mo26ulbdfqjei1][info][application] $_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'irghtc4u3va2mo26ulbdfqjei1'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=irghtc4u3va2mo26ulbdfqjei1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '57852'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446394562.863
+    'REQUEST_TIME' => 1446394562
+]
+2015-11-01 17:34:16 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The table does not exist: usuario' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\ActiveRecord.php:298
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\ActiveRecord.php(327): yii\db\ActiveRecord::getTableSchema()
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(422): yii\db\ActiveRecord->attributes()
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(241): yii\db\BaseActiveRecord->hasAttribute('cpf')
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\validators\Validator.php(237): yii\db\BaseActiveRecord->__get('cpf')
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Model.php(352): yii\validators\Validator->validateAttributes(Object(app\models\UsuarioSearch), Array)
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\models\UsuarioSearch.php(52): yii\base\Model->validate()
+#6 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\controllers\UsuarioController.php(36): app\models\UsuarioSearch->search(Array)
+#7 [internal function]: app\controllers\UsuarioController->actionIndex()
+#8 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#11 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('usuario/index', Array)
+#12 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-11-01 17:34:15 [::1][-][-][info][application] $_GET = [
+    'r' => 'usuario/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'p98j5giur5l6tpc7qun3766t92'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=tipousuario%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=p98j5giur5l6tpc7qun3766t92'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '58103'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=usuario%2Findex'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=usuario%2Findex'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446395655.619
+    'REQUEST_TIME' => 1446395655
+]
+2015-11-01 18:46:16 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'Html' not found' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\site\index.php:94
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-11-01 18:46:15 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'p98j5giur5l6tpc7qun3766t92'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=p98j5giur5l6tpc7qun3766t92'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59249'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446399975.818
+    'REQUEST_TIME' => 1446399975
+]
+2015-11-01 19:23:28 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Naturezaocorrencia::idNome' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('idNome')
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\naturezaocorrencia\update.php(10): yii\db\BaseActiveRecord->__get('idNome')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\NaturezaocorrenciaController))
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\NaturezaocorrenciaController))
+#6 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\controllers\NaturezaocorrenciaController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\NaturezaocorrenciaController->actionUpdate('1')
+#8 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('naturezaocorren...', Array)
+#12 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-11-01 19:23:27 [::1][-][-][info][application] $_GET = [
+    'r' => 'naturezaocorrencia/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'p98j5giur5l6tpc7qun3766t92'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Fview&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=p98j5giur5l6tpc7qun3766t92'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59630'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=naturezaocorrencia%2Fupdate&id=1'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446402207.738
+    'REQUEST_TIME' => 1446402207
+]
+2015-11-01 19:26:28 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Naturezaocorrencia::idNome' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('idNome')
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\naturezaocorrencia\update.php(8): yii\db\BaseActiveRecord->__get('idNome')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\NaturezaocorrenciaController))
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\NaturezaocorrenciaController))
+#6 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\controllers\NaturezaocorrenciaController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\NaturezaocorrenciaController->actionUpdate('1')
+#8 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('naturezaocorren...', Array)
+#12 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-11-01 19:26:28 [::1][-][-][info][application] $_GET = [
+    'r' => 'naturezaocorrencia/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'p98j5giur5l6tpc7qun3766t92'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=p98j5giur5l6tpc7qun3766t92'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59674'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=naturezaocorrencia%2Fupdate&id=1'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446402388.43
+    'REQUEST_TIME' => 1446402388
+]
+2015-11-01 19:26:36 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Naturezaocorrencia::idName' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('idName')
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\naturezaocorrencia\update.php(8): yii\db\BaseActiveRecord->__get('idName')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\NaturezaocorrenciaController))
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\NaturezaocorrenciaController))
+#6 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\controllers\NaturezaocorrenciaController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\NaturezaocorrenciaController->actionUpdate('1')
+#8 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('naturezaocorren...', Array)
+#12 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-11-01 19:26:35 [::1][-][-][info][application] $_GET = [
+    'r' => 'naturezaocorrencia/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'p98j5giur5l6tpc7qun3766t92'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=p98j5giur5l6tpc7qun3766t92'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59678'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=naturezaocorrencia%2Fupdate&id=1'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446402395.891
+    'REQUEST_TIME' => 1446402395
+]
+2015-11-01 19:26:45 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Naturezaocorrencia::nome' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('nome')
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\naturezaocorrencia\update.php(8): yii\db\BaseActiveRecord->__get('nome')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\NaturezaocorrenciaController))
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\NaturezaocorrenciaController))
+#6 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\controllers\NaturezaocorrenciaController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\NaturezaocorrenciaController->actionUpdate('1')
+#8 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('naturezaocorren...', Array)
+#12 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-11-01 19:26:45 [::1][-][-][info][application] $_GET = [
+    'r' => 'naturezaocorrencia/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'p98j5giur5l6tpc7qun3766t92'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=p98j5giur5l6tpc7qun3766t92'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59682'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=naturezaocorrencia%2Fupdate&id=1'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446402405.431
+    'REQUEST_TIME' => 1446402405
+]
+2015-11-01 19:27:04 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Naturezaocorrencia::Naturezaocorrencia' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('Naturezaocorren...')
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\naturezaocorrencia\update.php(8): yii\db\BaseActiveRecord->__get('Naturezaocorren...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\NaturezaocorrenciaController))
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\NaturezaocorrenciaController))
+#6 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\controllers\NaturezaocorrenciaController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\NaturezaocorrenciaController->actionUpdate('1')
+#8 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('naturezaocorren...', Array)
+#12 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-11-01 19:27:03 [::1][-][-][info][application] $_GET = [
+    'r' => 'naturezaocorrencia/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'p98j5giur5l6tpc7qun3766t92'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=p98j5giur5l6tpc7qun3766t92'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59686'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=naturezaocorrencia%2Fupdate&id=1'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446402423.813
+    'REQUEST_TIME' => 1446402423
+]
+2015-11-01 19:27:21 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Naturezaocorrencia::NaturezaocorrenciaNome' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('Naturezaocorren...')
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\naturezaocorrencia\update.php(8): yii\db\BaseActiveRecord->__get('Naturezaocorren...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\NaturezaocorrenciaController))
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\NaturezaocorrenciaController))
+#6 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\controllers\NaturezaocorrenciaController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\NaturezaocorrenciaController->actionUpdate('1')
+#8 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('naturezaocorren...', Array)
+#12 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-11-01 19:27:21 [::1][-][-][info][application] $_GET = [
+    'r' => 'naturezaocorrencia/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'p98j5giur5l6tpc7qun3766t92'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=p98j5giur5l6tpc7qun3766t92'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59691'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=naturezaocorrencia%2Fupdate&id=1'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446402441.751
+    'REQUEST_TIME' => 1446402441
+]
+2015-11-01 19:27:46 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Naturezaocorrencia::Naturezaocorrencia' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('Naturezaocorren...')
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\naturezaocorrencia\update.php(8): yii\db\BaseActiveRecord->__get('Naturezaocorren...')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\NaturezaocorrenciaController))
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\NaturezaocorrenciaController))
+#6 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\controllers\NaturezaocorrenciaController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\NaturezaocorrenciaController->actionUpdate('1')
+#8 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('naturezaocorren...', Array)
+#12 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-11-01 19:27:46 [::1][-][-][info][application] $_GET = [
+    'r' => 'naturezaocorrencia/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'p98j5giur5l6tpc7qun3766t92'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=p98j5giur5l6tpc7qun3766t92'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59695'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=naturezaocorrencia%2Fupdate&id=1'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446402466.523
+    'REQUEST_TIME' => 1446402466
+]
+2015-11-01 19:28:13 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Naturezaocorrencia::Natureza' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('Natureza')
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\naturezaocorrencia\update.php(8): yii\db\BaseActiveRecord->__get('Natureza')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\NaturezaocorrenciaController))
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\NaturezaocorrenciaController))
+#6 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\controllers\NaturezaocorrenciaController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\NaturezaocorrenciaController->actionUpdate('1')
+#8 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('naturezaocorren...', Array)
+#12 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-11-01 19:28:13 [::1][-][-][info][application] $_GET = [
+    'r' => 'naturezaocorrencia/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'p98j5giur5l6tpc7qun3766t92'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=p98j5giur5l6tpc7qun3766t92'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59699'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=naturezaocorrencia%2Fupdate&id=1'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446402493.193
+    'REQUEST_TIME' => 1446402493
+]
+2015-11-01 19:28:16 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Naturezaocorrencia::Natureza' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('Natureza')
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\naturezaocorrencia\update.php(8): yii\db\BaseActiveRecord->__get('Natureza')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\NaturezaocorrenciaController))
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\NaturezaocorrenciaController))
+#6 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\controllers\NaturezaocorrenciaController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\NaturezaocorrenciaController->actionUpdate('1')
+#8 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('naturezaocorren...', Array)
+#12 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-11-01 19:28:16 [::1][-][-][info][application] $_GET = [
+    'r' => 'naturezaocorrencia/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'p98j5giur5l6tpc7qun3766t92'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=p98j5giur5l6tpc7qun3766t92'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=naturezaocorrencia%2Fupdate&id=1'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446402496.742
+    'REQUEST_TIME' => 1446402496
+]
+2015-11-01 19:28:27 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Naturezaocorrencia::Naturezanome' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('Naturezanome')
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\naturezaocorrencia\update.php(8): yii\db\BaseActiveRecord->__get('Naturezanome')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\NaturezaocorrenciaController))
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\NaturezaocorrenciaController))
+#6 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\controllers\NaturezaocorrenciaController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\NaturezaocorrenciaController->actionUpdate('1')
+#8 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('naturezaocorren...', Array)
+#12 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-11-01 19:28:27 [::1][-][-][info][application] $_GET = [
+    'r' => 'naturezaocorrencia/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'p98j5giur5l6tpc7qun3766t92'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=p98j5giur5l6tpc7qun3766t92'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59705'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=naturezaocorrencia%2Fupdate&id=1'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446402507.333
+    'REQUEST_TIME' => 1446402507
+]
+2015-11-01 19:29:04 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Naturezaocorrencia::nomeNatureza' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('nomeNatureza')
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\naturezaocorrencia\update.php(8): yii\db\BaseActiveRecord->__get('nomeNatureza')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\NaturezaocorrenciaController))
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\NaturezaocorrenciaController))
+#6 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\controllers\NaturezaocorrenciaController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\NaturezaocorrenciaController->actionUpdate('1')
+#8 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('naturezaocorren...', Array)
+#12 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-11-01 19:29:03 [::1][-][-][info][application] $_GET = [
+    'r' => 'naturezaocorrencia/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'p98j5giur5l6tpc7qun3766t92'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=p98j5giur5l6tpc7qun3766t92'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59723'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=naturezaocorrencia%2Fupdate&id=1'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446402543.901
+    'REQUEST_TIME' => 1446402543
+]
+2015-11-01 19:29:14 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Naturezaocorrencia::nameNatureza' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('nameNatureza')
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\naturezaocorrencia\update.php(8): yii\db\BaseActiveRecord->__get('nameNatureza')
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#4 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\NaturezaocorrenciaController))
+#5 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\NaturezaocorrenciaController))
+#6 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\controllers\NaturezaocorrenciaController.php(89): yii\base\Controller->render('update', Array)
+#7 [internal function]: app\controllers\NaturezaocorrenciaController->actionUpdate('1')
+#8 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#9 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#11 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('naturezaocorren...', Array)
+#12 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2015-11-01 19:29:14 [::1][-][-][info][application] $_GET = [
+    'r' => 'naturezaocorrencia/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'p98j5giur5l6tpc7qun3766t92'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=p98j5giur5l6tpc7qun3766t92'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59727'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=naturezaocorrencia%2Fupdate&id=1'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=naturezaocorrencia%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446402554.372
+    'REQUEST_TIME' => 1446402554
+]
+2015-11-01 19:52:08 [::1][-][ap67tjdicekqbukcfujhv20tf6][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "locais/index".' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('locais/index', Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-11-01 19:52:08 [::1][-][ap67tjdicekqbukcfujhv20tf6][info][application] $_GET = [
+    'r' => 'locais/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'ap67tjdicekqbukcfujhv20tf6'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=ocorrencia%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=ap67tjdicekqbukcfujhv20tf6'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '60033'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locais%2Findex'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=locais%2Findex'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446403928.65
+    'REQUEST_TIME' => 1446403928
+]
+2015-11-01 19:52:31 [::1][-][ap67tjdicekqbukcfujhv20tf6][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "locais/index".' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php:461
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('locais/index', Array)
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2015-11-01 19:52:31 [::1][-][ap67tjdicekqbukcfujhv20tf6][info][application] $_GET = [
+    'r' => 'locais/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'ap67tjdicekqbukcfujhv20tf6'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=ocorrencia%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=ap67tjdicekqbukcfujhv20tf6'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '60035'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=locais%2Findex'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=locais%2Findex'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446403951.595
+    'REQUEST_TIME' => 1446403951
+]
+2015-11-01 21:02:46 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ''brandUrl'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\layouts\main.php:41
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-11-01 21:02:45 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'ap67tjdicekqbukcfujhv20tf6'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=ap67tjdicekqbukcfujhv20tf6'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '62302'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446408165.915
+    'REQUEST_TIME' => 1446408165
+]
+2015-11-01 21:03:23 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ''brandUrl'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\layouts\main.php:41
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-11-01 21:03:23 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'ap67tjdicekqbukcfujhv20tf6'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=ap67tjdicekqbukcfujhv20tf6'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '62305'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446408203.229
+    'REQUEST_TIME' => 1446408203
+]
+2015-11-01 21:03:30 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ''brandUrl'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\layouts\main.php:41
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-11-01 21:03:30 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'ap67tjdicekqbukcfujhv20tf6'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=ap67tjdicekqbukcfujhv20tf6'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '62306'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446408210.121
+    'REQUEST_TIME' => 1446408210
+]
+2015-11-01 21:10:56 [::1][-][-][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '=>' (T_DOUBLE_ARROW)' in C:\xampp\htdocs\ATUALPAPS\PAPS\yii2-app-basic\views\layouts\main.php:41
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-11-01 21:10:56 [::1][-][-][info][application] $_COOKIE = [
+    '_csrf' => '5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sbI27PlCoPxSQeJs1eAXK5pTGe54ze33\";}'
+    'PHPSESSID' => 'ap67tjdicekqbukcfujhv20tf6'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/ATUALPAPS/PAPS/yii2-app-basic/web/index.php?r=categoria%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=5ae6598870e122f2ca7a3d34dc20b0ce91e0efa8110270fac28b96badd5b0a19a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sbI27PlCoPxSQeJs1eAXK5pTGe54ze33%22%3B%7D; PHPSESSID=ap67tjdicekqbukcfujhv20tf6'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '62439'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'SCRIPT_NAME' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/ATUALPAPS/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1446408656.101
+    'REQUEST_TIME' => 1446408656
+]

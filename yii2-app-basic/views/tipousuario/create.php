@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Tipousuario */
 
-$this->title = 'Create Tipousuario';
-$this->params['breadcrumbs'][] = ['label' => 'Tipousuarios', 'url' => ['index']];
+$this->title = 'Novo Tipo';
+$this->params['breadcrumbs'][] = ['label' => 'Tiposusuarios', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="tipousuario-create">

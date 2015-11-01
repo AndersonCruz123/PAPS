@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Naturezaocorrencia */
 
-$this->title = 'Create Naturezaocorrencia';
+$this->title = 'Nova Natureza';
 $this->params['breadcrumbs'][] = ['label' => 'Naturezaocorrencias', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
