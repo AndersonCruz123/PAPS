@@ -8,6 +8,7 @@ use app\models\OcorrenciaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * OcorrenciaController implements the CRUD actions for Ocorrencia model.
@@ -16,16 +17,27 @@ class OcorrenciaController extends Controller
 {
     public function behaviors()
     {
-        return [
+        return [ 
+        'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['create', 'index', 'update', ''],
+                'rules' => [
+                    [
+                        'actions' => ['create', 'index', 'update'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['post'],
+                    'logout' => ['post'],
                 ],
             ],
         ];
     }
-
     /**
      * Lists all Ocorrencia models.
      * @return mixed

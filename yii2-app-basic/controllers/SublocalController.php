@@ -8,7 +8,7 @@ use app\models\SublocalSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\filters\AccessControl;
 /**
  * SublocalController implements the CRUD actions for Sublocal model.
  */
@@ -16,16 +16,27 @@ class SublocalController extends Controller
 {
     public function behaviors()
     {
-        return [
+        return [ 
+        'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['create', 'index', 'update', ''],
+                'rules' => [
+                    [
+                        'actions' => ['create', 'index', 'update'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['post'],
+                    'logout' => ['post'],
                 ],
             ],
         ];
     }
-
     /**
      * Lists all Sublocal models.
      * @return mixed

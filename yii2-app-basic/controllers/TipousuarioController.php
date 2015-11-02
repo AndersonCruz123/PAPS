@@ -8,7 +8,7 @@ use app\models\TipousuarioSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\filters\AccessControl;
 /**
  * TipousuarioController implements the CRUD actions for Tipousuario model.
  */
@@ -16,16 +16,27 @@ class TipousuarioController extends Controller
 {
     public function behaviors()
     {
-        return [
+        return [ 
+        'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['create', 'index', 'update', ''],
+                'rules' => [
+                    [
+                        'actions' => ['create', 'index', 'update'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['post'],
+                    'logout' => ['post'],
                 ],
             ],
         ];
     }
-
     /**
      * Lists all Tipousuario models.
      * @return mixed
