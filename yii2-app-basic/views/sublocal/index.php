@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\SublocalSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Sublocals';
+$this->title = 'Sublocais';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="sublocal-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Sublocal', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Novo Sublocal', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
