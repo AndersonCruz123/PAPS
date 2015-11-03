@@ -5,10 +5,14 @@ namespace app\controllers;
 use Yii;
 use app\models\Sublocal;
 use app\models\SublocalSearch;
+use app\models\Local;
+use app\models\LocalSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\helpers\ArrayHelper;
+
 /**
  * SublocalController implements the CRUD actions for Sublocal model.
  */
@@ -73,14 +77,19 @@ class SublocalController extends Controller
     {
         $model = new Sublocal();
 
+       $arraylocal=ArrayHelper::map(LocalSearch::find()->all(),'idLocal','Nome');
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->idSubLocal]);
+
+            return $this->redirect(['view', 'id' => $model->idSubLocal, 'arraylocal'=>$arraylocal]);
         } else {
+
             return $this->render('create', [
                 'model' => $model,
+             'arraylocal'=>$arraylocal
             ]);
         }
     }
+
 
     /**
      * Updates an existing Sublocal model.
@@ -92,11 +101,15 @@ class SublocalController extends Controller
     {
         $model = $this->findModel($id);
 
+       $arraylocal=ArrayHelper::map(LocalSearch::find()->all(),'idLocal','Nome');
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->idSubLocal]);
+
+            return $this->redirect(['view', 'id' => $model->idSubLocal, 'arraylocal'=>$arraylocal]);
         } else {
+
             return $this->render('update', [
                 'model' => $model,
+             'arraylocal'=>$arraylocal
             ]);
         }
     }

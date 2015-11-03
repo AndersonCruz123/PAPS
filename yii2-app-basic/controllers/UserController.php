@@ -5,11 +5,13 @@ namespace app\controllers;
 use Yii;
 use app\models\User;
 use app\models\UserSearch;
+use app\models\Tipousuario;
+use app\models\TipousuarioSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl; 
-
+use yii\helpers\ArrayHelper;
 /**
  * UserController implements the CRUD actions for User model.
  */
@@ -74,14 +76,36 @@ class UserController extends Controller
     {
         $model = new User();
 
+        $arraytiposusuario=ArrayHelper::map(TipousuarioSearch::find()->all(),'idTipo','funcao');
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->cpf]);
+            return $this->redirect(['view', 'id' => $model->cpf, 'arraytiposusuario' => $arraytiposusuario]);
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'arraytiposusuario' => $arraytiposusuario
             ]);
         }
     }
+ /*   public function actionCreate()
+    {
+        $model = new Aluno();
+        
+          $arraycursos=ArrayHelper::map(CursoSearch::find()->all(),'id','nome');
+
+        
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+
+            return $this->redirect(['view', 'id' => $model->id, 'arraycursos'=>$arraycursos]);
+        } else {
+            return $this->render('create', [
+                'model' => $model, 
+                'arraycursos'=>$arraycursos
+            ]);
+        }
+    }*/
+
+
 
     /**
      * Updates an existing User model.
@@ -92,12 +116,15 @@ class UserController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+     
+        $arraytiposusuario=ArrayHelper::map(TipousuarioSearch::find()->all(),'idTipo','funcao');
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->cpf]);
+            return $this->redirect(['view', 'id' => $model->cpf, 'arraytiposusuario' => $arraytiposusuario]);
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'arraytiposusuario' => $arraytiposusuario
             ]);
         }
     }

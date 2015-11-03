@@ -63,4 +63,7 @@ class Sublocal extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Local::className(), ['idLocal' => 'idLocal']);
     }
+    public function afterFind(){
+        return $this->idLocal = Local::findOne($this->idLocal)->Nome;
+    }
 }

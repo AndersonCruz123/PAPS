@@ -133,4 +133,9 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     {
         return $this->hasOne(Tipousuario::className(), ['idTipo' => 'idTipoUsuario']);
     }
+
+    public function afterFind(){
+        return $this->idTipoUsuario = Tipousuario::findOne($this->idTipoUsuario)->funcao;
+    }
+
 }

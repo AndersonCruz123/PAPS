@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
+use yii\helpers\ArrayHelper;
 /* @var $this yii\web\View */
 /* @var $model app\models\User */
 /* @var $form yii\widgets\ActiveForm */
@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'senha')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'idTipoUsuario')->textInput() ?>
+    <?= $form->field($model, 'idTipoUsuario')->dropdownlist($arraytiposusuario, ['prompt'=>'Selecione a função do usuario']) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Salvar' : 'Editar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
