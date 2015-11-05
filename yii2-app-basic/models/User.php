@@ -138,4 +138,25 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         return $this->idTipoUsuario = Tipousuario::findOne($this->idTipoUsuario)->funcao;
     }
 
+ public function senhaAleatoria($user)
+    {
+        
+
+        //return print_r($user);
+
+        $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        
+        $key = substr(str_shuffle(str_repeat($chars, 5)), 0, strlen($chars) );
+        
+        $key = substr($key, 0, 10) . '_' . rand(1,10000);
+        
+        $password = $key ;
+
+        $user->senha =$password;    
+
+        $user->save();
+
+        return $password ; //sem ta criptografado 
+    } 
+
 }

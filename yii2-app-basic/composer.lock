@@ -4,9 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "479407875c975e7dbee0aefcb85e62d5",
-    "content-hash": "5c27dd23827e5c153817a7f3f5d227c6",
+    "hash": "262ba89031e5e5575fe10734fa564991",
+    "content-hash": "df89d6ac35cadaec1cd2a5c0bbb6f37e",
     "packages": [
+        {
+            "name": "baibaratsky/php-mailgun",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/baibaratsky/php-mailgun.git",
+                "reference": "72b41cde59dfad546b6023f4603481c1675c9d4d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/baibaratsky/php-mailgun/zipball/72b41cde59dfad546b6023f4603481c1675c9d4d",
+                "reference": "72b41cde59dfad546b6023f4603481c1675c9d4d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.2"
+            },
+            "require-dev": {
+                "yiisoft/yii": "*",
+                "yiisoft/yii2": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    ""
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Andrei Baibaratsky",
+                    "email": "andrei@baibaratsky.com"
+                }
+            ],
+            "description": "Mailgun API PHP library and Yii extension (as well as Yii2)",
+            "homepage": "http://github.com/baibaratsky/php-mailgun",
+            "keywords": [
+                "email",
+                "mail",
+                "mailgun",
+                "mailing lists",
+                "yii",
+                "yii2"
+            ],
+            "time": "2015-09-08 07:27:17"
+        },
         {
             "name": "bower-asset/bootstrap",
             "version": "v3.3.5",
@@ -460,21 +510,21 @@
         },
         {
             "name": "yiisoft/yii2-bootstrap",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-bootstrap.git",
-                "reference": "1b6b1e61cf91c3cdd517d6a7e71d30bb212e4af0"
+                "reference": "1464f93834b1d5edb1f5625f7ffd6c3723fa4923"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/1b6b1e61cf91c3cdd517d6a7e71d30bb212e4af0",
-                "reference": "1b6b1e61cf91c3cdd517d6a7e71d30bb212e4af0",
+                "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/1464f93834b1d5edb1f5625f7ffd6c3723fa4923",
+                "reference": "1464f93834b1d5edb1f5625f7ffd6c3723fa4923",
                 "shasum": ""
             },
             "require": {
                 "bower-asset/bootstrap": "3.3.* | 3.2.* | 3.1.*",
-                "yiisoft/yii2": ">=2.0.4"
+                "yiisoft/yii2": ">=2.0.6"
             },
             "type": "yii2-extension",
             "extra": {
@@ -506,7 +556,7 @@
                 "bootstrap",
                 "yii2"
             ],
-            "time": "2015-05-10 22:08:17"
+            "time": "2015-09-23 17:48:24"
         },
         {
             "name": "yiisoft/yii2-composer",

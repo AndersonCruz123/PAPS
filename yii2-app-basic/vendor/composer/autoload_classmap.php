@@ -6,4 +6,18 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'MailgunApi' => $vendorDir . '/baibaratsky/php-mailgun/MailgunApi.php',
+    'MailgunBounce' => $vendorDir . '/baibaratsky/php-mailgun/MailgunBounce.php',
+    'MailgunComplaint' => $vendorDir . '/baibaratsky/php-mailgun/MailgunComplaint.php',
+    'MailgunException' => $vendorDir . '/baibaratsky/php-mailgun/MailgunApi.php',
+    'MailgunList' => $vendorDir . '/baibaratsky/php-mailgun/MailgunList.php',
+    'MailgunListMember' => $vendorDir . '/baibaratsky/php-mailgun/MailgunListMember.php',
+    'MailgunMessage' => $vendorDir . '/baibaratsky/php-mailgun/MailgunMessage.php',
+    'MailgunMessageYii' => $vendorDir . '/baibaratsky/php-mailgun/MailgunYii.php',
+    'MailgunMessageYii2' => $vendorDir . '/baibaratsky/php-mailgun/MailgunYii2.php',
+    'MailgunObject' => $vendorDir . '/baibaratsky/php-mailgun/MailgunApi.php',
+    'MailgunRoute' => $vendorDir . '/baibaratsky/php-mailgun/MailgunRoute.php',
+    'MailgunUnsubscribe' => $vendorDir . '/baibaratsky/php-mailgun/MailgunUnsubscribe.php',
+    'MailgunYii' => $vendorDir . '/baibaratsky/php-mailgun/MailgunYii.php',
+    'MailgunYii2' => $vendorDir . '/baibaratsky/php-mailgun/MailgunYii2.php',
 );

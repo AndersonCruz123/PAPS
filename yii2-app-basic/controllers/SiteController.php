@@ -8,6 +8,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\User;
 
 class SiteController extends Controller
 {
@@ -92,4 +93,49 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+    public function actionTeste()
+    {
+        return $this->render('teste');
+    }
+
+    public function actionForgot()
+    {
+
+        if ( Yii::$app->request->post()) 
+        {
+            $email = Yii::$app->request->post('cpf');
+
+            $usuario = User::find()->where(['email'=>$email])->one();
+            //$usuario = User::findOne($cpf);
+             print($usuario->cpf);
+  
+            if($usuario!=null) //se o usuario com email informado existe...
+            {
+                $domain = 'sandbox0d88942972964b89b6b8ef12520db517.mailgun.org';
+                $key = 'key-4ff7c7a5e38505ed435d60be7006c3a2';
+
+                $mailgun = new \MailgunApi( $domain, $key );
+
+                $message = $mailgun->newMessage();
+                $message->setFrom('admin@icomp.ufam.edu.br', 'SOS UFAM');
+                $message->addTo( $usuario->email, $usuario->cpf); //destinatario...
+                $message->setSubject('Nova Senha');
+                $message->setText('Sua nova senha temporária é: ' . $usuario->senhaAleatoria($usuario));
+
+                $message->send();
+                print_r($usuario);
+                
+                return $this->render('enviada');
+            }
+            else
+            {
+                return $this->render('emailnaoencontrado');
+            }
+        }
+        else
+        {
+            return $this->render('forgot');
+        }
+    }
+
 }

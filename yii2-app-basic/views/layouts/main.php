@@ -69,6 +69,7 @@ AppAsset::register($this);
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'Esqueci', 'url' => ['/site/forgot']],
             ['label' => 'Locais', 
             'items' => [
                     ['label' => 'Gerenciar Local', 'url' => ['/local/index']],
