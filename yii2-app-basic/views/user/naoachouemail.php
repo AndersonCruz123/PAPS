@@ -7,14 +7,12 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\UsuarioSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Nova senha enviada';
+$this->title = 'Não encontramos o CPF informado';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="usuario-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode($this->title.' mais '.$cpf) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <h2>Olhe seu email, sua senha foi recuperada....</h2>
 
 </div>

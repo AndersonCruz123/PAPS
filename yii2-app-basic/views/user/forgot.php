@@ -64,17 +64,17 @@ $this->params['breadcrumbs'][] = $this->title;
 */
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
 ?>
-
 <?php $form = ActiveForm::begin(); ?>
 
-    <h2>Informe o cpf cadastrado:</h2>
-    <div class="form-group">
-        <?= Html::input('text','cpf') ?>
-    </div>
+    <h2>Informe o seu cpf que enviaremos para o email a sua nova senha</h2>
+
+   <?= $form->field($model, 'cpf')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Enviar', ['class' => 'btn btn-primary']) ?>
     </div>
 
 <?php ActiveForm::end(); ?>
+</div>

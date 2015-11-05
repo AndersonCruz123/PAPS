@@ -6,6 +6,7 @@ namespace app\models;
 
 use Yii;
 use yii\web\IdentityInterface;
+
 /**
  * This is the model class for table "user".
  *
@@ -36,8 +37,8 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
             [['cpf', 'email', 'senha', 'idTipoUsuario'], 'required'],
             [['idTipoUsuario'], 'integer'],
             [['cpf'], 'string', 'max' => 11],
-            [['email'], 'string', 'max' => 50],
-            [['senha'], 'string', 'max' => 16]
+            [['email'], 'string', 'max' => 110],
+            [['senha'], 'string', 'max' => 110]
         ];
     }
 
@@ -138,9 +139,12 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         return $this->idTipoUsuario = Tipousuario::findOne($this->idTipoUsuario)->funcao;
     }
 
- public function senhaAleatoria($user)
+ public function senhaAleatoria($cpf)
     {
         
+        $usuario = new User();
+        $usuario = User::findOne($cpf);
+
 
         //return print_r($user);
 
@@ -152,9 +156,22 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         
         $password = $key ;
 
-        $user->senha =$password;    
-
-        $user->save();
+        $usuario->senha =$password;
+        if (strcmp($usuario->idTipoUsuario,"Chefe de Segurança")==0){
+            $usuario->idTipoUsuario=1;
+        }    
+         if (strcmp($usuario->idTipoUsuario,"Segurança Terceirizada")==0){
+            $usuario->idTipoUsuario=2;
+        }       
+        if ($usuario->save()){
+                print('CONSEGUISAVE');
+            }else {
+                print('NAOCONSEGUI SAVE\n');
+                print('cpf:'.$usuario->cpf.'\n');
+                print('senha:'.$usuario->senha.'\n');
+                print('email:'.$usuario->email.'\n');
+                print('idTipoUsuario:'.$usuario->idTipoUsuario.'\n');
+                }
 
         return $password ; //sem ta criptografado 
     } 

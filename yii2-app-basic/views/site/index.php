@@ -71,6 +71,9 @@ border: 4px ;
 background: transparent;
 margin:90px 10px;
 }
+#esqueciminhasenha {
+ margin:10px 10px; 
+}
             
         </style>
   </head>
@@ -81,7 +84,7 @@ margin:90px 10px;
             <div class="jumbotron">
          
               <h1 style="text-align:center">Sistema de Ocorrência de Segurança</h1>
-
+             <a id="esqueciminhasenha" href="index.php?r=user%2Fforgot">Esqueci minha senha</a> 
             <img id="icomp"src=icomp.png width="100" height="50" / >
             <img id="ufam" src=ufam.png  width="50" height="50" / >
             <h4>© ICOMP - Instituto de Computação</br>

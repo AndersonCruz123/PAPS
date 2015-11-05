@@ -12,6 +12,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl; 
 use yii\helpers\ArrayHelper;
+use yii\db\ActiveRecord;
 /**
  * UserController implements the CRUD actions for User model.
  */
@@ -157,4 +158,56 @@ class UserController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+    public function actionForgot()
+    {
+
+        if ( Yii::$app->request->post()) 
+        {
+            $cpf = new User();
+            $cpf->load(Yii::$app->request->post());
+
+           /// $usuario = User::find()->where(['email'=>$email])->one();
+            //$usuario = User::findOne($cpf);
+          //   echo($usuario->cpf);
+            $usuario = new User();
+            $usuario = User::findOne($cpf->cpf);
+        //    print_r($usuario);
+            if($usuario!=null) //se o usuario com email informado existe...
+            {
+                $domain = 'sandbox0d88942972964b89b6b8ef12520db517.mailgun.org';
+                $key = 'key-4ff7c7a5e38505ed435d60be7006c3a2';
+
+                $mailgun = new \MailgunApi( $domain, $key );
+
+                $senha = $usuario->senhaAleatoria($usuario->cpf);
+
+                $message = $mailgun->newMessage();
+                $message->setFrom('admin@icomp.ufam.edu.br', 'SOS-UFAM');
+                $message->addTo( $usuario->email); //destinatario...
+                $message->setSubject('Nova Senha');
+                $message->setText('Sua nova senha temporária é: ' . $senha);
+                $message->send();
+
+                return $this->render('enviada',[
+                    'email' => $usuario->email
+                ]);
+            }
+            else
+            {
+                return $this->render('naoachouemail', [
+                                    'cpf' => $cpf
+                ]);
+            }
+        }
+        else
+        {
+            $model = new User();
+            return $this->render('forgot', [
+                'model' => $model
+            ]);        
+        }
+    }
+
+
 }

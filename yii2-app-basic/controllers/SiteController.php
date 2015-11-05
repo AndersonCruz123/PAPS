@@ -98,7 +98,7 @@ class SiteController extends Controller
         return $this->render('teste');
     }
 
-    public function actionForgot()
+    /*public function actionForgot()
     {
 
         if ( Yii::$app->request->post()) 
@@ -123,7 +123,8 @@ class SiteController extends Controller
                 $message->setText('Sua nova senha temporária é: ' . $usuario->senhaAleatoria($usuario));
 
                 $message->send();
-                print_r($usuario);
+  print($usuario->cpf);
+               // print_r($usuario);
                 
                 return $this->render('enviada');
             }
@@ -136,6 +137,6 @@ class SiteController extends Controller
         {
             return $this->render('forgot');
         }
-    }
+    }*/
 
 }
