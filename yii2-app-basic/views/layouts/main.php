@@ -23,11 +23,23 @@ AppAsset::register($this);
     <style> 
           .navbar
           {
-            background-color: #228B22;
+            background-color: #EEE5DE;
+           border-radius: 10px;
+            border-top: 20px;
+            border-bottom: 10px;
+            
+
             
             }
 
-
+            img{
+                width: 200px;
+                position:absolute;
+                left:13%;
+                top:15%;
+                margin-left:-110px;
+                margin-top:-45px;
+            }
             
         </style>
 </head>
@@ -37,7 +49,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'SOS - UFAM',
+        'brandLabel' => Html::img('sos.png'),
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
