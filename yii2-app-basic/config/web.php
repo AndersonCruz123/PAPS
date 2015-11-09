@@ -7,6 +7,15 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
+            'assetManager' => [
+            'bundles' => [
+                'yii\bootstrap\BootstrapAsset' => [
+                    'basePath' => '@webroot',
+                    'baseUrl' => '@web',
+                    'css' => ['baseUrl/bootstrap.css']
+                ],
+            ],
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'jOvZb5TACXWqEVAm3aV50ZkA8i-qVV-a',
