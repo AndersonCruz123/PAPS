@@ -18,10 +18,10 @@ use yii\helpers\ArrayHelper;
 
     <?= $form->field($model, 'senha')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'idTipoUsuario')->dropdownlist($arraytiposusuario, ['prompt'=>'Selecione a função do usuario']) ?>
+    <?= $form->field($model, 'idTipoUsuario')->dropdownlist($arraytiposusuario, ['prompt'=>'Selecione a função do usuário']) ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Salvar' : 'Editar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Salvar' : 'Salvar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

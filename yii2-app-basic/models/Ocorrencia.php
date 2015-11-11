@@ -63,15 +63,15 @@ class Ocorrencia extends \yii\db\ActiveRecord
             'status' => 'Status',
             'data' => 'Data',
             'hora' => 'Hora',
-            'periodo' => 'Periodo',
-            'detalheLocal' => 'Detalhe Local',
-            'descricao' => 'Descricao',
+            'periodo' => 'Período',
+            'detalheLocal' => 'Detalhamento do Local',
+            'descricao' => 'Descrição',
             'procedimento' => 'Procedimento',
-            'dataConclusao' => 'Data Conclusao',
-            'idCategoria' => 'Id Categoria',
-            'idSubLocal' => 'Id Sub Local',
-            'idNatureza' => 'Id Natureza',
-            'cpfUsuario' => 'Cpf Usuario',
+            'dataConclusao' => 'Data de Conclusão',
+            'idCategoria' => 'Categoria',
+            'idSubLocal' => 'Sublocal',
+            'idNatureza' => 'Natureza da Ocorrência',
+            'cpfUsuario' => 'CPF',
         ];
     }
 

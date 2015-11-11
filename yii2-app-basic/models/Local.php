@@ -39,7 +39,7 @@ class Local extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idLocal' => 'Id Local',
+            'idLocal' => 'id Local',
             'Nome' => 'Nome',
         ];
     }

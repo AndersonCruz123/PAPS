@@ -19972,3 +19972,724 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1446760551.334
     'REQUEST_TIME' => 1446760551
 ]
+2015-11-11 21:23:44 [::1][-][-][warning][yii\web\User::loginByCookie] Invalid auth key attempted for user '000': 000100
+    in C:\xampp\htdocs\PAPS\yii2-app-basic\views\layouts\main.php:103
+    in C:\xampp\htdocs\PAPS\yii2-app-basic\controllers\SiteController.php:54
+2015-11-11 21:23:44 [::1][-][-][info][application] $_COOKIE = [
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/PAPS/yii2-app-basic/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\Windows\\System32;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;C:\\Windows\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59017'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PAPS/yii2-app-basic/web/'
+    'SCRIPT_NAME' => '/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1447273424.437
+    'REQUEST_TIME' => 1447273424
+]
+2015-11-11 21:24:05 [::1][-][-][warning][yii\web\User::loginByCookie] Invalid auth key attempted for user '000': 000100
+2015-11-11 21:24:05 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/contact'
+]
+
+$_COOKIE = [
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+    '_csrf' => '3db0524b09e3e67072f68c23bf268f29b97270efe20541938079ea78fb3265aca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"1AghqIueaumWyHQgiUyyPQpwP0aM3mZ-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/PAPS/yii2-app-basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D; _csrf=3db0524b09e3e67072f68c23bf268f29b97270efe20541938079ea78fb3265aca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221AghqIueaumWyHQgiUyyPQpwP0aM3mZ-%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\Windows\\System32;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;C:\\Windows\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59024'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fcontact'
+    'REQUEST_URI' => '/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+    'SCRIPT_NAME' => '/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1447273445.619
+    'REQUEST_TIME' => 1447273445
+]
+2015-11-11 21:24:06 [::1][-][-][warning][yii\web\User::loginByCookie] Invalid auth key attempted for user '000': 000100
+    in C:\xampp\htdocs\PAPS\yii2-app-basic\controllers\SiteController.php:59
+2015-11-11 21:24:06 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_COOKIE = [
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+    '_csrf' => '3db0524b09e3e67072f68c23bf268f29b97270efe20541938079ea78fb3265aca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"1AghqIueaumWyHQgiUyyPQpwP0aM3mZ-\";}'
+    'PHPSESSID' => '8a0l4q97tct8mvitt455gucov0'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/PAPS/yii2-app-basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D; _csrf=3db0524b09e3e67072f68c23bf268f29b97270efe20541938079ea78fb3265aca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221AghqIueaumWyHQgiUyyPQpwP0aM3mZ-%22%3B%7D; PHPSESSID=8a0l4q97tct8mvitt455gucov0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\Windows\\System32;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;C:\\Windows\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59024'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1447273446.001
+    'REQUEST_TIME' => 1447273446
+]
+2015-11-11 21:24:14 [::1][000][-][warning][yii\web\User::loginByCookie] Invalid auth key attempted for user '000': 000100
+    in C:\xampp\htdocs\PAPS\yii2-app-basic\controllers\SiteController.php:59
+2015-11-11 21:24:14 [::1][000][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'YlYtek8yX09TF0oSPnsqKgMjQC02eg4oCwNUAx9jLzgyZkw3fF8FYg=='
+    'LoginForm' => [
+        'cpf' => '000'
+        'senha' => 'teste'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+    '_csrf' => '3db0524b09e3e67072f68c23bf268f29b97270efe20541938079ea78fb3265aca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"1AghqIueaumWyHQgiUyyPQpwP0aM3mZ-\";}'
+    'PHPSESSID' => '8a0l4q97tct8mvitt455gucov0'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+    '__id' => '000'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '186'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D; _csrf=3db0524b09e3e67072f68c23bf268f29b97270efe20541938079ea78fb3265aca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221AghqIueaumWyHQgiUyyPQpwP0aM3mZ-%22%3B%7D; PHPSESSID=8a0l4q97tct8mvitt455gucov0'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\Windows\\System32;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;C:\\Windows\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59029'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1447273454.355
+    'REQUEST_TIME' => 1447273454
+]
+2015-11-11 21:54:20 [::1][000][4hkregur1fr7t18kb5d42o6957][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Sublocal::Local' in C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('Local')
+#1 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\helpers\BaseArrayHelper.php(202): yii\db\BaseActiveRecord->__get('Local')
+#2 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\DataColumn.php(193): yii\helpers\BaseArrayHelper::getValue(Object(app\models\Sublocal), 'Local')
+#3 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\DataColumn.php(204): yii\grid\DataColumn->getDataCellValue(Object(app\models\Sublocal), 1, 0)
+#4 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\Column.php(108): yii\grid\DataColumn->renderDataCellContent(Object(app\models\Sublocal), 1, 0)
+#5 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(504): yii\grid\Column->renderDataCell(Object(app\models\Sublocal), 1, 0)
+#6 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(473): yii\grid\GridView->renderTableRow(Object(app\models\Sublocal), 1, 0)
+#7 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(344): yii\grid\GridView->renderTableBody()
+#8 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\widgets\BaseListView.php(151): yii\grid\GridView->renderItems()
+#9 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(313): yii\widgets\BaseListView->renderSection('{items}')
+#10 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(288): yii\widgets\BaseListView->run()
+#14 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Widget.php(98): yii\grid\GridView->run()
+#15 C:\xampp\htdocs\PAPS\yii2-app-basic\views\sublocal\index.php(33): yii\base\Widget::widget(Array)
+#16 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#17 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#18 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SublocalController))
+#19 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SublocalController))
+#20 C:\xampp\htdocs\PAPS\yii2-app-basic\controllers\SublocalController.php(56): yii\base\Controller->render('index', Array)
+#21 [internal function]: app\controllers\SublocalController->actionIndex()
+#22 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#23 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#24 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#25 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('sublocal/index', Array)
+#26 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 C:\xampp\htdocs\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#28 {main}
+2015-11-11 21:54:20 [::1][000][4hkregur1fr7t18kb5d42o6957][info][application] $_GET = [
+    'r' => 'sublocal/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '3db0524b09e3e67072f68c23bf268f29b97270efe20541938079ea78fb3265aca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"1AghqIueaumWyHQgiUyyPQpwP0aM3mZ-\";}'
+    'PHPSESSID' => '4hkregur1fr7t18kb5d42o6957'
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+    '__id' => '000'
+    '__captcha/site/captcha' => 'rfzzcal'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/PAPS/yii2-app-basic/web/index.php?r=local%2Fview&id=5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3db0524b09e3e67072f68c23bf268f29b97270efe20541938079ea78fb3265aca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221AghqIueaumWyHQgiUyyPQpwP0aM3mZ-%22%3B%7D; PHPSESSID=4hkregur1fr7t18kb5d42o6957; _identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\Windows\\System32;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;C:\\Windows\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59335'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=sublocal%2Findex'
+    'REQUEST_URI' => '/PAPS/yii2-app-basic/web/index.php?r=sublocal%2Findex'
+    'SCRIPT_NAME' => '/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1447275260.214
+    'REQUEST_TIME' => 1447275260
+]
+2015-11-11 21:56:44 [::1][000][4hkregur1fr7t18kb5d42o6957][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Sublocal::Local' in C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('Local')
+#1 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\helpers\BaseArrayHelper.php(202): yii\db\BaseActiveRecord->__get('Local')
+#2 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\DataColumn.php(193): yii\helpers\BaseArrayHelper::getValue(Object(app\models\Sublocal), 'Local')
+#3 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\DataColumn.php(204): yii\grid\DataColumn->getDataCellValue(Object(app\models\Sublocal), 1, 0)
+#4 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\Column.php(108): yii\grid\DataColumn->renderDataCellContent(Object(app\models\Sublocal), 1, 0)
+#5 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(504): yii\grid\Column->renderDataCell(Object(app\models\Sublocal), 1, 0)
+#6 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(473): yii\grid\GridView->renderTableRow(Object(app\models\Sublocal), 1, 0)
+#7 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(344): yii\grid\GridView->renderTableBody()
+#8 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\widgets\BaseListView.php(151): yii\grid\GridView->renderItems()
+#9 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(313): yii\widgets\BaseListView->renderSection('{items}')
+#10 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(288): yii\widgets\BaseListView->run()
+#14 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Widget.php(98): yii\grid\GridView->run()
+#15 C:\xampp\htdocs\PAPS\yii2-app-basic\views\sublocal\index.php(33): yii\base\Widget::widget(Array)
+#16 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#17 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#18 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SublocalController))
+#19 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SublocalController))
+#20 C:\xampp\htdocs\PAPS\yii2-app-basic\controllers\SublocalController.php(56): yii\base\Controller->render('index', Array)
+#21 [internal function]: app\controllers\SublocalController->actionIndex()
+#22 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#23 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#24 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#25 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('sublocal/index', Array)
+#26 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 C:\xampp\htdocs\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#28 {main}
+2015-11-11 21:56:44 [::1][000][4hkregur1fr7t18kb5d42o6957][info][application] $_GET = [
+    'r' => 'sublocal/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '3db0524b09e3e67072f68c23bf268f29b97270efe20541938079ea78fb3265aca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"1AghqIueaumWyHQgiUyyPQpwP0aM3mZ-\";}'
+    'PHPSESSID' => '4hkregur1fr7t18kb5d42o6957'
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+    '__id' => '000'
+    '__captcha/site/captcha' => 'rfzzcal'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/PAPS/yii2-app-basic/web/index.php?r=local%2Fview&id=5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3db0524b09e3e67072f68c23bf268f29b97270efe20541938079ea78fb3265aca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221AghqIueaumWyHQgiUyyPQpwP0aM3mZ-%22%3B%7D; PHPSESSID=4hkregur1fr7t18kb5d42o6957; _identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\Windows\\System32;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;C:\\Windows\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59351'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=sublocal%2Findex'
+    'REQUEST_URI' => '/PAPS/yii2-app-basic/web/index.php?r=sublocal%2Findex'
+    'SCRIPT_NAME' => '/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1447275404.591
+    'REQUEST_TIME' => 1447275404
+]
+2015-11-11 22:01:00 [::1][000][4hkregur1fr7t18kb5d42o6957][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Sublocal::Local' in C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('Local')
+#1 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\helpers\BaseHtml.php(2029): yii\db\BaseActiveRecord->__get('Local')
+#2 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\helpers\BaseHtml.php(1649): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\Sublocal), 'Local')
+#3 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\helpers\BaseHtml.php(1495): yii\helpers\BaseHtml::activeListInput('dropDownList', Object(app\models\Sublocal), 'Local', Array, Array)
+#4 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\widgets\ActiveField.php(565): yii\helpers\BaseHtml::activeDropDownList(Object(app\models\Sublocal), 'Local', Array, Array)
+#5 C:\xampp\htdocs\PAPS\yii2-app-basic\views\sublocal\_form.php(17): yii\widgets\ActiveField->dropDownList(Array, Array)
+#6 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#8 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, NULL)
+#9 C:\xampp\htdocs\PAPS\yii2-app-basic\views\sublocal\update.php(20): yii\base\View->render('_form', Array)
+#10 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#12 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SublocalController))
+#13 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('update', Array, Object(app\controllers\SublocalController))
+#14 C:\xampp\htdocs\PAPS\yii2-app-basic\controllers\SublocalController.php(113): yii\base\Controller->render('update', Array)
+#15 [internal function]: app\controllers\SublocalController->actionUpdate('1')
+#16 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#17 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('update', Array)
+#19 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('sublocal/update', Array)
+#20 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\xampp\htdocs\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#22 {main}
+2015-11-11 22:01:00 [::1][000][4hkregur1fr7t18kb5d42o6957][info][application] $_GET = [
+    'r' => 'sublocal/update'
+    'id' => '1'
+]
+
+$_COOKIE = [
+    '_csrf' => '3db0524b09e3e67072f68c23bf268f29b97270efe20541938079ea78fb3265aca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"1AghqIueaumWyHQgiUyyPQpwP0aM3mZ-\";}'
+    'PHPSESSID' => '4hkregur1fr7t18kb5d42o6957'
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+    '__id' => '000'
+    '__captcha/site/captcha' => 'rfzzcal'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/PAPS/yii2-app-basic/web/index.php?r=sublocal%2Fview&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3db0524b09e3e67072f68c23bf268f29b97270efe20541938079ea78fb3265aca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221AghqIueaumWyHQgiUyyPQpwP0aM3mZ-%22%3B%7D; PHPSESSID=4hkregur1fr7t18kb5d42o6957; _identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\Windows\\System32;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;C:\\Windows\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59398'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=sublocal%2Fupdate&id=1'
+    'REQUEST_URI' => '/PAPS/yii2-app-basic/web/index.php?r=sublocal%2Fupdate&id=1'
+    'SCRIPT_NAME' => '/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1447275660.246
+    'REQUEST_TIME' => 1447275660
+]
+2015-11-11 22:05:38 [::1][000][4hkregur1fr7t18kb5d42o6957][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Sublocal::idSublocal' in C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('idSublocal')
+#1 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\helpers\BaseArrayHelper.php(202): yii\db\BaseActiveRecord->__get('idSublocal')
+#2 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\DataColumn.php(193): yii\helpers\BaseArrayHelper::getValue(Object(app\models\Sublocal), 'idSublocal')
+#3 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\DataColumn.php(204): yii\grid\DataColumn->getDataCellValue(Object(app\models\Sublocal), 1, 0)
+#4 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\Column.php(108): yii\grid\DataColumn->renderDataCellContent(Object(app\models\Sublocal), 1, 0)
+#5 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(504): yii\grid\Column->renderDataCell(Object(app\models\Sublocal), 1, 0)
+#6 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(473): yii\grid\GridView->renderTableRow(Object(app\models\Sublocal), 1, 0)
+#7 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(344): yii\grid\GridView->renderTableBody()
+#8 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\widgets\BaseListView.php(151): yii\grid\GridView->renderItems()
+#9 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(313): yii\widgets\BaseListView->renderSection('{items}')
+#10 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(288): yii\widgets\BaseListView->run()
+#14 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Widget.php(98): yii\grid\GridView->run()
+#15 C:\xampp\htdocs\PAPS\yii2-app-basic\views\sublocal\index.php(33): yii\base\Widget::widget(Array)
+#16 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#17 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#18 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SublocalController))
+#19 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SublocalController))
+#20 C:\xampp\htdocs\PAPS\yii2-app-basic\controllers\SublocalController.php(56): yii\base\Controller->render('index', Array)
+#21 [internal function]: app\controllers\SublocalController->actionIndex()
+#22 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#23 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#24 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#25 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('sublocal/index', Array)
+#26 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 C:\xampp\htdocs\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#28 {main}
+2015-11-11 22:05:38 [::1][000][4hkregur1fr7t18kb5d42o6957][info][application] $_GET = [
+    'r' => 'sublocal/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '3db0524b09e3e67072f68c23bf268f29b97270efe20541938079ea78fb3265aca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"1AghqIueaumWyHQgiUyyPQpwP0aM3mZ-\";}'
+    'PHPSESSID' => '4hkregur1fr7t18kb5d42o6957'
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+    '__id' => '000'
+    '__captcha/site/captcha' => 'rfzzcal'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/PAPS/yii2-app-basic/web/index.php?r=sublocal%2Fupdate&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3db0524b09e3e67072f68c23bf268f29b97270efe20541938079ea78fb3265aca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221AghqIueaumWyHQgiUyyPQpwP0aM3mZ-%22%3B%7D; PHPSESSID=4hkregur1fr7t18kb5d42o6957; _identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\Windows\\System32;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;C:\\Windows\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59432'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=sublocal%2Findex'
+    'REQUEST_URI' => '/PAPS/yii2-app-basic/web/index.php?r=sublocal%2Findex'
+    'SCRIPT_NAME' => '/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1447275938.586
+    'REQUEST_TIME' => 1447275938
+]
+2015-11-11 22:06:22 [::1][000][4hkregur1fr7t18kb5d42o6957][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Sublocal::Nom' in C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Component.php:143
+Stack trace:
+#0 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(247): yii\base\Component->__get('Nom')
+#1 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\helpers\BaseArrayHelper.php(202): yii\db\BaseActiveRecord->__get('Nom')
+#2 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\DataColumn.php(193): yii\helpers\BaseArrayHelper::getValue(Object(app\models\Sublocal), 'Nom')
+#3 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\DataColumn.php(204): yii\grid\DataColumn->getDataCellValue(Object(app\models\Sublocal), 1, 0)
+#4 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\Column.php(108): yii\grid\DataColumn->renderDataCellContent(Object(app\models\Sublocal), 1, 0)
+#5 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(504): yii\grid\Column->renderDataCell(Object(app\models\Sublocal), 1, 0)
+#6 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(473): yii\grid\GridView->renderTableRow(Object(app\models\Sublocal), 1, 0)
+#7 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(344): yii\grid\GridView->renderTableBody()
+#8 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\widgets\BaseListView.php(151): yii\grid\GridView->renderItems()
+#9 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(313): yii\widgets\BaseListView->renderSection('{items}')
+#10 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\widgets\BaseListView.php(126): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\widgets\BaseListView.php(129): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\grid\GridView.php(288): yii\widgets\BaseListView->run()
+#14 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Widget.php(98): yii\grid\GridView->run()
+#15 C:\xampp\htdocs\PAPS\yii2-app-basic\views\sublocal\index.php(33): yii\base\Widget::widget(Array)
+#16 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#17 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#18 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\SublocalController))
+#19 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('index', Array, Object(app\controllers\SublocalController))
+#20 C:\xampp\htdocs\PAPS\yii2-app-basic\controllers\SublocalController.php(56): yii\base\Controller->render('index', Array)
+#21 [internal function]: app\controllers\SublocalController->actionIndex()
+#22 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#23 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#24 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('index', Array)
+#25 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('sublocal/index', Array)
+#26 C:\xampp\htdocs\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 C:\xampp\htdocs\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#28 {main}
+2015-11-11 22:06:21 [::1][000][4hkregur1fr7t18kb5d42o6957][info][application] $_GET = [
+    'r' => 'sublocal/index'
+]
+
+$_COOKIE = [
+    '_csrf' => '3db0524b09e3e67072f68c23bf268f29b97270efe20541938079ea78fb3265aca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"1AghqIueaumWyHQgiUyyPQpwP0aM3mZ-\";}'
+    'PHPSESSID' => '4hkregur1fr7t18kb5d42o6957'
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => '/PAPS/yii2-app-basic/web/index.php?r=site%2Fcontact'
+    '__id' => '000'
+    '__captcha/site/captcha' => 'rfzzcal'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/PAPS/yii2-app-basic/web/index.php?r=sublocal%2Fupdate&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=3db0524b09e3e67072f68c23bf268f29b97270efe20541938079ea78fb3265aca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221AghqIueaumWyHQgiUyyPQpwP0aM3mZ-%22%3B%7D; PHPSESSID=4hkregur1fr7t18kb5d42o6957; _identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C:\\Program Files\\Java\\jdk1.8.0_45\\bin;C:\\Windows\\System32;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;%USERPROFILE%\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\;C:\\xampp\\php;C:\\ProgramData\\ComposerSetup\\bin;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Python27\\;C:\\Python27\\Scripts\\;C:\\Windows\\system32\\config\\systemprofile\\.dnx\\bin;C:\\Program Files\\Microsoft DNX\\Dnvm\\;C:\\Program Files (x86)\\Skype\\Phone\\'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Win32) OpenSSL/1.0.1l PHP/5.6.8'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '59442'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=sublocal%2Findex'
+    'REQUEST_URI' => '/PAPS/yii2-app-basic/web/index.php?r=sublocal%2Findex'
+    'SCRIPT_NAME' => '/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1447275981.621
+    'REQUEST_TIME' => 1447275981
+]

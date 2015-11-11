@@ -84,20 +84,20 @@ AppAsset::register($this);
             ['label' => 'Contact', 'url' => ['/site/contact']],
             ['label' => 'Locais', 
             'items' => [
-                    ['label' => 'Gerenciar Local', 'url' => ['/local/index']],
-                    ['label' => 'Gerenciar Sub-Local', 'url' => ['/sublocal/index']]]],
+                    ['label' => 'Gerenciar Locais', 'url' => ['/local/index']],
+                    ['label' => 'Gerenciar Sublocais', 'url' => ['/sublocal/index']]]],
 
             ['label' => 'Categorias', 'url' => ['/categoria/index']],
              ['label' => 'Usuário',
             'items' => [
-                 ['label' => 'Gerenciar Usuário', 'url' => ['/user/index']],
+                 ['label' => 'Gerenciar Usuários', 'url' => ['/user/index']],
                  ['label' => 'Gerenciar Tipos de Usuário ', 'url' => ['/tipousuario/index']]]],
             ['label' => 'Ocorrências',
             'items' => [
-                 ['label' => 'Gerenciar Ocorrência', 'url' => ['/ocorrencia/index']],
+                 ['label' => 'Gerenciar Ocorrências', 'url' => ['/ocorrencia/index']],
                  ['label' => 'Ocorrências Abertas', 'url' => ['/ocorrencia/index']],
                  ['label' => 'Registrar Ocorrências', 'url' => ['/ocorrencia/index']],
-                  ['label' => 'Natureza das Ocorrências', 'url' => ['/naturezaocorrencia/index']],
+                  ['label' => 'Natureza de Ocorrências', 'url' => ['/naturezaocorrencia/index']],
                  ['label' => 'Fechar Ocorrências ', 'url' => ['/ocorrencia/index']]]],
   
                      Yii::$app->user->isGuest ?

@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Sublocal */
 
-$this->title = 'Create Sublocal';
+$this->title = 'Criar Sublocal';
 $this->params['breadcrumbs'][] = ['label' => 'Sublocals', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

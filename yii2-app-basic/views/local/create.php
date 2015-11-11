@@ -7,7 +7,7 @@ use yii\helpers\Html;
 /* @var $model app\models\Local */
 
 $this->title = 'Novo Local';
-$this->params['breadcrumbs'][] = ['label' => 'Locals', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Locais', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="local-create">

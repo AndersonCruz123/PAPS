@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Sistema de Ocorrência de Segurança';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -79,8 +79,7 @@ margin:90px 10px;
              <a id="esqueciminhasenha" href="index.php?r=user%2Fforgot">Esqueci minha senha</a> 
             <img id="icomp"src=icomp.png width="100" height="50" / >
             <img id="ufam" src=ufam.png  width="50" height="50" / >
-            <h4>© ICOMP - Instituto de Computação</br>
-Desenvolvido no contexto da disciplina ICC410 - 2015/02<h4>
+            <h4>© SOS UFAM - Sistema de Ocorrência de Segurança UFAM</br><h4>
         
         
       </div>

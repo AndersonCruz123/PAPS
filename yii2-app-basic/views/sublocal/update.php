@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Sublocal */
 
-$this->title = 'Update Sublocal: ' . ' ' . $model->idSubLocal;
-$this->params['breadcrumbs'][] = ['label' => 'Sublocals', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->idSubLocal, 'url' => ['view', 'id' => $model->idSubLocal]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'Editar: ' . ' ' . $model->Nome;
+$this->params['breadcrumbs'][] = ['label' => 'Sublocais', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => $model->Nome, 'url' => ['view', 'id' => $model->idSubLocal]];
+$this->params['breadcrumbs'][] = 'Editar';
 ?>
 <div class="sublocal-update">
 

@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Sublocal */
 
-$this->title = $model->idSubLocal;
-$this->params['breadcrumbs'][] = ['label' => 'Sublocals', 'url' => ['index']];
+$this->title = $model->Nome;
+$this->params['breadcrumbs'][] = ['label' => 'Sublocais', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="sublocal-view">
@@ -15,11 +15,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->idSubLocal], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->idSubLocal], [
+        <?= Html::a('Editar', ['update', 'id' => $model->idSubLocal], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Deletar', ['delete', 'id' => $model->idSubLocal], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Você tem certeza que deseja deletar este item?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -28,7 +28,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'idSubLocal',
             'Nome',
             'idLocal',
         ],
