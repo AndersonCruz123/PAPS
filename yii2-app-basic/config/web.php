@@ -12,7 +12,7 @@ $config = [
                 'yii\bootstrap\BootstrapAsset' => [
                     'basePath' => '@webroot',
                     'baseUrl' => '@web',
-                    'css' => ['baseUrl/bootstrap.css']
+                    'css' => ['baseUrl/css/bootstrap.css']
                 ],
             ],
         ],
