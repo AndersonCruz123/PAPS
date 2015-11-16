@@ -45,7 +45,7 @@ class LoginForm extends Model
             $user = $this->getUser();
 
             if (!$user || !$user->validatesenha($this->senha)) {
-                $this->addError($attribute, 'Incorrect cpf or senha.');
+                $this->addError($attribute, 'CPF ou Senha incorretos.');
             }
         }
     }

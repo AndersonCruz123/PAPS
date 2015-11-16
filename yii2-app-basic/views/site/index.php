@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Sistema de Ocorrência de Segurança';
+$this->title = 'SOS UFAM - Sistema de Ocorrência de Segurança UFAM';
 ?>
 <!DOCTYPE html>
 <html lang="en">

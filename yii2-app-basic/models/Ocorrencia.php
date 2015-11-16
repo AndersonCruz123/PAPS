@@ -43,7 +43,7 @@ class Ocorrencia extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['status', 'data', 'hora', 'periodo', 'detalheLocal', 'descricao', 'idCategoria', 'idSubLocal', 'idNatureza', 'cpfUsuario'], 'required'],
+            [['status', 'data', 'hora', 'periodo', 'detalheLocal', 'descricao', 'idCategoria', 'idSubLocal', 'idNatureza', 'cpfUsuario'], 'required','message'=>'Este campo é obrigatório'],
             [['status', 'idCategoria', 'idSubLocal', 'idNatureza'], 'integer'],
             [['data', 'hora', 'dataConclusao'], 'safe'],
             [['descricao', 'procedimento'], 'string'],

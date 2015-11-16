@@ -32,7 +32,7 @@ class Denuncia extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['descricao', 'local', 'data', 'hora', 'status'], 'required'],
+            [['descricao', 'local', 'data', 'hora', 'status'], 'required','message'=>'Este campo é obrigatório'],
             [['descricao'], 'string'],
             [['data'], 'safe'],
             [['status'], 'integer'],
