@@ -30,7 +30,7 @@ class Sublocal extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Nome', 'idLocal'], 'required'],
+            [['Nome', 'idLocal'], 'required','message'=>'Este campo é obrigatório'],
             [['idLocal'], 'integer'],
             [['Nome'], 'string', 'max' => 20]
         ];

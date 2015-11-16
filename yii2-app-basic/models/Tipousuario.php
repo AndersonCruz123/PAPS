@@ -28,7 +28,7 @@ class Tipousuario extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['funcao'], 'required'],
+            [['funcao'], 'required','message'=>'Este campo é obrigatório'],
             [['funcao'], 'string', 'max' => 25]
         ];
     }
@@ -40,7 +40,7 @@ class Tipousuario extends \yii\db\ActiveRecord
     {
         return [
             'idTipo' => 'Id Tipo',
-            'funcao' => 'Funcao',
+            'funcao' => 'Função',
         ];
     }
 

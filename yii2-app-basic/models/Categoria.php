@@ -28,7 +28,7 @@ class Categoria extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['Nome'], 'required'],
+            [['Nome'], 'required','message'=>'Este campo é obrigatório'],
             [['Nome'], 'string', 'max' => 12]
         ];
     }

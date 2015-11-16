@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\OcorrenciaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Ocorrencias';
+$this->title = 'Ocorrências';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="ocorrencia-index">
@@ -25,7 +25,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'idOcorrencia',
             'status',
             'data',
             'hora',

@@ -5,9 +5,9 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Tipousuario */
 
-$this->title = 'Editar Tipo de usuário: ' . ' ' . $model->idTipo;
+$this->title = 'Editar:' . ' ' . $model->funcao;
 $this->params['breadcrumbs'][] = ['label' => 'Tipousuarios', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->idTipo, 'url' => ['view', 'id' => $model->idTipo]];
+$this->params['breadcrumbs'][] = ['label' => $model->funcao, 'url' => ['view', 'id' => $model->idTipo]];
 $this->params['breadcrumbs'][] = 'Editar';
 ?>
 <div class="tipousuario-update">

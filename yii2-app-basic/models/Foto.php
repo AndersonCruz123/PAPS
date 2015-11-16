@@ -32,7 +32,7 @@ class Foto extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['comentario', 'idOcorrencia', 'idDenuncia', 'endereco'], 'required'],
+            [['comentario', 'idOcorrencia', 'idDenuncia', 'endereco'], 'required','message'=>'Este campo é obrigatório'],
             [['idOcorrencia', 'idDenuncia'], 'integer'],
             [['comentario'], 'string', 'max' => 144],
             [['endereco'], 'string', 'max' => 150]
