@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'cpf',
             'email:email',
-            'senha',
+//            'senha',
             'idTipoUsuario',
         ],
     ]) ?>

@@ -80,8 +80,8 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
+//            ['label' => 'About', 'url' => ['/site/about']],
+ //           ['label' => 'Contact', 'url' => ['/site/contact']],
             ['label' => 'Locais', 
             'items' => [
                     ['label' => 'Gerenciar Locais', 'url' => ['/local/index']],
@@ -102,7 +102,8 @@ AppAsset::register($this);
   
                      Yii::$app->user->isGuest ?
                         ['label' => 'Login', 'url' => ['/site/login']] :
-                        ['label' => 'Logout (' . Yii::$app->user->identity->cpf . ')',
+            //            ['label' => 'Logout (' . Yii::$app->user->identity->cpf . ')',
+                            ['label' => 'Logout',
                             'url' => ['/site/logout'],
                             'linkOptions' => ['data-method' => 'post']],
                 ],
