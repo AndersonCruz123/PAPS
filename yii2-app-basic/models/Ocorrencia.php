@@ -40,10 +40,14 @@ class Ocorrencia extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+
+    public $idLocal;
+
+
     public function rules()
     {
         return [
-            [['status', 'data', 'hora', 'periodo', 'detalheLocal', 'descricao', 'idCategoria', 'idSubLocal', 'idNatureza', 'cpfUsuario'], 'required','message'=>'Este campo é obrigatório'],
+            [['status', 'data', 'hora', 'periodo', 'detalheLocal', 'descricao', 'idCategoria', 'idLocal', 'idSubLocal', 'idNatureza', 'cpfUsuario'], 'required','message'=>'Este campo é obrigatório'],
             [['status', 'idCategoria', 'idSubLocal', 'idNatureza'], 'integer'],
             [['data', 'hora', 'dataConclusao'], 'safe'],
             [['descricao', 'procedimento'], 'string'],
@@ -69,6 +73,7 @@ class Ocorrencia extends \yii\db\ActiveRecord
             'procedimento' => 'Procedimento',
             'dataConclusao' => 'Data de Conclusão',
             'idCategoria' => 'Categoria',
+            'idLocal' => 'Local',
             'idSubLocal' => 'Sublocal',
             'idNatureza' => 'Natureza da Ocorrência',
             'cpfUsuario' => 'CPF',
@@ -102,6 +107,12 @@ class Ocorrencia extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
+    public function getIdLocal0()
+    {
+        return $this->hasOne(local::className(), ['idLocal' => 'idLocal']);
+    }
+
+
     public function getIdSubLocal0()
     {
         return $this->hasOne(Sublocal::className(), ['idSubLocal' => 'idSubLocal']);

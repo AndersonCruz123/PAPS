@@ -68,6 +68,31 @@ class SublocalController extends Controller
         ]);
     }
 
+
+    public function actionLists($id){
+        $countSublocais = SubLocal::find()
+            ->where(['idLocal' => $id])
+            ->count();
+
+        $subLocal = Sublocal::find()
+            ->where(['idLocal' => $id])
+            ->all();
+
+        if($countSublocais > 0 ){
+            foreach ($subLocal as $branch) {
+                echo "<options value='".$branch->idSubLocal."'>".$branch->Nome."</options";
+            }
+
+        }else{
+            echo "<options> - </options>";
+
+        }
+
+
+    }
+
+
+
     /**
      * Creates a new Sublocal model.
      * If creation is successful, the browser will be redirected to the 'view' page.

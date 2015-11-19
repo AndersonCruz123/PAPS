@@ -88,6 +88,7 @@ AppAsset::register($this);
                     ['label' => 'Gerenciar Sublocais', 'url' => ['/sublocal/index']]]],
 
             ['label' => 'Categorias', 'url' => ['/categoria/index']],
+            ['label' => 'Denuncia', 'url' => ['/denuncia/index']],
              ['label' => 'Usuário',
             'items' => [
                  ['label' => 'Gerenciar Usuários', 'url' => ['/user/index']],
