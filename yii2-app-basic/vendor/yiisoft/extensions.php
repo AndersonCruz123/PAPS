@@ -66,4 +66,22 @@ return array (
       '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
     ),
   ),
+  '2amigos/yii2-editable-widget' => 
+  array (
+    'name' => '2amigos/yii2-editable-widget',
+    'version' => '0.1.3.0',
+    'alias' => 
+    array (
+      '@dosamigos/editable' => $vendorDir . '/2amigos/yii2-editable-widget',
+    ),
+  ),
+  '2amigos/yii2-date-picker-widget' => 
+  array (
+    'name' => '2amigos/yii2-date-picker-widget',
+    'version' => '0.1.0.0',
+    'alias' => 
+    array (
+      '@dosamigos/datepicker' => $vendorDir . '/2amigos/yii2-date-picker-widget',
+    ),
+  ),
 );

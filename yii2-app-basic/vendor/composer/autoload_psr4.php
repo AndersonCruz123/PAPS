@@ -15,6 +15,9 @@ return array(
     'yii\\codeception\\' => array($vendorDir . '/yiisoft/yii2-codeception'),
     'yii\\bootstrap\\' => array($vendorDir . '/yiisoft/yii2-bootstrap'),
     'yii\\' => array($vendorDir . '/yiisoft/yii2'),
+    'dosamigos\\editable\\' => array($vendorDir . '/2amigos/yii2-editable-widget'),
+    'dosamigos\\datepicker\\' => array($vendorDir . '/2amigos/yii2-date-picker-widget'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
+    'Symfony\\Component\\Process\\' => array($vendorDir . '/symfony/process'),
     'Faker\\' => array($vendorDir . '/fzaninotto/faker/src/Faker'),
 );
