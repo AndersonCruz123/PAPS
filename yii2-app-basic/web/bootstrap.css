@@ -1104,12 +1104,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #2E8B57;
+  color: black;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #23527c;
+  color:#EEE5DE;
   text-decoration: underline;
 }
 a:focus {
@@ -4764,7 +4764,9 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   content: "/\00a0";
 }
 .breadcrumb > .active {
-  color: black;
+  color: white;
+  font-size: 16px;
+  
 }
 .pagination {
   display: inline-block;

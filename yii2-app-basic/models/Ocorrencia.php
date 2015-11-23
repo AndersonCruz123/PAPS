@@ -3,7 +3,8 @@
 namespace app\models;
 
 use Yii;
-
+use yii\web\UploadedFile;
+use yii\base\Model;
 /**
  * This is the model class for table "ocorrencia".
  *
@@ -42,18 +43,24 @@ class Ocorrencia extends \yii\db\ActiveRecord
      */
 
     public $idLocal;
-
+    public $idSubLocalbkp;
+    public $idNaturezabkp;
+    public $idCategoriabkp;
+    public $imageFiles;
+    public $comentarioFoto;
 
     public function rules()
     {
         return [
-            [['status', 'data', 'hora', 'periodo', 'detalheLocal', 'descricao', 'idCategoria', 'idLocal', 'idSubLocal', 'idNatureza', 'cpfUsuario'], 'required','message'=>'Este campo é obrigatório'],
-            [['status', 'idCategoria', 'idSubLocal', 'idNatureza'], 'integer'],
+            [['status', 'data', 'hora', 'periodo', 'detalheLocal', 'descricao', 'idCategoria', 'idLocal', 'idSubLocal', 'idNatureza'], 'required','message'=>'Este campo é obrigatório'],
+            [['status', 'idCategoria', 'idNatureza', 'idLocal', 'idSubLocal'], 'integer'],
             [['data', 'hora', 'dataConclusao'], 'safe'],
             [['descricao', 'procedimento'], 'string'],
+            [['comentarioFoto'], 'string', 'max' => 500],            
             [['periodo'], 'string', 'max' => 6],
             [['detalheLocal'], 'string', 'max' => 120],
-            [['cpfUsuario'], 'string', 'max' => 12]
+            [['cpfUsuario'], 'string', 'max' => 12],
+            [['imageFiles'], 'file', 'extensions'=>'jpg, png, jpeg', 'maxFiles' => 4],
         ];
     }
 
@@ -63,7 +70,7 @@ class Ocorrencia extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idOcorrencia' => 'Id Ocorrencia',
+            'idOcorrencia' => 'Número da Ocorrencia',
             'status' => 'Status',
             'data' => 'Data',
             'hora' => 'Hora',
@@ -77,6 +84,8 @@ class Ocorrencia extends \yii\db\ActiveRecord
             'idSubLocal' => 'Sublocal',
             'idNatureza' => 'Natureza da Ocorrência',
             'cpfUsuario' => 'CPF',
+            'comentarioFoto' => 'Comentário das Fotos',
+            'imageFiles' => 'Clique abaixo e anexe até 4 fotos',
         ];
     }
 
@@ -125,4 +134,46 @@ class Ocorrencia extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Usuario::className(), ['cpf' => 'cpfUsuario']);
     }
+    public function afterFind(){
+        $this->idCategoriabkp = $this->idCategoria;
+    //    echo "Categoria bkp".$this->idCategoriabkp;
+        $this->idSubLocalbkp = $this->idSubLocal;
+        $this->idNaturezabkp = $this->idNatureza;
+        $sublocal = Sublocal::findOne($this->idSubLocal);
+        $this->idLocal = $sublocal->idLocal;
+
+        $this->idNatureza = Naturezaocorrencia::findOne($this->idNatureza)->Nome;
+        $this->idCategoria = Categoria::findOne($this->idCategoria)->Nome;
+
+        if ($this->status == 1){
+            $this->status = 'Aberto';
+        } elseif ($this->status == 2) {
+            $this->status = 'Solucionado';
+        } elseif ($this->status == 3) {
+            $this->status = 'Não Solucionado';
+        }
+
+        if ($this->periodo == 1){
+            $this->periodo = 'Manhã';
+        } elseif ($this->periodo == 2) {
+            $this->periodo = 'Tarde';
+        } elseif ($this->periodo == 3) {
+            $this->periodo = 'Noite';
+        } elseif ($this->periodo == 4) {
+            $this->periodo = 'Madrugada';
+        }
+
+    }
+
+    public function upload() {
+        if ($this->validate()) { 
+            foreach ($this->imageFiles as $file) {
+                $file->saveAs('/opt/lampp/htdocs/uploads/' . $file->baseName . '.' . $file->extension);
+                echo "error da foto em".$file->error;
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }    
 }

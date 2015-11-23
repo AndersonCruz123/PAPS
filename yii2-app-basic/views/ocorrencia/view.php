@@ -38,6 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'procedimento:ntext',
             'dataConclusao',
             'idCategoria',
+            'idLocal',
             'idSubLocal',
             'idNatureza',
             'cpfUsuario',

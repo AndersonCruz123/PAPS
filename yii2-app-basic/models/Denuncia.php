@@ -34,10 +34,9 @@ class Denuncia extends \yii\db\ActiveRecord
         return [
             [['descricao', 'local', 'data', 'hora', 'status'], 'required','message'=>'Este campo é obrigatório'],
             [['descricao'], 'string'],
-            [['data'], 'safe'],
+            [['data', 'hora'], 'safe'],
             [['status'], 'integer'],
             [['local'], 'string', 'max' => 254],
-            [['hora'], 'string', 'max' => 6]
         ];
     }
 
@@ -47,7 +46,7 @@ class Denuncia extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idDenuncia' => 'Id Denuncia',
+            'idDenuncia' => 'Número da Denuncia',
             'descricao' => 'Descricao',
             'local' => 'Local',
             'data' => 'Data',
@@ -62,5 +61,18 @@ class Denuncia extends \yii\db\ActiveRecord
     public function getFotos()
     {
         return $this->hasMany(Foto::className(), ['idDenuncia' => 'idDenuncia']);
+    }
+
+    public function afterFind(){
+
+        if ($this->status == 1){
+            $this->status = 'Não verificada';
+        } elseif ($this->status == 2) {
+            $this->status = 'Verdadeira';
+        } elseif ($this->status == 3) {
+            $this->status = 'Falsa';
+        }
+
+
     }
 }

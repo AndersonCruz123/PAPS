@@ -3,7 +3,8 @@
 namespace app\models;
 
 use Yii;
-
+use yii\web\UploadedFile;
+use yii\base\Model;
 /**
  * This is the model class for table "foto".
  *
@@ -32,10 +33,10 @@ class Foto extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['comentario', 'idOcorrencia', 'idDenuncia', 'endereco'], 'required','message'=>'Este campo é obrigatório'],
+            [['endereco'], 'required','message'=>'Este campo é obrigatório'],
             [['idOcorrencia', 'idDenuncia'], 'integer'],
-            [['comentario'], 'string', 'max' => 144],
-            [['endereco'], 'string', 'max' => 150]
+            [['comentario'], 'string', 'max' => 500],
+            [['endereco'], 'string', 'max' => 500]
         ];
     }
 

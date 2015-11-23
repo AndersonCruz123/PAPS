@@ -4,19 +4,19 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\UsuarioSearch */
+/* @var $searchModel app\models\OcorrenciaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Usuarios';
+$this->title = 'Ocorrências';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="usuario-index">
+<div class="ocorrencia-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Usuario', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Nova Ocorrência', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -24,11 +24,19 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
-            'cpf',
-            'email:email',
-            'senha',
-            'idTipoUsuario',
+            'idOcorrencia',
+            'status',
+            'data',
+            'hora',
+            'periodo',
+            // 'detalheLocal',
+            // 'descricao:ntext',
+            // 'procedimento:ntext',
+            // 'dataConclusao',
+             'idCategoria',
+            // 'idSubLocal',
+             'idNatureza',
+            // 'cpfUsuario',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

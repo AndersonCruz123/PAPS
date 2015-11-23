@@ -19,6 +19,8 @@ class Sublocal extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $idLocalbkp;
+    
     public static function tableName()
     {
         return 'sublocal';
@@ -64,6 +66,7 @@ class Sublocal extends \yii\db\ActiveRecord
         return $this->hasOne(Local::className(), ['idLocal' => 'idLocal']);
     }
     public function afterFind(){
+        $this->idLocalbkp = $this->idLocal;
         return $this->idLocal = Local::findOne($this->idLocal)->Nome;
     }
 }

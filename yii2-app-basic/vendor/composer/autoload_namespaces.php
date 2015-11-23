@@ -8,6 +8,4 @@ $baseDir = dirname($vendorDir);
 return array(
     'HTMLPurifier' => array($vendorDir . '/ezyang/htmlpurifier/library'),
     'Diff' => array($vendorDir . '/phpspec/php-diff/lib'),
-    'ComponentInstaller' => array($vendorDir . '/robloach/component-installer/src'),
-    'Assetic' => array($vendorDir . '/kriswallsmith/assetic/src'),
 );

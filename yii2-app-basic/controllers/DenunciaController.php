@@ -62,7 +62,9 @@ class DenunciaController extends Controller
     {
         $model = new Denuncia();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $model->status = 1;
+            if ($model->save())
             return $this->redirect(['view', 'id' => $model->idDenuncia]);
         } else {
             return $this->render('create', [
@@ -80,6 +82,10 @@ class DenunciaController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+
+        if (strcmp($model->status, 'Não verificada') == 0)$model->status = 1;
+        elseif (strcmp($model->status, 'Verdadeira') == 0)$model->status = 2;
+        elseif (strcmp($model->status, 'Falsa') == 0)$model->status = 3;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->idDenuncia]);

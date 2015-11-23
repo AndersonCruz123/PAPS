@@ -37,8 +37,8 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
             [['cpf', 'email', 'senha', 'idTipoUsuario'], 'required','message'=>'Este campo é obrigatório'],
             [['idTipoUsuario'], 'integer'],
             [['cpf'], 'string', 'max' => 11],
-            [['email'], 'string', 'max' => 110],
-            [['senha'], 'string', 'max' => 110]
+            [['email'], 'string', 'max' => 150],
+            [['senha'], 'string', 'max' => 80]
         ];
     }
 

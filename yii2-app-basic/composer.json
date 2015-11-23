@@ -21,7 +21,8 @@
         "baibaratsky/php-mailgun":"*",
         "yiisoft/yii2-jui": "^2.0",
         "2amigos/yii2-editable-widget": "*",
-        "2amigos/yii2-date-picker-widget": "*"
+        "2amigos/yii2-date-picker-widget": "*",
+        "kartik-v/yii2-widget-fileinput": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

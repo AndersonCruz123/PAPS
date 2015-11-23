@@ -88,23 +88,25 @@ AppAsset::register($this);
                     ['label' => 'Gerenciar Sublocais', 'url' => ['/sublocal/index']]]],
 
             ['label' => 'Categorias', 'url' => ['/categoria/index']],
-            ['label' => 'Denuncia', 'url' => ['/denuncia/index']],
-             ['label' => 'Usuário',
-            'items' => [
-                 ['label' => 'Gerenciar Usuários', 'url' => ['/user/index']],
-                 ['label' => 'Gerenciar Tipos de Usuário ', 'url' => ['/tipousuario/index']]]],
+            ['label' => 'Natureza de Ocorrências', 'url' => ['/naturezaocorrencia/index']],
+           ['label' => 'Denuncia', 'url' => ['/denuncia/index']],
             ['label' => 'Ocorrências',
             'items' => [
                  ['label' => 'Gerenciar Ocorrências', 'url' => ['/ocorrencia/index']],
-                 ['label' => 'Ocorrências Abertas', 'url' => ['/ocorrencia/index']],
-                 ['label' => 'Registrar Ocorrências', 'url' => ['/ocorrencia/index']],
-                  ['label' => 'Natureza de Ocorrências', 'url' => ['/naturezaocorrencia/index']],
-                 ['label' => 'Fechar Ocorrências ', 'url' => ['/ocorrencia/index']]]],
+                 ['label' => 'Ocorrências em Aberto', 'url' => ['/ocorrencia/emaberto']],
+                 ['label' => 'Registrar Ocorrência', 'url' => ['/ocorrencia/create']]]],
+//                 ['label' => 'Fechar Ocorrências ', 'url' => ['/ocorrencia/index']]]],
+             ['label' => 'Usuário',
+ 
+            'items' => [
+                 ['label' => 'Gerenciar Usuários', 'url' => ['/user/index']],
+                 ['label' => 'Gerenciar Tipos de Usuário ', 'url' => ['/tipousuario/index']]]],
+ 
   
                      Yii::$app->user->isGuest ?
-                        ['label' => 'Login', 'url' => ['/site/login']] :
+                        ['label' => 'Entrar', 'url' => ['/site/login']] :
             //            ['label' => 'Logout (' . Yii::$app->user->identity->cpf . ')',
-                            ['label' => 'Logout',
+                            ['label' => 'Sair',
                             'url' => ['/site/logout'],
                             'linkOptions' => ['data-method' => 'post']],
                 ],
@@ -122,7 +124,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; SOS-UFAM <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>

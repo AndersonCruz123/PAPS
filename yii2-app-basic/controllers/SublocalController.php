@@ -80,14 +80,13 @@ class SublocalController extends Controller
 
         if($countSublocais > 0 ){
             foreach ($subLocal as $branch) {
-                echo "<options value='".$branch->idSubLocal."'>".$branch->Nome."</options";
+                echo "<option value='".$branch->idSubLocal."'>".$branch->Nome."</option>";
             }
 
         }else{
-            echo "<options> - </options>";
+            echo "<options>Não possui sublocal</options>";
 
         }
-
 
     }
 

@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
+            'idOcorrencia',
             'status',
             'data',
             'hora',
@@ -33,9 +33,9 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'descricao:ntext',
             // 'procedimento:ntext',
             // 'dataConclusao',
-            // 'idCategoria',
+             'idCategoria',
             // 'idSubLocal',
-            // 'idNatureza',
+             'idNatureza',
             // 'cpfUsuario',
 
             ['class' => 'yii\grid\ActionColumn'],
