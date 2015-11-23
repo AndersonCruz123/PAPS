@@ -26,6 +26,8 @@ class OcorrenciaController extends Controller
 {
     public function behaviors()
     {
+
+    	if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Chefe de Segurança') {
         return [ 
         'access' => [
                 'class' => AccessControl::className(),
@@ -46,7 +48,31 @@ class OcorrenciaController extends Controller
                 ],
             ],
         ];
+    	}
+    	elseif(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Segurança Terceirizada') {
+        return [ 
+        'access' => [
+                'class' => AccessControl::className(),
+ //               'only' => ['create'],
+                'rules' => [
+                    [
+                        'actions' => ['create'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post'],
+                ],
+            ],
+        ];
+    	}
     }
+
     /**
      * Lists all Ocorrencia models.
      * @return mixed
