@@ -32,7 +32,7 @@ class OcorrenciaController extends Controller
                 'only' => ['create', 'index', 'update', 'emaberto'],
                 'rules' => [
                     [
-                        'actions' => ['create', 'index', 'update', 'emAberto'],
+                        'actions' => ['create', 'index', 'update', 'emaberto'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -131,7 +131,8 @@ class OcorrenciaController extends Controller
         if ($model->load(Yii::$app->request->post())) {
            $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
            $path = Yii::$app->basePath.'/web/uploadFoto/';
- 
+		   $model->cpfUsuario = Yii::$app->user->identity->cpf;
+
             if($model->save()){
      //       	if (count ($model->imageFiles) >= 1) {
            	    foreach ($model->imageFiles as $file) {
@@ -181,6 +182,8 @@ class OcorrenciaController extends Controller
         $model->idNatureza = $model->idNaturezabkp;
         $model->idSubLocal = $model->idSubLocalbkp;
         $model->idCategoria = $model->idCategoriabkp;
+
+		$model->cpfUsuario = Yii::$app->user->identity->cpf;
 
     	$sublocal = Sublocal::findOne($model->idSubLocal);
        	$model->idLocal = $sublocal->idLocalbkp;

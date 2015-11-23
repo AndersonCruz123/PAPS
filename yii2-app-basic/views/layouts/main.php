@@ -55,9 +55,9 @@ AppAsset::register($this);
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
-    ]);
+    ]); ?>
 
-  /*              $menuItems = [
+<?php  /*              $menuItems = [
                 ['label' => 'Home', 'url' => ['/site/index']],
                 ['label' => 'About', 'url' => ['/site/about']],
                 ['label' => 'Contact', 'url' => ['/site/contact']],
@@ -76,10 +76,12 @@ AppAsset::register($this);
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => $menuItems,
             ]);*/
+if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Chefe de Segurança') {
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
+
 //            ['label' => 'About', 'url' => ['/site/about']],
  //           ['label' => 'Contact', 'url' => ['/site/contact']],
             ['label' => 'Locais', 
@@ -112,6 +114,42 @@ AppAsset::register($this);
                 ],
             ]);
             NavBar::end();
+        } elseif (Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Segurança Terceirizada') {
+    	 echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-right'],
+        'items' => [
+            ['label' => 'Home', 'url' => ['/site/index']],
+
+            ['label' => 'Ocorrências',
+            'items' => [
+  //               ['label' => 'Gerenciar Ocorrências', 'url' => ['/ocorrencia/index']],
+//                 ['label' => 'Ocorrências em Aberto', 'url' => ['/ocorrencia/emaberto']],
+                 ['label' => 'Registrar Ocorrência', 'url' => ['/ocorrencia/create']]]],
+//                 ['label' => 'Fechar Ocorrências ', 'url' => ['/ocorrencia/index']]]], 
+  
+                     Yii::$app->user->isGuest ?
+                        ['label' => 'Entrar', 'url' => ['/site/login']] :
+            //            ['label' => 'Logout (' . Yii::$app->user->identity->cpf . ')',
+                            ['label' => 'Sair',
+                            'url' => ['/site/logout'],
+                            'linkOptions' => ['data-method' => 'post']],
+                ],
+            ]);
+            NavBar::end();
+
+
+        	# code...
+        } else {
+        	    echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-right'],
+        'items' => [
+            ['label' => 'Home', 'url' => ['/site/index']],
+                        ['label' => 'Entrar', 'url' => ['/site/login'],
+                            'linkOptions' => ['data-method' => 'post']],
+                ],
+            ]);
+            NavBar::end();
+        }
     ?>
 
     <div class="container">

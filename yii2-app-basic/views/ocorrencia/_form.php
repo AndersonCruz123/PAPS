@@ -101,9 +101,6 @@ use dosamigos\datepicker\DatePicker;
         ])->hint('Ano, mês, dia'); ?>
 
 
-   <?= 
-   $form->field ($model, 'cpfUsuario')->textInput(['value' => Yii::$app->user->identity->cpf]); ?>
-
   <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
     
   <?= $form->field($model, 'comentarioFoto')->textarea(['rows' => 3]) ?>
