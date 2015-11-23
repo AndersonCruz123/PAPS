@@ -46,6 +46,7 @@ class Ocorrencia extends \yii\db\ActiveRecord
     public $idSubLocalbkp;
     public $idNaturezabkp;
     public $idCategoriabkp;
+    public $cpfbkp;
     public $imageFiles;
     public $comentarioFoto;
 
@@ -83,7 +84,7 @@ class Ocorrencia extends \yii\db\ActiveRecord
             'idLocal' => 'Local',
             'idSubLocal' => 'Sublocal',
             'idNatureza' => 'Natureza da Ocorrência',
-            'cpfUsuario' => 'CPF',
+            'cpfUsuario' => 'Nome da última pessoa que atualizou a ocorrência',
             'comentarioFoto' => 'Comentário das Fotos',
             'imageFiles' => 'Clique abaixo e anexe até 4 fotos',
         ];
@@ -141,7 +142,9 @@ class Ocorrencia extends \yii\db\ActiveRecord
         $this->idNaturezabkp = $this->idNatureza;
         $sublocal = Sublocal::findOne($this->idSubLocal);
         $this->idLocal = $sublocal->idLocal;
+        $this->cpfbkp = $this->cpfUsuario;
 
+        $this->cpfUsuario = User::findOne($this->cpfUsuario)->nome;
         $this->idNatureza = Naturezaocorrencia::findOne($this->idNatureza)->Nome;
         $this->idCategoria = Categoria::findOne($this->idCategoria)->Nome;
 

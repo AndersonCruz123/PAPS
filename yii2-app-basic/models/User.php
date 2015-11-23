@@ -34,9 +34,10 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['cpf', 'email', 'senha', 'idTipoUsuario'], 'required','message'=>'Este campo é obrigatório'],
+            [['cpf', 'email', 'senha', 'idTipoUsuario', 'nome'], 'required','message'=>'Este campo é obrigatório'],
             [['idTipoUsuario'], 'integer'],
             [['cpf'], 'string', 'max' => 11],
+            [['nome'], 'string', 'max' => 300],
             [['email'], 'string', 'max' => 150],
             [['senha'], 'string', 'max' => 80]
         ];
