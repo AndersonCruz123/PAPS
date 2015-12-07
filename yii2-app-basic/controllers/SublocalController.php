@@ -87,7 +87,29 @@ class SublocalController extends Controller
             echo "<options>Não possui sublocal</options>";
 
         }
+    }
 
+    public function actionSublocalselected($idLocal, $idSublocal){
+        $countSublocais = SubLocal::find()
+            ->where(['idLocal' => $idLocal])
+            ->count();
+
+        $subLocal = Sublocal::find()
+            ->where(['idLocal' => $idLocal])
+            ->all();
+
+        if($countSublocais > 0 ){
+            foreach ($subLocal as $branch) {
+                if ($branch->idSubLocal == $idSublocal){
+                echo "<option value='".$branch->idSubLocal."' selected>".$branch->Nome."</option>";                    
+                } else 
+                echo "<option value='".$branch->idSubLocal."'>".$branch->Nome."</option>";
+            }
+
+        }else{
+            echo "<options>Não possui sublocal</options>";
+
+        }
     }
 
 

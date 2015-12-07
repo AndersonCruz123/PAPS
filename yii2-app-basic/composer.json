@@ -22,7 +22,10 @@
         "yiisoft/yii2-jui": "^2.0",
         "2amigos/yii2-editable-widget": "*",
         "2amigos/yii2-date-picker-widget": "*",
-        "kartik-v/yii2-widget-fileinput": "@dev"
+        "2amigos/yii2-date-time-picker-widget" : "~1.0",
+        "kartik-v/yii2-widget-fileinput": "@dev",
+        "kartik-v/yii2-widget-timepicker": "*",
+        "mpdf/mpdf": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

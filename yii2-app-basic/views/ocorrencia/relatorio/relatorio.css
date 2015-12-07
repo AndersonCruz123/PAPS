@@ -1,0 +1,27 @@
+  #cabecalho{
+              position: absolute; 
+              margin-left: 16px; /* posiciona a 90px para a esquerda */ 
+              top: 121px; /* posiciona a 70px para baixo */
+
+            }
+
+  #foto1, #foto2, #foto3, #foto4{
+              position: relative; /*PODE SER ABSOLUTE AINDA NAO SEI DIREITO*/
+              margin-left: 80px; /* posiciona a 90px para a esquerda */ 
+              margin-top: 20px; /* posiciona a 70px para baixo */
+			  width:550; 
+			  height: 440;
+            }           
+
+   #data{
+   		font-size: 10pt;
+   }         
+p{
+	font-size: 13pt;
+
+}
+ h5{
+
+
+ 	color: red;
+ }

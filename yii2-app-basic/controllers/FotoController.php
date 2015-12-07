@@ -8,7 +8,7 @@ use app\models\FotoSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use app\controllers\FotoController;
 /**
  * FotoController implements the CRUD actions for Foto model.
  */
@@ -117,5 +117,12 @@ class FotoController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+
+  public function getFotoOcorrencia($id)
+    {
+        $foto = Foto::findAll (['idOcorrencia' => $id]);
+        return $foto;        
     }
 }

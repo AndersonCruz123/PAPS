@@ -19,6 +19,8 @@ use app\models\Sublocal;
 use app\models\Categoria;
 use yii\web\UploadedFile;
 use app\models\Foto;
+use app\controllers\FotoController;
+use mPDF;
 /**
  * OcorrenciaController implements the CRUD actions for Ocorrencia model.
  */
@@ -136,10 +138,15 @@ class OcorrenciaController extends Controller
     	$model->idLocal = $sublocal->idLocal;
     	$model->idCategoria = $categoria->Nome;*/
 
-    	$sublocal = Sublocal::findOne($model->idSubLocal);
-       	$model->idSubLocal = $sublocal->Nome;
+    	$sublocal = Sublocal::findOne($model->idSubLocalbkp);
+       	//$model->idSubLocal = $sublocal->Nome;
        	$model->idLocal = $sublocal->idLocal;
 
+        $foto = FotoController::getFotoOcorrencia($model->idOcorrencia);
+ 		if ($foto != null) {
+ 		$model->comentarioFoto = $foto[0]->comentario;
+        $model->fotos = $foto;
+    	}
         return $this->render('view', [
             'model' => $model,
         ]);
@@ -166,7 +173,7 @@ class OcorrenciaController extends Controller
            			$foto->idOcorrencia = $model->idOcorrencia;
            			$foto->comentario = $model->comentarioFoto;
            			$foto->endereco = $path . $file->baseName . '.' . $file->extension;
-
+           			$foto->nome = $file->baseName . '.' . $file->extension;
            			$file->saveAs( $foto->endereco);
                 	
                 	$foto->save();
@@ -211,7 +218,7 @@ class OcorrenciaController extends Controller
 
 		$model->cpfUsuario = Yii::$app->user->identity->cpf;
 
-    	$sublocal = Sublocal::findOne($model->idSubLocal);
+    	$sublocal = Sublocal::findOne($model->idSubLocalbkp);
        	$model->idLocal = $sublocal->idLocalbkp;
 
         if ($model->load(Yii::$app->request->post())) {
@@ -224,8 +231,10 @@ class OcorrenciaController extends Controller
            	    	$foto = new Foto();
            			$foto->idOcorrencia = $model->idOcorrencia;
            			$foto->comentario = $model->comentarioFoto;
+           			
            			$foto->endereco = $path . $file->baseName . '.' . $file->extension;
 
+					$foto->nome = $file->baseName . '.' . $file->extension;
            			$file->saveAs( $foto->endereco);
                 	
                 	$foto->save();
@@ -272,5 +281,161 @@ class OcorrenciaController extends Controller
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
+    }
+
+    public function actionPrintocorrencia($id)
+    {
+        $model = $this->findModel($id);
+    	$sublocal = Sublocal::findOne($model->idSubLocal);
+    	//$mode->idSubLocal = $sublocal->Nome;
+         $mpdf = new mPDF('',    // mode - default ''
+        '',    // format - A4, for example, default ''
+        0,     // font size - default 0
+        '',    // default font family
+        15,    // margin_left
+ 15,    // margin right
+ 16,     // margin top
+ 16,    // margin bottom
+ 9,     // margin header
+ 9,     // margin footer
+
+ 'L');
+
+		$stylesheet = file_get_contents("./../views/ocorrencia/relatorio/relatorio.css");
+
+ 		$mpdf->WriteHTML($stylesheet,1);
+    
+        $foto = FotoController::getFotoOcorrencia($model->idOcorrencia);
+ 		if ($foto != null) {
+	 		$model->comentarioFoto = $foto[0]->comentario;
+    	    $model->fotos = $foto;
+    	}
+
+    	if($model->procedimento == null) $model->procedimento = "Não informado";
+    	if($model->dataConclusao == null) $model->dataConclusao = "Não informado";
+
+		$tam = sizeof($model->fotos);
+		$date = date("d/m/Y H:i:s ");
+
+		if ($tam==0) {
+      	  $html = "
+        	<img id='cabecalho' src='./../views/ocorrencia/relatorio/figura.png'/>
+     		<span id='data'><b>Gerado em: ".$date."</b></span> 
+        	<h2> 1. Número da Ocorrencia: ".$model->idOcorrencia. "</h2>
+        	<h2> 2. Status:</h2> <p>".$model->status. "</p>
+        	<h2> 3. Categoria da Ocorrência:</h2> <p>".$model->idCategoria. "</p>
+        	<h2> 4. Natureza da Ocorrência:</h2> <p>".$model->idNatureza. "</p>
+        	<h2> 5. Data do acontecimento da ocorrência:</h2> <p>".$model->data. "</p>
+        	<h2> 6. Hora do acontecimento da ocorrência:</h2> <p>".$model->hora. "</p>
+      	 	<h2> 7. Local:</h2> <p>".$model->idLocal. "</p>
+      		<h2> 8. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
+       		<h2> 9. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
+        	<h2> 10. Descrição:</h2>  <p>".$model->descricao. "</p>
+        	<h2> 11. Procedimento:</h2> <p>".$model->procedimento. "</p> 
+        	<h2> 12. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
+	        ";
+	    }
+
+		if ($tam==1) {
+      	  $html = "
+        	<img id='cabecalho' src='./../views/ocorrencia/relatorio/figura.png'/>
+     		<span id='data'><b>Gerado em: ".$date."</b></span> 
+        	<h2> 1. Número da Ocorrencia: ".$model->idOcorrencia. "</h2>
+        	<h2> 2. Status:</h2> <p>".$model->status. "</p>
+        	<h2> 3. Categoria da Ocorrência:</h2> <p>".$model->idCategoria. "</p>
+        	<h2> 4. Natureza da Ocorrência:</h2> <p>".$model->idNatureza. "</p>
+        	<h2> 5. Data do acontecimento da ocorrência:</h2> <p>".$model->data. "</p>
+        	<h2> 6. Hora do acontecimento da ocorrência:</h2> <p>".$model->hora. "</p>
+      	 	<h2> 7. Local:</h2> <p>".$model->idLocal. "</p>
+      		<h2> 8. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
+       		<h2> 9. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
+        	<h2> 10. Descrição:</h2>  <p>".$model->descricao. "</p>
+        	<h2> 11. Procedimento:</h2> <p>".$model->procedimento. "</p> 
+        	<h2> 12. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
+        	<h2> 13. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
+        	<h2> 14. Foto:</h2>
+        	<img id='foto1' src='./../web/uploadFoto/".$model->fotos[0]->nome."' alt='".$model->fotos[0]->nome."'/>
+        	"	        
+	        ;
+	    }
+
+		else if ($tam==2) {
+      	  $html = "
+        	<img id='cabecalho' src='./../views/ocorrencia/relatorio/figura.png'/>
+     		<span id='data'><b>Gerado em: ".$date."</b></span> 
+        	<h2> 1. Número da Ocorrencia: ".$model->idOcorrencia. "</h2>
+        	<h2> 2. Status:</h2> <p>".$model->status. "</p>
+        	<h2> 3. Categoria da Ocorrência:</h2> <p>".$model->idCategoria. "</p>
+        	<h2> 4. Natureza da Ocorrência:</h2> <p>".$model->idNatureza. "</p>
+        	<h2> 5. Data do acontecimento da ocorrência:</h2> <p>".$model->data. "</p>
+        	<h2> 6. Hora do acontecimento da ocorrência:</h2> <p>".$model->hora. "</p>
+      	 	<h2> 7. Local:</h2> <p>".$model->idLocal. "</p>
+      		<h2> 8. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
+       		<h2> 9. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
+        	<h2> 10. Descrição:</h2>  <p>".$model->descricao. "</p>
+        	<h2> 11. Procedimento:</h2> <p>".$model->procedimento. "</p> 
+        	<h2> 12. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
+        	<h2> 13. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
+        	<h2> 14. Fotos:</h2>
+        	<img id='foto1' src='./../web/uploadFoto/".$model->fotos[0]->nome."' alt='".$model->fotos[0]->nome."'/>
+        	<img id='foto2' src='./../web/uploadFoto/".$model->fotos[1]->nome."' alt='".$model->fotos[1]->nome."'/>
+        	"	        
+	        ;
+	    }
+
+		else if ($tam==3) {
+      	  $html = "
+        	<img id='cabecalho' src='./../views/ocorrencia/relatorio/figura.png'/>
+     		<span id='data'><b>Gerado em: ".$date."</b></span> 
+        	<h2> 1. Número da Ocorrencia: ".$model->idOcorrencia. "</h2>
+        	<h2> 2. Status:</h2> <p>".$model->status. "</p>
+        	<h2> 3. Categoria da Ocorrência:</h2> <p>".$model->idCategoria. "</p>
+        	<h2> 4. Natureza da Ocorrência:</h2> <p>".$model->idNatureza. "</p>
+        	<h2> 5. Data do acontecimento da ocorrência:</h2> <p>".$model->data. "</p>
+        	<h2> 6. Hora do acontecimento da ocorrência:</h2> <p>".$model->hora. "</p>
+      	 	<h2> 7. Local:</h2> <p>".$model->idLocal. "</p>
+      		<h2> 8. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
+       		<h2> 9. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
+        	<h2> 10. Descrição:</h2>  <p>".$model->descricao. "</p>
+        	<h2> 11. Procedimento:</h2> <p>".$model->procedimento. "</p> 
+        	<h2> 12. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
+        	<h2> 13. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
+        	<h2> 14. Fotos:</h2>
+        	<img id='foto1' src='./../web/uploadFoto/".$model->fotos[0]->nome."' alt='".$model->fotos[0]->nome."'/>
+        	<img id='foto2' src='./../web/uploadFoto/".$model->fotos[1]->nome."' alt='".$model->fotos[1]->nome."'/>
+        	<img id='foto3' src='./../web/uploadFoto/".$model->fotos[2]->nome."' alt='".$model->fotos[2]->nome."'/>
+        	"	        
+	        ;
+	    }
+
+		else if ($tam==4) {
+      	  $html = "
+        	<img id='cabecalho' src='./../views/ocorrencia/relatorio/figura.png'/>
+     		<span id='data'><b>Gerado em: ".$date."</b></span> 
+        	<h2> 1. Número da Ocorrencia: ".$model->idOcorrencia. "</h2>
+        	<h2> 2. Status:</h2> <p>".$model->status. "</p>
+        	<h2> 3. Categoria da Ocorrência:</h2> <p>".$model->idCategoria. "</p>
+        	<h2> 4. Natureza da Ocorrência:</h2> <p>".$model->idNatureza. "</p>
+        	<h2> 5. Data do acontecimento da ocorrência:</h2> <p>".$model->data. "</p>
+        	<h2> 6. Hora do acontecimento da ocorrência:</h2> <p>".$model->hora. "</p>
+      	 	<h2> 7. Local:</h2> <p>".$model->idLocal. "</p>
+      		<h2> 8. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
+       		<h2> 9. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
+        	<h2> 10. Descrição:</h2>  <p>".$model->descricao. "</p>
+        	<h2> 11. Procedimento:</h2> <p>".$model->procedimento. "</p> 
+        	<h2> 12. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
+        	<h2> 13. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
+        	<h2> 14. Fotos:</h2>
+        	<img id='foto1' src='./../web/uploadFoto/".$model->fotos[0]->nome."' alt='".$model->fotos[0]->nome."'/>
+        	<img id='foto2' src='./../web/uploadFoto/".$model->fotos[1]->nome."' alt='".$model->fotos[1]->nome."'/>
+        	<img id='foto3' src='./../web/uploadFoto/".$model->fotos[2]->nome."' alt='".$model->fotos[2]->nome."'/>
+        	<img id='foto4' src='./../web/uploadFoto/".$model->fotos[3]->nome."' alt='".$model->fotos[3]->nome."'/>
+        	"	        
+	        ;
+	    }
+
+		$mpdf->WriteHTML($html);
+		$mpdf->Output();
+        exit;
     }
 }
