@@ -2,6 +2,8 @@
 
 namespace app\models;
 
+use yii\base\Model;
+use yii\web\UploadedFile;
 use Yii;
 
 /**
@@ -29,6 +31,8 @@ class Denuncia extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $imageFiles;
+
     public function rules()
     {
         return [
@@ -37,6 +41,7 @@ class Denuncia extends \yii\db\ActiveRecord
             [['data', 'hora'], 'safe'],
             [['status'], 'integer'],
             [['local'], 'string', 'max' => 254],
+            [['imageFiles'], 'file', 'extensions'=>'jpg, png, jpeg', 'maxFiles' => 4],
         ];
     }
 
@@ -52,6 +57,7 @@ class Denuncia extends \yii\db\ActiveRecord
             'data' => 'Data',
             'hora' => 'Hora',
             'status' => 'Status',
+            'imageFiles' => 'Clique abaixo e anexe até 4 fotos',
         ];
     }
 
@@ -75,4 +81,17 @@ class Denuncia extends \yii\db\ActiveRecord
 
 
     }
+
+    public function upload() {
+        if ($this->validate()) { 
+            foreach ($this->imageFiles as $file) {
+                $file->saveAs('/opt/lampp/htdocs/uploads/' . $file->baseName . '.' . $file->extension);
+                echo "error da foto em".$file->error;
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }    
+
 }

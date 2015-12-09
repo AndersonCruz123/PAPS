@@ -105,12 +105,14 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
                  ['label' => 'Gerenciar Tipos de Usuário ', 'url' => ['/tipousuario/index']]]],
  
   
-                     Yii::$app->user->isGuest ?
+                Yii::$app->user->isGuest ?
                         ['label' => 'Entrar', 'url' => ['/site/login']] :
             //            ['label' => 'Logout (' . Yii::$app->user->identity->cpf . ')',
                             ['label' => 'Sair',
-                            'url' => ['/site/logout'],
-                            'linkOptions' => ['data-method' => 'post']],
+                        'items' => [
+                            ['label' => 'Alterar senha ', 'url' => ['/user/alterarsenha']],        
+                            ['label' => 'Logout', 'url' => ['/site/logout'],
+                            'linkOptions' => ['data-method' => 'post']]]],
                 ],
             ]);
             NavBar::end();

@@ -208,6 +208,47 @@ class UserController extends Controller
             ]);        
         }
     }
+    public function actionAlterarsenha()
+    {
+        $model = $this->findModel(Yii::$app->user->identity->cpf);
+        
+        $cpf = $model->cpf;
+        $funcao = $model->idTipoUsuario;
+        $email = $model->email; 
+        $model->senha = "";
+        
+        if ($model->load(Yii::$app->request->post())) {
+   /*         echo "senha".$model->senha;
+            echo "cpf".$model->cpf;
+            echo "idTipoUsuario".$model->idTipoUsuario;
+            echo "email".$model->email;*/
+            if (strcmp($model->senha, $model->confirmarSenha) == 0){
+            $model->cpf = $cpf;
+            $model->idTipoUsuario = $funcao;
 
+               if (strcmp($model->idTipoUsuario, 'Chefe de Segurança') == 0)$model->idTipoUsuario = 1;
+              elseif (strcmp($model->idTipoUsuario, 'Segurança Terceirizada') == 0)$model->idTipoUsuario = 2;
+ 
+                $model->email = $email;
+
+
+                $model->save();
+              
+                $arraytiposusuario=ArrayHelper::map(TipousuarioSearch::find()->all(),'idTipo','funcao');
+                return $this->redirect(['view', 'id' => $model->cpf, 'arraytiposusuario' => $arraytiposusuario]);
+            }else {
+                    return $this->render('_formalterarsenha', [
+                    'model' => $model,
+                    
+                ]);     
+            }
+         }
+         else {
+                return $this->render('_formalterarsenha', [
+                    'model' => $model,
+                    
+                ]);
+        }
+    }
 
 }

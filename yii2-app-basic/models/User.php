@@ -28,13 +28,16 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         return 'user';
     }
 
+    public $confirmarSenha;
+    public $novaSenha;
+
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['cpf', 'email', 'senha', 'idTipoUsuario', 'nome'], 'required','message'=>'Este campo é obrigatório'],
+            [['cpf', 'email', 'senha', 'confirmarSenha', 'idTipoUsuario', 'nome'], 'required','message'=>'Este campo é obrigatório'],
             [['idTipoUsuario'], 'integer'],
             [['cpf'], 'string', 'max' => 11],
             [['nome'], 'string', 'max' => 300],
@@ -52,6 +55,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
             'cpf' => 'CPF',
             'email' => 'Email',
             'senha' => 'Senha',
+            'confirmarSenha' => 'Confirmar Senha',
             'idTipoUsuario' => 'Tipo de Usuário',
         ];
     }

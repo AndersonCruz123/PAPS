@@ -8,6 +8,8 @@ use app\models\DenunciaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
+use app\models\Foto;
 
 /**
  * DenunciaController implements the CRUD actions for Denuncia model.
@@ -63,9 +65,31 @@ class DenunciaController extends Controller
         $model = new Denuncia();
 
         if ($model->load(Yii::$app->request->post())) {
-            $model->status = 1;
-            if ($model->save())
-            return $this->redirect(['view', 'id' => $model->idDenuncia]);
+           $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
+           $path = Yii::$app->basePath.'/web/uploadFoto/';
+           $cpfUsuario = Yii::$app->user->identity->cpf;
+
+
+            if($model->save()){
+     //         if (count ($model->imageFiles) >= 1) {
+                /*foreach ($model->imageFiles as $file) {
+                    $foto = new Foto();
+                    $foto->idDenuncia = $model->idDenuncia;
+                    $foto->endereco = $path . $file->baseName . '.' . $file->extension;
+                    $foto->nome = $file->baseName . '.' . $file->extension;
+
+                    $file->saveAs( $foto->endereco);
+                    
+                    $foto->save();
+
+                    $foto = null;
+                    }*/
+             //   }
+                return $this->redirect(['view', 'id' => $model->idDenuncia]);
+            } else {
+              //  echo "error da foto em".$image->error;
+            }
+      
         } else {
             return $this->render('create', [
                 'model' => $model,
