@@ -96,7 +96,8 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
             'items' => [
                  ['label' => 'Gerenciar Ocorrências', 'url' => ['/ocorrencia/index']],
                  ['label' => 'Ocorrências em Aberto', 'url' => ['/ocorrencia/emaberto']],
-                 ['label' => 'Registrar Ocorrência', 'url' => ['/ocorrencia/create']]]],
+                 ['label' => 'Registrar Ocorrência', 'url' => ['/ocorrencia/create']],
+                 ['label' => 'Gerar Relatórios', 'url' => ['/ocorrencia/relatorio']]]],
 //                 ['label' => 'Fechar Ocorrências ', 'url' => ['/ocorrencia/index']]]],
              ['label' => 'Usuário',
  
