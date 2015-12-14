@@ -43586,3 +43586,596 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1450026184.684
     'REQUEST_TIME' => 1450026184
 ]
+2015-12-14 19:33:39 [::1][-][-][warning][yii\web\User::loginByCookie] Invalid auth key attempted for user '000': 000100
+    in C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\views\layouts\main.php:79
+    in C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\controllers\SiteController.php:54
+2015-12-14 19:33:39 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/PAPS1/PAPS/yii2-app-basic/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef; _identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '62873'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/PAPS1/PAPS/yii2-app-basic/web/'
+    'SCRIPT_NAME' => '/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1450118019.075
+    'REQUEST_TIME' => 1450118019
+]
+2015-12-14 19:34:30 [::1][-][-][warning][yii\web\User::loginByCookie] Invalid auth key attempted for user '000': 000100
+    in C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\controllers\SiteController.php:59
+2015-12-14 19:34:30 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'LjRGVVAxQTRGTg0xGXl4fHkNDTcVCDN2XE4AICEHLVxgYjcaE34DDA=='
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+    '_csrf' => 'b8dcb54827fe1cc2cefcc35112347d6b681460178c2896a1d83e640fc2180a7fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hzKdIH9HW9KbE9rBrzFuq6lhNVqOCOB8\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '66'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/PAPS1/PAPS/yii2-app-basic/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef; _identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D; _csrf=b8dcb54827fe1cc2cefcc35112347d6b681460178c2896a1d83e640fc2180a7fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hzKdIH9HW9KbE9rBrzFuq6lhNVqOCOB8%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '62881'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/PAPS1/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1450118069.987
+    'REQUEST_TIME' => 1450118069
+]
+2015-12-14 19:34:38 [::1][000][-][warning][yii\web\User::loginByCookie] Invalid auth key attempted for user '000': 000100
+    in C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\controllers\SiteController.php:59
+2015-12-14 19:34:38 [::1][000][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'TmsuWUVaenYmEWU9DBJDPhlSZTsAYwg0PBFoLDRsFh4APV8WBhU4Tg=='
+    'LoginForm' => [
+        'cpf' => '000'
+        'senha' => 'teste'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+    '_csrf' => 'b8dcb54827fe1cc2cefcc35112347d6b681460178c2896a1d83e640fc2180a7fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hzKdIH9HW9KbE9rBrzFuq6lhNVqOCOB8\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '000'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '186'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/PAPS1/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef; _identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D; _csrf=b8dcb54827fe1cc2cefcc35112347d6b681460178c2896a1d83e640fc2180a7fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hzKdIH9HW9KbE9rBrzFuq6lhNVqOCOB8%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '62889'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/PAPS1/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1450118078.344
+    'REQUEST_TIME' => 1450118078
+]
+2015-12-14 19:35:20 [::1][000][r7jfe20gdosuui46cpjuan7rr4][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'The table does not exist: relatorio' in C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\ActiveRecord.php:298
+Stack trace:
+#0 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\ActiveRecord.php(327): yii\db\ActiveRecord::getTableSchema()
+#1 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(422): yii\db\ActiveRecord->attributes()
+#2 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(241): yii\db\BaseActiveRecord->hasAttribute('isNewRecord')
+#3 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\views\ocorrencia\_relatorio.php(85): yii\db\BaseActiveRecord->__get('isNewRecord')
+#4 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#6 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, NULL)
+#7 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\views\ocorrencia\relatorio.php(19): yii\base\View->render('_relatorio', Array)
+#8 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#10 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(app\controllers\OcorrenciaController))
+#11 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(371): yii\base\View->render('relatorio', Array, Object(app\controllers\OcorrenciaController))
+#12 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\controllers\OcorrenciaController.php(930): yii\base\Controller->render('relatorio', Array)
+#13 [internal function]: app\controllers\OcorrenciaController->actionRelatorio()
+#14 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#15 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('relatorio', Array)
+#17 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('ocorrencia/rela...', Array)
+#18 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#20 {main}
+2015-12-14 19:35:18 [::1][000][r7jfe20gdosuui46cpjuan7rr4][info][application] $_GET = [
+    'r' => 'ocorrencia/relatorio'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+    '_csrf' => 'b8dcb54827fe1cc2cefcc35112347d6b681460178c2896a1d83e640fc2180a7fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hzKdIH9HW9KbE9rBrzFuq6lhNVqOCOB8\";}'
+    'PHPSESSID' => 'r7jfe20gdosuui46cpjuan7rr4'
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '000'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36'
+    'HTTP_REFERER' => 'http://localhost/PAPS1/PAPS/yii2-app-basic/web/index.php?r=categoria%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef; _csrf=b8dcb54827fe1cc2cefcc35112347d6b681460178c2896a1d83e640fc2180a7fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hzKdIH9HW9KbE9rBrzFuq6lhNVqOCOB8%22%3B%7D; PHPSESSID=r7jfe20gdosuui46cpjuan7rr4; _identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '62921'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=ocorrencia%2Frelatorio'
+    'REQUEST_URI' => '/PAPS1/PAPS/yii2-app-basic/web/index.php?r=ocorrencia%2Frelatorio'
+    'SCRIPT_NAME' => '/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1450118118.075
+    'REQUEST_TIME' => 1450118118
+]
+2015-12-14 19:37:40 [::1][-][shpvs356jl1afp798jl3lho7p4][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1130] Host 'localhost' is not allowed to connect to this MariaDB server' in C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#5 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#6 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#8 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\Schema.php(146): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#10 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\ActiveRecord.php(294): yii\db\Schema->getTableSchema('<span class="st...')
+#11 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\ActiveRecord.php(317): yii\db\ActiveRecord::getTableSchema()
+#12 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\ActiveRecord.php(176): yii\db\ActiveRecord::primaryKey()
+#13 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveRecord::findByCondition('<span class="st...')
+#14 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\models\User.php(66): yii\db\BaseActiveRecord::findOne('<span class="st...')
+#15 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\models\LoginForm.php(73): app\models\User::findByCpf('<span class="st...')
+#16 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\models\LoginForm.php(45): app\models\LoginForm->getUser()
+#17 [internal function]: app\models\LoginForm->validatesenha('<span class="st...', '<span class="ke...')
+#18 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#19 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\validators\Validator.php(240): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), '<span class="st...')
+#20 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Model.php(352): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), '[<span class="s...')
+#21 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\models\LoginForm.php(59): yii\base\Model->validate()
+#22 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\controllers\SiteController.php(64): app\models\LoginForm->login()
+#23 [internal function]: app\controllers\SiteController->actionLogin()
+#24 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#25 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#26 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#27 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#28 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#29 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#30 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1130] Host 'localhost' is not allowed to connect to this MariaDB server' in C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\Command.php(216): yii\db\Connection->getSlavePdo()
+#3 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\Command.php(831): yii\db\Command->prepare('<span class="ke...')
+#4 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\Command.php(359): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\mysql\Schema.php(198): yii\db\Command->queryAll()
+#6 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\mysql\Schema.php(97): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\Schema.php(146): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#8 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\ActiveRecord.php(294): yii\db\Schema->getTableSchema('<span class="st...')
+#9 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\ActiveRecord.php(317): yii\db\ActiveRecord::getTableSchema()
+#10 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\ActiveRecord.php(176): yii\db\ActiveRecord::primaryKey()
+#11 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\db\BaseActiveRecord.php(102): yii\db\ActiveRecord::findByCondition('<span class="st...')
+#12 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\models\User.php(66): yii\db\BaseActiveRecord::findOne('<span class="st...')
+#13 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\models\LoginForm.php(73): app\models\User::findByCpf('<span class="st...')
+#14 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\models\LoginForm.php(45): app\models\LoginForm->getUser()
+#15 [internal function]: app\models\LoginForm->validatesenha('<span class="st...', '<span class="ke...')
+#16 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#17 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\validators\Validator.php(240): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), '<span class="st...')
+#18 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Model.php(352): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), '[<span class="s...')
+#19 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\models\LoginForm.php(59): yii\base\Model->validate()
+#20 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\controllers\SiteController.php(64): app\models\LoginForm->login()
+#21 [internal function]: app\controllers\SiteController->actionLogin()
+#22 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#23 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams('[<span class="s...')
+#24 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#25 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#26 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#28 {main}
+Additional Information:
+
+2015-12-14 19:37:39 [::1][-][shpvs356jl1afp798jl3lho7p4][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'dmxtOE9pTTYeFiZcBiF0fiFVJloKUD90BBYrTT5fIV44Ohx3DCYPDg=='
+    'LoginForm' => [
+        'cpf' => '000'
+        'senha' => 'teste'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+    '_csrf' => 'b8dcb54827fe1cc2cefcc35112347d6b681460178c2896a1d83e640fc2180a7fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hzKdIH9HW9KbE9rBrzFuq6lhNVqOCOB8\";}'
+    'PHPSESSID' => 'shpvs356jl1afp798jl3lho7p4'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '186'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/PAPS1/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef; _csrf=b8dcb54827fe1cc2cefcc35112347d6b681460178c2896a1d83e640fc2180a7fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hzKdIH9HW9KbE9rBrzFuq6lhNVqOCOB8%22%3B%7D; PHPSESSID=shpvs356jl1afp798jl3lho7p4'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '63003'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/PAPS1/PAPS/yii2-app-basic/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1450118259.887
+    'REQUEST_TIME' => 1450118259
+]
+2015-12-14 19:40:20 [::1][-][-][error][MailgunException] exception 'MailgunException' with message 'SSL certificate problem: unable to get local issuer certificate' in C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\baibaratsky\php-mailgun\MailgunApi.php:658
+Stack trace:
+#0 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\baibaratsky\php-mailgun\MailgunApi.php(59): MailgunApi->_performRequest('POST', 'https://api.mai...', Object(MailgunMessage))
+#1 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\baibaratsky\php-mailgun\MailgunMessage.php(60): MailgunApi->sendMessage(Object(MailgunMessage))
+#2 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\controllers\UserController.php(190): MailgunMessage->send()
+#3 [internal function]: app\controllers\UserController->actionForgot()
+#4 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('forgot', Array)
+#7 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('user/forgot', Array)
+#8 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2015-12-14 19:40:19 [::1][-][-][info][application] $_GET = [
+    'r' => 'user/forgot'
+]
+
+$_POST = [
+    '_csrf' => 'enR5ajBNdngSDjIOeQVPMC1NMgh1dAQ6CA4/H0F7GhA0IgglcwI0QA=='
+    'User' => [
+        'cpf' => '000'
+    ]
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+    '_csrf' => 'b8dcb54827fe1cc2cefcc35112347d6b681460178c2896a1d83e640fc2180a7fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hzKdIH9HW9KbE9rBrzFuq6lhNVqOCOB8\";}'
+    'PHPSESSID' => 'shpvs356jl1afp798jl3lho7p4'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '86'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/PAPS1/PAPS/yii2-app-basic/web/index.php?r=user%2Fforgot'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef; _csrf=b8dcb54827fe1cc2cefcc35112347d6b681460178c2896a1d83e640fc2180a7fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hzKdIH9HW9KbE9rBrzFuq6lhNVqOCOB8%22%3B%7D; PHPSESSID=shpvs356jl1afp798jl3lho7p4'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '63072'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=user%2Fforgot'
+    'REQUEST_URI' => '/PAPS1/PAPS/yii2-app-basic/web/index.php?r=user%2Fforgot'
+    'SCRIPT_NAME' => '/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1450118419.159
+    'REQUEST_TIME' => 1450118419
+]
+2015-12-14 19:55:11 [::1][000][43vbdvdv9cdve856vnkv1lhg23][error][yii\base\ErrorException:2] exception 'yii\base\ErrorException' with message 'include(C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor/mpdf/mpdf/mpdf.php): failed to open stream: No such file or directory' in C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\composer\ClassLoader.php:412
+Stack trace:
+#0 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\composer\ClassLoader.php(412): yii\base\ErrorHandler->handleError(2, 'include(C:\\xamp...', 'C:\\xampp\\htdocs...', 412, Array)
+#1 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\composer\ClassLoader.php(412): Composer\Autoload\includeFile()
+#2 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\composer\ClassLoader.php(301): Composer\Autoload\includeFile('C:\\xampp\\htdocs...')
+#3 [internal function]: Composer\Autoload\ClassLoader->loadClass('mPDF')
+#4 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\controllers\OcorrenciaController.php(466): spl_autoload_call('mPDF')
+#5 [internal function]: app\controllers\OcorrenciaController->actionRelatorio()
+#6 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('relatorio', Array)
+#9 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('ocorrencia/rela...', Array)
+#10 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\xampp\htdocs\PAPS1\PAPS\yii2-app-basic\web\index.php(12): yii\base\Application->run()
+#12 {main}
+2015-12-14 19:55:10 [::1][000][43vbdvdv9cdve856vnkv1lhg23][info][application] $_GET = [
+    'r' => 'ocorrencia/relatorio'
+]
+
+$_POST = [
+    '_csrf' => 'a2k2OG9BNHEDE31cJgkNOTxQfVoqeEYzGRNwTR53WBklP0d3LA52SQ=='
+    'Relatorio' => [
+        'radiobutton' => '1'
+        'mes' => '11'
+        'ano' => '2015'
+    ]
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.523106616.1449533364'
+    'intercom-id' => '22106819-9585-474c-813d-078401e4f6ef'
+    '_csrf' => 'b8dcb54827fe1cc2cefcc35112347d6b681460178c2896a1d83e640fc2180a7fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hzKdIH9HW9KbE9rBrzFuq6lhNVqOCOB8\";}'
+    'PHPSESSID' => '43vbdvdv9cdve856vnkv1lhg23'
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '000'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '619'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.80 Safari/537.36'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=----WebKitFormBoundaryQDBipZ6B04finTcf'
+    'HTTP_REFERER' => 'http://localhost/PAPS1/PAPS/yii2-app-basic/web/index.php?r=ocorrencia%2Frelatorio'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_ga=GA1.1.523106616.1449533364; intercom-id=22106819-9585-474c-813d-078401e4f6ef; _csrf=b8dcb54827fe1cc2cefcc35112347d6b681460178c2896a1d83e640fc2180a7fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hzKdIH9HW9KbE9rBrzFuq6lhNVqOCOB8%22%3B%7D; PHPSESSID=43vbdvdv9cdve856vnkv1lhg23; _identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\TXE Components\\TCS\\;C:\\Program Files\\Intel\\TXE Components\\TCS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Hewlett-Packard\\SimplePass\\;C:\\Program Files (x86)\\Windows Live\\Shared;C:\\Program Files\\Git\\cmd'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win32) OpenSSL/1.0.2d PHP/5.6.14'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '63253'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=ocorrencia%2Frelatorio'
+    'REQUEST_URI' => '/PAPS1/PAPS/yii2-app-basic/web/index.php?r=ocorrencia%2Frelatorio'
+    'SCRIPT_NAME' => '/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPS1/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1450119310.696
+    'REQUEST_TIME' => 1450119310
+]

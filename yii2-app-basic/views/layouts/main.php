@@ -81,6 +81,7 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => 'Iniciar', 'url' => ['/site/index1']],
 
 //            ['label' => 'About', 'url' => ['/site/about']],
  //           ['label' => 'Contact', 'url' => ['/site/contact']],
