@@ -91,12 +91,13 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
 
             ['label' => 'Categorias', 'url' => ['/categoria/index']],
             ['label' => 'Natureza de Ocorrências', 'url' => ['/naturezaocorrencia/index']],
-           ['label' => 'Denuncia', 'url' => ['/denuncia/index']],
+           ['label' => 'Denúncias', 'url' => ['/denuncia/index']],
             ['label' => 'Ocorrências',
             'items' => [
                  ['label' => 'Gerenciar Ocorrências', 'url' => ['/ocorrencia/index']],
                  ['label' => 'Ocorrências em Aberto', 'url' => ['/ocorrencia/emaberto']],
-                 ['label' => 'Registrar Ocorrência', 'url' => ['/ocorrencia/create']]]],
+                 ['label' => 'Registrar Ocorrência', 'url' => ['/ocorrencia/create']],
+                 ['label' => 'Gerar Relatórios', 'url' => ['/ocorrencia/relatorio']]]],
 //                 ['label' => 'Fechar Ocorrências ', 'url' => ['/ocorrencia/index']]]],
              ['label' => 'Usuário',
  
@@ -133,8 +134,10 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
                         ['label' => 'Entrar', 'url' => ['/site/login']] :
             //            ['label' => 'Logout (' . Yii::$app->user->identity->cpf . ')',
                             ['label' => 'Sair',
-                            'url' => ['/site/logout'],
-                            'linkOptions' => ['data-method' => 'post']],
+                            'items' => [
+                            ['label' => 'Alterar senha ', 'url' => ['/user/alterarsenha']],        
+                            ['label' => 'Logout', 'url' => ['/site/logout'],
+                            'linkOptions' => ['data-method' => 'post']]]],
                 ],
             ]);
             NavBar::end();

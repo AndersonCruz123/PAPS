@@ -127,7 +127,7 @@ class FotoController extends Controller
     }
   public function getFotoDenuncia($id)
     {
-        $foto = Foto::findAll (['idDenunncia' => $id]);
+        $foto = Foto::findAll (['idDenuncia' => $id]);
         return $foto;        
     }
 }

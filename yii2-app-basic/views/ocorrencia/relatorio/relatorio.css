@@ -16,6 +16,18 @@
    #data{
    		font-size: 10pt;
    }         
+table { 
+                margin-top: 10px; /* posiciona a 70px para baixo */
+                margin-bottom: 30px;
+                text-align:center;
+        }
+
+caption {
+
+        font-size: 10pt;
+        font-weight: bold;
+  }
+
 p{
 	font-size: 13pt;
 

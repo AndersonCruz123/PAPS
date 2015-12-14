@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\DenunciaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Denuncias';
+$this->title = 'Denúncias';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="denuncia-index">

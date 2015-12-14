@@ -47,15 +47,10 @@ class DenunciaController extends Controller
     /**
      * Displays a single Denuncia model.
      * @param integer $id
-     * @return mixed
+     * @ret4urn mixed
      */
     public function actionView($id)
     {
-        $model = $this->findModel($id);
-        $foto = FotoController::getFotoDenuncia($model->idDenuncia);
-        if ($foto != null) {
-        $model->fotos = $foto;
-        }
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -73,7 +68,7 @@ class DenunciaController extends Controller
         if ($model->load(Yii::$app->request->post())) {
            $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
            $path = Yii::$app->basePath.'/web/uploadFoto/';
-
+           $model->status = 1;
             if($model->save()){
                 foreach ($model->imageFiles as $file) {
                     $foto = new Foto();
@@ -90,7 +85,9 @@ class DenunciaController extends Controller
                 
                 return $this->redirect(['view', 'id' => $model->idDenuncia]);
             } else {
-              //  echo "error da foto em".$image->error;
+            return $this->render('create', [
+                'model' => $model,
+            ]);
             }
       
         } else {

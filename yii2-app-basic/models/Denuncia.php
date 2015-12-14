@@ -53,7 +53,7 @@ class Denuncia extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idDenuncia' => 'Número da Denuncia',
+            'idDenuncia' => 'Número da Denúncia',
             'descricao' => 'Descrição',
             'local' => 'Local',
             'data' => 'Data',
