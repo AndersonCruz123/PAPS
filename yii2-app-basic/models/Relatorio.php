@@ -20,7 +20,11 @@ class Relatorio extends \yii\db\ActiveRecord
     public $mes;
     public $ano;
     public $radiobutton;
-
+    public $idLocal;
+    public $idNatureza;
+    public $idCategoria;
+    public $status;
+    public $periodo;
 
     public static function tableName()
     {
@@ -45,6 +49,11 @@ class Relatorio extends \yii\db\ActiveRecord
     {
         return [
             'radiobutton' => 'Selecione o período do relatório',
+            'idLocal' => 'Local',
+            'idNatureza' => 'Natureza',
+            'idCategoria' => 'Categoria',
+            'status' => 'Status',
+            'periodo' => 'Período',
         ];
     }
 }

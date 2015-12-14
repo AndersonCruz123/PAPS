@@ -11,7 +11,7 @@ use dosamigos\datepicker\DatePicker;
 
 <div class="denuncia-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]);?>
 
     <?= $form->field($model, 'descricao')->textarea(['rows' => 6]) ?>
 

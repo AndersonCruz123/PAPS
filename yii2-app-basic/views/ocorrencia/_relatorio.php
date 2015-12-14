@@ -81,6 +81,34 @@ use kartik\timepicker\TimePicker;
                 ]
         ])->hint('Ano, mês, dia'); ?>
 
+    <?php $arrayNatureza = ArrayHelper::map( NaturezaocorrenciaSearch::find()->all(), 'idNatureza', 'Nome'); 
+          $arrayNatureza[0] = 'Todos';
+    ?>
+
+    <?php $arrayLocal = ArrayHelper::map( LocalSearch::find()->all(), 'idLocal', 'Nome'); 
+          $arrayLocal[0] = 'Todos';
+    ?>
+
+    <?php 
+    $arrayCategoria = ArrayHelper::map( CategoriaSearch::find()->all(), 'idCategoria', 'Nome'); 
+    $arrayCategoria[0] = 'Todos';
+    ?>
+
+    <?php $arraystatus = [0 => 'Todos', 1 => 'Aberto', 2=>'Solucionado', 3=>'Não Solucionado']; ?>
+
+    <?php $arrayPeriodo = [0 => 'Todos', 1=> 'Manhã', 2=>'Tarde', 3=>'Noite', 4=>'Madrugada']; ?>
+
+
+    <?= $form->field($model, 'status')->dropdownlist($arraystatus, ['options'=>[0=>['Selected'=>true]]]) ?>
+
+    <?= $form->field($model, 'idCategoria')->dropdownlist($arrayCategoria, ['options'=>[0=>['Selected'=>true]]]) ?>
+    
+    <?= $form->field($model, 'idNatureza')->dropdownlist($arrayNatureza, ['options'=>[0=>['Selected'=>true]]]) ?>
+
+    <?= $form->field($model, 'idLocal')->dropdownlist($arrayLocal, ['options'=>[0=>['Selected'=>true]]]) ?>
+  
+      <?= $form->field($model, 'periodo')->dropdownlist($arrayPeriodo, ['options'=>[0=>['Selected'=>true]]]) ?>
+
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Enviar' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>

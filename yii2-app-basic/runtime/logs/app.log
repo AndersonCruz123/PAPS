@@ -48826,3 +48826,165 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1450119310.696
     'REQUEST_TIME' => 1450119310
 ]
+2015-12-15 00:05:01 [127.0.0.1][000][3uvkmurki6atd0qsr1mf3nobj2][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '=>' (T_DOUBLE_ARROW)' in /opt/lampp/htdocs/PAPSATUAL/PAPS/yii2-app-basic/views/ocorrencia/_relatorio.php:100
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-12-15 00:05:01 [127.0.0.1][000][3uvkmurki6atd0qsr1mf3nobj2][info][application] $_GET = [
+    'r' => 'ocorrencia/relatorio'
+]
+
+$_COOKIE = [
+    '_csrf' => 'b19f928839ec1105f6e7179b5648f20738eb072199a7a383308e22fa26776930a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oldlAQ1hjxDFTzfaqhyTphXJQA_93eET\";}'
+    'PHPSESSID' => '3uvkmurki6atd0qsr1mf3nobj2'
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '000'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Vm9LHX8AAQEAACLCPCwAAAAA'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=b19f928839ec1105f6e7179b5648f20738eb072199a7a383308e22fa26776930a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oldlAQ1hjxDFTzfaqhyTphXJQA_93eET%22%3B%7D; PHPSESSID=3uvkmurki6atd0qsr1mf3nobj2; _identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'LD_LIBRARY_PATH' => '/opt/lampp/lib:/opt/lampp/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Unix) OpenSSL/1.0.1m PHP/5.6.8 mod_perl/2.0.8-dev Perl/v5.16.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/opt/lampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/opt/lampp/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/opt/lampp/htdocs/PAPSATUAL/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '58554'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=ocorrencia%2Frelatorio'
+    'REQUEST_URI' => '/PAPSATUAL/PAPS/yii2-app-basic/web/index.php?r=ocorrencia%2Frelatorio'
+    'SCRIPT_NAME' => '/PAPSATUAL/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPSATUAL/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1450134301.311
+    'REQUEST_TIME' => 1450134301
+]
+2015-12-15 00:06:54 [127.0.0.1][000][3uvkmurki6atd0qsr1mf3nobj2][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected '=>' (T_DOUBLE_ARROW)' in /opt/lampp/htdocs/PAPSATUAL/PAPS/yii2-app-basic/views/ocorrencia/_relatorio.php:100
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-12-15 00:06:54 [127.0.0.1][000][3uvkmurki6atd0qsr1mf3nobj2][info][application] $_GET = [
+    'r' => 'ocorrencia/relatorio'
+]
+
+$_COOKIE = [
+    '_csrf' => 'b19f928839ec1105f6e7179b5648f20738eb072199a7a383308e22fa26776930a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oldlAQ1hjxDFTzfaqhyTphXJQA_93eET\";}'
+    'PHPSESSID' => '3uvkmurki6atd0qsr1mf3nobj2'
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '000'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Vm9Ljn8AAQEAACI6pzgAAAAK'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=b19f928839ec1105f6e7179b5648f20738eb072199a7a383308e22fa26776930a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oldlAQ1hjxDFTzfaqhyTphXJQA_93eET%22%3B%7D; PHPSESSID=3uvkmurki6atd0qsr1mf3nobj2; _identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'LD_LIBRARY_PATH' => '/opt/lampp/lib:/opt/lampp/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Unix) OpenSSL/1.0.1m PHP/5.6.8 mod_perl/2.0.8-dev Perl/v5.16.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/opt/lampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/opt/lampp/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/opt/lampp/htdocs/PAPSATUAL/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '58566'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=ocorrencia%2Frelatorio'
+    'REQUEST_URI' => '/PAPSATUAL/PAPS/yii2-app-basic/web/index.php?r=ocorrencia%2Frelatorio'
+    'SCRIPT_NAME' => '/PAPSATUAL/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPSATUAL/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1450134414.852
+    'REQUEST_TIME' => 1450134414
+]
+2015-12-15 00:07:00 [127.0.0.1][000][3uvkmurki6atd0qsr1mf3nobj2][error][yii\base\ErrorException:4] exception 'yii\base\ErrorException' with message 'syntax error, unexpected ')', expecting ']'' in /opt/lampp/htdocs/PAPSATUAL/PAPS/yii2-app-basic/views/ocorrencia/_relatorio.php:100
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2015-12-15 00:07:00 [127.0.0.1][000][3uvkmurki6atd0qsr1mf3nobj2][info][application] $_GET = [
+    'r' => 'ocorrencia/relatorio'
+]
+
+$_COOKIE = [
+    '_csrf' => 'b19f928839ec1105f6e7179b5648f20738eb072199a7a383308e22fa26776930a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"oldlAQ1hjxDFTzfaqhyTphXJQA_93eET\";}'
+    'PHPSESSID' => '3uvkmurki6atd0qsr1mf3nobj2'
+    '_identity' => 'f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a:2:{i:0;s:9:\"_identity\";i:1;s:24:\"[\"000\",\"000100\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '000'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'Vm9LlH8AAQEAACLfxUgAAAAH'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.152 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4'
+    'HTTP_COOKIE' => '_csrf=b19f928839ec1105f6e7179b5648f20738eb072199a7a383308e22fa26776930a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22oldlAQ1hjxDFTzfaqhyTphXJQA_93eET%22%3B%7D; PHPSESSID=3uvkmurki6atd0qsr1mf3nobj2; _identity=f6d6c1548af5d9b46393f30434d23d8092287fdd873eb1efc04f59ed5f7b8801a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A24%3A%22%5B%22000%22%2C%22000100%22%2C2592000%5D%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'LD_LIBRARY_PATH' => '/opt/lampp/lib:/opt/lampp/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.12 (Unix) OpenSSL/1.0.1m PHP/5.6.8 mod_perl/2.0.8-dev Perl/v5.16.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/opt/lampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/opt/lampp/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/opt/lampp/htdocs/PAPSATUAL/PAPS/yii2-app-basic/web/index.php'
+    'REMOTE_PORT' => '58567'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=ocorrencia%2Frelatorio'
+    'REQUEST_URI' => '/PAPSATUAL/PAPS/yii2-app-basic/web/index.php?r=ocorrencia%2Frelatorio'
+    'SCRIPT_NAME' => '/PAPSATUAL/PAPS/yii2-app-basic/web/index.php'
+    'PHP_SELF' => '/PAPSATUAL/PAPS/yii2-app-basic/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1450134420.177
+    'REQUEST_TIME' => 1450134420
+]
