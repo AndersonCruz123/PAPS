@@ -2,87 +2,108 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'SOS UFAM - Sistema de Ocorrência de Segurança UFAM';
+$this->title = 'SOS-UFAM';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+   
 
-    <title>Navbar Template for Bootstrap</title>
+    <title>Home 1</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-   
 
 
           <style> 
           .navbar
           {
             background-color: #EEE9E9;
+            border-color: transparent;
+            }  
+
+        
+            .container1{
+              height: 430px;
+              width: 500px;
+              margin-left: 330px;
+              margin-bottom: 250px;            
+              padding: 25px;
+             -webkit-border-radius: 15px;
+             -moz-border-radius: 15px;
+             border-radius: 15px;
+             -moz-border-radius: 8px;
+            -webkit-border-radius: 8px;
+             border-radius: 8px;
+             -moz-background-clip: padding;
+             -webkit-background-clip: padding-box;
+             background-color: white;
+             border: solid 2px white;
+             padding: 15px;
+            }
+            #teste{
+              width: 320px;
+              height: 250px;
+              position: absolute; 
+              margin-left: 330px; /* posiciona a 90px para a esquerda */ 
+              top: 130px; /* posiciona a 70px para baixo */
+
             }
 
-            .jumbotron {
-    margin-bottom: 8px;
-    height: 420px;
-    color: black;
-    text-shadow: #DCDCDC 0.4em 0.4em 0.4em;
-    background-color: #DCDCDC ;
-}
+             #teste1{
+              width: 350px;
+              height: 90px;
+              position: absolute; 
+              margin-left: 330px; /* posiciona a 90px para a esquerda */ 
+              top: 390px; /* posiciona a 70px para baixo */
 
-     .jumbotron {
-background-image: url("teste.jpg");
-background-size: cover;}
+            }
 
-            h1 { 
-    display: block;
-    font-size: 2em;
-    margin-top: 0.40em;
-    margin-bottom: 0.0em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-}
+             #teste2{
+              width: 1390px;
+              height: 70px;
+              position: absolute; 
+              margin-left: -200px; /* posiciona a 90px para a esquerda */ 
+              top: 755px; /* posiciona a 70px para baixo */
 
-         h4 { 
-   font-size: 15px;
-   margin:-70px 0px;
+            }
 
-    }
+             #teste3{
+              width: 100px;
+              height: 60px;
+              position: absolute; 
+              margin-left: 1050px; /* posiciona a 90px para a esquerda */ 
+              top: 759px; /* posiciona a 70px para baixo */
+            }
 
-img {
-border: 4px ;
-background: transparent;
-margin:90px 10px;
-}
-#esqueciminhasenha {
- margin:10px 10px; 
-}
-            
+
+           
+           
         </style>
   </head>
 
-<div class="site-index">
 
-    
-            <div class="jumbotron">
-         
-              <h1 style="text-align:center">Sistema de Ocorrência de Segurança</h1>
-             <a id="esqueciminhasenha" href="index.php?r=user%2Fforgot">Esqueci minha senha</a> 
-            <img id="icomp"src=icomp.png width="100" height="50" / >
-            <img id="ufam" src=ufam.png  width="50" height="50" / >
-            <h4>© SOS UFAM - Sistema de Ocorrência de Segurança UFAM</br><h4>
-        
-        
-      </div>
+<body>
+  <div class="site-index">    
+            <div class="container1"> 
 
-   
-</div>
+              <!--  <p><a class="btn btn-primary btn-lg" href="#" role="button">Denunciar</a></p> -->
+               <img id="teste" src="5.png">
+               <a href="index.php?r=denuncia%2Fcreate"><img id="teste1" src="6.png" ></a>
+               <img id="teste2" src="fim.png">
+               <img id="teste3" src="icomp.png">
+               </div>
+           
+     
+      }       
+               
+
+</body>
+</html>
+

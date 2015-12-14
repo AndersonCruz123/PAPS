@@ -28,6 +28,7 @@ use yii\base\Model;
  * @property Sublocal $idSubLocal0
  * @property Usuario $cpfUsuario0
  */
+
 class Ocorrencia extends \yii\db\ActiveRecord
 {
     /**
@@ -49,6 +50,7 @@ class Ocorrencia extends \yii\db\ActiveRecord
     public $cpfbkp;
     public $imageFiles;
     public $comentarioFoto;
+    public $fotos;
 
     public function rules()
     {
@@ -73,7 +75,7 @@ class Ocorrencia extends \yii\db\ActiveRecord
         return [
             'idOcorrencia' => 'Número da Ocorrencia',
             'status' => 'Status',
-            'data' => 'Data',
+            'data' => 'Data do acontecimento da ocorrência',
             'hora' => 'Hora',
             'periodo' => 'Período',
             'detalheLocal' => 'Detalhamento do Local',
@@ -87,6 +89,7 @@ class Ocorrencia extends \yii\db\ActiveRecord
             'cpfUsuario' => 'Nome da última pessoa que atualizou a ocorrência',
             'comentarioFoto' => 'Comentário das Fotos',
             'imageFiles' => 'Clique abaixo e anexe até 4 fotos',
+            'fotos' => 'fotos clique para fazer download'
         ];
     }
 
@@ -143,6 +146,7 @@ class Ocorrencia extends \yii\db\ActiveRecord
         $sublocal = Sublocal::findOne($this->idSubLocal);
         $this->idLocal = $sublocal->idLocal;
         $this->cpfbkp = $this->cpfUsuario;
+        $this->idSubLocal = Sublocal::findOne($this->idSubLocal)->Nome;
 
         $this->cpfUsuario = User::findOne($this->cpfUsuario)->nome;
         $this->idNatureza = Naturezaocorrencia::findOne($this->idNatureza)->Nome;

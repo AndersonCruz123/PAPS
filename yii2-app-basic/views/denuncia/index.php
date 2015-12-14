@@ -26,11 +26,12 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'idDenuncia',
+           'status',
             'descricao:ntext',
             'local',
             'data',
             'hora',
-            // 'status',
+
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

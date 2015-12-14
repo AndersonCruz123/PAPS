@@ -36,7 +36,8 @@ class Foto extends \yii\db\ActiveRecord
             [['endereco'], 'required','message'=>'Este campo é obrigatório'],
             [['idOcorrencia', 'idDenuncia'], 'integer'],
             [['comentario'], 'string', 'max' => 500],
-            [['endereco'], 'string', 'max' => 500]
+            [['endereco'], 'string', 'max' => 500],
+            [['nome'], 'string', 'max' => 100],            
         ];
     }
 

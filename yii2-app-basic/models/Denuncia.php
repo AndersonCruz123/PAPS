@@ -32,6 +32,8 @@ class Denuncia extends \yii\db\ActiveRecord
      * @inheritdoc
      */
     public $imageFiles;
+    public $fotos;
+
 
     public function rules()
     {
@@ -52,7 +54,7 @@ class Denuncia extends \yii\db\ActiveRecord
     {
         return [
             'idDenuncia' => 'Número da Denuncia',
-            'descricao' => 'Descricao',
+            'descricao' => 'Descrição',
             'local' => 'Local',
             'data' => 'Data',
             'hora' => 'Hora',
