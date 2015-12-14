@@ -111,35 +111,6 @@ class OcorrenciaController extends Controller
     {
     	$model = $this->findModel($id);
 
-/*    	if ($model->status == 1){
-    		$model->status = 'Aberto';
-    	} elseif ($model->status == 2) {
-    		$model->status = 'Solucionado';
-    	} elseif ($model->status == 3) {
-    		$model->status = 'Não Solucionado';
-    	}
-
-       	if ($model->periodo == 1){
-    		$model->periodo = 'Manhã';
-    	} elseif ($model->periodo == 2) {
-    		$model->periodo = 'Tarde';
-    	} elseif ($model->periodo == 3) {
-    		$model->periodo = 'Noite';
-    	} elseif ($model->periodo == 4) {
-    		$model->periodo = 'Madrugada';
-    	}
-
-    	$natureza = Naturezaocorrencia::findOne($model->idNatureza);
-    	$sublocal = Sublocal::findOne($model->idSubLocal);
-    	$categoria = Categoria::findOne($model->idCategoria);
-    	$local = Local::findOne($sublocal->idLocal);
-
-//    	echo 'idsublocal'.$sublocal->idLocal;
-    	$model->idNatureza = $natureza->Nome;
-    	$model->idSubLocal = $sublocal->Nome;
-    	$model->idLocal = $sublocal->idLocal;
-    	$model->idCategoria = $categoria->Nome;*/
-
     	$sublocal = Sublocal::findOne($model->idSubLocalbkp);
        	//$model->idSubLocal = $sublocal->Nome;
        	$model->idLocal = $sublocal->idLocal;

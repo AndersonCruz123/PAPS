@@ -32,6 +32,7 @@ use dosamigos\datepicker\DatePicker;
         
     <?= $form->field($model, 'hora')->textInput()->hint('Exemplo: 12:30') ?>
 
+  <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Salvar' : 'Atualizar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

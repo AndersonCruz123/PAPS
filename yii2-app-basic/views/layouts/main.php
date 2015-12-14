@@ -92,7 +92,7 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
 
             ['label' => 'Categorias', 'url' => ['/categoria/index']],
             ['label' => 'Natureza de Ocorrências', 'url' => ['/naturezaocorrencia/index']],
-           ['label' => 'Denuncia', 'url' => ['/denuncia/index']],
+           ['label' => 'Denúncias', 'url' => ['/denuncia/index']],
             ['label' => 'Ocorrências',
             'items' => [
                  ['label' => 'Gerenciar Ocorrências', 'url' => ['/ocorrencia/index']],
@@ -107,12 +107,14 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
                  ['label' => 'Gerenciar Tipos de Usuário ', 'url' => ['/tipousuario/index']]]],
  
   
-                     Yii::$app->user->isGuest ?
+                Yii::$app->user->isGuest ?
                         ['label' => 'Entrar', 'url' => ['/site/login']] :
             //            ['label' => 'Logout (' . Yii::$app->user->identity->cpf . ')',
                             ['label' => 'Sair',
-                            'url' => ['/site/logout'],
-                            'linkOptions' => ['data-method' => 'post']],
+                        'items' => [
+                            ['label' => 'Alterar senha ', 'url' => ['/user/alterarsenha']],        
+                            ['label' => 'Logout', 'url' => ['/site/logout'],
+                            'linkOptions' => ['data-method' => 'post']]]],
                 ],
             ]);
             NavBar::end();
@@ -133,8 +135,10 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
                         ['label' => 'Entrar', 'url' => ['/site/login']] :
             //            ['label' => 'Logout (' . Yii::$app->user->identity->cpf . ')',
                             ['label' => 'Sair',
-                            'url' => ['/site/logout'],
-                            'linkOptions' => ['data-method' => 'post']],
+                            'items' => [
+                            ['label' => 'Alterar senha ', 'url' => ['/user/alterarsenha']],        
+                            ['label' => 'Logout', 'url' => ['/site/logout'],
+                            'linkOptions' => ['data-method' => 'post']]]],
                 ],
             ]);
             NavBar::end();

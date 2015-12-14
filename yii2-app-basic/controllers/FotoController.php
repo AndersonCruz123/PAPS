@@ -125,4 +125,9 @@ class FotoController extends Controller
         $foto = Foto::findAll (['idOcorrencia' => $id]);
         return $foto;        
     }
+  public function getFotoDenuncia($id)
+    {
+        $foto = Foto::findAll (['idDenuncia' => $id]);
+        return $foto;        
+    }
 }
