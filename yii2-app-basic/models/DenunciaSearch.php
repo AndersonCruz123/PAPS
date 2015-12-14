@@ -67,4 +67,40 @@ class DenunciaSearch extends Denuncia
 
         return $dataProvider;
     }
+
+    public function naoVerificadas($params)
+    {
+        $query = Denuncia::find();
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+        $this->load($params);
+
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            // $query->where('0=1');
+            return $dataProvider;
+        }
+
+        $query->andFilterWhere([
+            'idDenuncia' => $this->idDenuncia,
+            'descricao' => $this->descricao,
+            'local' => $this->local,
+            'data' => $this->data,
+            'hora' => $this->hora,
+            'status' => 1,
+ 
+        ]);
+
+/*        $query->andFilterWhere(['like', 'periodo', $this->periodo])
+            ->andFilterWhere(['like', 'detalheLocal', $this->detalheLocal])
+            ->andFilterWhere(['like', 'descricao', $this->descricao])
+            ->andFilterWhere(['like', 'procedimento', $this->procedimento])
+            ->andFilterWhere(['like', 'cpfUsuario', $this->cpfUsuario]);*/
+
+        return $dataProvider;
+    }
+
 }
