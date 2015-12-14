@@ -44,6 +44,17 @@ class DenunciaController extends Controller
         ]);
     }
 
+    public function actionNaoverificadas()
+    {
+        $searchModel = new DenunciaSearch();
+        $dataProvider = $searchModel->naoVerificadas(Yii::$app->request->queryParams);
+
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
     /**
      * Displays a single Denuncia model.
      * @param integer $id

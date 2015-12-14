@@ -122,7 +122,7 @@ $this->title = 'SOS UFAM';
     </br></br></br>
    <?php
      $totalDen = Denuncia::find()->where('status = 1')->count();
-    echo "<a href='index.php?r=denuncia%2Fcreate'><h1 id=totalden>".$totalDen."</h1></a>";
+    echo "<a href='index.php?r=denuncia%2Fnaoverificadas'><h1 id=totalden>".$totalDen."</h1></a>";
     ?> 
     </div>
                   
