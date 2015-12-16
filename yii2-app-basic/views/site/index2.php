@@ -121,7 +121,7 @@ $this->title = 'SOS UFAM';
     <img id="teste3" src="naoverificada.png">
     </br></br></br>      
     <?php
-     $total = Ocorrencia::find()->where('status = 1')->count();
+     $total = Denuncia::find()->where('status = 1')->count();
     echo "<a href='index.php?r=denuncia%2Fnaoverificadas'><h1 id=totalden>".$total."</h1></a>";
     ?>
 

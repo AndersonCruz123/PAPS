@@ -92,7 +92,15 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
 
             ['label' => 'Categorias', 'url' => ['/categoria/index']],
             ['label' => 'Natureza de Ocorrências', 'url' => ['/naturezaocorrencia/index']],
-           ['label' => 'Denúncias', 'url' => ['/denuncia/index']],
+
+//           ['label' => 'Denúncias', 
+ //           'url' => ['/denuncia/index']],
+   
+            ['label' => 'Denúncias',
+            'items' => [
+                 ['label' => 'Gerenciar Denúncias', 'url' => ['/denuncia/index']],
+                 ['label' => 'Denúncias não visualizadas', 'url' => ['/denuncia/naoverificadas']]]],
+
             ['label' => 'Ocorrências',
             'items' => [
                  ['label' => 'Gerenciar Ocorrências', 'url' => ['/ocorrencia/index']],
@@ -123,6 +131,12 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
            ['label' => 'Iniciar', 'url' => ['/site/index2']],
+
+
+            ['label' => 'Denúncias',
+            'items' => [
+            //     ['label' => 'Gerenciar Denúncias', 'url' => ['/denuncia/index']],
+                 ['label' => 'Denúncias não visualizadas', 'url' => ['/denuncia/naoverificadas']]]],
 
             ['label' => 'Ocorrências',
             'items' => [
