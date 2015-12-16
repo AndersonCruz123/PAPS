@@ -60,7 +60,7 @@ class OcorrenciaController extends Controller
  //               'only' => ['create'],
                 'rules' => [
                     [
-                        'actions' => ['create'],
+                        'actions' => ['create', 'view'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
