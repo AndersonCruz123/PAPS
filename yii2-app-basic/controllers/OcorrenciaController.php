@@ -35,10 +35,10 @@ class OcorrenciaController extends Controller
         return [ 
         'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['create', 'index', 'update', 'emaberto'],
+                'only' => ['create', 'index', 'update', 'emaberto', 'relatorio', 'printocorrencia'],
                 'rules' => [
                     [
-                        'actions' => ['create', 'index', 'update', 'emaberto'],
+                        'actions' => ['create', 'index', 'update', 'emaberto', 'relatorio', 'printocorrencia'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -318,8 +318,8 @@ class OcorrenciaController extends Controller
       	 	<h2> 7. Local:</h2> <p>".$model->idLocal. "</p>
       		<h2> 8. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
        		<h2> 9. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
-        	<h2> 10. Descrição:</h2>  <p>".$model->descricao. "</p>
-        	<h2> 11. Procedimento:</h2> <p>".$model->procedimento. "</p> 
+          <h2> 10. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
+          <h2> 11. Procedimento:</h2> <pre><p>".$model->procedimento. "</p></pre> 
         	<h2> 12. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
 	        ";
 	    }
@@ -337,8 +337,8 @@ class OcorrenciaController extends Controller
       	 	<h2> 7. Local:</h2> <p>".$model->idLocal. "</p>
       		<h2> 8. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
        		<h2> 9. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
-        	<h2> 10. Descrição:</h2>  <p>".$model->descricao. "</p>
-        	<h2> 11. Procedimento:</h2> <p>".$model->procedimento. "</p> 
+          <h2> 10. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
+          <h2> 11. Procedimento:</h2> <pre><p>".$model->procedimento. "</p></pre> 
         	<h2> 12. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
         	<h2> 13. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
         	<h2> 14. Foto:</h2>
@@ -360,8 +360,8 @@ class OcorrenciaController extends Controller
       	 	<h2> 7. Local:</h2> <p>".$model->idLocal. "</p>
       		<h2> 8. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
        		<h2> 9. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
-        	<h2> 10. Descrição:</h2>  <p>".$model->descricao. "</p>
-        	<h2> 11. Procedimento:</h2> <p>".$model->procedimento. "</p> 
+          <h2> 10. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
+          <h2> 11. Procedimento:</h2> <pre><p>".$model->procedimento. "</p></pre> 
         	<h2> 12. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
         	<h2> 13. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
         	<h2> 14. Fotos:</h2>
@@ -384,8 +384,8 @@ class OcorrenciaController extends Controller
       	 	<h2> 7. Local:</h2> <p>".$model->idLocal. "</p>
       		<h2> 8. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
        		<h2> 9. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
-        	<h2> 10. Descrição:</h2>  <p>".$model->descricao. "</p>
-        	<h2> 11. Procedimento:</h2> <p>".$model->procedimento. "</p> 
+          <h2> 10. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
+          <h2> 11. Procedimento:</h2> <pre><p>".$model->procedimento. "</p></pre> 
         	<h2> 12. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
         	<h2> 13. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
         	<h2> 14. Fotos:</h2>
@@ -409,8 +409,8 @@ class OcorrenciaController extends Controller
       	 	<h2> 7. Local:</h2> <p>".$model->idLocal. "</p>
       		<h2> 8. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
        		<h2> 9. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
-        	<h2> 10. Descrição:</h2>  <p>".$model->descricao. "</p>
-        	<h2> 11. Procedimento:</h2> <p>".$model->procedimento. "</p> 
+        	<h2> 10. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
+        	<h2> 11. Procedimento:</h2> <pre><p>".$model->procedimento. "</p></pre> 
         	<h2> 12. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
         	<h2> 13. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
         	<h2> 14. Fotos:</h2>

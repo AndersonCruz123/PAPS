@@ -17,10 +17,10 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'ocorrencia'],
+                'only' => ['logout', 'ocorrencia', 'index1', 'index2'],
                 'rules' => [
                     [
-                        'actions' => ['logout'],
+                        'actions' => ['logout', 'index1', 'index2'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -59,6 +59,10 @@ class SiteController extends Controller
         return $this->render('index1');
     }
 
+     public function actionIndex2()
+    {
+        return $this->render('index2');
+    }
     public function actionLogin()
     {
         if (!\Yii::$app->user->isGuest) {

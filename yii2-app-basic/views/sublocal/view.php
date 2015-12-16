@@ -30,6 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'Nome',
             'idLocal',
+            'longitude',
+            'latitude'
         ],
     ]) ?>
 

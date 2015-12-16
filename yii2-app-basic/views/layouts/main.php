@@ -80,7 +80,7 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
+    //        ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'Iniciar', 'url' => ['/site/index1']],
 
 //            ['label' => 'About', 'url' => ['/site/about']],
@@ -122,7 +122,7 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
     	 echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
+           ['label' => 'Iniciar', 'url' => ['/site/index2']],
 
             ['label' => 'Ocorrências',
             'items' => [
