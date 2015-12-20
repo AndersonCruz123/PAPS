@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
+use app\models\TipousuarioSearch;
 /* @var $this yii\web\View */
 /* @var $model app\models\User */
 /* @var $form yii\widgets\ActiveForm */
@@ -12,11 +13,17 @@ use yii\helpers\ArrayHelper;
 
     <?php $form = ActiveForm::begin(); ?>
 
+	<?php $arraytiposusuario=ArrayHelper::map(TipousuarioSearch::find()->all(),'idTipo','funcao'); ?>
+    
     <?= $form->field($model, 'cpf')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'nome')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'senha')->textInput(['maxlength' => true]) ?>
+
+       <?= $form->field($model, 'confirmarSenha')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'idTipoUsuario')->dropdownlist($arraytiposusuario, ['prompt'=>'Selecione a função do usuário']) ?>
 

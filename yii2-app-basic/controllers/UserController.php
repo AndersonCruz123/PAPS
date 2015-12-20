@@ -77,14 +77,18 @@ class UserController extends Controller
     {
         $model = new User();
 
-        $arraytiposusuario=ArrayHelper::map(TipousuarioSearch::find()->all(),'idTipo','funcao');
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->cpf, 'arraytiposusuario' => $arraytiposusuario]);
+        if ($model->load(Yii::$app->request->post())){
+            if ($model->save()) {
+            return $this->redirect(['view', 'id' => $model->cpf]);
+            }
+            else {
+            return $this->render('create', [
+                'model' => $model
+            ]);
+        }
         } else {
             return $this->render('create', [
-                'model' => $model,
-                'arraytiposusuario' => $arraytiposusuario
+                'model' => $model
             ]);
         }
     }
@@ -120,8 +124,13 @@ class UserController extends Controller
      
         $arraytiposusuario=ArrayHelper::map(TipousuarioSearch::find()->all(),'idTipo','funcao');
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        $model->idTipoUsuario = $model->idTipoUsuariobkp;
+        
+        if ($model->load(Yii::$app->request->post())) {
+        
+            if($model->save()) {
             return $this->redirect(['view', 'id' => $model->cpf, 'arraytiposusuario' => $arraytiposusuario]);
+            }
         } else {
             return $this->render('update', [
                 'model' => $model,

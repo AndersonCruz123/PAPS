@@ -30,7 +30,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
 
     public $confirmarSenha;
     public $novaSenha;
-
+    public $idTipoUsuariobkp;
     /**
      * @inheritdoc
      */
@@ -55,6 +55,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
             'cpf' => 'CPF',
             'email' => 'Email',
             'senha' => 'Senha',
+            'nome' => 'Nome',
             'confirmarSenha' => 'Confirmar Senha',
             'idTipoUsuario' => 'Tipo de Usuário',
         ];
@@ -141,7 +142,9 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     }
 
     public function afterFind(){
-        return $this->idTipoUsuario = Tipousuario::findOne($this->idTipoUsuario)->funcao;
+        $this->idTipoUsuariobkp = $this->idTipoUsuario;
+        $this->confirmarSenha = $this->senha;
+        $this->idTipoUsuario = Tipousuario::findOne($this->idTipoUsuario)->funcao;
     }
 
  public function senhaAleatoria($cpf)
@@ -162,12 +165,11 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         $password = $key ;
 
         $usuario->senha =$password;
-        if (strcmp($usuario->idTipoUsuario,"Chefe de Segurança")==0){
-            $usuario->idTipoUsuario=1;
-        }    
-         if (strcmp($usuario->idTipoUsuario,"Segurança Terceirizada")==0){
-            $usuario->idTipoUsuario=2;
-        }       
+
+        $usuario->idTipoUsuario = $usuario->idTipoUsuariobkp;
+
+        $usuario->confirmarSenha = $password;
+
         if ($usuario->save()){
                 print('CONSEGUISAVE');
             }else {

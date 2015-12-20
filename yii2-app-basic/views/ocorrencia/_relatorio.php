@@ -23,6 +23,9 @@ use kartik\timepicker\TimePicker;
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
 
+ 
+ <fieldset>
+    <legend>Filtrar por data</legend>
    <?=$form->field($model,'radiobutton')->radioList([1 => 'Por mês e ano', 2 => 'Por data inicial e data final' ],[
               'onchange' =>'
                         console.log("checkbox1");
@@ -54,7 +57,6 @@ use kartik\timepicker\TimePicker;
     <?php $arrayAno = [2014 => '2014', 2015 => '2015', 2016 => '2016']?>
     <?= $form->field($model, 'ano')->dropdownlist($arrayAno, ['prompt'=>'Selecione o ano']) ?>
 
-
     <?= $form->field($model, 'dataInicial')->widget(
             DatePicker::className(), [
                 // inline too, not bad
@@ -80,6 +82,11 @@ use kartik\timepicker\TimePicker;
                     'format' => 'yyyy-mm-dd',
                 ]
         ])->hint('Ano, mês, dia'); ?>
+</fieldset>
+
+
+ <fieldset>
+    <legend>Filtrar por</legend>
 
     <?php $arrayNatureza = ArrayHelper::map( NaturezaocorrenciaSearch::find()->all(), 'idNatureza', 'Nome'); 
           $arrayNatureza[0] = 'Todos';
@@ -108,6 +115,7 @@ use kartik\timepicker\TimePicker;
     <?= $form->field($model, 'idLocal')->dropdownlist($arrayLocal, ['options'=>[0=>['Selected'=>true]]]) ?>
   
       <?= $form->field($model, 'periodo')->dropdownlist($arrayPeriodo, ['options'=>[0=>['Selected'=>true]]]) ?>
+</fieldset>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Enviar' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
@@ -129,6 +137,7 @@ use kartik\timepicker\TimePicker;
  
     var ano = document.getElementById('relatorio-ano');
     ano.disabled=true;
+
   </script>"
 
   ?>
