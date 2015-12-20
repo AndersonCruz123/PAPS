@@ -125,7 +125,7 @@ class UserController extends Controller
         $arraytiposusuario=ArrayHelper::map(TipousuarioSearch::find()->all(),'idTipo','funcao');
 
         $model->idTipoUsuario = $model->idTipoUsuariobkp;
-        
+
         if ($model->load(Yii::$app->request->post())) {
         
             if($model->save()) {
@@ -223,8 +223,10 @@ class UserController extends Controller
         
         $cpf = $model->cpf;
         $funcao = $model->idTipoUsuario;
+        $nome = $model->nome;
         $email = $model->email; 
         $model->senha = "";
+        $model->confirmarSenha = "";
         
         if ($model->load(Yii::$app->request->post())) {
    /*         echo "senha".$model->senha;
@@ -239,7 +241,7 @@ class UserController extends Controller
               elseif (strcmp($model->idTipoUsuario, 'Segurança Terceirizada') == 0)$model->idTipoUsuario = 2;
  
                 $model->email = $email;
-
+                $model->nome = $nome;
 
                 $model->save();
               
