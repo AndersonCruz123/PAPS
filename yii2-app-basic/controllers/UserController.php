@@ -20,13 +20,14 @@ class UserController extends Controller
 {
     public function behaviors()
     {
+        if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Chefe de Segurança') {
         return [ 
         'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['create', 'index', 'update', ''],
+                'only' => ['create', 'index', 'update', 'delete', 'view', 'alterarsenha'],
                 'rules' => [
                     [
-                        'actions' => ['create', 'index', 'update'],
+                        'actions' => ['create', 'index', 'update', 'delete', 'view', 'alterarsenha'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -40,7 +41,52 @@ class UserController extends Controller
                 ],
             ],
         ];
+    } elseif(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Segurança Terceirizada') {
+        return [ 
+        'access' => [
+                'class' => AccessControl::className(),
+ //               'only' => ['create'],
+                'rules' => [
+                    [
+                        'actions' => ['alterarsenha', 'view'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post'],
+                ],
+            ],
+        ];
+        }  else {
+        return [ 
+        'access' => [
+                'class' => AccessControl::className(),
+           //     'only' => ['alterarsenha', 'forgot'],
+                'rules' => [
+                    [
+                        'actions' => ['forgot'],
+                        'allow' => true,
+                       // 'roles' => ['@'],
+                    ],
+
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post'],
+                ],
+            ],
+        ];
+
     }
+    
+}
     /**
      * Lists all User models.
      * @return mixed

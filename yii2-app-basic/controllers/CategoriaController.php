@@ -17,13 +17,14 @@ class CategoriaController extends Controller
 {
     public function behaviors()
     {
+        if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Chefe de Segurança') {
         return [ 
         'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['create', 'index', 'update', ''],
+                'only' => ['create', 'index', 'update', 'delete', 'view'],
                 'rules' => [
                     [
-                        'actions' => ['create', 'index', 'update'],
+                        'actions' => ['create', 'index', 'update', 'delete', 'view'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -37,6 +38,7 @@ class CategoriaController extends Controller
                 ],
             ],
         ];
+    }
     }
 
     /**

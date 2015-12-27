@@ -6,8 +6,9 @@ use Yii;
 use app\models\Denuncia;
 use app\models\DenunciaSearch;
 use yii\web\Controller;
-use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
+use yii\web\NotFoundHttpException;
 use yii\web\UploadedFile;
 use app\models\Foto;
 use app\controllers\FotoController;
@@ -19,16 +20,74 @@ class DenunciaController extends Controller
 {
     public function behaviors()
     {
-        return [
+        if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Chefe de Segurança') {
+        return [ 
+        'access' => [
+                'class' => AccessControl::className(),
+            //    'only' => ['index', 'update', 'delete', 'naoverificadas'],
+                'rules' => [
+                    [
+                        'actions' => ['index','view', 'update','delete', 'naoverificadas'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['post'],
+                    'logout' => ['post'],
                 ],
             ],
         ];
-    }
+        }
+        else if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Segurança Terceirizada') {
+        return [ 
+        'access' => [
+                'class' => AccessControl::className(),
+         //       'only' => ['index', 'update', 'delete', 'naoverificadas'],
+                'rules' => [
+                    [
+                        'actions' => ['index','view', 'naoverificadas'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
 
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post'],
+                ],
+            ],
+        ];
+        }
+        else if (Yii::$app->user->isGuest == true) {
+        return [ 
+        'access' => [
+                'class' => AccessControl::className(),
+                 'rules' => [
+                    [
+                        'actions' => ['create'],
+                        'allow' => true,
+  //                     'roles' => ['@'],
+                    ],
+
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post'],
+                ],
+            ],
+        ];
+
+        }
+    }
+  
     /**
      * Lists all Denuncia models.
      * @return mixed

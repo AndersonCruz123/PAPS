@@ -35,10 +35,10 @@ class OcorrenciaController extends Controller
         return [ 
         'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['create', 'index', 'update', 'emaberto', 'relatorio', 'printocorrencia'],
+                'only' => ['create', 'index', 'update', 'delete', 'emaberto', 'relatorio', 'printocorrencia'],
                 'rules' => [
                     [
-                        'actions' => ['create', 'index', 'update', 'emaberto', 'relatorio', 'printocorrencia'],
+                        'actions' => ['create', 'index', 'update','delete', 'emaberto', 'relatorio', 'printocorrencia'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
