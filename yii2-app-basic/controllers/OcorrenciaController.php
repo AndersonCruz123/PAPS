@@ -1011,79 +1011,32 @@ protected function generateTableOcorrencia($option, $dataIni, $dataFim, $status,
           if ($mes < 10) {
       	 	$dataIni = $ano."-0".$mes."-01";
       	  	$dataFim = $ano."-0".$mes."-31";
-      	} else {
-     	 	$dataIni = $ano."-".$mes."-01";
-      	  	$dataFim = $ano."-".$mes."-31";
-      	}
-
-      	//TABELA OCORRENCIA 
-  /*      	$ocorrencia = Ocorrencia::find()->where('data >= "'.$dataIni.'"')->andWhere('data <= "'.$dataFim.'"')->all();
-			$color  = false;
-
-		 	foreach ($ocorrencia as $reg):
-  //          $tabela .= ($color) ? "<tr>" : "<tr class=\'zebra\''>";
-		 		$tabelaOco .= "<tr>";
-            	$tabelaOco .= "<td>".$reg->idOcorrencia."</td>";
-            	$tabelaOco .= "<td>".$reg->idCategoria."</td>";
-            	$tabelaOco .= "<td>".$reg->idNatureza."</td>";
-            	$tabelaOco .= "<td>".$reg->idLocal."</td>";
-            	$tabelaOco .= "<td>".$reg->idSubLocal."</td>";
-            	$tabelaOco .= "<td>".$reg->status."</td>";
-           		$tabelaOco .= "<td>".$reg->periodo."</td>";
-            	$tabelaOco .= "<td>".$reg->data."</td>";
-            	$tabelaOco .= "</tr>";
-     //       $color = !$color;
-        	endforeach;
-
-       		$tabelaOco .= "</table>";
-*/
+    	  	} else {
+     		 	$dataIni = $ano."-".$mes."-01";
+      		  	$dataFim = $ano."-".$mes."-31";
+	      	}
 	  	} else {
 
 	  	$dataIni = $model->dataInicial;
       	$dataFim = $model->dataFinal;
       	
-  /*    	//TABELA OCORRENCIA
-      	  $tabelaOco .= "<table border='1' width='1000' align='center' id='tabelaocorrencia'>
-      	  <caption>Quadro de ocorrências do período de ". $dataIni." a ".$dataFim."</caption>
-           <thead>
-           <tr class='header'>
-             <td>Número</td>
-             <td>Categoria</td>
-             <td>Natureza</td>
-             <td>Local</td>
-             <td>Sublocal</td>
-             <td>Status</td>
-             <td>Período</td>
-             <td>Data</td>
-           </tr>
-           </thead>
-           ";
- 
-        	$ocorrencia = Ocorrencia::find()->where('data >= "'.$dataIni.'"')->andWhere('data <= "'.$dataFim.'"')->all();
-			$color  = false;
-
-		 	foreach ($ocorrencia as $reg):
-  //          $tabela .= ($color) ? "<tr>" : "<tr class=\'zebra\''>";
-		 		$tabelaOco .= "<tr>";
-            	$tabelaOco .= "<td>".$reg->idOcorrencia."</td>";
-            	$tabelaOco .= "<td>".$reg->idCategoria."</td>";
-            	$tabelaOco .= "<td>".$reg->idNatureza."</td>";
-            	$tabelaOco .= "<td>".$reg->idLocal."</td>";
-            	$tabelaOco .= "<td>".$reg->idSubLocal."</td>";
-            	$tabelaOco .= "<td>".$reg->status."</td>";
-           		$tabelaOco .= "<td>".$reg->periodo."</td>";
-            	$tabelaOco .= "<td>".$reg->data."</td>";
-            	$tabelaOco .= "</tr>";
-     //       $color = !$color;
-        	endforeach;
-
-       		$tabelaOco .= "</table>";
-*/
+  
 	  	}
 
-
-        $total = Ocorrencia::find()->where('data >= "'.$dataIni.'"')->andWhere('data <= "'.$dataFim.'"')->count();
-      	  
+  		$stringsql = "SELECT COUNT(idOcorrencia) as cont FROM ocorrencia
+				JOIN sublocal ON sublocal.idSubLocal = 	ocorrencia.idSubLocal
+				JOIN categoria ON categoria.idCategoria = ocorrencia.idCategoria
+				JOIN naturezaocorrencia ON naturezaocorrencia.idNatureza = ocorrencia.idNatureza				
+				JOIN local ON sublocal.idLocal= local.idLocal
+				WHERE ocorrencia.data >= '".$dataIni."' AND ocorrencia.data <= '".$dataFim."'";
+		 if ($model->status!=0) $stringsql .= ' AND ocorrencia.status = '.$model->status;
+		 if ($model->periodo!=0) $stringsql .= ' AND ocorrencia.periodo = '.$model->periodo;
+	 	 if ($model->idCategoria!=0) $stringsql .= ' AND ocorrencia.idCategoria = '.$model->idCategoria;		 
+	 	 if ($model->idNatureza!=0) $stringsql .= ' AND ocorrencia.idNatureza = '.$model->idNatureza;		 
+		 if ($model->idLocal!=0) $stringsql .= ' AND local.idLocal = '.$model->idLocal;
+        $sqlSolucionado = $connection->createCommand($stringsql);
+        $total = $sqlSolucionado->queryScalar();
+  	  
       	  $html = "
         	<img id='cabecalho' src='./../views/ocorrencia/relatorio/figura.png'/>
      		<span id='data'><b>Gerado em: ".$date."</b></span>
