@@ -17,14 +17,15 @@ class Relatorio extends \yii\db\ActiveRecord
     public $tipo;
     public $dataInicial;
     public $dataFinal;
-    public $mes;
-    public $ano;
+    public $mesAno;
     public $radiobutton;
     public $idLocal;
     public $idNatureza;
     public $idCategoria;
     public $status;
     public $periodo;
+    public $mes;
+    public $ano;
 
     public static function tableName()
     {
@@ -37,8 +38,8 @@ class Relatorio extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['tipo', 'mes', 'ano', 'radiobutton'], 'integer'],
-            [['dataInicial', 'dataFinal'], 'safe'],         
+            [['tipo', 'mes', 'ano', 'radiobutton', 'periodo', 'idLocal', 'idNatureza', 'idCategoria', 'status'], 'integer'],
+            [['dataInicial', 'dataFinal', 'mesAno'], 'safe'],         
         ];
     }
 
@@ -54,6 +55,7 @@ class Relatorio extends \yii\db\ActiveRecord
             'idCategoria' => 'Categoria',
             'status' => 'Status',
             'periodo' => 'Período',
+            'mesAno' => 'Mês e ano'
         ];
     }
 }

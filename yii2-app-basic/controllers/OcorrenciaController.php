@@ -271,6 +271,22 @@ class OcorrenciaController extends Controller
     	else if ($mes == 12) return "Dezembro";
     }
 
+
+    protected function findMonthsNumber($mes) {
+        if (strcmp ($mes, 'Jan') == 0) return 1;
+        else if (strcmp ($mes, 'Fev') == 0) return 2;
+        else if (strcmp ($mes, 'Mar') == 0) return 3;
+        else if (strcmp ($mes, 'Abr') == 0) return 4;
+        else if (strcmp ($mes, 'Mai') == 0) return 5;
+        else if (strcmp ($mes, 'Jun') == 0) return 6;                             
+        else if (strcmp ($mes, 'Jul') == 0) return 7;
+        else if (strcmp ($mes, 'Ago') == 0) return 8;
+        else if (strcmp ($mes, 'Set') == 0) return 9;
+        else if (strcmp ($mes, 'Out') == 0)return 10;
+        else if (strcmp ($mes, 'Nov') == 0) return 11;                      
+        else if (strcmp ($mes, 'Dez') == 0) return 12;
+    }
+
     public function actionPrintocorrencia($id)
     {
         $model = $this->findModel($id);
@@ -427,6 +443,533 @@ class OcorrenciaController extends Controller
         exit;
 }
 
+protected function generateTablePeriodo($option, $dataIni, $dataFim, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
+
+		$tabelaPeriodo = "";
+		if ($option == 1) {
+
+          list ($ano, $mes, $dia) = split ('[-]', $dataFim);
+      	
+   		//TABELA PERIODO
+       		$tabelaPeriodo .= "<table border='1' width='1000' align='center' id='tabelaperiodo'>
+      	  <caption>Quantidade de ocorrências por período do mês de ". $this->findMonths($mes)." do ano de ".$ano."</caption>
+           <thead>
+           <tr class='header'>
+             <td>Período</td>
+             <td>Quantidade</td>
+           </tr>
+           </thead>
+           ";
+       } else {
+       		$tabelaPeriodo .= "<table border='1' width='1000' align='center' id='tabelaperiodo'>
+      	  <caption>Quantidade de ocorrências por período do mês de ". $dataIni." a ".$dataFim."</caption>
+           <thead>
+           <tr class='header'>
+             <td>Período</td>
+             <td>Quantidade</td>
+           </tr>
+           </thead>
+           ";
+       }
+
+	  	$connection = \Yii::$app->db;
+	  
+	  if ($periodo == 0) {
+        $stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 1'; 
+		 if ($status!=0) $stringsql .= ' AND status = '.$status;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+		 if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';
+        $sqlManha = $connection->createCommand($stringsql);
+        $manha = $sqlManha->queryScalar();
+
+        $stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 2';
+		 if ($status!=0) $stringsql .= ' AND status = '.$status;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+		 if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';
+        $sqlTarde = $connection->createCommand($stringsql);
+        $tarde = $sqlTarde->queryScalar();
+
+        $stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 3';
+		 if ($status!=0) $stringsql .= ' AND status = '.$status;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+		 if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';
+        $sqlNoite = $connection->createCommand($stringsql);
+        $noite = $sqlNoite->queryScalar();
+
+        $stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 4';
+		 if ($status!=0) $stringsql .= ' AND status = '.$status;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+		 if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';        
+        $sqlMadrugada = $connection->createCommand($stringsql);
+        $madrugada = $sqlMadrugada->queryScalar();        
+
+		 		$tabelaPeriodo .= "<tr>";
+		 		$tabelaPeriodo .= "<td>Manhã</td>";
+            	$tabelaPeriodo .= "<td>".$manha."</td>";
+            	$tabelaPeriodo .= "</tr>";
+
+		 		$tabelaPeriodo .= "<tr>";
+		 		$tabelaPeriodo .= "<td>Tarde</td>";
+            	$tabelaPeriodo .= "<td>".$tarde."</td>";
+            	$tabelaPeriodo .= "</tr>";
+
+		 		$tabelaPeriodo .= "<tr>";
+		 		$tabelaPeriodo .= "<td>Noite</td>";
+            	$tabelaPeriodo .= "<td>".$noite."</td>";
+            	$tabelaPeriodo .= "</tr>";
+
+		 		$tabelaPeriodo .= "<tr>";
+		 		$tabelaPeriodo .= "<td>Madrugada</td>";
+            	$tabelaPeriodo .= "<td>".$madrugada."</td>";
+            	$tabelaPeriodo .= "</tr>";
+     //       $color = !$color;
+       	} else if ($periodo == 1) {
+
+        $stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 1'; 
+		 if ($status!=0) $stringsql .= ' AND status = '.$status;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+		 if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';
+        $sqlManha = $connection->createCommand($stringsql);
+        $manha = $sqlManha->queryScalar();
+
+		 		$tabelaPeriodo .= "<tr>";
+		 		$tabelaPeriodo .= "<td>Manhã</td>";
+            	$tabelaPeriodo .= "<td>".$manha."</td>";
+            	$tabelaPeriodo .= "</tr>";
+
+       	} else if ($periodo == 2) {
+
+        $stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 2';
+		 if ($status!=0) $stringsql .= ' AND status = '.$status;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+		 if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';
+        $sqlTarde = $connection->createCommand($stringsql);
+        $tarde = $sqlTarde->queryScalar();
+
+		 		$tabelaPeriodo .= "<tr>";
+		 		$tabelaPeriodo .= "<td>Tarde</td>";
+            	$tabelaPeriodo .= "<td>".$tarde."</td>";
+            	$tabelaPeriodo .= "</tr>";
+       	} else if ($periodo == 3) {
+
+        $stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 3';
+		 if ($status!=0) $stringsql .= ' AND status = '.$status;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+		 if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';
+        $sqlNoite = $connection->createCommand($stringsql);
+        $noite = $sqlNoite->queryScalar();
+
+		 		$tabelaPeriodo .= "<tr>";
+		 		$tabelaPeriodo .= "<td>Noite</td>";
+            	$tabelaPeriodo .= "<td>".$noite."</td>";
+            	$tabelaPeriodo .= "</tr>";
+
+       	} else if ($periodo == 4) {
+
+        $stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 4';
+		 if ($status!=0) $stringsql .= ' AND status = '.$status;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+		 if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';        
+        $sqlMadrugada = $connection->createCommand($stringsql);
+        $madrugada = $sqlMadrugada->queryScalar();        
+
+		 		$tabelaPeriodo .= "<tr>";
+		 		$tabelaPeriodo .= "<td>Madrugada</td>";
+            	$tabelaPeriodo .= "<td>".$madrugada."</td>";
+            	$tabelaPeriodo .= "</tr>";
+    	}
+
+       	$tabelaPeriodo .= "</table>";
+        return $tabelaPeriodo;
+}
+
+protected function generateTableStatus($option, $dataIni, $dataFim, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
+
+		$tabelaStatus = "";
+		if ($option == 1) {
+
+          list ($ano, $mes, $dia) = split ('[-]', $dataFim);
+		
+       		//TABELA STATUS
+       		$tabelaStatus .= "<table border='1' width='1000' align='center' id='tabelastatus'>
+      	  <caption>Quantidade de ocorrências por status do mês de ". $this->findMonths($mes)." do ano de ".$ano."</caption>
+           <thead>
+           <tr class='header'>
+             <td>Status</td>
+             <td>Quantidade</td>
+           </tr>
+           </thead>
+           ";
+		} else {
+       		$tabelaStatus .= "<table border='1' width='1000' align='center' id='tabelastatus'>
+      	  <caption>Quantidade de ocorrências por status do mês de ". $dataIni." a ".$dataFim."</caption>
+           <thead>
+           <tr class='header'>
+             <td>Status</td>
+             <td>Quantidade</td>
+           </tr>
+           </thead>
+           ";
+		}
+
+	  	$connection = \Yii::$app->db;
+
+	  	if ($status == 0){
+	
+	   	$stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND status = 1';
+		 if ($periodo!=0) $stringsql .= ' AND periodo = '.$periodo;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+		 if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';
+
+		$sqlAberto = $connection->createCommand($stringsql);
+        $aberto = $sqlAberto->queryScalar();
+ 
+ 		$stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND status = 2';
+		 if ($periodo!=0) $stringsql .= ' AND periodo = '.$periodo;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+		 if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';
+        $sqlSolucionado = $connection->createCommand($stringsql);
+        $solucionado = $sqlSolucionado->queryScalar();
+
+
+		$stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND status = 3';
+		 if ($periodo!=0) $stringsql .= ' AND periodo = '.$periodo;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+		 if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';		       
+        $sqlNotSolucionado = $connection->createCommand($stringsql);
+        $notsolucionado = $sqlNotSolucionado->queryScalar();
+
+		 		$tabelaStatus .= "<tr>";
+            	$tabelaStatus .= "<td>Aberta</td>";
+            	$tabelaStatus .= "<td>".$aberto."</td>";
+            	$tabelaStatus .= "</tr>";
+
+		 		$tabelaStatus .= "<tr>";
+            	$tabelaStatus .= "<td>Solucionada</td>";		 		
+            	$tabelaStatus .= "<td>".$solucionado."</td>";
+            	$tabelaStatus .= "</tr>";
+
+		 		$tabelaStatus .= "<tr>";
+            	$tabelaStatus .= "<td>Não solucionada</td>";		 		
+            	$tabelaStatus .= "<td>".$notsolucionado."</td>";
+            	$tabelaStatus .= "</tr>";
+     //       $color = !$color;
+       	} else if ($status == 1) {
+
+	   	$stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND status = 1';
+		 if ($periodo!=0) $stringsql .= ' AND periodo = '.$periodo;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+		 if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';
+
+		$sqlAberto = $connection->createCommand($stringsql);
+        $aberto = $sqlAberto->queryScalar();
+
+		 		$tabelaStatus .= "<tr>";
+            	$tabelaStatus .= "<td>Aberta</td>";
+            	$tabelaStatus .= "<td>".$aberto."</td>";
+            	$tabelaStatus .= "</tr>";
+
+       	} else if ($status == 2) {
+
+ 		$stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND status = 2';
+		 if ($periodo!=0) $stringsql .= ' AND periodo = '.$periodo;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+		 if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';
+        $sqlSolucionado = $connection->createCommand($stringsql);
+        $solucionado = $sqlSolucionado->queryScalar();
+
+        		$tabelaStatus .= "<tr>";
+            	$tabelaStatus .= "<td>Solucionada</td>";		 		
+            	$tabelaStatus .= "<td>".$solucionado."</td>";
+            	$tabelaStatus .= "</tr>";
+        } else if ($status == 3) {
+
+		$stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND status = 3';
+		 if ($periodo!=0) $stringsql .= ' AND periodo = '.$periodo;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+		 if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';		       
+        $sqlNotSolucionado = $connection->createCommand($stringsql);
+        $notsolucionado = $sqlNotSolucionado->queryScalar();
+
+		 		$tabelaStatus .= "<tr>";
+            	$tabelaStatus .= "<td>Não solucionada</td>";		 		
+            	$tabelaStatus .= "<td>".$notsolucionado."</td>";
+            	$tabelaStatus .= "</tr>";
+        }
+
+       	$tabelaStatus .= "</table>";
+       	return $tabelaStatus;
+}
+
+protected function generateTableNatureza($option, $dataIni, $dataFim, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
+
+	  	$connection = \Yii::$app->db;
+		$tabelaNatureza = "";
+		if ($option == 1) {
+
+          list ($ano, $mes, $dia) = split ('[-]', $dataFim);
+
+       		//TABELA NATUREZA
+       		$tabelaNatureza .= "<table border='1' width='1000' align='center' id='tabelanatureza'>
+      	  <caption>Quantidade de ocorrências por natureza do mês de ". $this->findMonths($mes)." do ano de ".$ano."</caption>
+           <thead>
+           <tr class='header'>
+             <td>Natureza</td>
+             <td>Quantidade</td>
+           </tr>
+           </thead>
+           ";
+       } else {
+    		$tabelaNatureza .= "<table border='1' width='1000' align='center' id='tabelanatureza'>
+      	  <caption>Quantidade de ocorrências por natureza do mês de ". $dataIni." a ".$dataFim."</caption>
+           <thead>
+           <tr class='header'>
+             <td>Natureza</td>
+             <td>Quantidade</td>
+           </tr>
+           </thead>
+           ";
+        }
+        
+        $stringsql = "SELECT naturezaocorrencia.Nome as natureza, COUNT(ocorrencia.idOcorrencia) as quantidade
+				FROM ocorrencia
+				JOIN naturezaocorrencia ON naturezaocorrencia.idNatureza = ocorrencia.idNatureza
+				WHERE ocorrencia.data >= '".$dataIni."' AND ocorrencia.data <= '".$dataFim."'";
+		 if ($status!=0) $stringsql .= ' AND ocorrencia.status = '.$status;
+		 if ($periodo!=0) $stringsql .= ' AND ocorrencia.periodo = '.$periodo;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND ocorrencia.idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND ocorrencia.idNatureza = '.$idNatureza;		 
+		 if ($idLocal!=0) $stringsql .= ' AND ocorrencia.idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';			    
+			    $stringsql .= " GROUP BY ocorrencia.idNatureza
+				ORDER BY quantidade  DESC";
+
+        $sqlNatureza = $connection->createCommand($stringsql);
+        $rstnatureza = $sqlNatureza->queryAll();
+
+        foreach ($rstnatureza as $reg):
+		 	$tabelaNatureza .= "<tr>";
+            $tabelaNatureza .= "<td>{$reg['natureza']}</td>";
+            $tabelaNatureza .= "<td>{$reg['quantidade']}</td>";
+            $tabelaNatureza .= "</tr>";
+        endforeach;
+
+       		$tabelaNatureza .= "</table>";
+       		return $tabelaNatureza;
+}
+
+protected function generateTableCategoria($option, $dataIni, $dataFim, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
+
+	  	$connection = \Yii::$app->db;
+		$tabelaCategoria = "";
+		if ($option == 1) {
+
+          list ($ano, $mes, $dia) = split ('[-]', $dataFim);
+
+       		$tabelaCategoria .= "<table border='1' width='1000' align='center' id='tabelacategoria'>
+      	  <caption>Quantidade de ocorrências por categoria do mês de ". $this->findMonths($mes)." do ano de ".$ano."</caption>
+           <thead>
+           <tr class='header'>
+             <td>Categoria</td>
+             <td>Quantidade</td>
+           </tr>
+           </thead>
+           ";
+       } else {
+       		$tabelaCategoria .= "<table border='1' width='1000' align='center' id='tabelacategoria'>
+      	  <caption>Quantidade de ocorrências por categoria do mês de ". $dataIni." a ".$dataFim."</caption>
+           <thead>
+           <tr class='header'>
+             <td>Categoria</td>
+             <td>Quantidade</td>
+           </tr>
+           </thead>
+           ";
+        }
+
+       $stringsql = "SELECT categoria.Nome as categoria, COUNT(ocorrencia.idOcorrencia) as quantidade
+				FROM ocorrencia
+				JOIN categoria ON categoria.idCategoria = 	ocorrencia.idCategoria
+				WHERE ocorrencia.data >= '".$dataIni."' AND ocorrencia.data <= '".$dataFim."'";
+		 if ($status!=0) $stringsql .= ' AND ocorrencia.status = '.$status;
+		 if ($periodo!=0) $stringsql .= ' AND ocorrencia.periodo = '.$periodo;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND ocorrencia.idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND ocorrencia.idNatureza = '.$idNatureza;		 
+		 if ($idLocal!=0) $stringsql .= ' AND ocorrencia.idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';			    
+		$stringsql .= " GROUP BY ocorrencia.idCategoria ORDER BY quantidade  DESC";
+
+
+        $sqlCategoria = $connection->createCommand($stringsql);
+        $rstcategoria = $sqlCategoria->queryAll();
+
+        foreach ($rstcategoria as $reg):
+		 	$tabelaCategoria .= "<tr>";
+            $tabelaCategoria .= "<td>{$reg['categoria']}</td>";
+            $tabelaCategoria .= "<td>{$reg['quantidade']}</td>";
+            $tabelaCategoria .= "</tr>";
+        endforeach;
+
+       		$tabelaCategoria .= "</table>";        
+       		return $tabelaCategoria;
+}
+
+protected function generateTableLocal($option, $dataIni, $dataFim, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
+
+	  	$connection = \Yii::$app->db;
+		$tabelaLocal = "";
+		if ($option == 1) {
+          list ($ano, $mes, $dia) = split ('[-]', $dataFim);
+           $tabelaLocal .= "<table border='1' width='1000' align='center' id='tabelalocal'>
+      	  <caption>Quantidade de ocorrências por local do mês de ". $this->findMonths($mes)." do ano de ".$ano."</caption>
+           <thead>
+           <tr class='header'>
+             <td>Local</td>
+             <td>Quantidade</td>
+           </tr>
+           </thead>
+           ";
+
+      } else {
+       		$tabelaLocal .= "<table border='1' width='1000' align='center' id='tabelalocal'>
+      	  <caption>Quantidade de ocorrências por local do mês de ". $dataIni." a ".$dataFim."</caption>
+           <thead>
+           <tr class='header'>
+             <td>Local</td>
+             <td>Quantidade</td>
+           </tr>
+           </thead>
+           ";
+      }
+        $stringsql = "SELECT local.Nome as nomelocal, COUNT(ocorrencia.idOcorrencia) as quantidade
+				FROM ocorrencia
+				JOIN sublocal ON sublocal.idSubLocal = 	ocorrencia.idSubLocal
+				JOIN local ON sublocal.idLocal= local.idLocal
+				WHERE ocorrencia.data >= '".$dataIni."' AND ocorrencia.data <= '".$dataFim."'";
+		 if ($status!=0) $stringsql .= ' AND ocorrencia.status = '.$status;
+		 if ($periodo!=0) $stringsql .= ' AND ocorrencia.periodo = '.$periodo;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND ocorrencia.idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND ocorrencia.idNatureza = '.$idNatureza;		 
+		 if ($idLocal!=0) $stringsql .= ' AND local.idLocal = '.$idLocal;			    
+		$stringsql .= " GROUP BY local.idLocal ORDER BY quantidade  DESC";
+
+        
+        $sqlLocal = $connection->createCommand($stringsql);      
+        $rstlocal = $sqlLocal->queryAll();
+
+        foreach ($rstlocal as $reg):
+		 	$tabelaLocal .= "<tr>";
+            $tabelaLocal .= "<td>{$reg['nomelocal']}</td>";
+            $tabelaLocal .= "<td>{$reg['quantidade']}</td>";
+            $tabelaLocal .= "</tr>";
+        endforeach;
+
+       		$tabelaLocal .= "</table>";
+       		return $tabelaLocal;
+
+}
+
+protected function generateTableOcorrencia($option, $dataIni, $dataFim, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
+
+	  	$connection = \Yii::$app->db;
+		$tabelaOco = "";
+		if ($option == 1) {
+          list ($ano, $mes, $dia) = split ('[-]', $dataFim);			
+      	  $tabelaOco .= "<table border='1' width='1000' align='center' id='tabelaocorrencia'>
+      	  <caption>Quadro de ocorrências do mês de ". $this->findMonths($mes)." do ano de ".$ano."</caption>
+           <thead>
+           <tr class='header'>
+             <td>Número</td>
+             <td>Categoria</td>
+             <td>Natureza</td>
+             <td>Local</td>
+             <td>Sublocal</td>
+             <td>Status</td>
+             <td>Período</td>
+             <td>Data</td>
+           </tr>
+           </thead>
+           ";		
+		} else {
+      	  
+      	  $tabelaOco .= "<table border='1' width='1000' align='center' id='tabelaocorrencia'>
+      	  <caption>Quadro de ocorrências do período de ". $dataIni." a ".$dataFim."</caption>
+           <thead>
+           <tr class='header'>
+             <td>Número</td>
+             <td>Categoria</td>
+             <td>Natureza</td>
+             <td>Local</td>
+             <td>Sublocal</td>
+             <td>Status</td>
+             <td>Período</td>
+             <td>Data</td>
+           </tr>
+           </thead>
+           ";
+		}
+
+        $stringsql = "SELECT ocorrencia.idOcorrencia as idOcorrencia, categoria.Nome as categoriaNome, 
+        naturezaocorrencia.Nome as naturezaNome, local.Nome as localNome, sublocal.Nome as sublocalNome, 
+        ocorrencia.status as status, ocorrencia.periodo as periodo, ocorrencia.data as data
+				FROM ocorrencia
+				JOIN sublocal ON sublocal.idSubLocal = 	ocorrencia.idSubLocal
+				JOIN categoria ON categoria.idCategoria = ocorrencia.idCategoria
+				JOIN naturezaocorrencia ON naturezaocorrencia.idNatureza = ocorrencia.idNatureza				
+				JOIN local ON sublocal.idLocal= local.idLocal
+				WHERE ocorrencia.data >= '".$dataIni."' AND ocorrencia.data <= '".$dataFim."'";
+		 if ($status!=0) $stringsql .= ' AND ocorrencia.status = '.$status;
+		 if ($periodo!=0) $stringsql .= ' AND ocorrencia.periodo = '.$periodo;
+	 	 if ($idCategoria!=0) $stringsql .= ' AND ocorrencia.idCategoria = '.$idCategoria;		 
+	 	 if ($idNatureza!=0) $stringsql .= ' AND ocorrencia.idNatureza = '.$idNatureza;		 
+		 if ($idLocal!=0) $stringsql .= ' AND local.idLocal = '.$idLocal;
+		$stringsql .= " ORDER BY ocorrencia.idOcorrencia ASC";
+
+        
+        $sqlOcorrencia = $connection->createCommand($stringsql);      
+        $rstocorencia = $sqlOcorrencia->queryAll();
+		 	
+		 	foreach ($rstocorencia as $reg):
+  //          $tabela .= ($color) ? "<tr>" : "<tr class=\'zebra\''>";
+		 		//{$reg['nomelocal']}
+		 		if ($reg['status'] == 1) $status = "Aberta";
+		 		else if ($reg['status'] == 2) $status = "Solucionada";
+		 		else if ($reg['status'] == 3) $status = "Não solucionada";
+
+		 		if ($reg['periodo'] == 1) $periodo = "Manhã";
+		 		else if ($reg['periodo'] == 2) $periodo = "Tarde";
+		 		else if ($reg['periodo'] == 3) $periodo = "Noite";
+		 		else if ($reg['periodo'] == 4) $periodo = "Madrugada";
+
+		 		$tabelaOco .= "<tr>";
+            	$tabelaOco .= "<td>{$reg['idOcorrencia']}</td>";
+            	$tabelaOco .= "<td>{$reg['categoriaNome']}</td>";
+            	$tabelaOco .= "<td>{$reg['naturezaNome']}</td>";
+            	$tabelaOco .= "<td>{$reg['localNome']}</td>";
+            	$tabelaOco .= "<td>{$reg['sublocalNome']}</td>";
+            	$tabelaOco .= "<td>".$status."</td>";
+           		$tabelaOco .= "<td>".$periodo."</td>";
+            	$tabelaOco .= "<td>{$reg['data']}</td>";
+            	$tabelaOco .= "</tr>";
+     //       $color = !$color;
+        	endforeach;
+
+       		$tabelaOco .= "</table>";
+       		return $tabelaOco;
+}
+
     public function actionRelatorio()
     {
         $model = new Relatorio();
@@ -459,34 +1002,22 @@ class OcorrenciaController extends Controller
       	$tabelaLocal = "";
       	$tabelaCategoria = "";
 
-	if ($model->radiobutton==1) {
-      	  if ($model->mes < 10) {
-      	 	$dataIni = $model->ano."-0".$model->mes."-01";
-      	  	$dataFim = $model->ano."-0".$model->mes."-31";
-      	} else {
-     	 	$dataIni = $model->ano."-".$model->mes."-01";
-      	  	$dataFim = $model->ano."-".$model->mes."-31";
 
+	  	$connection = \Yii::$app->db;
+	if ($model->radiobutton==1) {
+          list ($mes, $ano) = split ('[-]', $model->mesAno);
+      	  $mes = $this->findMonthsNumber($mes);
+            
+          if ($mes < 10) {
+      	 	$dataIni = $ano."-0".$mes."-01";
+      	  	$dataFim = $ano."-0".$mes."-31";
+      	} else {
+     	 	$dataIni = $ano."-".$mes."-01";
+      	  	$dataFim = $ano."-".$mes."-31";
       	}
 
-      	//TABELA OCORRENCIA
-      	  $tabelaOco .= "<table border='1' width='1000' align='center' id='tabelaocorrencia'>
-      	  <caption>Quadro de ocorrências do mês de ". $this->findMonths($model->mes)." do ano de ".$model->ano."</caption>
-           <thead>
-           <tr class='header'>
-             <td>Número</td>
-             <td>Categoria</td>
-             <td>Natureza</td>
-             <td>Local</td>
-             <td>Sublocal</td>
-             <td>Status</td>
-             <td>Período</td>
-             <td>Data</td>
-           </tr>
-           </thead>
-           ";
- 
-        	$ocorrencia = Ocorrencia::find()->where('data >= "'.$dataIni.'"')->andWhere('data <= "'.$dataFim.'"')->all();
+      	//TABELA OCORRENCIA 
+  /*      	$ocorrencia = Ocorrencia::find()->where('data >= "'.$dataIni.'"')->andWhere('data <= "'.$dataFim.'"')->all();
 			$color  = false;
 
 		 	foreach ($ocorrencia as $reg):
@@ -500,181 +1031,18 @@ class OcorrenciaController extends Controller
             	$tabelaOco .= "<td>".$reg->status."</td>";
            		$tabelaOco .= "<td>".$reg->periodo."</td>";
             	$tabelaOco .= "<td>".$reg->data."</td>";
-            	$tabelaOco .= "<tr>";
+            	$tabelaOco .= "</tr>";
      //       $color = !$color;
         	endforeach;
 
        		$tabelaOco .= "</table>";
-
-       		//TABELA PERIODO
-       		$tabelaPeriodo .= "<table border='1' width='1000' align='center' id='tabelaperiodo'>
-      	  <caption>Quantidade de ocorrências por período do mês de ". $this->findMonths($model->mes)." do ano de ".$model->ano."</caption>
-           <thead>
-           <tr class='header'>
-             <td>Manhã</td>
-             <td>Tarde</td>
-             <td>Noite</td>
-             <td>Madrugada</td>
-           </tr>
-           </thead>
-           ";
-
-
-	  	$connection = \Yii::$app->db;
-        $sqlManha = $connection->createCommand('SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 1');
-        $manha = $sqlManha->queryScalar();
- 
-        $sqlTarde = $connection->createCommand('SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 2');
-        $tarde = $sqlTarde->queryScalar();
-
-        $sqlNoite = $connection->createCommand('SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 3');
-        $noite = $sqlNoite->queryScalar();
-
-        $sqlMadrugada = $connection->createCommand('SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 4');
-        $madrugada = $sqlMadrugada->queryScalar();        
-
-		 		$tabelaPeriodo .= "<tr>";
-            	$tabelaPeriodo .= "<td>".$manha."</td>";
-            	$tabelaPeriodo .= "<td>".$tarde."</td>";
-            	$tabelaPeriodo .= "<td>".$noite."</td>";
-            	$tabelaPeriodo .= "<td>".$madrugada."</td>";
-            	$tabelaPeriodo .= "<tr>";
-     //       $color = !$color;
-
-       		$tabelaPeriodo .= "</table>";
-
-       		//TABELA STATUS
-
-       		$tabelaStatus .= "<table border='1' width='1000' align='center' id='tabelastatus'>
-      	  <caption>Quantidade de ocorrências por status do mês de ". $this->findMonths($model->mes)." do ano de ".$model->ano."</caption>
-           <thead>
-           <tr class='header'>
-             <td>Aberta</td>
-             <td>Solucionada</td>
-             <td>Não Solucionada</td>
-           </tr>
-           </thead>
-           ";
-
-        $sqlAberto = $connection->createCommand('SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND status = 1');
-        $aberto = $sqlAberto->queryScalar();
- 
-        $sqlSolucionado = $connection->createCommand('SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND status = 2');
-        $solucionado = $sqlSolucionado->queryScalar();
-
-        $sqlNotSolucionado = $connection->createCommand('SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND status = 3');
-        $notsolcionado = $sqlNotSolucionado->queryScalar();
-
-		 		$tabelaStatus .= "<tr>";
-            	$tabelaStatus .= "<td>".$aberto."</td>";
-            	$tabelaStatus .= "<td>".$solucionado."</td>";
-            	$tabelaStatus .= "<td>".$notsolcionado."</td>";
-            	$tabelaStatus .= "<tr>";
-     //       $color = !$color;
-
-       		$tabelaStatus .= "</table>";
-
-       		//TABELA NATUREZA
-       		$tabelaNatureza .= "<table border='1' width='1000' align='center' id='tabelanatureza'>
-      	  <caption>Quantidade de ocorrências por natureza do mês de ". $this->findMonths($model->mes)." do ano de ".$model->ano."</caption>
-           <thead>
-           <tr class='header'>
-             <td>Natureza</td>
-             <td>Quantidade</td>
-           </tr>
-           </thead>
-           ";
-
-        $sql = "SELECT naturezaocorrencia.Nome as natureza, COUNT(ocorrencia.idOcorrencia) as quantidade
-				FROM ocorrencia
-				JOIN naturezaocorrencia ON naturezaocorrencia.idNatureza = ocorrencia.idNatureza
-				WHERE ocorrencia.data >= '".$dataIni."' AND ocorrencia.data <= '".$dataFim."' 
-				GROUP BY ocorrencia.idNatureza
-				ORDER BY quantidade  DESC";
-
-        $sqlNatureza = $connection->createCommand($sql);
-        $rstnatureza = $sqlNatureza->queryAll();
-
-        foreach ($rstnatureza as $reg):
-		 	$tabelaNatureza .= "<tr>";
-            $tabelaNatureza .= "<td>{$reg['natureza']}</td>";
-            $tabelaNatureza .= "<td>{$reg['quantidade']}</td>";
-            $tabelaNatureza .= "</tr>";
-        endforeach;
-
-       		$tabelaNatureza .= "</table>";
-
-
-     		//TABELA CATEGORIA
-       		$tabelaCategoria .= "<table border='1' width='1000' align='center' id='tabelacategoria'>
-      	  <caption>Quantidade de ocorrências por categoria do mês de ". $this->findMonths($model->mes)." do ano de ".$model->ano."</caption>
-           <thead>
-           <tr class='header'>
-             <td>Categoria</td>
-             <td>Quantidade</td>
-           </tr>
-           </thead>
-           ";
-
-        $sql = "SELECT categoria.Nome as categoria, COUNT(ocorrencia.idOcorrencia) as quantidade
-				FROM ocorrencia
-				JOIN categoria ON categoria.idCategoria = 	ocorrencia.idCategoria
-				WHERE ocorrencia.data >= '".$dataIni."' AND ocorrencia.data <= '".$dataFim."' 
-				GROUP BY ocorrencia.idCategoria
-				ORDER BY quantidade  DESC";
-        
-        $sqlCategoria = $connection->createCommand($sql);
-        $rstcategoria = $sqlCategoria->queryAll();
-
-        foreach ($rstcategoria as $reg):
-		 	$tabelaCategoria .= "<tr>";
-            $tabelaCategoria .= "<td>{$reg['categoria']}</td>";
-            $tabelaCategoria .= "<td>{$reg['quantidade']}</td>";
-            $tabelaCategoria .= "</tr>";
-        endforeach;
-
-       		$tabelaCategoria .= "</table>";
-
-     		//TABELA LOCAL
-       		$tabelaLocal .= "<table border='1' width='1000' align='center' id='tabelalocal'>
-      	  <caption>Quantidade de ocorrências por local do mês de ". $this->findMonths($model->mes)." do ano de ".$model->ano."</caption>
-           <thead>
-           <tr class='header'>
-             <td>Local</td>
-             <td>Quantidade</td>
-           </tr>
-           </thead>
-           ";
-
-        $sql = "SELECT local.Nome as nomelocal, COUNT(ocorrencia.idOcorrencia) as quantidade
-				FROM ocorrencia
-				JOIN sublocal ON sublocal.idSubLocal = 	ocorrencia.idSubLocal
-				JOIN local ON sublocal.idLocal= local.idLocal
-				WHERE ocorrencia.data >= '".$dataIni."' AND ocorrencia.data <= '".$dataFim."'
-				GROUP BY local.idLocal
-				ORDER BY quantidade  DESC
-        		";
-        
-        $sqlLocal = $connection->createCommand($sql);
-        $rstlocal = $sqlLocal->queryAll();
-
-        foreach ($rstlocal as $reg):
-		 	$tabelaLocal .= "<tr>";
-            $tabelaLocal .= "<td>{$reg['nomelocal']}</td>";
-            $tabelaLocal .= "<td>{$reg['quantidade']}</td>";
-            $tabelaLocal .= "</tr>";
-        endforeach;
-
-       		$tabelaLocal .= "</table>";
-
-
-
+*/
 	  	} else {
 
 	  	$dataIni = $model->dataInicial;
       	$dataFim = $model->dataFinal;
       	
-      	//TABELA OCORRENCIA
+  /*    	//TABELA OCORRENCIA
       	  $tabelaOco .= "<table border='1' width='1000' align='center' id='tabelaocorrencia'>
       	  <caption>Quadro de ocorrências do período de ". $dataIni." a ".$dataFim."</caption>
            <thead>
@@ -705,175 +1073,12 @@ class OcorrenciaController extends Controller
             	$tabelaOco .= "<td>".$reg->status."</td>";
            		$tabelaOco .= "<td>".$reg->periodo."</td>";
             	$tabelaOco .= "<td>".$reg->data."</td>";
-            	$tabelaOco .= "<tr>";
+            	$tabelaOco .= "</tr>";
      //       $color = !$color;
         	endforeach;
 
        		$tabelaOco .= "</table>";
-
-       		//TABELA PERIODO
-       		$tabelaPeriodo .= "<table border='1' width='1000' align='center' id='tabelaperiodo'>
-      	  <caption>Quantidade de ocorrências por período do mês de ". $dataIni." a ".$dataFim."</caption>
-           <thead>
-           <tr class='header'>
-             <td>Manhã</td>
-             <td>Tarde</td>
-             <td>Noite</td>
-             <td>Madrugada</td>
-           </tr>
-           </thead>
-           ";
-
-
-	  	$connection = \Yii::$app->db;
-        $sqlManha = $connection->createCommand('SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 1');
-        $manha = $sqlManha->queryScalar();
- 
-        $sqlTarde = $connection->createCommand('SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 2');
-        $tarde = $sqlTarde->queryScalar();
-
-        $sqlNoite = $connection->createCommand('SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 3');
-        $noite = $sqlNoite->queryScalar();
-
-        $sqlMadrugada = $connection->createCommand('SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 4');
-        $madrugada = $sqlMadrugada->queryScalar();        
-
-		 		$tabelaPeriodo .= "<tr>";
-            	$tabelaPeriodo .= "<td>".$manha."</td>";
-            	$tabelaPeriodo .= "<td>".$tarde."</td>";
-            	$tabelaPeriodo .= "<td>".$noite."</td>";
-            	$tabelaPeriodo .= "<td>".$madrugada."</td>";
-            	$tabelaPeriodo .= "<tr>";
-     //       $color = !$color;
-
-       		$tabelaPeriodo .= "</table>";
-
-       		//TABELA STATUS
-
-       		$tabelaStatus .= "<table border='1' width='1000' align='center' id='tabelastatus'>
-      	  <caption>Quantidade de ocorrências por status do mês de ". $dataIni." a ".$dataFim."</caption>
-           <thead>
-           <tr class='header'>
-             <td>Aberta</td>
-             <td>Solucionada</td>
-             <td>Não Solucionada</td>
-           </tr>
-           </thead>
-           ";
-
-        $sqlAberto = $connection->createCommand('SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND status = 1');
-        $aberto = $sqlAberto->queryScalar();
- 
-        $sqlSolucionado = $connection->createCommand('SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND status = 2');
-        $solucionado = $sqlSolucionado->queryScalar();
-
-        $sqlNotSolucionado = $connection->createCommand('SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND status = 3');
-        $notsolcionado = $sqlNotSolucionado->queryScalar();
-
-		 		$tabelaStatus .= "<tr>";
-            	$tabelaStatus .= "<td>".$aberto."</td>";
-            	$tabelaStatus .= "<td>".$solucionado."</td>";
-            	$tabelaStatus .= "<td>".$notsolcionado."</td>";
-            	$tabelaStatus .= "<tr>";
-     //       $color = !$color;
-
-       		$tabelaStatus .= "</table>";
-
-       		//TABELA NATUREZA
-       		$tabelaNatureza .= "<table border='1' width='1000' align='center' id='tabelanatureza'>
-      	  <caption>Quantidade de ocorrências por natureza do mês de ". $dataIni." a ".$dataFim."</caption>
-           <thead>
-           <tr class='header'>
-             <td>Natureza</td>
-             <td>Quantidade</td>
-           </tr>
-           </thead>
-           ";
-
-        $sql = "SELECT naturezaocorrencia.Nome as natureza, COUNT(ocorrencia.idOcorrencia) as quantidade
-				FROM ocorrencia
-				JOIN naturezaocorrencia ON naturezaocorrencia.idNatureza = ocorrencia.idNatureza
-				WHERE ocorrencia.data >= '".$dataIni."' AND ocorrencia.data <= '".$dataFim."' 
-				GROUP BY ocorrencia.idNatureza
-				ORDER BY quantidade  DESC";
-
-        $sqlNatureza = $connection->createCommand($sql);
-        $rstnatureza = $sqlNatureza->queryAll();
-
-        foreach ($rstnatureza as $reg):
-		 	$tabelaNatureza .= "<tr>";
-            $tabelaNatureza .= "<td>{$reg['natureza']}</td>";
-            $tabelaNatureza .= "<td>{$reg['quantidade']}</td>";
-            $tabelaNatureza .= "</tr>";
-        endforeach;
-
-       		$tabelaNatureza .= "</table>";
-
-
-     		//TABELA CATEGORIA
-       		$tabelaCategoria .= "<table border='1' width='1000' align='center' id='tabelacategoria'>
-      	  <caption>Quantidade de ocorrências por categoria do mês de ". $dataIni." a ".$dataFim."</caption>
-           <thead>
-           <tr class='header'>
-             <td>Categoria</td>
-             <td>Quantidade</td>
-           </tr>
-           </thead>
-           ";
-
-        $sql = "SELECT categoria.Nome as categoria, COUNT(ocorrencia.idOcorrencia) as quantidade
-				FROM ocorrencia
-				JOIN categoria ON categoria.idCategoria = 	ocorrencia.idCategoria
-				WHERE ocorrencia.data >= '".$dataIni."' AND ocorrencia.data <= '".$dataFim."' 
-				GROUP BY ocorrencia.idCategoria
-				ORDER BY quantidade  DESC";
-        
-        $sqlCategoria = $connection->createCommand($sql);
-        $rstcategoria = $sqlCategoria->queryAll();
-
-        foreach ($rstcategoria as $reg):
-		 	$tabelaCategoria .= "<tr>";
-            $tabelaCategoria .= "<td>{$reg['categoria']}</td>";
-            $tabelaCategoria .= "<td>{$reg['quantidade']}</td>";
-            $tabelaCategoria .= "</tr>";
-        endforeach;
-
-       		$tabelaCategoria .= "</table>";
-
-     		//TABELA LOCAL
-       		$tabelaLocal .= "<table border='1' width='1000' align='center' id='tabelalocal'>
-      	  <caption>Quantidade de ocorrências por local do mês de ". $dataIni." a ".$dataFim."</caption>
-           <thead>
-           <tr class='header'>
-             <td>Local</td>
-             <td>Quantidade</td>
-           </tr>
-           </thead>
-           ";
-
-        $sql = "SELECT local.Nome as nomelocal, COUNT(ocorrencia.idOcorrencia) as quantidade
-				FROM ocorrencia
-				JOIN sublocal ON sublocal.idSubLocal = 	ocorrencia.idSubLocal
-				JOIN local ON sublocal.idLocal= local.idLocal
-				WHERE ocorrencia.data >= '".$dataIni."' AND ocorrencia.data <= '".$dataFim."'
-				GROUP BY local.idLocal
-				ORDER BY quantidade  DESC
-        		";
-        
-        $sqlLocal = $connection->createCommand($sql);
-        $rstlocal = $sqlLocal->queryAll();
-
-        foreach ($rstlocal as $reg):
-		 	$tabelaLocal .= "<tr>";
-            $tabelaLocal .= "<td>{$reg['nomelocal']}</td>";
-            $tabelaLocal .= "<td>{$reg['quantidade']}</td>";
-            $tabelaLocal .= "</tr>";
-        endforeach;
-
-       		$tabelaLocal .= "</table>";
-
-
-
+*/
 	  	}
 
 
@@ -883,12 +1088,18 @@ class OcorrenciaController extends Controller
         	<img id='cabecalho' src='./../views/ocorrencia/relatorio/figura.png'/>
      		<span id='data'><b>Gerado em: ".$date."</b></span>
      		<h3>Total de ocorrências no período selecionado: ".$total."</h3>    		
-	        ".$tabelaOco."
-	        ".$tabelaPeriodo."
-	        ".$tabelaStatus."
-	        ".$tabelaNatureza."	        
-	        ".$tabelaCategoria."
-	        ".$tabelaLocal."	        
+	        ".$this->generateTableOcorrencia($model->radiobutton, $dataIni, $dataFim, $model->status, $model->periodo, 
+	        	$model->idLocal, $model->idNatureza, $model->idCategoria)."
+	        ".$this->generateTablePeriodo($model->radiobutton, $dataIni, $dataFim, $model->status, $model->periodo, 
+	        	$model->idLocal, $model->idNatureza, $model->idCategoria)."
+	        ".$this->generateTableStatus($model->radiobutton, $dataIni, $dataFim, $model->status, $model->periodo, 
+	        	$model->idLocal, $model->idNatureza, $model->idCategoria)."
+	        ".$this->generateTableNatureza($model->radiobutton, $dataIni, $dataFim, $model->status, $model->periodo, 
+	        	$model->idLocal, $model->idNatureza, $model->idCategoria)."	        
+	        ".$this->generateTableCategoria($model->radiobutton, $dataIni, $dataFim, $model->status, $model->periodo, 
+	        	$model->idLocal, $model->idNatureza, $model->idCategoria)."
+	        ".$this->generateTableLocal($model->radiobutton, $dataIni, $dataFim, $model->status, $model->periodo, 
+	        	$model->idLocal, $model->idNatureza, $model->idCategoria)."
 	        ";
 
 		$mpdf->WriteHTML($html);

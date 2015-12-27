@@ -33,14 +33,20 @@ use kartik\timepicker\TimePicker;
                            var radios = document.getElementsByName("Relatorio[radiobutton]");
                         
                         if (radios[1].checked == false) {
-                            $( "#relatorio-mes").prop("disabled", true);
-                            $( "#relatorio-ano").prop("disabled", true);   
+                          $( "#relatorio-mesano").hide();   
+                          $( "#relatorio-mesano").prop("disabled", true);
+                          
+                            $( "#relatorio-datafinal").show();
+                            $( "#relatorio-datainicial").show();
                             $( "#relatorio-datafinal").prop("disabled", false);
                             $( "#relatorio-datainicial").prop("disabled", false);                                                                     
                         } else {
 
-                           $( "#relatorio-mes").prop("disabled", false);
-                            $( "#relatorio-ano").prop("disabled", false);                                                                        
+                           $( "#relatorio-mesano").show();                                                                        
+                           $( "#relatorio-mesano").prop("disabled", false);
+
+                            $( "#relatorio-datafinal").hide();
+                            $( "#relatorio-datainicial").hide();
                             $( "#relatorio-datafinal").prop("disabled", true);
                             $( "#relatorio-datainicial").prop("disabled", true);
                         }
@@ -51,11 +57,20 @@ use kartik\timepicker\TimePicker;
    ); ?>
 
 
-    <?php $arrayMes = [1 => 'Janeiro', 2 => 'Fevereiro', 3 => 'Março', 4 => 'Abril', 5 => 'Maio', 6 => 'Junho', 7 => 'Julho', 8 => 'Agosto',9 => 'Setembro',10 => 'Outubro',11 => 'Novembro',12 => 'Dezembro']; ?>
-    <?= $form->field($model, 'mes')->dropdownlist($arrayMes, ['prompt'=>'Selecione o mês']) ?>
 
-    <?php $arrayAno = [2014 => '2014', 2015 => '2015', 2016 => '2016']?>
-    <?= $form->field($model, 'ano')->dropdownlist($arrayAno, ['prompt'=>'Selecione o ano']) ?>
+    <?= $form->field($model, 'mesAno')->widget(
+            DatePicker::className(), [
+                // inline too, not bad
+                 'inline' => false, 
+                 'language' => 'pt',
+                 // modify template for custom rendering
+                //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+                'clientOptions' => [
+                    'autoclose' => true,
+                    'format' => 'M-yyyy',
+                ]
+        ])->hint('Ano, mês, dia'); ?>
+
 
     <?= $form->field($model, 'dataInicial')->widget(
             DatePicker::className(), [
@@ -128,15 +143,15 @@ use kartik\timepicker\TimePicker;
    <?=  "<script>
     var datafinal = document.getElementById('relatorio-datafinal');
     datafinal.disabled = true;
+    datafinal.style.display = 'none';
 
     var datainicial = document.getElementById('relatorio-datainicial');
     datainicial.disabled = true;
-
-    var mes = document.getElementById('relatorio-mes');
-    mes.disabled=true;
- 
-    var ano = document.getElementById('relatorio-ano');
-    ano.disabled=true;
+    datainicial.style.display = 'none';
+    
+    var mesano = document.getElementById('relatorio-mesano');
+    mesano.disabled=true;
+    mesano.style.display = 'none';
 
   </script>"
 
