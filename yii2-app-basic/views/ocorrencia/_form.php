@@ -9,6 +9,7 @@ use app\assets\AppAsset;
 use app\models\NaturezaocorrenciaSearch;
 use app\models\LocalSearch;
 use app\models\SublocalSearch;
+use app\models\Sublocal;
 use app\models\CategoriaSearch;
 use dosamigos\datepicker\DatePicker;
 use kartik\timepicker\TimePicker;
@@ -39,6 +40,8 @@ use kartik\timepicker\TimePicker;
 
     <?php $arrayLocal = ArrayHelper::map( LocalSearch::find()->all(), 'idLocal', 'Nome'); ?>
 
+    <?php $arraySubLocal = ArrayHelper::map( SubLocal::find()->where(['idLocal' => $model->idLocal])->all(), 'idSubLocal', 'Nome'); ?>
+
     <?php $arrayCategoria = ArrayHelper::map( CategoriaSearch::find()->all(), 'idCategoria', 'Nome'); ?>
 
     <?php $arraystatus = [1 => 'Aberto', 2=>'Solucionado', 3=>'Não Solucionado']; ?>
@@ -52,7 +55,8 @@ use kartik\timepicker\TimePicker;
     
     <?= $form->field($model, 'idNatureza')->dropdownlist($arrayNatureza, ['prompt'=>'Selecione a Natureza da ocorrência']) ?>
 
-    <?= $form->field($model, 'idLocal')->dropDownList($arrayLocal,
+<?php if ($model->idLocal == 0) {
+    echo $form->field($model, 'idLocal')->dropDownList($arrayLocal,
              [
              'prompt' =>'Selecione o Local da Ocorrência' ,
               'onchange' =>'
@@ -60,21 +64,35 @@ use kartik\timepicker\TimePicker;
                     
                     $.get("index.php?r=sublocal/lists&id='.'" + $(this).val(), function(data){
                         $( "#ocorrencia-idsublocal").html(data);
-                    });',
-   
-    			'onload' => '
-    					console.log("carreguei a tela");
-    			        $.get("index.php?r=sublocal/sublocalselected&idLocal='.'" + $(this).val()&idSublocal='.'" + $model->idSubLocal , function(data){
-                        $( "#ocorrencia-idsublocal").html(data);
-                    });'
-    			
+                    });'    			
 
-             ]);?>
+             ]);
             
-    <?= $form->field($model, 'idSubLocal')->dropDownList(
+    echo $form->field($model, 'idSubLocal')->dropDownList(
                                     [
                                     'prompt' =>'Selecione o SubLocal da Ocorrência'
-                                    ]); ?>
+                                    ]);
+          } else {
+    echo $form->field($model, 'idLocal')->dropDownList($arrayLocal,
+             [
+             'prompt' =>'Selecione o Local da Ocorrência' ,
+              'onchange' =>'
+                    $.get("index.php?r=sublocal/lists&id='.'" + $(this).val(), function(data){
+                        $( "#ocorrencia-idsublocal").html(data);
+                    });
+                    ',
+                    'options'=>[$model->idLocal=>['Selected'=>true]]          
+
+             ]);
+               
+  echo $form->field($model, 'idSubLocal')->dropDownList($arraySubLocal,
+                                    [
+                                    'prompt' =>'Selecione o SubLocal da Ocorrência',
+                                    'options'=>[$model->idSubLocalbkp=>['Selected'=>true]]
+                                    ]);  
+
+    }
+  ?>
 
     <?= $form->field($model, 'detalheLocal')->textInput(['maxlength' => true]) ?>
      

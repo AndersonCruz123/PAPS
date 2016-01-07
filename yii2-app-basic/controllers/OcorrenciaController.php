@@ -133,6 +133,7 @@ class OcorrenciaController extends Controller
     public function actionCreate()
     {
         $model = new Ocorrencia();
+        $model->idLocal = 0;
 
         if ($model->load(Yii::$app->request->post())) {
            $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
@@ -221,8 +222,9 @@ class OcorrenciaController extends Controller
             }
       
         } else {
+
             return $this->render('update', [
-                'model' => $model,
+                'model' => $model
             ]);
         }
     }

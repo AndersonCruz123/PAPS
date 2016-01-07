@@ -56,7 +56,7 @@ class Ocorrencia extends \yii\db\ActiveRecord
     {
         return [
             [['status', 'data', 'hora', 'periodo', 'detalheLocal', 'descricao', 'idCategoria', 'idLocal', 'idSubLocal', 'idNatureza'], 'required','message'=>'Este campo é obrigatório'],
-            [['status', 'idCategoria', 'idNatureza', 'idLocal', 'idSubLocal'], 'integer'],
+            [['status', 'idCategoria', 'idNatureza', 'idLocal', 'idSubLocal', 'idSubLocalbkp'], 'integer'],
             [['data', 'hora', 'dataConclusao'], 'safe'],
             [['descricao', 'procedimento'], 'string'],
             [['comentarioFoto'], 'string', 'max' => 500],            
