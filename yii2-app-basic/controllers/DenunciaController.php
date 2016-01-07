@@ -70,7 +70,7 @@ class DenunciaController extends Controller
                 'class' => AccessControl::className(),
                  'rules' => [
                     [
-                        'actions' => ['create'],
+                        'actions' => ['create', 'sucesso'],
                         'allow' => true,
   //                     'roles' => ['@'],
                     ],
@@ -153,7 +153,7 @@ class DenunciaController extends Controller
                     $foto = null;
                     }
                 
-                return $this->redirect(['view', 'id' => $model->idDenuncia]);
+                return $this->render('sucesso');
             } else {
             return $this->render('create', [
                 'model' => $model,
