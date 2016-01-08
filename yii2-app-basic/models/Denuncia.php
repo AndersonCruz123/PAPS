@@ -54,10 +54,10 @@ class Denuncia extends \yii\db\ActiveRecord
     {
         return [
             'idDenuncia' => 'Número da Denúncia',
-            'descricao' => 'Descrição',
-            'local' => 'Local',
-            'data' => 'Data',
-            'hora' => 'Hora',
+            'descricao' => '*Descrição',
+            'local' => '*Local',
+            'data' => '*Data',
+            'hora' => '*Hora',
             'status' => 'Status',
             'imageFiles' => 'Clique abaixo e anexe até 4 fotos',
         ];

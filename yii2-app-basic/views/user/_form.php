@@ -11,7 +11,10 @@ use app\models\TipousuarioSearch;
 
 <div class="user-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin();
+    $campos = '(*)Campos obrigatórios';
+    ?>
+    <h5 style="color:red;"><?= Html::encode($campos) ?></h5>
 
 	<?php $arraytiposusuario=ArrayHelper::map(TipousuarioSearch::find()->all(),'idTipo','funcao'); ?>
     

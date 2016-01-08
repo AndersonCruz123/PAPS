@@ -19,22 +19,12 @@ use kartik\timepicker\TimePicker;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<!DOCTYPE html>
-<html>
-	<script type="text/javascript">
-	function loadSublocal() {
-		var sublocal = document.getElementById("ocorrencia-idsublocal");
-		var local = document.getElementById("ocorrencia-idlocal");
-
-	}
-
-	</script>
-</html>
-
-
 <div class="ocorrencia-form">
 
-    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]);
+    $campos = '(*)Campos obrigatórios';
+    ?>
+    <h5 style="color:red;"><?= Html::encode($campos) ?></h5>    
 
     <?php $arrayNatureza = ArrayHelper::map( NaturezaocorrenciaSearch::find()->all(), 'idNatureza', 'Nome'); ?>
 

@@ -10,8 +10,10 @@ use yii\widgets\ActiveForm;
 
 <div class="sublocal-form">
 
-    <?php $form = ActiveForm::begin(); ?>
-
+    <?php $form = ActiveForm::begin(); 
+	$campos = '(*)Campos obrigatórios';
+    ?>
+    <h5 style="color:red;"><?= Html::encode($campos) ?></h5>
     <?= $form->field($model, 'Nome')->textInput(['maxlength' => true]) ?>
 
       <?= $form->field($model, 'longitude')->textInput(['maxlength' => true]) ?>

@@ -52,12 +52,12 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     public function attributeLabels()
     {
         return [
-            'cpf' => 'CPF',
-            'email' => 'Email',
-            'senha' => 'Senha',
-            'nome' => 'Nome',
-            'confirmarSenha' => 'Confirmar Senha',
-            'idTipoUsuario' => 'Tipo de Usuário',
+            'cpf' => '*CPF',
+            'email' => '*Email',
+            'senha' => '*Senha',
+            'nome' => '*Nome',
+            'confirmarSenha' => '*Confirmar Senha',
+            'idTipoUsuario' => '*Tipo de Usuário',
         ];
     }
 
