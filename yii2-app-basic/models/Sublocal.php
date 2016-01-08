@@ -35,8 +35,8 @@ class Sublocal extends \yii\db\ActiveRecord
             [['Nome', 'idLocal'], 'required','message'=>'Este campo é obrigatório'],
             [['idLocal'], 'integer'],
             [['Nome'], 'string', 'max' => 20],
-            [['latitude'], 'string', 'max' => 20],
-            [['longitude'], 'string', 'max' => 20],
+            [['latitude'], 'integer', 'integerOnly' => false],
+            [['longitude'], 'integer', 'integerOnly' => false],
 
         ];
     }

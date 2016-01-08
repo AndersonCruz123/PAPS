@@ -14,6 +14,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'Nome')->textInput(['maxlength' => true]) ?>
 
+      <?= $form->field($model, 'longitude')->textInput(['maxlength' => true]) ?>
+      
+   	<?= $form->field($model, 'latitude')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'idLocal')->dropdownlist($arraylocal, ['prompt'=>'Selecione o local a que pertence este sublocal']) ?>
 
     <div class="form-group">

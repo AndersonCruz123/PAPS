@@ -150,6 +150,8 @@ class SublocalController extends Controller
         $model = $this->findModel($id);
 
        $arraylocal=ArrayHelper::map(LocalSearch::find()->all(),'idLocal','Nome');
+       $model->idLocal = $model->idLocalbkp;
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
             return $this->redirect(['view', 'id' => $model->idSubLocal, 'arraylocal'=>$arraylocal]);

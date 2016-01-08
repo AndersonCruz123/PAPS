@@ -111,8 +111,8 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
              ['label' => 'Usuário',
  
             'items' => [
-                 ['label' => 'Gerenciar Usuários', 'url' => ['/user/index']],
-                 ['label' => 'Gerenciar Tipos de Usuário ', 'url' => ['/tipousuario/index']]]],
+                 ['label' => 'Gerenciar Usuários', 'url' => ['/user/index']]
+                 ]],
  
   
                 Yii::$app->user->isGuest ?
