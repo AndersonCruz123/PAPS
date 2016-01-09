@@ -73,6 +73,9 @@ class Denuncia extends \yii\db\ActiveRecord
 
     public function afterFind(){
 
+        list ($ano, $mes, $dia) = split ('[-]', $this->data);
+        $this->data = $dia.'/'.$mes.'/'.$ano;
+
         if ($this->status == 1){
             $this->status = 'Não verificada';
         } elseif ($this->status == 2) {

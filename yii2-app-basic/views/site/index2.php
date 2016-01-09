@@ -83,7 +83,7 @@ $this->title = 'SOS UFAM';
               height: 90px;
               width: 310px;
               position: absolute; 
-             margin-left: 220px;
+             margin-left: 217px;
               margin-top:105px;  
 
 
@@ -118,7 +118,7 @@ $this->title = 'SOS UFAM';
              
                                    
     <div class="container2" id="denuncia"> 
-    <img id="teste3" src="naoverificada.png">
+   <a href="index.php?r=denuncia%2Fnaoverificadas"> <img id="teste3" src="naoverificada.png"></a>
     </br></br></br>      
     <?php
      $total = Denuncia::find()->where('status = 1')->count();

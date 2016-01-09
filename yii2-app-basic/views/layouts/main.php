@@ -49,13 +49,34 @@ AppAsset::register($this);
 
 <div class="wrap">
     <?php
+if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Chefe de Segurança') {
     NavBar::begin([
         'brandLabel' => Html::img('sos.png'),
-        'brandUrl' => Yii::$app->homeUrl,
+        'brandUrl' => ['/site/index1'],
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
-    ]); ?>
+    ]); } elseif (Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Segurança Terceirizada') {
+    NavBar::begin([
+        'brandLabel' => Html::img('sos.png'),
+        'brandUrl' => ['/site/index2'],
+        'options' => [
+            'class' => 'navbar-inverse navbar-fixed-top',
+        ],
+    ]);
+    } else {
+    NavBar::begin([
+        'brandLabel' => Html::img('sos.png'),
+        'brandUrl' => ['/site/index'],
+        'options' => [
+            'class' => 'navbar-inverse navbar-fixed-top',
+        ],
+    ]);
+
+    }
+
+
+     ?>
 
 <?php  /*              $menuItems = [
                 ['label' => 'Home', 'url' => ['/site/index']],

@@ -41,7 +41,28 @@ class SublocalController extends Controller
                 ],
             ],
         ];
-    }
+    } elseif(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Segurança Terceirizada') {
+        return [ 
+        'access' => [
+                'class' => AccessControl::className(),
+                //'only' => ['create', 'index', 'update', 'delete', 'view'],
+                'rules' => [
+                    [
+                        'actions' => ['lists', 'sublocalselected'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post'],
+                ],
+            ],
+        ];
+        }
     }
     /**
      * Lists all Sublocal models.

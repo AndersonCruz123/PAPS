@@ -75,7 +75,7 @@ $this->title = 'SOS UFAM';
               height: 90px;
               width: 330px;
               position: absolute; 
-             margin-left: 530px;
+             margin-left: 485px;
               margin-top:100px;    
 
             }
@@ -83,7 +83,7 @@ $this->title = 'SOS UFAM';
               height: 90px;
               width: 310px;
               position: absolute; 
-             margin-left: 180px;
+             margin-left: 137px;
               margin-top:105px;  
 
 
@@ -127,7 +127,7 @@ $this->title = 'SOS UFAM';
     </div>
                   
     <div class="container3" id="denuncia"> 
-    <img id="teste3" src="naoverificada.png">
+   <a href="index.php?r=denuncia%2Fnaoverificadas"><img id="teste3" src="naoverificada.png"></a>
     </br></br></br>      
     <?php
      $total = Ocorrencia::find()->where('status = 1')->count();

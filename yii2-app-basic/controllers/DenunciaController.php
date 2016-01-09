@@ -136,6 +136,10 @@ class DenunciaController extends Controller
         $model = new Denuncia();
 
         if ($model->load(Yii::$app->request->post())) {
+
+         list ($dia, $mes, $ano) = split ('[/]', $model->data);
+        $model->data = $ano.'-'.$mes.'-'.$dia;
+        
            $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
            $path = Yii::$app->basePath.'/web/uploadFoto/';
            $model->status = 1;
@@ -181,8 +185,19 @@ class DenunciaController extends Controller
         elseif (strcmp($model->status, 'Verdadeira') == 0)$model->status = 2;
         elseif (strcmp($model->status, 'Falsa') == 0)$model->status = 3;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())){
+
+         list ($dia, $mes, $ano) = split ('[/]', $model->data);
+        $model->data = $ano.'-'.$mes.'-'.$dia;
+ 
+            if($model->save()) {
             return $this->redirect(['view', 'id' => $model->idDenuncia]);
+            }
+        else {
+            return $this->render('update', [
+                'model' => $model,
+            ]);
+            }
         } else {
             return $this->render('update', [
                 'model' => $model,

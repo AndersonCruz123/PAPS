@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Ocorrencia */
 
-$this->title = 'Editar Ocorrencia de número: ' . ' ' . $model->idOcorrencia;
+$this->title = 'Editar Registro de ocorrência de número: ' . ' ' . $model->idOcorrencia;
 $this->params['breadcrumbs'][] = ['label' => 'Ocorrencias', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->idOcorrencia, 'url' => ['view', 'id' => $model->idOcorrencia]];
 $this->params['breadcrumbs'][] = 'Editar';

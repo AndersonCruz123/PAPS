@@ -48,7 +48,7 @@ class Sublocal extends \yii\db\ActiveRecord
     {
         return [
             'idSubLocal' => 'Id Sub Local',
-            'Nome' => '*Nome',
+            'Nome' => '*Sublocal',
             'idLocal' => '*Local',
             'latitude' => 'Latitude',
             'longitude' => 'Longitude'  

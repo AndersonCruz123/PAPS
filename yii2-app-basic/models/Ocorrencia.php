@@ -73,9 +73,9 @@ class Ocorrencia extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idOcorrencia' => 'Número da Ocorrencia',
+            'idOcorrencia' => 'Registro',
             'status' => '*Status',
-            'data' => '*Data do acontecimento da ocorrência',
+            'data' => '*Data do ocorrido',
             'hora' => '*Hora',
             'periodo' => '*Período',
             'detalheLocal' => '*Detalhamento do Local',
@@ -139,6 +139,15 @@ class Ocorrencia extends \yii\db\ActiveRecord
         return $this->hasOne(Usuario::className(), ['cpf' => 'cpfUsuario']);
     }
     public function afterFind(){
+
+        list ($ano, $mes, $dia) = split ('[-]', $this->data);
+        $this->data = $dia.'/'.$mes.'/'.$ano;
+
+        if ($this->dataConclusao!=null){
+            list ($ano, $mes, $dia) = split ('[-]', $this->dataConclusao);
+            $this->dataConclusao = $dia.'/'.$mes.'/'.$ano;            
+        }
+        
         $this->idCategoriabkp = $this->idCategoria;
     //    echo "Categoria bkp".$this->idCategoriabkp;
         $this->idSubLocalbkp = $this->idSubLocal;

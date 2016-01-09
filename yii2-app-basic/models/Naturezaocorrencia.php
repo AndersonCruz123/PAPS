@@ -40,7 +40,7 @@ class Naturezaocorrencia extends \yii\db\ActiveRecord
     {
         return [
             'idNatureza' => 'Id Natureza',
-            'Nome' => 'Nome',
+            'Nome' => 'Natureza',
         ];
     }
 

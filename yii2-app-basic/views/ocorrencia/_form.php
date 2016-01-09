@@ -95,9 +95,9 @@ use kartik\timepicker\TimePicker;
                 //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
                 'clientOptions' => [
                     'autoclose' => true,
-                    'format' => 'yyyy-mm-dd',
+                    'format' => 'dd/mm/yyyy',
                 ]
-        ])->hint('Ano, mês, dia'); ?>
+        ]); ?>
 
     <?= $form->field($model, 'dataConclusao')->widget(
             DatePicker::className(), [
@@ -108,9 +108,9 @@ use kartik\timepicker\TimePicker;
                 //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
                 'clientOptions' => [
                     'autoclose' => true,
-                    'format' => 'yyyy-mm-dd',
+                    'format' => 'dd/mm/yyyy',
                 ]
-        ])->hint('Ano, mês, dia'); ?>
+        ]); ?>
 
  
     <?= $form->field($model, 'hora')->textInput()->hint('Exemplo: 12:30') ?>

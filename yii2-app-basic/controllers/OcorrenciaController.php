@@ -136,9 +136,18 @@ class OcorrenciaController extends Controller
         $model->idLocal = 0;
 
         if ($model->load(Yii::$app->request->post())) {
+
+            list ($dia, $mes, $ano) = split ('[/]', $model->data);
+            $model->data = $ano.'-'.$mes.'-'.$dia;
+
+            if ($model->dataConclusao!=null){
+              list ($dia, $mes, $ano) = split ('[/]', $model->dataConclusao);
+              $model->dataConclusao = $ano.'-'.$mes.'-'.$dia;
+            }
+
            $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
            $path = Yii::$app->basePath.'/web/uploadFoto/';
-		   $model->cpfUsuario = Yii::$app->user->identity->cpf;
+		       $model->cpfUsuario = Yii::$app->user->identity->cpf;
 
             if($model->save()){
      //       	if (count ($model->imageFiles) >= 1) {
@@ -199,6 +208,14 @@ class OcorrenciaController extends Controller
           $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
            $path = Yii::$app->basePath.'/web/uploadFoto/';
  
+            list ($dia, $mes, $ano) = split ('[/]', $model->data);
+            $model->data = $ano.'-'.$mes.'-'.$dia;
+
+            if ($model->dataConclusao!=null){
+              list ($dia, $mes, $ano) = split ('[/]', $model->dataConclusao);
+              $model->dataConclusao = $ano.'-'.$mes.'-'.$dia;
+            }
+
             if($model->save()){
        //     	if (count ($model->imageFiles) >= 1) {
            	    foreach ($model->imageFiles as $file) {
