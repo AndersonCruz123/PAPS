@@ -23,10 +23,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'idDenuncia',
            'status',
-            'descricao:ntext',
+        //    'descricao:ntext',
             'local',
             'data',
-            'hora',
+   //         'hora',
 
 
             ['class' => 'yii\grid\ActionColumn'],

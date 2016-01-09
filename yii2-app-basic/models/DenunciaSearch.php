@@ -18,7 +18,7 @@ class DenunciaSearch extends Denuncia
     public function rules()
     {
         return [
-            [['idDenuncia', 'status'], 'integer'],
+            [['idDenuncia', 'status'], 'safe'],
             [['descricao', 'local', 'data', 'hora'], 'safe'],
         ];
     }
@@ -55,6 +55,20 @@ class DenunciaSearch extends Denuncia
             return $dataProvider;
         }
 
+        $statusbkp = $this->status;
+        $databkp = $this->data;
+
+        if ($this->status!=null) {
+            if (strcmp($this->status, 'Não verificada') == 0)$this->status = 1;
+            elseif (strcmp($this->status, 'Verdadeira') == 0)$this->status = 2;
+            elseif (strcmp($this->status, 'Falsa') == 0)$this->status = 3;
+        }
+
+        if ($this->data!=null){
+             list ($dia, $mes, $ano) = split ('[/]', $this->data);
+            $this->data = $ano.'-'.$mes.'-'.$dia;
+         }
+
         $query->andFilterWhere([
             'idDenuncia' => $this->idDenuncia,
             'data' => $this->data,
@@ -64,6 +78,9 @@ class DenunciaSearch extends Denuncia
         $query->andFilterWhere(['like', 'descricao', $this->descricao])
             ->andFilterWhere(['like', 'local', $this->local])
             ->andFilterWhere(['like', 'hora', $this->hora]);
+
+        $this->status = $statusbkp;
+        $this->data = $databkp;
 
         return $dataProvider;
     }
