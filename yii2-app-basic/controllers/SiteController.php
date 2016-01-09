@@ -17,10 +17,10 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'index1', 'index2'],
+                'only' => ['logout'],
                 'rules' => [
                     [
-                        'actions' => ['logout', 'index1', 'index2'],
+                        'actions' => ['logout'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -54,15 +54,7 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
-     public function actionIndex1()
-    {
-        return $this->render('index1');
-    }
-
-     public function actionIndex2()
-    {
-        return $this->render('index2');
-    }
+    
     public function actionLogin()
     {
         if (!\Yii::$app->user->isGuest) {
@@ -72,9 +64,9 @@ class SiteController extends Controller
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post())) {
             if ($model->login() && Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Chefe de Segurança') {
-                return $this->render('index1');
+                return $this->render('index');
             } else if ($model->login() && Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Segurança Terceirizada'){
-                 return $this->render('index2');
+                 return $this->render('index');
              }
         }
         return $this->render('login', [

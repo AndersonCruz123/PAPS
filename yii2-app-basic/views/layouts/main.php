@@ -49,22 +49,6 @@ AppAsset::register($this);
 
 <div class="wrap">
     <?php
-if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Chefe de Segurança') {
-    NavBar::begin([
-        'brandLabel' => Html::img('sos.png'),
-        'brandUrl' => ['/site/index1'],
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]); } elseif (Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Segurança Terceirizada') {
-    NavBar::begin([
-        'brandLabel' => Html::img('sos.png'),
-        'brandUrl' => ['/site/index2'],
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    } else {
     NavBar::begin([
         'brandLabel' => Html::img('sos.png'),
         'brandUrl' => ['/site/index'],
@@ -72,8 +56,6 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-
-    }
 
 
      ?>
@@ -102,7 +84,7 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
     //        ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'Iniciar', 'url' => ['/site/index1']],
+            ['label' => 'Iniciar', 'url' => ['/site/index']],
 
 //            ['label' => 'About', 'url' => ['/site/about']],
  //           ['label' => 'Contact', 'url' => ['/site/contact']],
@@ -151,7 +133,7 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
     	 echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-           ['label' => 'Iniciar', 'url' => ['/site/index2']],
+           ['label' => 'Iniciar', 'url' => ['/site/index']],
 
 
             ['label' => 'Denúncias',
