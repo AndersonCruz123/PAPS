@@ -35,10 +35,10 @@ class OcorrenciaController extends Controller
         return [ 
         'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['create', 'index', 'update', 'delete', 'emaberto', 'relatorio', 'printocorrencia'],
+                'only' => ['create', 'index', 'update', 'delete', 'emaberto', 'relatorio', 'printocorrencia', 'printrelatorio'],
                 'rules' => [
                     [
-                        'actions' => ['create', 'index', 'update','delete', 'emaberto', 'relatorio', 'printocorrencia'],
+                        'actions' => ['create', 'index', 'update','delete', 'emaberto', 'relatorio', 'printocorrencia', 'printrelatorio'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -344,7 +344,7 @@ class OcorrenciaController extends Controller
       	  $html = "
         	<img id='cabecalho' src='./../views/ocorrencia/relatorio/figura.png'/>
      		<span id='data'><b>Gerado em: ".$date."</b></span> 
-        	<h2> 1. Número da Ocorrencia: ".$model->idOcorrencia. "</h2>
+        	<h2> 1. Número de Registro da Ocorrência: ".$model->idOcorrencia. "</h2>
         	<h2> 2. Status:</h2> <p>".$model->status. "</p>
         	<h2> 3. Categoria da Ocorrência:</h2> <p>".$model->idCategoria. "</p>
         	<h2> 4. Natureza da Ocorrência:</h2> <p>".$model->idNatureza. "</p>
@@ -363,7 +363,7 @@ class OcorrenciaController extends Controller
       	  $html = "
         	<img id='cabecalho' src='./../views/ocorrencia/relatorio/figura.png'/>
      		<span id='data'><b>Gerado em: ".$date."</b></span> 
-        	<h2> 1. Número da Ocorrencia: ".$model->idOcorrencia. "</h2>
+        	<h2> 1. Número de Registro da Ocorrência: ".$model->idOcorrencia. "</h2>
         	<h2> 2. Status:</h2> <p>".$model->status. "</p>
         	<h2> 3. Categoria da Ocorrência:</h2> <p>".$model->idCategoria. "</p>
         	<h2> 4. Natureza da Ocorrência:</h2> <p>".$model->idNatureza. "</p>
@@ -386,7 +386,7 @@ class OcorrenciaController extends Controller
       	  $html = "
         	<img id='cabecalho' src='./../views/ocorrencia/relatorio/figura.png'/>
      		<span id='data'><b>Gerado em: ".$date."</b></span> 
-        	<h2> 1. Número da Ocorrencia: ".$model->idOcorrencia. "</h2>
+        	<h2> 1. Número de Registro da Ocorrência: ".$model->idOcorrencia. "</h2>
         	<h2> 2. Status:</h2> <p>".$model->status. "</p>
         	<h2> 3. Categoria da Ocorrência:</h2> <p>".$model->idCategoria. "</p>
         	<h2> 4. Natureza da Ocorrência:</h2> <p>".$model->idNatureza. "</p>
@@ -410,7 +410,7 @@ class OcorrenciaController extends Controller
       	  $html = "
         	<img id='cabecalho' src='./../views/ocorrencia/relatorio/figura.png'/>
      		<span id='data'><b>Gerado em: ".$date."</b></span> 
-        	<h2> 1. Número da Ocorrencia: ".$model->idOcorrencia. "</h2>
+        	<h2> 1. Número de Registro da Ocorrência: ".$model->idOcorrencia. "</h2>
         	<h2> 2. Status:</h2> <p>".$model->status. "</p>
         	<h2> 3. Categoria da Ocorrência:</h2> <p>".$model->idCategoria. "</p>
         	<h2> 4. Natureza da Ocorrência:</h2> <p>".$model->idNatureza. "</p>
@@ -435,7 +435,7 @@ class OcorrenciaController extends Controller
       	  $html = "
         	<img id='cabecalho' src='./../views/ocorrencia/relatorio/figura.png'/>
      		<span id='data'><b>Gerado em: ".$date."</b></span> 
-        	<h2> 1. Número da Ocorrencia: ".$model->idOcorrencia. "</h2>
+        	<h2> 1. Número de Registro da Ocorrência: ".$model->idOcorrencia. "</h2>
         	<h2> 2. Status:</h2> <p>".$model->status. "</p>
         	<h2> 3. Categoria da Ocorrência:</h2> <p>".$model->idCategoria. "</p>
         	<h2> 4. Natureza da Ocorrência:</h2> <p>".$model->idNatureza. "</p>
@@ -462,7 +462,7 @@ class OcorrenciaController extends Controller
         exit;
 }
 
-protected function generateTablePeriodo($option, $dataIni, $dataFim, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
+protected function generateTablePeriodo($option, $dataIni, $dataFim, $dataInicial, $dataFinal, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
 
 		$tabelaPeriodo = "";
 		if ($option == 1) {
@@ -481,7 +481,7 @@ protected function generateTablePeriodo($option, $dataIni, $dataFim, $status, $p
            ";
        } else {
        		$tabelaPeriodo .= "<table border='1' width='1000' align='center' id='tabelaperiodo'>
-      	  <caption>Quantidade de ocorrências por período do mês de ". $dataIni." a ".$dataFim."</caption>
+      	  <caption>Quantidade de ocorrências por período do mês de ". $dataInicial." a ".$dataFinal."</caption>
            <thead>
            <tr class='header'>
              <td>Período</td>
@@ -610,7 +610,7 @@ protected function generateTablePeriodo($option, $dataIni, $dataFim, $status, $p
         return $tabelaPeriodo;
 }
 
-protected function generateTableStatus($option, $dataIni, $dataFim, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
+protected function generateTableStatus($option, $dataIni, $dataFim, $dataInicial, $dataFinal, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
 
 		$tabelaStatus = "";
 		if ($option == 1) {
@@ -629,7 +629,7 @@ protected function generateTableStatus($option, $dataIni, $dataFim, $status, $pe
            ";
 		} else {
        		$tabelaStatus .= "<table border='1' width='1000' align='center' id='tabelastatus'>
-      	  <caption>Quantidade de ocorrências por status do mês de ". $dataIni." a ".$dataFim."</caption>
+      	  <caption>Quantidade de ocorrências por status do mês de ". $dataInicial." a ".$dataFinal."</caption>
            <thead>
            <tr class='header'>
              <td>Status</td>
@@ -734,7 +734,7 @@ protected function generateTableStatus($option, $dataIni, $dataFim, $status, $pe
        	return $tabelaStatus;
 }
 
-protected function generateTableNatureza($option, $dataIni, $dataFim, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
+protected function generateTableNatureza($option, $dataIni, $dataFim, $dataInicial, $dataFinal, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
 
 	  	$connection = \Yii::$app->db;
 		$tabelaNatureza = "";
@@ -754,7 +754,7 @@ protected function generateTableNatureza($option, $dataIni, $dataFim, $status, $
            ";
        } else {
     		$tabelaNatureza .= "<table border='1' width='1000' align='center' id='tabelanatureza'>
-      	  <caption>Quantidade de ocorrências por natureza do mês de ". $dataIni." a ".$dataFim."</caption>
+      	  <caption>Quantidade de ocorrências por natureza do mês de ". $dataInicial." a ".$dataFinal."</caption>
            <thead>
            <tr class='header'>
              <td>Natureza</td>
@@ -790,7 +790,7 @@ protected function generateTableNatureza($option, $dataIni, $dataFim, $status, $
        		return $tabelaNatureza;
 }
 
-protected function generateTableCategoria($option, $dataIni, $dataFim, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
+protected function generateTableCategoria($option, $dataIni, $dataFim, $dataInicial, $dataFinal, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
 
 	  	$connection = \Yii::$app->db;
 		$tabelaCategoria = "";
@@ -809,7 +809,7 @@ protected function generateTableCategoria($option, $dataIni, $dataFim, $status, 
            ";
        } else {
        		$tabelaCategoria .= "<table border='1' width='1000' align='center' id='tabelacategoria'>
-      	  <caption>Quantidade de ocorrências por categoria do mês de ". $dataIni." a ".$dataFim."</caption>
+      	  <caption>Quantidade de ocorrências por categoria do mês de ". $dataInicial." a ".$dataFinal."</caption>
            <thead>
            <tr class='header'>
              <td>Categoria</td>
@@ -845,7 +845,7 @@ protected function generateTableCategoria($option, $dataIni, $dataFim, $status, 
        		return $tabelaCategoria;
 }
 
-protected function generateTableLocal($option, $dataIni, $dataFim, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
+protected function generateTableLocal($option, $dataIni, $dataFim, $dataInicial, $dataFinal, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
 
 	  	$connection = \Yii::$app->db;
 		$tabelaLocal = "";
@@ -863,7 +863,7 @@ protected function generateTableLocal($option, $dataIni, $dataFim, $status, $per
 
       } else {
        		$tabelaLocal .= "<table border='1' width='1000' align='center' id='tabelalocal'>
-      	  <caption>Quantidade de ocorrências por local do mês de ". $dataIni." a ".$dataFim."</caption>
+      	  <caption>Quantidade de ocorrências por local do mês de ". $dataInicial." a ".$dataFinal."</caption>
            <thead>
            <tr class='header'>
              <td>Local</td>
@@ -900,7 +900,7 @@ protected function generateTableLocal($option, $dataIni, $dataFim, $status, $per
 
 }
 
-protected function generateTableOcorrencia($option, $dataIni, $dataFim, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
+protected function generateTableOcorrencia($option, $dataIni, $dataFim, $dataInicial, $dataFinal, $status, $periodo, $idLocal, $idNatureza, $idCategoria) {
 
 	  	$connection = \Yii::$app->db;
 		$tabelaOco = "";
@@ -910,7 +910,7 @@ protected function generateTableOcorrencia($option, $dataIni, $dataFim, $status,
       	  <caption>Quadro de ocorrências do mês de ". $this->findMonths($mes)." do ano de ".$ano."</caption>
            <thead>
            <tr class='header'>
-             <td>Número</td>
+             <td>Registro</td>
              <td>Categoria</td>
              <td>Natureza</td>
              <td>Local</td>
@@ -924,10 +924,10 @@ protected function generateTableOcorrencia($option, $dataIni, $dataFim, $status,
 		} else {
       	  
       	  $tabelaOco .= "<table border='1' width='1000' align='center' id='tabelaocorrencia'>
-      	  <caption>Quadro de ocorrências do período de ". $dataIni." a ".$dataFim."</caption>
+      	  <caption>Quadro de ocorrências do período de ". $dataInicial." a ".$dataFinal."</caption>
            <thead>
            <tr class='header'>
-             <td>Número</td>
+             <td>Registro</td>
              <td>Categoria</td>
              <td>Natureza</td>
              <td>Local</td>
@@ -988,13 +988,19 @@ protected function generateTableOcorrencia($option, $dataIni, $dataFim, $status,
        		$tabelaOco .= "</table>";
        		return $tabelaOco;
 }
+ 
+  public function actionPrintrelatorio($periodo, $idCategoria, $status, $idNatureza, $idLocal, $dataInicial, $dataFinal, $radiobutton) {
 
-    public function actionRelatorio()
-    {
         $model = new Relatorio();
 
-
-        if ($model->load(Yii::$app->request->post())) {
+        $model->periodo = $periodo;
+        $model->idCategoria = $idCategoria;
+        $model->status = $status;
+        $model->idNatureza = $idNatureza;
+        $model->idLocal = $idLocal;
+        $model->dataInicial = $dataInicial;
+        $model->dataFinal = $dataFinal;
+        $model->radiobutton = $radiobutton;
 
         $mpdf = new mPDF('',    // mode - default ''
         '',    // format - A4, for example, default ''
@@ -1009,79 +1015,130 @@ protected function generateTableOcorrencia($option, $dataIni, $dataFim, $status,
 
  'L');
 
-		$stylesheet = file_get_contents("./../views/ocorrencia/relatorio/relatorio.css");
+    $stylesheet = file_get_contents("./../views/ocorrencia/relatorio/relatorio.css");
 
- 		$mpdf->WriteHTML($stylesheet,1);
+    $mpdf->WriteHTML($stylesheet,1);
 
-		$date = date("d/m/Y H:i:s ");
-      	$tabelaOco = "";
-      	$tabelaPeriodo = "";
-      	$tabelaStatus = "";
-      	$tabelaNatureza = "";
-      	$tabelaLocal = "";
-      	$tabelaCategoria = "";
+    $date = date("d/m/Y H:i:s ");
+        $tabelaOco = "";
+        $tabelaPeriodo = "";
+        $tabelaStatus = "";
+        $tabelaNatureza = "";
+        $tabelaLocal = "";
+        $tabelaCategoria = "";
 
 
-	  	$connection = \Yii::$app->db;
-	if ($model->radiobutton==1) {
-          list ($mes, $ano) = split ('[-]', $model->mesAno);
-      	  $mes = $this->findMonthsNumber($mes);
-            
-          if ($mes < 10) {
-      	 	$dataIni = $ano."-0".$mes."-01";
-      	  	$dataFim = $ano."-0".$mes."-31";
-    	  	} else {
-     		 	$dataIni = $ano."-".$mes."-01";
-      		  	$dataFim = $ano."-".$mes."-31";
-	      	}
-	  	} else {
+      $connection = \Yii::$app->db;
 
-	  	$dataIni = $model->dataInicial;
-      	$dataFim = $model->dataFinal;
-      	
+        list ($dia, $mes, $ano) = split ('[/]', $model->dataInicial);
+        $dataIni = $ano.'-'.$mes.'-'.$dia;
+
+        list ($dia, $mes, $ano) = split ('[/]', $model->dataFinal);
+        $dataFim = $ano.'-'.$mes.'-'.$dia;
   
-	  	}
 
-  		$stringsql = "SELECT COUNT(idOcorrencia) as cont FROM ocorrencia
-				JOIN sublocal ON sublocal.idSubLocal = 	ocorrencia.idSubLocal
-				JOIN categoria ON categoria.idCategoria = ocorrencia.idCategoria
-				JOIN naturezaocorrencia ON naturezaocorrencia.idNatureza = ocorrencia.idNatureza				
-				JOIN local ON sublocal.idLocal= local.idLocal
-				WHERE ocorrencia.data >= '".$dataIni."' AND ocorrencia.data <= '".$dataFim."'";
-		 if ($model->status!=0) $stringsql .= ' AND ocorrencia.status = '.$model->status;
-		 if ($model->periodo!=0) $stringsql .= ' AND ocorrencia.periodo = '.$model->periodo;
-	 	 if ($model->idCategoria!=0) $stringsql .= ' AND ocorrencia.idCategoria = '.$model->idCategoria;		 
-	 	 if ($model->idNatureza!=0) $stringsql .= ' AND ocorrencia.idNatureza = '.$model->idNatureza;		 
-		 if ($model->idLocal!=0) $stringsql .= ' AND local.idLocal = '.$model->idLocal;
+      $stringsql = "SELECT COUNT(idOcorrencia) as cont FROM ocorrencia
+        JOIN sublocal ON sublocal.idSubLocal =  ocorrencia.idSubLocal
+        JOIN categoria ON categoria.idCategoria = ocorrencia.idCategoria
+        JOIN naturezaocorrencia ON naturezaocorrencia.idNatureza = ocorrencia.idNatureza        
+        JOIN local ON sublocal.idLocal= local.idLocal
+        WHERE ocorrencia.data >= '".$dataIni."' AND ocorrencia.data <= '".$dataFim."'";
+     if ($model->status!=0) $stringsql .= ' AND ocorrencia.status = '.$model->status;
+     if ($model->periodo!=0) $stringsql .= ' AND ocorrencia.periodo = '.$model->periodo;
+     if ($model->idCategoria!=0) $stringsql .= ' AND ocorrencia.idCategoria = '.$model->idCategoria;     
+     if ($model->idNatureza!=0) $stringsql .= ' AND ocorrencia.idNatureza = '.$model->idNatureza;    
+     if ($model->idLocal!=0) $stringsql .= ' AND local.idLocal = '.$model->idLocal;
         $sqlSolucionado = $connection->createCommand($stringsql);
         $total = $sqlSolucionado->queryScalar();
-  	  
-      	  $html = "
-        	<img id='cabecalho' src='./../views/ocorrencia/relatorio/figura.png'/>
-     		<span id='data'><b>Gerado em: ".$date."</b></span>
-     		<h3>Total de ocorrências no período selecionado: ".$total."</h3>    		
-	        ".$this->generateTableOcorrencia($model->radiobutton, $dataIni, $dataFim, $model->status, $model->periodo, 
-	        	$model->idLocal, $model->idNatureza, $model->idCategoria)."
-	        ".$this->generateTablePeriodo($model->radiobutton, $dataIni, $dataFim, $model->status, $model->periodo, 
-	        	$model->idLocal, $model->idNatureza, $model->idCategoria)."
-	        ".$this->generateTableStatus($model->radiobutton, $dataIni, $dataFim, $model->status, $model->periodo, 
-	        	$model->idLocal, $model->idNatureza, $model->idCategoria)."
-	        ".$this->generateTableNatureza($model->radiobutton, $dataIni, $dataFim, $model->status, $model->periodo, 
-	        	$model->idLocal, $model->idNatureza, $model->idCategoria)."	        
-	        ".$this->generateTableCategoria($model->radiobutton, $dataIni, $dataFim, $model->status, $model->periodo, 
-	        	$model->idLocal, $model->idNatureza, $model->idCategoria)."
-	        ".$this->generateTableLocal($model->radiobutton, $dataIni, $dataFim, $model->status, $model->periodo, 
-	        	$model->idLocal, $model->idNatureza, $model->idCategoria)."
-	        ";
+      
+          $html = "
+          <img id='cabecalho' src='./../views/ocorrencia/relatorio/figura.png'/>
+        <span id='data'><b>Gerado em: ".$date."</b></span>
+        <h3>Total de ocorrências no período selecionado: ".$total."</h3>        
+          ".$this->generateTableOcorrencia($model->radiobutton, $dataIni, $dataFim, $model->dataInicial, $model->dataFinal, $model->status, $model->periodo, 
+            $model->idLocal, $model->idNatureza, $model->idCategoria)."
+          ".$this->generateTablePeriodo($model->radiobutton, $dataIni, $dataFim, $model->dataInicial, $model->dataFinal, $model->status, $model->periodo, 
+            $model->idLocal, $model->idNatureza, $model->idCategoria)."
+          ".$this->generateTableStatus($model->radiobutton, $dataIni, $dataFim, $model->dataInicial, $model->dataFinal, $model->status, $model->periodo, 
+            $model->idLocal, $model->idNatureza, $model->idCategoria)."
+          ".$this->generateTableNatureza($model->radiobutton, $dataIni, $dataFim, $model->dataInicial, $model->dataFinal, $model->status, $model->periodo, 
+            $model->idLocal, $model->idNatureza, $model->idCategoria)."         
+          ".$this->generateTableCategoria($model->radiobutton, $dataIni, $dataFim, $model->dataInicial, $model->dataFinal, $model->status, $model->periodo, 
+            $model->idLocal, $model->idNatureza, $model->idCategoria)."
+          ".$this->generateTableLocal($model->radiobutton, $dataIni, $dataFim, $model->dataInicial, $model->dataFinal, $model->status, $model->periodo, 
+            $model->idLocal, $model->idNatureza, $model->idCategoria)."
+          ";
 
-		$mpdf->WriteHTML($html);
-		$mpdf->Output();
+    $mpdf->WriteHTML($html);
+    $mpdf->Output();
         exit;
          
+        } /*else {
+            return $this->render('relatorio', [
+                'model' => $model,
+            ]);
+        }*/ 
+  
+
+    public function actionRelatorio()
+    {
+
+        $model = new Relatorio();
+
+        if ($model->load(Yii::$app->request->post())) {
+
+        $searchModel = new OcorrenciaSearch();
+        
+        if($model->idLocal!=0)
+        $params['idLocal'] = $model->idLocal;
+
+        if($model->idCategoria!=0)
+        $params['idCategoria'] = $model->idCategoria;
+
+        if($model->idNatureza!=0)
+        $params['idNatureza'] = $model->idNatureza;
+        
+        if($model->status!=0)
+        $params['status'] = $model->status;
+
+        if($model->periodo!=0)
+        $params['periodo'] = $model->periodo;
+
+        if($model->mesAno==null) {
+          $params['dataInicial'] = $model->dataInicial;
+          $params['dataFinal'] = $model->dataFinal;
         } else {
+          list ($mes, $ano) = split ('[-]', $model->mesAno);
+          $mes = $this->findMonthsNumber($mes);
+            
+          if ($mes < 10) {
+            $model->dataInicial = "01/"."0".$mes."/".$ano;
+            $model->dataFinal = "31/"."0".$mes."/".$ano;
+
+            $params['dataInicial'] = "01/"."0".$mes."/".$ano;
+            $params['dataFinal'] = "31/"."0".$mes."/".$ano;
+          } else {
+            $model->dataInicial = "01/".$mes."/".$ano;
+            $model->dataFinal = "31/".$mes."/".$ano;
+
+            $params['dataInicial'] = "01/".$mes."/".$ano;
+            $params['dataFinal'] = "31/".$mes."/".$ano;
+          }          
+
+        }
+
+        $dataProvider = $searchModel->relatorio(['OcorrenciaSearch' => $params]);
+
+        return $this->render('indexrelatorio', [
+            'model' => $model,
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+      
+        ]);
+      } else {
             return $this->render('relatorio', [
                 'model' => $model,
             ]);
         }
     }
-  }
+}

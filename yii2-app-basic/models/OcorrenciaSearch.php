@@ -8,6 +8,9 @@ use yii\data\ActiveDataProvider;
 use app\models\Ocorrencia;
 use app\models\Naturezaocorrencia;
 use app\models\NaturezaocorrenciaSearch;
+use app\models\Sublocal;
+use app\models\SublocalSearch;
+use yii\helpers\ArrayHelper;
 /**
  * OcorrenciaSearch represents the model behind the search form about `app\models\Ocorrencia`.
  */
@@ -16,11 +19,14 @@ class OcorrenciaSearch extends Ocorrencia
     /**
      * @inheritdoc
      */
+    public $dataInicial;
+    public $dataFinal;
+    public $idLocal;
 
     public function rules()
     {
         return [
-            [['idOcorrencia', 'status', 'idCategoria', 'idSubLocal', 'idNatureza'], 'safe'],
+            [['idOcorrencia', 'status', 'idCategoria','idLocal' ,'idSubLocal', 'idNatureza', 'dataInicial','dataFinal'], 'safe'],
             [['data', 'hora', 'periodo', 'detalheLocal', 'descricao', 'procedimento', 'dataConclusao', 'cpfUsuario'], 'safe'],
         ];
     }
@@ -193,4 +199,141 @@ class OcorrenciaSearch extends Ocorrencia
         return $dataProvider;
 
     }
+
+    public function relatorio($params)
+    {
+        $query = Ocorrencia::find();
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+        $this->load($params);
+
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            // $query->where('0=1');
+            return $dataProvider;
+        }
+
+        $databkp = $this->data;
+
+        if ($this->dataInicial!=null){
+             list ($dia, $mes, $ano) = split ('[/]', $this->dataInicial);
+            $this->dataInicial = $ano.'-'.$mes.'-'.$dia;
+         }
+
+        if ($this->dataFinal!=null){
+             list ($dia, $mes, $ano) = split ('[/]', $this->dataFinal);
+            $this->dataFinal = $ano.'-'.$mes.'-'.$dia;
+         }
+        
+ //       if ($this->idLocal!=null)
+         $sublocal = Sublocal::find()->where(['=', 'idLocal', $this->idLocal])->all();
+        //$model->idSubLocal = $sublocal->Nome;
+  
+         
+        $query->andFilterWhere([
+            'status' => $this->status,
+             'idCategoria' => $this->idCategoria,
+             'idNatureza' => $this->idNatureza,
+             'periodo' => $this->periodo,          
+    //         ''   
+        ]);
+       
+    $query->andFilterWhere(['>=', 'data', $this->dataInicial]);
+    $query->andFilterWhere(['<=', 'data', $this->dataFinal]);
+
+    if ($this->idLocal!=null) {
+        $connection = \Yii::$app->db;
+        $stringsql = "SELECT idSubLocal as idsublocal FROM sublocal WHERE idLocal = ".$this->idLocal;
+        $sqlOcorrencia = $connection->createCommand($stringsql);      
+        $rstocorencia = $sqlOcorrencia->queryAll();
+
+        $arraysublocal = array();
+            $i=0;
+            foreach ($rstocorencia as $reg):            
+                $arraysublocal[$i] = $reg['idsublocal'];
+                $i=$i+1;
+                endforeach;
+
+        $query->andFilterWhere(['IN', 'idSubLocal', $arraysublocal]);
+        }
+        return $dataProvider;
+    }
+  /*    public function relatorio($params)
+    {
+        $query = Ocorrencia::find();
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+     //   $this->load($params);
+
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            // $query->where('0=1');
+            return $dataProvider;
+        }
+
+        $idCategoriabkp = $params->idCategoria;
+        $idNaturezabkp = $params->idNatureza;
+        $periodobkp = $params->periodo;
+        $databkp = $params->dataInicial;
+
+        $this->idCategoria = $params->idCategoria;
+        $this->periodo = $params->periodo;
+
+        if ($params->dataInicial!=null){
+             list ($dia, $mes, $ano) = split ('[/]', $params->dataInicial);
+            $params->dataInicial = $ano.'-'.$mes.'-'.$dia;
+         }
+
+        if ($params->dataFinal!=null){
+             list ($dia, $mes, $ano) = split ('[/]', $params->dataFinal);
+            $params->dataFinal = $ano.'-'.$mes.'-'.$dia;
+         }
+
+        if ($params->periodo!=null) {
+            if (strcmp($params->periodo, 'Manhã') == 0)$params->periodo = 1;
+            elseif (strcmp($params->periodo, 'Tarde') == 0)$params->periodo = 2;
+            elseif (strcmp($params->periodo, 'Noite') == 0)$params->periodo = 3;
+            elseif (strcmp($params->periodo, 'Madrugada') == 0)$params->periodo = 4;
+        }
+            $Natureza = Naturezaocorrencia::find()->where(['nome' => $params->idNatureza])->One();
+        if ($Natureza!=null) {
+            $params->idNatureza = $Natureza->idNatureza;
+        }
+            $Categoria = Categoria::find()->where(['nome' => $params->idCategoria])->One();
+        if ($Categoria!=null) {
+            $params->idCategoria = $Categoria->idCategoria;
+        }
+        //$this->idCategoria = Categoria::findOne($this->idCategoria)->Nome;
+
+        $query->andFilterWhere([
+//            'idOcorrencia' => $params->idOcorrencia,
+            'status' => $params->status,
+            'data' => $params->dataInicial,
+           // 'hora' => $params->hora,
+         //   'dataConclusao' => $params->dataFinal,
+            'idCategoria' => $params->idCategoria,
+            //'idSubLocal' => $params->idSubLocal,
+            'idNatureza' => $params->idNatureza,
+        ]);
+
+        $query->andFilterWhere(['like', 'periodo', $params->periodo]);
+       //     ->andFilterWhere(['like', 'detalheLocal', $params->detalheLocal])
+         //   ->andFilterWhere(['like', 'descricao', $params->descricao])
+          //  ->andFilterWhere(['like', 'procedimento', $params->procedimento])
+           // ->andFilterWhere(['like', 'cpfUsuario', $params->cpfUsuario]);
+
+    
+        $params->idCategoria = $idCategoriabkp;
+        $params->idNatureza = $idNaturezabkp;
+        $params->periodo = $periodobkp;
+        $params->dataInicial = $databkp;
+        return $dataProvider;
+
+    }*/
 }

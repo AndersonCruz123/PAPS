@@ -16,12 +16,15 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Nova Ocorrência', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Gerar relatório', ['printrelatorio', 'periodo' => $model->periodo, 'idCategoria' => $model->idCategoria,
+                                  'status'=>$model->status, 'idNatureza' =>$model->idNatureza, 'idLocal' =>$model->idLocal, 
+                                  'dataInicial' =>$model->dataInicial, 'dataFinal' => $model->dataFinal, 
+                                  'radiobutton' => $model->radiobutton], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+      // 'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
             'idOcorrencia',
@@ -29,13 +32,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'data',
             //'hora',
             'periodo',
-            'idLocal',
             // 'detalheLocal',
             // 'descricao:ntext',
             // 'procedimento:ntext',
             // 'dataConclusao',
              'idCategoria',
-         //    'idLocal',
+             'idLocal',
              'idNatureza',
             // 'cpfUsuario',
 

@@ -69,7 +69,7 @@ use kartik\timepicker\TimePicker;
                     'autoclose' => true,
                     'format' => 'M-yyyy',
                 ]
-        ])->hint('Ano, mês, dia'); ?>
+        ]); ?>
 
 
     <?= $form->field($model, 'dataInicial')->widget(
@@ -81,9 +81,9 @@ use kartik\timepicker\TimePicker;
                 //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
                 'clientOptions' => [
                     'autoclose' => true,
-                    'format' => 'yyyy-mm-dd',
+                    'format' => 'dd/mm/yyyy',
                 ]
-        ])->hint('Ano, mês, dia'); ?>
+        ]); ?>
 
     <?= $form->field($model, 'dataFinal')->widget(
             DatePicker::className(), [
@@ -94,9 +94,9 @@ use kartik\timepicker\TimePicker;
                 //'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
                 'clientOptions' => [
                     'autoclose' => true,
-                    'format' => 'yyyy-mm-dd',
+                    'format' => 'dd/mm/yyyy',
                 ]
-        ])->hint('Ano, mês, dia'); ?>
+        ]); ?>
 </fieldset>
 
 
@@ -141,6 +141,11 @@ use kartik\timepicker\TimePicker;
 </div>
 
    <?=  "<script>
+
+    var radios = document.getElementsByName('Relatorio[radiobutton]');
+    radios[0].checked = false;
+    radios[1].checked = false;
+
     var datafinal = document.getElementById('relatorio-datafinal');
     datafinal.disabled = true;
     datafinal.style.display = 'none';
@@ -152,6 +157,8 @@ use kartik\timepicker\TimePicker;
     var mesano = document.getElementById('relatorio-mesano');
     mesano.disabled=true;
     mesano.style.display = 'none';
+
+
 
   </script>"
 
