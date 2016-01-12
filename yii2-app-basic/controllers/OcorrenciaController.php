@@ -335,7 +335,14 @@ class OcorrenciaController extends Controller
     	}
 
     	if($model->procedimento == null) $model->procedimento = "Não informado";
-    	if($model->dataConclusao == null) $model->dataConclusao = "Não informado";
+  //  	if($model->dataConclusao == null) $model->dataConclusao = "Não informado";
+    //  else {
+      //  list ($ano, $mes, $dia) = split ('[-]', $model->dataConclusao);
+        //$model->dataConclusao = $dia.'/'.$mes.'/'.$ano;        
+      //}       
+      
+   //   list ($ano, $mes, $dia) = split ('[-]', $model->data);
+     // $model->data = $dia.'/'.$mes.'/'.$ano;
 
 		$tam = sizeof($model->fotos);
 		$date = date("d/m/Y H:i:s ");
@@ -972,6 +979,9 @@ protected function generateTableOcorrencia($option, $dataIni, $dataFim, $dataIni
 		 		else if ($reg['periodo'] == 3) $periodo = "Noite";
 		 		else if ($reg['periodo'] == 4) $periodo = "Madrugada";
 
+        list ($ano, $mes, $dia) = split ('[-]', $reg['data']);
+        $data = $dia.'/'.$mes.'/'.$ano;
+
 		 		$tabelaOco .= "<tr>";
             	$tabelaOco .= "<td>{$reg['idOcorrencia']}</td>";
             	$tabelaOco .= "<td>{$reg['categoriaNome']}</td>";
@@ -980,7 +990,7 @@ protected function generateTableOcorrencia($option, $dataIni, $dataFim, $dataIni
             	$tabelaOco .= "<td>{$reg['sublocalNome']}</td>";
             	$tabelaOco .= "<td>".$status."</td>";
            		$tabelaOco .= "<td>".$periodo."</td>";
-            	$tabelaOco .= "<td>{$reg['data']}</td>";
+            	$tabelaOco .= "<td>".$data."</td>";
             	$tabelaOco .= "</tr>";
      //       $color = !$color;
         	endforeach;

@@ -40,25 +40,36 @@ class Denuncia extends \yii\db\ActiveRecord
         return [
             [['descricao', 'local', 'data', 'hora', 'status'], 'required','message'=>'Este campo é obrigatório'],
             [['descricao'], 'string'],
-            [['data', 'hora'], 'safe'],
+            [['data'], 'safe'],            
             [['status'], 'integer'],
             [['local'], 'string', 'max' => 254],
             [['imageFiles'], 'file', 'extensions'=>'jpg, png, jpeg', 'maxFiles' => 4],
-        ];
+            [['hora'], 'validatehora'],
+            ];
     }
 
     /**
      * @inheritdoc
      */
+
+    public function validatehora($attribute, $params)
+    {
+
+            list ($hora, $minuto) = split('[:]', $this->hora);
+
+            if ((int)$hora >=0 && (int)$hora <=23 && (int)$minuto >=0 && (int)$minuto <=59 );
+            else $this->addError($attribute, 'Insira uma hora válida. Ex: "14:45"');
+    }
+
     public function attributeLabels()
     {
         return [
             'idDenuncia' => 'Número da Denúncia',
             'descricao' => '*Descrição',
             'local' => '*Local',
+            'status' => '*Status',            
             'data' => '*Data',
             'hora' => '*Hora',
-            'status' => 'Status',
             'imageFiles' => 'Clique abaixo e anexe até 4 fotos',
         ];
     }
@@ -75,6 +86,11 @@ class Denuncia extends \yii\db\ActiveRecord
 
         list ($ano, $mes, $dia) = split ('[-]', $this->data);
         $this->data = $dia.'/'.$mes.'/'.$ano;
+
+        if ($this->hora!=null){
+            list ($hora, $minuto, $segundos) = split ('[:]', $this->hora);
+            $this->hora = $hora.':'.$minuto;            
+        }
 
         if ($this->status == 1){
             $this->status = 'Não verificada';

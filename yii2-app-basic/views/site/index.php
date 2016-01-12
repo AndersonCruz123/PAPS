@@ -82,7 +82,7 @@ echo "<!DOCTYPE html>
               height: 90px;
               width: 330px;
               position: absolute; 
-             margin-left: 485px;
+             margin-left: 533px;
               margin-top:100px;    
 
             }
@@ -90,7 +90,7 @@ echo "<!DOCTYPE html>
               height: 90px;
               width: 310px;
               position: absolute; 
-             margin-left: 137px;
+             margin-left: 183px;
               margin-top:105px;  
 
 
@@ -220,7 +220,7 @@ echo "<!DOCTYPE html>
               height: 90px;
               width: 310px;
               position: absolute; 
-             margin-left: 217px;
+             margin-left: 263px;
               margin-top:105px;  
 
 

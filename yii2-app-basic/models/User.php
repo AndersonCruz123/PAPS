@@ -41,8 +41,9 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
             [['idTipoUsuario'], 'integer'],
             [['cpf'], 'string', 'max' => 11],
             [['nome'], 'string', 'max' => 300],
-            [['email'], 'string', 'max' => 150],
-            [['senha'], 'string', 'max' => 80]
+            [['confirmarSenha'], 'compare', 'compareAttribute' => 'senha', 'message'=> 'Deve ser exatamente igual ao campo senha'],            
+            [['email'], 'email', 'message'=>'Este email é inválido'],
+            [['senha'], 'string', 'max' => 80],
         ];
     }
 

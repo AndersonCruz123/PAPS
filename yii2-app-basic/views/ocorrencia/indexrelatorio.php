@@ -25,13 +25,19 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
       // 'filterModel' => $searchModel,
+        'summary' => "Exibindo {begin} - {end} de {totalCount} items",
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            'idOcorrencia',
-            'status',
-            'data',
+
+           ['attribute'=>'idOcorrencia',
+             'contentOptions'=>['style'=>'width: 10px;']],
+            ['attribute'=>'status',
+             'contentOptions'=>['style'=>'width: 10px;']],
+            ['attribute'=>'data',
+             'contentOptions'=>['style'=>'width: 10px;']],
             //'hora',
-            'periodo',
+            ['attribute'=>'periodo',
+             'contentOptions'=>['style'=>'width: 10px;']],
             // 'detalheLocal',
             // 'descricao:ntext',
             // 'procedimento:ntext',

@@ -70,7 +70,7 @@ use yii\helpers\ArrayHelper;
 
     <h2>Informe o seu cpf que enviaremos para o email a sua nova senha</h2>
 
-   <?= $form->field($model, 'cpf')->textInput(['maxlength' => true]) ?>
+   <?= $form->field($model, 'cpf')->textInput(['maxlength' => true, 'style'=>'width:180px'])->hint('Sem pontos e dígitos (., -)') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Enviar', ['class' => 'btn btn-primary']) ?>

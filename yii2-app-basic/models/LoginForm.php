@@ -24,11 +24,18 @@ class LoginForm extends Model
     {
         return [
             // cpf and senha are both required
-            [['cpf', 'senha'], 'required'],
+            [['cpf', 'senha'], 'required','message'=>'Este campo é obrigatório'],
             // rememberMe must be a boolean value
             ['rememberMe', 'boolean'],
             // senha is validated by validatesenha()
             ['senha', 'validatesenha'],
+        ];
+    }
+    public function attributeLabels()
+    {
+        return [
+            'cpf' => 'CPF',
+            'rememberMe' => 'Lembrar-me',
         ];
     }
 

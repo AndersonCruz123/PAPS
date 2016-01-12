@@ -39,11 +39,11 @@ use kartik\timepicker\TimePicker;
     <?php $arrayPeriodo = [1=> 'Manhã', 2=>'Tarde', 3=>'Noite', 4=>'Madrugada']; ?>
 
 
-    <?= $form->field($model, 'status')->dropdownlist($arraystatus, ['prompt'=>'Selecione o status da ocorrência']) ?>
+    <?= $form->field($model, 'status')->dropdownlist($arraystatus, ['prompt'=>'Selecione o status da ocorrência', 'style'=>'width:300px']) ?>
 
-    <?= $form->field($model, 'idCategoria')->dropdownlist($arrayCategoria, ['prompt'=>'Selecione o Categoria da ocorrência']) ?>
+    <?= $form->field($model, 'idCategoria')->dropdownlist($arrayCategoria, ['prompt'=>'Selecione o Categoria da ocorrência', 'style'=>'width:300px']) ?>
     
-    <?= $form->field($model, 'idNatureza')->dropdownlist($arrayNatureza, ['prompt'=>'Selecione a Natureza da ocorrência']) ?>
+    <?= $form->field($model, 'idNatureza')->dropdownlist($arrayNatureza, ['prompt'=>'Selecione a Natureza da ocorrência', 'style'=>'width:300px']) ?>
 
 <?php if ($model->idLocal == 0) {
     echo $form->field($model, 'idLocal')->dropDownList($arrayLocal,
@@ -54,13 +54,14 @@ use kartik\timepicker\TimePicker;
                     
                     $.get("index.php?r=sublocal/lists&id='.'" + $(this).val(), function(data){
                         $( "#ocorrencia-idsublocal").html(data);
-                    });'    			
-
+                    });',    			
+                     'style'=>'width:300px'
              ]);
             
     echo $form->field($model, 'idSubLocal')->dropDownList(
                                     [
-                                    'prompt' =>'Selecione o SubLocal da Ocorrência'
+                                    'prompt' =>'Selecione o SubLocal da Ocorrência',
+                    
                                     ]);
           } else {
     echo $form->field($model, 'idLocal')->dropDownList($arrayLocal,
@@ -71,20 +72,22 @@ use kartik\timepicker\TimePicker;
                         $( "#ocorrencia-idsublocal").html(data);
                     });
                     ',
-                    'options'=>[$model->idLocal=>['Selected'=>true]]          
+                    'options'=>[$model->idLocal=>['Selected'=>true]],
+                     'style'=>'width:300px'          
 
              ]);
                
   echo $form->field($model, 'idSubLocal')->dropDownList($arraySubLocal,
                                     [
                                     'prompt' =>'Selecione o SubLocal da Ocorrência',
-                                    'options'=>[$model->idSubLocalbkp=>['Selected'=>true]]
+                                    'options'=>[$model->idSubLocalbkp=>['Selected'=>true]],
+                                    'style'=>'width:300px'
                                     ]);  
 
     }
   ?>
 
-    <?= $form->field($model, 'detalheLocal')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'detalheLocal')->textInput(['maxlength' => true, 'style'=>'width:300px']) ?>
      
     <?= $form->field($model, 'data')->widget(
             DatePicker::className(), [
@@ -113,9 +116,9 @@ use kartik\timepicker\TimePicker;
         ]); ?>
 
  
-    <?= $form->field($model, 'hora')->textInput()->hint('Exemplo: 12:30') ?>
+    <?= $form->field($model, 'hora')->textInput(['maxlength' => true, 'style'=>'width:60px'])->hint('Exemplo: 12:30') ?>
 
-    <?= $form->field($model, 'periodo')->dropdownlist($arrayPeriodo, ['prompt'=>'Selecione o Período da ocorrência']) ?>
+    <?= $form->field($model, 'periodo')->dropdownlist($arrayPeriodo, ['prompt'=>'Selecione o Período da ocorrência', 'style'=>'width:300px']) ?>
 
     <?= $form->field($model, 'descricao')->textarea(['rows' => 6]) ?>
 

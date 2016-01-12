@@ -38,6 +38,7 @@ class Relatorio extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['radiobutton'], 'required', 'message' => 'Este campo é obrigatório'],
             [['tipo', 'mes', 'ano', 'radiobutton', 'periodo', 'idLocal', 'idNatureza', 'idCategoria', 'status'], 'integer'],
             [['dataInicial', 'dataFinal', 'mesAno'], 'safe'],         
         ];

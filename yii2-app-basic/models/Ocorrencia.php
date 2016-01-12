@@ -5,6 +5,7 @@ namespace app\models;
 use Yii;
 use yii\web\UploadedFile;
 use yii\base\Model;
+use app\controllers\FotoController;
 /**
  * This is the model class for table "ocorrencia".
  *
@@ -57,19 +58,29 @@ class Ocorrencia extends \yii\db\ActiveRecord
         return [
             [['status', 'data', 'hora', 'periodo', 'detalheLocal', 'descricao', 'idCategoria', 'idLocal', 'idSubLocal', 'idNatureza'], 'required','message'=>'Este campo é obrigatório'],
             [['status', 'idCategoria', 'idNatureza', 'idLocal', 'idSubLocal', 'idSubLocalbkp'], 'integer'],
-            [['data', 'hora', 'dataConclusao'], 'safe'],
+            [['data', 'dataConclusao'], 'safe'],
             [['descricao', 'procedimento'], 'string'],
             [['comentarioFoto'], 'string', 'max' => 500],            
-            [['periodo'], 'string', 'max' => 6],
+            [['periodo'], 'string', 'max' => 6],            
             [['detalheLocal'], 'string', 'max' => 120],
             [['cpfUsuario'], 'string', 'max' => 12],
             [['imageFiles'], 'file', 'extensions'=>'jpg, png, jpeg', 'maxFiles' => 4],
+            [['hora'], 'validatehora'],
         ];
     }
 
     /**
      * @inheritdoc
      */
+   public function validatehora($attribute, $params)
+    {
+
+            list ($hora, $minuto) = split('[:]', $this->hora);
+
+            if ((int)$hora >=0 && (int)$hora <=23 && (int)$minuto >=0 && (int)$minuto <=59 );
+            else $this->addError($attribute, 'Insira uma hora válida. Ex: "14:45"');
+    }
+
     public function attributeLabels()
     {
         return [
@@ -148,6 +159,16 @@ class Ocorrencia extends \yii\db\ActiveRecord
             $this->dataConclusao = $dia.'/'.$mes.'/'.$ano;            
         }
         
+        if ($this->hora!=null){
+            list ($hora, $minuto, $segundos) = split ('[:]', $this->hora);
+            $this->hora = $hora.':'.$minuto;            
+        }
+
+        $foto = FotoController::getFotoOcorrencia($this->idOcorrencia);
+        if ($foto != null) {
+        $this->comentarioFoto = $foto[0]->comentario;
+         }
+
         $this->idCategoriabkp = $this->idCategoria;
     //    echo "Categoria bkp".$this->idCategoriabkp;
         $this->idSubLocalbkp = $this->idSubLocal;

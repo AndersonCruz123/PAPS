@@ -102,7 +102,7 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
             ['label' => 'Denúncias',
             'items' => [
                  ['label' => 'Gerenciar Denúncias', 'url' => ['/denuncia/index']],
-                 ['label' => 'Denúncias não visualizadas', 'url' => ['/denuncia/naoverificadas']]]],
+                 ['label' => 'Denúncias não verificadas', 'url' => ['/denuncia/naoverificadas']]]],
 
             ['label' => 'Ocorrências',
             'items' => [

@@ -121,15 +121,15 @@ use kartik\timepicker\TimePicker;
     <?php $arrayPeriodo = [0 => 'Todos', 1=> 'Manhã', 2=>'Tarde', 3=>'Noite', 4=>'Madrugada']; ?>
 
 
-    <?= $form->field($model, 'status')->dropdownlist($arraystatus, ['options'=>[0=>['Selected'=>true]]]) ?>
+    <?= $form->field($model, 'status')->dropdownlist($arraystatus, ['options'=>[0=>['Selected'=>true]], 'style'=>'width:300px']) ?>
 
-    <?= $form->field($model, 'idCategoria')->dropdownlist($arrayCategoria, ['options'=>[0=>['Selected'=>true]]]) ?>
+    <?= $form->field($model, 'idCategoria')->dropdownlist($arrayCategoria, ['options'=>[0=>['Selected'=>true]], 'style'=>'width:300px']) ?>
     
-    <?= $form->field($model, 'idNatureza')->dropdownlist($arrayNatureza, ['options'=>[0=>['Selected'=>true]]]) ?>
+    <?= $form->field($model, 'idNatureza')->dropdownlist($arrayNatureza, ['options'=>[0=>['Selected'=>true]], 'style'=>'width:300px']) ?>
 
-    <?= $form->field($model, 'idLocal')->dropdownlist($arrayLocal, ['options'=>[0=>['Selected'=>true]]]) ?>
+    <?= $form->field($model, 'idLocal')->dropdownlist($arrayLocal, ['options'=>[0=>['Selected'=>true]], 'style'=>'width:300px']) ?>
   
-      <?= $form->field($model, 'periodo')->dropdownlist($arrayPeriodo, ['options'=>[0=>['Selected'=>true]]]) ?>
+      <?= $form->field($model, 'periodo')->dropdownlist($arrayPeriodo, ['options'=>[0=>['Selected'=>true]], 'style'=>'width:300px']) ?>
 </fieldset>
 
     <div class="form-group">
@@ -153,6 +153,7 @@ use kartik\timepicker\TimePicker;
     var datainicial = document.getElementById('relatorio-datainicial');
     datainicial.disabled = true;
     datainicial.style.display = 'none';
+    
     
     var mesano = document.getElementById('relatorio-mesano');
     mesano.disabled=true;

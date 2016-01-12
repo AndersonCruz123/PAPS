@@ -29,7 +29,7 @@ class Categoria extends \yii\db\ActiveRecord
     {
         return [
             [['Nome'], 'required','message'=>'Este campo é obrigatório'],
-            [['Nome'], 'string', 'max' => 12]
+            [['Nome'], 'string', 'max' => 40]
         ];
     }
 

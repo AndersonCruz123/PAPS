@@ -15,6 +15,9 @@ use dosamigos\datepicker\DatePicker;
     $campos = '(*)Campos obrigatórios';
     ?>
     <h5 style="color:red;"><?= Html::encode($campos) ?></h5>
+    
+        <?php $arraystatus = [1 => 'Não verificada', 2=>'Verdadeira', 3=>'Falsa']; ?>
+    <?= $form->field($model, 'status')->dropdownlist($arraystatus, ['prompt'=>'Selecione o status da denúncia', 'style'=>'width:300px']) ?>
 
     <?= $form->field($model, 'descricao')->textarea(['rows' => 6]) ?>
 
