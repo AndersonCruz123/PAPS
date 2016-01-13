@@ -161,15 +161,15 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         
         $key = substr(str_shuffle(str_repeat($chars, 5)), 0, strlen($chars) );
         
-        $key = substr($key, 0, 10) . '_' . rand(1,10000);
+        $key = substr($key, 0, 5) . '_' . rand(1,10000);
         
-        $password = $key ;
+        $password = $key;
 
-        $usuario->senha =$password;
+        $usuario->senha = md5($password);
 
         $usuario->idTipoUsuario = $usuario->idTipoUsuariobkp;
 
-        $usuario->confirmarSenha = $password;
+        $usuario->confirmarSenha = md5($password);
 
         if ($usuario->save()){
                 print('CONSEGUISAVE');
