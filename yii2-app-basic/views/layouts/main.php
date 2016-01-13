@@ -185,9 +185,9 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; SOS-UFAM <?= date('Y') ?></p>
+        <p class="pull-left">&copy; SOS-UFAM <?= date('Y') ?> - INSTITUTO DE COMPUTAÇÃO</p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-right">Desenvolvido no contexto da disciplina ICC410-2015/02</p>
     </div>
 </footer>
 
