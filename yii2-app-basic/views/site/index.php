@@ -149,7 +149,7 @@ echo "<!DOCTYPE html>
              max-width:100%; 
              height:auto;
              width: 309px;            
-             left:45%;
+             left:40%;
              top: 250px; 
              position: fixed;
 
@@ -161,7 +161,7 @@ echo "<!DOCTYPE html>
              }  
 
              h1{
-               max-width:10%; 
+               max-width:100%; 
               height:auto;
               color: white;
               font-size: 90px;
@@ -175,16 +175,24 @@ echo "<!DOCTYPE html>
              }
 
              #totalden{
+             top:120px;
                max-width:10%; 
               height:auto;
-
-              left: 39%;
-              top: 110px;
+              left: 32%;
               color: white;
               position: relative;
 
              }
 
+             #totalOcorrencia{
+              max-width:10%;
+              left: 55%;
+              top: 120px;
+              color: white;
+              position: relative;
+
+             }
+  
         </style>
   </head>
 
@@ -194,7 +202,7 @@ echo "<!DOCTYPE html>
  <h1 id='titulo'><p> Monitoramento de ocorrências e denúncias em tempo real</p></h1> 
 
 <div>
-    <a href='index.php?r=denuncia%2Fnaoverificadas'><img id='teste3' src='naoverificada.png' /> <h1 id=totalden>".$totalDen."</h1></a>  
+  <img id='teste3' src='naoverificada.png' />  <a href='index.php?r=denuncia%2Fnaoverificadas'> <h1 id=totalden>".$totalDen."</h1></a>  
 </div>              
 </body>
 </html>
