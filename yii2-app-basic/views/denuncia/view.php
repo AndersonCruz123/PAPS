@@ -23,6 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
+        <?= Html::a('Gerar PDF da denúncia', ['printdenuncia', 'id' => $model->idDenuncia], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= DetailView::widget([
@@ -30,9 +31,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'idDenuncia',
             'descricao:ntext',
-            'local',
+            'idCategoria',
+            'idNatureza',
+            'idLocal',
+            'idSubLocal',
             'data',
             'hora',
+            'periodo',
             'status',
         ],
     ]) ?>

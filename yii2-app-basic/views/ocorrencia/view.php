@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'method' => 'post',
             ],
         ]) ?>
-        <?= Html::a('Gerar relatório', ['printocorrencia', 'id' => $model->idOcorrencia], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Gerar PDF da ocorrência', ['printocorrencia', 'id' => $model->idOcorrencia], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php $tam = sizeof($model->fotos); ?>

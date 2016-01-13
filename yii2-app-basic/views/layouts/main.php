@@ -24,8 +24,8 @@ AppAsset::register($this);
     <style> 
           .navbar
           {
-            background-color: #EEE5DE;
-           border-radius: 10px;
+            background-color: #EEE9E9;
+           border-radius: 0px;
             border-top: 20px;
             border-bottom: 10px;
             

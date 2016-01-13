@@ -20,19 +20,21 @@ use app\models\CategoriaSearch;
     $campos = '(*)Campos obrigatórios';
     ?>
     <h5 style="color:red;"><?= Html::encode($campos) ?></h5>
-
-    <?= $form->field($model, 'descricao')->textarea(['rows' => 6]) ?>
-
+    
+    <?php $arraystatus = [1 => 'Não verificada', 2=>'Verdadeira', 3=>'Falsa']; ?>
     <?php $arrayLocal = ArrayHelper::map( LocalSearch::find()->all(), 'idLocal', 'Nome'); ?>
     <?php $arrayNatureza = ArrayHelper::map( NaturezaocorrenciaSearch::find()->all(), 'idNatureza', 'Nome'); ?>
     <?php $arrayCategoria = ArrayHelper::map( CategoriaSearch::find()->all(), 'idCategoria', 'Nome'); ?>    
     <?php $arraySubLocal = ArrayHelper::map( SubLocal::find()->where(['idLocal' => $model->idLocal])->all(), 'idSubLocal', 'Nome'); ?>
     <?php $arrayPeriodo = [1=> 'Manhã', 2=>'Tarde', 3=>'Noite', 4=>'Madrugada']; ?>
 
+    <?= $form->field($model, 'status')->dropdownlist($arraystatus, ['prompt'=>'Selecione o status da denúncia', 'style'=>'width:300px']) ?>
+    <?= $form->field($model, 'descricao')->textarea(['rows' => 6]) ?>
+
     <?= $form->field($model, 'idCategoria')->dropdownlist($arrayCategoria, ['prompt'=>'Selecione o Categoria da ocorrência', 'style'=>'width:300px']) ?>
     
     <?= $form->field($model, 'idNatureza')->dropdownlist($arrayNatureza, ['prompt'=>'Selecione a Natureza da ocorrência', 'style'=>'width:300px']) ?>
-<?php if ($model->idLocal == 0) {
+    <?php if ($model->idLocal == 0) {
     echo $form->field($model, 'idLocal')->dropDownList($arrayLocal,
              [
              'prompt' =>'Selecione o Local da Ocorrência' ,
@@ -93,10 +95,7 @@ use app\models\CategoriaSearch;
     <?= $form->field($model, 'hora')->textInput(['maxlength' => true, 'style'=>'width:60px'])->hint('Exemplo: 12:30') ?>
     <?= $form->field($model, 'periodo')->dropdownlist($arrayPeriodo, ['prompt'=>'Selecione o Período da ocorrência', 'style'=>'width:300px']) ?>
 
-  <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
-  <?= $form->field($model, 'comentarioFoto')->textarea(['rows' => 3]) ?>
-  
-    <div class="form-group">
+  <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Salvar' : 'Atualizar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 

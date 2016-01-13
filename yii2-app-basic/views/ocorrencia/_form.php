@@ -99,6 +99,7 @@ use kartik\timepicker\TimePicker;
                 'clientOptions' => [
                     'autoclose' => true,
                     'format' => 'dd/mm/yyyy',
+                    'todayHighlight' => true
                 ]
         ]); ?>
 
@@ -112,6 +113,7 @@ use kartik\timepicker\TimePicker;
                 'clientOptions' => [
                     'autoclose' => true,
                     'format' => 'dd/mm/yyyy',
+                    'todayHighlight' => true
                 ]
         ]); ?>
 
@@ -130,7 +132,7 @@ use kartik\timepicker\TimePicker;
   <?= $form->field($model, 'comentarioFoto')->textarea(['rows' => 3]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Enviar' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Enviar' : 'Atualizar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

@@ -18,6 +18,7 @@ use app\models\Local;
 use app\models\Sublocal;
 use app\models\Categoria;
 use app\models\Relatorio;
+use app\models\Denuncia;
 use yii\web\UploadedFile;
 use app\models\Foto;
 use app\controllers\FotoController;
@@ -35,7 +36,7 @@ class OcorrenciaController extends Controller
         return [ 
         'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['create', 'index', 'update', 'delete', 'emaberto', 'relatorio', 'printocorrencia', 'printrelatorio'],
+                'only' => ['create',' createfromdenuncia' ,'index', 'update', 'delete', 'emaberto', 'relatorio', 'printocorrencia', 'printrelatorio'],
                 'rules' => [
                     [
                         'actions' => ['create', 'index', 'update','delete', 'emaberto', 'relatorio', 'printocorrencia', 'printrelatorio'],
@@ -130,6 +131,79 @@ class OcorrenciaController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
+    public function actionCreatefromdenuncia($idDenuncia) {
+        
+        $model = new Ocorrencia();
+
+        $denuncia = Denuncia::findOne($idDenuncia);
+        
+        $model->detalheLocal = $denuncia->detalheLocal;
+        $model->data = $denuncia->data;
+        $model->hora = $denuncia->hora;
+        $model->descricao = $denuncia->descricao;
+
+        $model->idLocal = $denuncia->idLocal;
+        $model->idSubLocal = $denuncia->idSubLocalbkp;
+        $sublocal = Sublocal::findOne($denuncia->idSubLocalbkp);
+        $model->idLocal = $sublocal->idLocalbkp;
+        $model->idNatureza = $denuncia->idNaturezabkp;
+        $model->idCategoria = $denuncia->idCategoriabkp;
+        $model->periodo = $denuncia->periodo;
+        $model->comentarioFoto = $denuncia->comentarioFoto;
+
+        if (strcmp($model->periodo, 'Manhã') == 0)$model->periodo = 1;
+        elseif (strcmp($model->periodo, 'Tarde') == 0)$model->periodo = 2;
+        elseif (strcmp($model->periodo, 'Noite') == 0)$model->periodo = 3;
+        elseif (strcmp($model->periodo, 'Madrugada') == 0)$model->periodo = 4;
+
+        if ($model->load(Yii::$app->request->post())) {
+
+            list ($dia, $mes, $ano) = split ('[/]', $model->data);
+            $model->data = $ano.'-'.$mes.'-'.$dia;
+
+            if ($model->dataConclusao!=null){
+              list ($dia, $mes, $ano) = split ('[/]', $model->dataConclusao);
+              $model->dataConclusao = $ano.'-'.$mes.'-'.$dia;
+            }
+
+           $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
+           $path = Yii::$app->basePath.'/web/uploadFoto/';
+           $model->cpfUsuario = Yii::$app->user->identity->cpf;
+
+            if($model->save()){
+     //         if (count ($model->imageFiles) >= 1) {
+                foreach ($model->imageFiles as $file) {
+                  $foto = new Foto();
+                $foto->idOcorrencia = $model->idOcorrencia;
+                $foto->comentario = $model->comentarioFoto;                
+                $foto->endereco = $path . $file->baseName . '.' . $file->extension;
+                $foto->nome = $file->baseName . '.' . $file->extension;
+                $file->saveAs( $foto->endereco);
+                  
+                  $foto->save();
+
+                  $foto = null;
+                  }
+
+              $foto = FotoController::getFotoDenuncia($denuncia->idDenuncia);
+              foreach ($foto as $file) {
+                $file->idOcorrencia = $model->idOcorrencia;
+                $file->save();
+               }
+
+             //   }
+                return $this->redirect(['view', 'id' => $model->idOcorrencia]);
+            } else {
+              //  echo "error da foto em".$image->error;
+            }
+      
+        } else {
+            return $this->render('createdenuncia', [
+                'model' => $model,
+            ]);
+        }
+    } 
+
     public function actionCreate()
     {
         $model = new Ocorrencia();
@@ -218,14 +292,23 @@ class OcorrenciaController extends Controller
 
             if($model->save()){
        //     	if (count ($model->imageFiles) >= 1) {
+
+            if($model->comentarioFoto!=null){
+              $foto = FotoController::getFotoOcorrencia($model->idOcorrencia);
+              foreach ($foto as $file) {
+                $file->comentario = $model->comentarioFoto;
+                $file->save();
+               }
+            }
+
            	    foreach ($model->imageFiles as $file) {
-           	    	$foto = new Foto();
+           	    $foto = new Foto();
            			$foto->idOcorrencia = $model->idOcorrencia;
            			$foto->comentario = $model->comentarioFoto;
            			
            			$foto->endereco = $path . $file->baseName . '.' . $file->extension;
 
-					$foto->nome = $file->baseName . '.' . $file->extension;
+      					$foto->nome = $file->baseName . '.' . $file->extension;
            			$file->saveAs( $foto->endereco);
                 	
                 	$foto->save();

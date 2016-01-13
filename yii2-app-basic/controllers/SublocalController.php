@@ -41,7 +41,7 @@ class SublocalController extends Controller
                 ],
             ],
         ];
-    } elseif(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Segurança Terceirizada') {
+    } else {
         return [ 
         'access' => [
                 'class' => AccessControl::className(),
@@ -50,7 +50,7 @@ class SublocalController extends Controller
                     [
                         'actions' => ['lists', 'sublocalselected'],
                         'allow' => true,
-                        'roles' => ['@'],
+                   //     'roles' => ['@'],
                     ],
 
                 ],
@@ -63,7 +63,7 @@ class SublocalController extends Controller
             ],
         ];
         }
-    }
+    } 
     /**
      * Lists all Sublocal models.
      * @return mixed

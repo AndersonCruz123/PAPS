@@ -19,7 +19,7 @@ class DenunciaSearch extends Denuncia
     {
         return [
             [['idDenuncia', 'status'], 'safe'],
-            [['descricao', 'local', 'data', 'hora'], 'safe'],
+            [['descricao', 'detalheLocal', 'idLocal', 'idSubLocal', 'data', 'hora'], 'safe'],
         ];
     }
 
@@ -76,7 +76,7 @@ class DenunciaSearch extends Denuncia
         ]);
 
         $query->andFilterWhere(['like', 'descricao', $this->descricao])
-            ->andFilterWhere(['like', 'local', $this->local])
+            ->andFilterWhere(['like', 'idSubLocal', $this->idSubLocal])
             ->andFilterWhere(['like', 'hora', $this->hora]);
 
         $this->status = $statusbkp;
@@ -104,7 +104,8 @@ class DenunciaSearch extends Denuncia
         $query->andFilterWhere([
             'idDenuncia' => $this->idDenuncia,
             'descricao' => $this->descricao,
-            'local' => $this->local,
+            'idLocal' => $this->idLocal,
+            'idSubLocal' => $this->idSubLocal,
             'data' => $this->data,
             'hora' => $this->hora,
             'status' => 1,

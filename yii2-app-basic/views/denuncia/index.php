@@ -24,13 +24,20 @@ $this->params['breadcrumbs'][] = $this->title;
 
             ['attribute'=>'idDenuncia',
              'contentOptions'=>['style'=>'width: 10px;']],
-           'status',
+           ['attribute'=>'status',
+             'contentOptions'=>['style'=>'width: 10px;']],           
         //    'descricao:ntext',
-            'local',
-            'data',
-   //         'hora',
-
-
+         //   'idSubLocal',
+            ['attribute'=>'idLocal',            
+             'contentOptions'=>['style'=>'width: 10px;']],
+            ['attribute'=>'data',
+             'contentOptions'=>['style'=>'width: 10px;']],
+            ['attribute'=>'idCategoria',
+             'contentOptions'=>['style'=>'width: 10px;']],
+            ['attribute'=>'idNatureza',
+             'contentOptions'=>['style'=>'width: 10px;']],
+            ['attribute'=> 'periodo',
+             'contentOptions'=>['style'=>'width: 10px;']],            
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

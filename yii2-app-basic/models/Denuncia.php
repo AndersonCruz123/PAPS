@@ -5,13 +5,12 @@ namespace app\models;
 use yii\base\Model;
 use yii\web\UploadedFile;
 use Yii;
-
+use app\controllers\FotoController;
 /**
  * This is the model class for table "denuncia".
  *
  * @property integer $idDenuncia
  * @property string $descricao
- * @property string $local
  * @property string $data
  * @property string $hora
  * @property integer $status
@@ -33,16 +32,21 @@ class Denuncia extends \yii\db\ActiveRecord
      */
     public $imageFiles;
     public $fotos;
-
+    public $idLocal;
+    public $idSubLocalbkp;
+    public $idNaturezabkp;
+    public $idCategoriabkp;    
+    public $comentarioFoto;    
 
     public function rules()
     {
         return [
-            [['descricao', 'local', 'data', 'hora', 'status'], 'required','message'=>'Este campo é obrigatório'],
+            [['descricao', 'idCategoria', 'idNatureza', 'periodo', 'detalheLocal', 'idLocal', 'idSubLocal','data', 'hora', 'status'], 'required','message'=>'Este campo é obrigatório'],
             [['descricao'], 'string'],
+            [['comentarioFoto'], 'string', 'max' => 500],                        
             [['data'], 'safe'],            
-            [['status'], 'integer'],
-            [['local'], 'string', 'max' => 254],
+            [['periodo'], 'string', 'max' => 6],            
+            [['status','idSubLocal', 'idLocal', 'idCategoria', 'idNatureza'], 'integer'],
             [['imageFiles'], 'file', 'extensions'=>'jpg, png, jpeg', 'maxFiles' => 4],
             [['hora'], 'validatehora'],
             ];
@@ -66,9 +70,15 @@ class Denuncia extends \yii\db\ActiveRecord
         return [
             'idDenuncia' => 'Número da Denúncia',
             'descricao' => '*Descrição',
-            'local' => '*Local',
+            'idCategoria' => '*Categoria',
+            'idNatureza' => '*Natureza da Ocorrência',            
+            'idLocal' => '*Local',
+            'idSubLocal' => '*Sublocal',
+            'periodo' => '*Período',
+            'detalheLocal' => '*Detalhamento do Local',            
             'status' => '*Status',            
             'data' => '*Data',
+            'comentarioFoto' => 'Comentário das Fotos',            
             'hora' => '*Hora',
             'imageFiles' => 'Clique abaixo e anexe até 4 fotos',
         ];
@@ -87,6 +97,20 @@ class Denuncia extends \yii\db\ActiveRecord
         list ($ano, $mes, $dia) = split ('[-]', $this->data);
         $this->data = $dia.'/'.$mes.'/'.$ano;
 
+        $this->idCategoriabkp = $this->idCategoria;
+        $this->idNaturezabkp = $this->idNatureza;        
+        $this->idSubLocalbkp = $this->idSubLocal;
+        $sublocal = Sublocal::findOne($this->idSubLocal);
+        $this->idLocal = $sublocal->idLocal;
+        $this->idSubLocal = Sublocal::findOne($this->idSubLocal)->Nome;
+        $this->idNatureza = Naturezaocorrencia::findOne($this->idNatureza)->Nome;
+        $this->idCategoria = Categoria::findOne($this->idCategoria)->Nome;
+
+        $foto = FotoController::getFotoDenuncia($this->idDenuncia);
+        if ($foto != null) {
+        $this->comentarioFoto = $foto[0]->comentario;
+         }
+
         if ($this->hora!=null){
             list ($hora, $minuto, $segundos) = split ('[:]', $this->hora);
             $this->hora = $hora.':'.$minuto;            
@@ -98,6 +122,16 @@ class Denuncia extends \yii\db\ActiveRecord
             $this->status = 'Verdadeira';
         } elseif ($this->status == 3) {
             $this->status = 'Falsa';
+        }
+        
+        if ($this->periodo == 1){
+            $this->periodo = 'Manhã';
+        } elseif ($this->periodo == 2) {
+            $this->periodo = 'Tarde';
+        } elseif ($this->periodo == 3) {
+            $this->periodo = 'Noite';
+        } elseif ($this->periodo == 4) {
+            $this->periodo = 'Madrugada';
         }
 
 
