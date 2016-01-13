@@ -3628,7 +3628,7 @@ tbody.collapse.in {
 .dropdown-menu > .active > a:focus {
   color: #fff;
   text-decoration: none;
-  background-color: #337ab7;
+  background-color: #2E8B57;
   outline: 0;
 }
 .dropdown-menu > .disabled > a,
@@ -4750,7 +4750,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 8px 15px;
   margin-bottom: 20px;
   list-style: none;
-  background-color: #2E8B57;
+  background-color: #EEE9E9;
   border-radius: 4px;
 }
 .breadcrumb > li {

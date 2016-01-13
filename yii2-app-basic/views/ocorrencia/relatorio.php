@@ -7,7 +7,7 @@ use yii\helpers\Html;
 /* @var $model app\models\Ocorrencia */
 
 $this->title = 'Gerar Relatório';
-$this->params['breadcrumbs'][] = ['label' => 'Gerar Relatório', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Ocorrências', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="ocorrencia-create">

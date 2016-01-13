@@ -40,7 +40,7 @@ $config = [
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
-                [
+                [   
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
                 ],
@@ -58,10 +58,10 @@ if (YII_ENV_DEV) {
         'class' => 'yii\debug\Module',
     ];*/
 
-    $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = [
+    //$config['bootstrap'][] = 'gii';
+/*    $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
-    ];
+    ];*/
 }
 
 return $config;

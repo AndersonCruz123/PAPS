@@ -30,23 +30,23 @@ $this->title = 'SOS UFAM';
             }
            
            #policial{
-              height: 250px;
-              width: 250px;
-              position: absolute; 
-             margin-left: 300px;
-              margin-top:90px; 
+             max-width:100%; 
+             height:auto;
+             height: 250px;
+             width: 250px;              
+             left:40%;
+             top: 300px; 
             } 
 
             #chat{
-              height: 250px;
-              width: 250px;
-              position: absolute; 
-             margin-left: 500px;
-              margin-top:50px; 
+             max-width:100%; 
+             height:auto;
+             height: 250px;
+             width: 250px;
+             position: fixed; 
+             left:55%;
+             top: 120px;             
             } 
-  
-
-
         </style>
   </head>
 
@@ -56,4 +56,3 @@ $this->title = 'SOS UFAM';
     
 
   </body>
-
