@@ -124,6 +124,8 @@ class UserController extends Controller
         $model = new User();
 
         if ($model->load(Yii::$app->request->post())){
+            $model->senha = md5($model->senha);
+            $model->confirmarSenha = md5($model->confirmarSenha);
             if ($model->save()) {
             return $this->redirect(['view', 'id' => $model->cpf]);
             }
@@ -173,7 +175,8 @@ class UserController extends Controller
         $model->idTipoUsuario = $model->idTipoUsuariobkp;
 
         if ($model->load(Yii::$app->request->post())) {
-        
+                    $model->senha = md5($model->senha);
+                    $model->confirmarSenha=md5($model->confirmarSenha);
             if($model->save()) {
             return $this->redirect(['view', 'id' => $model->cpf, 'arraytiposusuario' => $arraytiposusuario]);
             }
@@ -279,7 +282,8 @@ class UserController extends Controller
             echo "cpf".$model->cpf;
             echo "idTipoUsuario".$model->idTipoUsuario;
             echo "email".$model->email;*/
-            if (strcmp($model->senha, $model->confirmarSenha) == 0){
+            $model->senha = md5($model->senha);
+            $model->confirmarSenha = md5($model->confirmarSenha);
             $model->cpf = $cpf;
             $model->idTipoUsuario = $funcao;
 
@@ -293,13 +297,7 @@ class UserController extends Controller
               
                 $arraytiposusuario=ArrayHelper::map(TipousuarioSearch::find()->all(),'idTipo','funcao');
                 return $this->redirect(['view', 'id' => $model->cpf, 'arraytiposusuario' => $arraytiposusuario]);
-            }else {
-                    return $this->render('_formalterarsenha', [
-                    'model' => $model,
-                    
-                ]);     
             }
-         }
          else {
                 return $this->render('_formalterarsenha', [
                     'model' => $model,

@@ -50,6 +50,7 @@ class LoginForm extends Model
     {
         if (!$this->hasErrors()) {
             $user = $this->getUser();
+            $this->senha = md5($this->senha);
 
             if (!$user || !$user->validatesenha($this->senha)) {
                 $this->addError($attribute, 'CPF ou Senha incorretos.');
