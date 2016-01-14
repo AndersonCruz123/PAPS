@@ -146,8 +146,6 @@ class OcorrenciaController extends Controller
         $model->idSubLocal = $denuncia->idSubLocalbkp;
         $sublocal = Sublocal::findOne($denuncia->idSubLocalbkp);
         $model->idLocal = $sublocal->idLocalbkp;
-        $model->idNatureza = $denuncia->idNaturezabkp;
-        $model->idCategoria = $denuncia->idCategoriabkp;
         $model->periodo = $denuncia->periodo;
         $model->comentarioFoto = $denuncia->comentarioFoto;
 
