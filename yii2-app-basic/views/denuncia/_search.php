@@ -19,7 +19,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'descricao') ?>
 
-    <?= $form->field($model, 'local') ?>
+    <?= $form->field($model, 'idLocal') ?>
 
     <?= $form->field($model, 'data') ?>
 

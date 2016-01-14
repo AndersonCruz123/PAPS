@@ -53,8 +53,8 @@ class LoginForm extends Model
             $this->senha = md5($this->senha);
 
             if (!$user || !$user->validatesenha($this->senha)) {
-                $this->senha = '';
-                $this->addError($attribute, 'CPF ou Senha incorretos.');
+                $this->addError($attribute, 'CPF ou Senha incorretos. CPF deve ser sem pontos e dígitos (., -)');
+                $this->senha = null;
             }
         }
     }

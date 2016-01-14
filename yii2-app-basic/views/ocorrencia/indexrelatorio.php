@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Gerar relatório', ['printrelatorio', 'periodo' => $model->periodo, 'idCategoria' => $model->idCategoria,
+        <?= Html::a('Gerar PDF do relatório', ['printrelatorio', 'periodo' => $model->periodo, 'idCategoria' => $model->idCategoria,
                                   'status'=>$model->status, 'idNatureza' =>$model->idNatureza, 'idLocal' =>$model->idLocal, 
                                   'dataInicial' =>$model->dataInicial, 'dataFinal' => $model->dataFinal, 
                                   'radiobutton' => $model->radiobutton], ['class' => 'btn btn-success']) ?>

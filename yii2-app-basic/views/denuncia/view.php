@@ -31,8 +31,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'idDenuncia',
             'descricao:ntext',
-            'idCategoria',
-            'idNatureza',
             'idLocal',
             'idSubLocal',
             'data',

@@ -13,6 +13,7 @@ use app\models\Sublocal;
 use app\models\CategoriaSearch;
 use dosamigos\datepicker\DatePicker;
 use kartik\timepicker\TimePicker;
+use yii\widgets\MaskedInput;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Ocorrencia */
@@ -118,7 +119,9 @@ use kartik\timepicker\TimePicker;
         ]); ?>
 
  
-    <?= $form->field($model, 'hora')->textInput(['maxlength' => true, 'style'=>'width:60px'])->hint('Exemplo: 12:30') ?>
+    <?= $form->field($model, 'hora')->textInput(['maxlength' => true])->widget(MaskedInput::className(), [
+                    'mask' => '99:99',
+                ]) ?>
 
     <?= $form->field($model, 'periodo')->dropdownlist($arrayPeriodo, ['prompt'=>'Selecione o Período da ocorrência', 'style'=>'width:300px']) ?>
 

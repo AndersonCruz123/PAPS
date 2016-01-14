@@ -194,7 +194,9 @@ class OcorrenciaController extends Controller
              //   }
                 return $this->redirect(['view', 'id' => $model->idOcorrencia]);
             } else {
-              //  echo "error da foto em".$image->error;
+            return $this->render('createdenuncia', [
+                'model' => $model,
+            ]);
             }
       
         } else {
@@ -240,7 +242,10 @@ class OcorrenciaController extends Controller
              //   }
                 return $this->redirect(['view', 'id' => $model->idOcorrencia]);
             } else {
-              //  echo "error da foto em".$image->error;
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+
             }
       
         } else {
@@ -318,6 +323,9 @@ class OcorrenciaController extends Controller
    //             }
                 return $this->redirect(['view', 'id' => $model->idOcorrencia]);
             } else {
+            return $this->render('update', [
+                'model' => $model
+            ]);
               //  echo "error da foto em".$image->error;
             }
       
@@ -1000,7 +1008,7 @@ protected function generateTableOcorrencia($option, $dataIni, $dataFim, $dataIni
       	  <caption>Quadro de ocorrências do mês de ". $this->findMonths($mes)." do ano de ".$ano."</caption>
            <thead>
            <tr class='header'>
-             <td>Registro</td>
+             <td>Nº Registro</td>
              <td>Categoria</td>
              <td>Natureza</td>
              <td>Local</td>
@@ -1017,7 +1025,7 @@ protected function generateTableOcorrencia($option, $dataIni, $dataFim, $dataIni
       	  <caption>Quadro de ocorrências do período de ". $dataInicial." a ".$dataFinal."</caption>
            <thead>
            <tr class='header'>
-             <td>Registro</td>
+             <td>Nº Registro</td>
              <td>Categoria</td>
              <td>Natureza</td>
              <td>Local</td>

@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="usuario-index">
 
-    <h1><?= Html::encode($this->title.' mais '.$cpf) ?></h1>
+    <h1><?= Html::encode($this->title.': '.$cpf.'. Tente novamente com o CPF sem pontos e dígitos (., -)') ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
 </div>

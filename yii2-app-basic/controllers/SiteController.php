@@ -63,11 +63,9 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post())) {
-            if ($model->login() && Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Chefe de Segurança') {
+            if ($model->login() && Yii::$app->user->isGuest == false) {
                 return $this->render('index');
-            } else if ($model->login() && Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario == 'Segurança Terceirizada'){
-                 return $this->render('index');
-             }
+            } 
         }
         return $this->render('login', [
             'model' => $model,

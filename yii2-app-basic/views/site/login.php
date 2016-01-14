@@ -24,7 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 
-        <?= $form->field($model, 'cpf') ?>
+        <?= $form->field($model, 'cpf')->hint('CPF deve ser sem pontos e dígitos (., -)') ?>
 
         <?= $form->field($model, 'senha')->passwordInput() ?>
 

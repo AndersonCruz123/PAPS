@@ -84,7 +84,7 @@ class Ocorrencia extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idOcorrencia' => 'Registro',
+            'idOcorrencia' => 'Nº Registro',
             'status' => '*Status',
             'data' => '*Data do ocorrido',
             'hora' => '*Hora',

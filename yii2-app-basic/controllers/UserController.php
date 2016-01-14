@@ -173,6 +173,8 @@ class UserController extends Controller
         $arraytiposusuario=ArrayHelper::map(TipousuarioSearch::find()->all(),'idTipo','funcao');
 
         $model->idTipoUsuario = $model->idTipoUsuariobkp;
+        $model->senha = "";
+        $model->confirmarSenha = "";
 
         if ($model->load(Yii::$app->request->post())) {
                     $model->senha = md5($model->senha);
@@ -254,7 +256,7 @@ class UserController extends Controller
             else
             {
                 return $this->render('naoachouemail', [
-                                    'cpf' => $cpf
+                                    'cpf' => $cpf->cpf
                 ]);
             }
         }
@@ -274,14 +276,11 @@ class UserController extends Controller
         $funcao = $model->idTipoUsuario;
         $nome = $model->nome;
         $email = $model->email; 
-        $model->senha = "";
-        $model->confirmarSenha = "";
+        $model->senha = null;
+        $model->confirmarSenha = null;
         
         if ($model->load(Yii::$app->request->post())) {
-   /*         echo "senha".$model->senha;
-            echo "cpf".$model->cpf;
-            echo "idTipoUsuario".$model->idTipoUsuario;
-            echo "email".$model->email;*/
+            
             $model->senha = md5($model->senha);
             $model->confirmarSenha = md5($model->confirmarSenha);
             $model->cpf = $cpf;

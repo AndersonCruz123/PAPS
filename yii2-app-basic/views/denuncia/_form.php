@@ -7,8 +7,7 @@ use yii\helpers\ArrayHelper;
 use app\models\LocalSearch;
 use app\models\SublocalSearch;
 use app\models\Sublocal;
-use app\models\NaturezaocorrenciaSearch;
-use app\models\CategoriaSearch;
+use yii\widgets\MaskedInput;
 /* @var $this yii\web\View */
 /* @var $model app\models\Denuncia */
 /* @var $form yii\widgets\ActiveForm */
@@ -24,14 +23,9 @@ use app\models\CategoriaSearch;
     <?= $form->field($model, 'descricao')->textarea(['rows' => 6]) ?>
 
     <?php $arrayLocal = ArrayHelper::map( LocalSearch::find()->all(), 'idLocal', 'Nome'); ?>
-    <?php $arrayNatureza = ArrayHelper::map( NaturezaocorrenciaSearch::find()->all(), 'idNatureza', 'Nome'); ?>
-    <?php $arrayCategoria = ArrayHelper::map( CategoriaSearch::find()->all(), 'idCategoria', 'Nome'); ?>    
     <?php $arraySubLocal = ArrayHelper::map( SubLocal::find()->where(['idLocal' => $model->idLocal])->all(), 'idSubLocal', 'Nome'); ?>
     <?php $arrayPeriodo = [1=> 'Manhã', 2=>'Tarde', 3=>'Noite', 4=>'Madrugada']; ?>
 
-    <?= $form->field($model, 'idCategoria')->dropdownlist($arrayCategoria, ['prompt'=>'Selecione o Categoria da ocorrência', 'style'=>'width:300px']) ?>
-    
-    <?= $form->field($model, 'idNatureza')->dropdownlist($arrayNatureza, ['prompt'=>'Selecione a Natureza da ocorrência', 'style'=>'width:300px']) ?>
 <?php if ($model->idLocal == 0) {
     echo $form->field($model, 'idLocal')->dropDownList($arrayLocal,
              [
@@ -90,7 +84,9 @@ use app\models\CategoriaSearch;
                 ],
         ]); ?>
         
-    <?= $form->field($model, 'hora')->textInput(['maxlength' => true, 'style'=>'width:60px'])->hint('Exemplo: 12:30') ?>
+    <?= $form->field($model, 'hora')->textInput(['maxlength' => true])->widget(MaskedInput::className(), [
+                    'mask' => '99:99',
+                ]) ?>
     <?= $form->field($model, 'periodo')->dropdownlist($arrayPeriodo, ['prompt'=>'Selecione o Período da ocorrência', 'style'=>'width:300px']) ?>
 
   <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
