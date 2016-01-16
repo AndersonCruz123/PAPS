@@ -6,6 +6,7 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
+use yii\widgets\MaskedInput;
 
 $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
@@ -24,7 +25,10 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 
-        <?= $form->field($model, 'cpf')->hint('CPF deve ser sem pontos e dígitos (., -)') ?>
+   <?= $form->field($model, 'cpf')->textInput(['style'=>'width:180px'])->widget(MaskedInput::className(), [
+                    'mask' => '999.999.999-99',
+                ]) ?>
+
 
         <?= $form->field($model, 'senha')->passwordInput() ?>
 

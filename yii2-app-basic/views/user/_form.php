@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use app\models\TipousuarioSearch;
+use yii\widgets\MaskedInput;
 /* @var $this yii\web\View */
 /* @var $model app\models\User */
 /* @var $form yii\widgets\ActiveForm */
@@ -18,7 +19,9 @@ use app\models\TipousuarioSearch;
 
 	<?php $arraytiposusuario=ArrayHelper::map(TipousuarioSearch::find()->all(),'idTipo','funcao'); ?>
     
-    <?= $form->field($model, 'cpf')->textInput(['maxlength' => true, 'style'=>'width:180px'])->hint('Sem pontos e dígitos (., -)') ?>
+    <?= $form->field($model, 'cpf')->textInput(['style'=>'width:180px'])->widget(MaskedInput::className(), [
+                    'mask' => '999.999.999-99',
+                ]) ?>
 
     <?= $form->field($model, 'email')->textInput(['maxlength' => true, 'style'=>'width:500px']) ?>
 

@@ -4,7 +4,6 @@ namespace app\models;
 
 use Yii;
 use yii\base\Model;
-
 /**
  * LoginForm is the model behind the login form.
  */
@@ -28,6 +27,7 @@ class LoginForm extends Model
             // rememberMe must be a boolean value
             ['rememberMe', 'boolean'],
             // senha is validated by validatesenha()
+            ['cpf', 'validacpf'],
             ['senha', 'validatesenha'],
         ];
     }
@@ -39,6 +39,21 @@ class LoginForm extends Model
         ];
     }
 
+public function validacpf($attribute, $params)
+{	// Verifiva se o número digitado contém todos os digitos
+    $this->cpf = str_pad(ereg_replace('[^0-9]', '', $this->cpf), 11, '0', STR_PAD_LEFT);
+	
+	// Verifica se nenhuma das sequências abaixo foi digitada, caso seja, retorna falso
+    if (strlen($this->cpf) != 11)
+	{
+	$this->addError($attribute, 'Insira um CPF válido');
+    }
+	else
+	{   // Calcula os números para verificar se o CPF é verdadeiro
+            $user = User::findBycpf($this->cpf);
+            if ($user==null) $this->addError($attribute, 'Este CPF não possui cadastro no sistema');
+    }
+}
     /**
      * Validates the senha.
      * This method serves as the inline validation for senha.
@@ -53,7 +68,7 @@ class LoginForm extends Model
             $this->senha = md5($this->senha);
 
             if (!$user || !$user->validatesenha($this->senha)) {
-                $this->addError($attribute, 'CPF ou Senha incorretos. CPF deve ser sem pontos e dígitos (., -)');
+                $this->addError($attribute, 'Senha incorreta');
                 $this->senha = null;
             }
         }

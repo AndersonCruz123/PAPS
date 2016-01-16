@@ -119,7 +119,7 @@ use yii\widgets\MaskedInput;
         ]); ?>
 
  
-    <?= $form->field($model, 'hora')->textInput(['maxlength' => true])->widget(MaskedInput::className(), [
+    <?= $form->field($model, 'hora')->textInput(['style'=>'width:180px'])->widget(MaskedInput::className(), [
                     'mask' => '99:99',
                 ]) ?>
 

@@ -29,7 +29,7 @@ use yii\widgets\MaskedInput;
 <?php if ($model->idLocal == 0) {
     echo $form->field($model, 'idLocal')->dropDownList($arrayLocal,
              [
-             'prompt' =>'Selecione o Local da Ocorrência' ,
+             'prompt' =>'Selecione o Local da Denúncia' ,
               'onchange' =>'
                           console.log("carreguei a tela");
                     
@@ -41,13 +41,13 @@ use yii\widgets\MaskedInput;
             
     echo $form->field($model, 'idSubLocal')->dropDownList(
                                     [
-                                    'prompt' =>'Selecione o SubLocal da Ocorrência',
+                                    'prompt' =>'Selecione o SubLocal da Denúncia',
                     
                                     ]);
           } else {
     echo $form->field($model, 'idLocal')->dropDownList($arrayLocal,
              [
-             'prompt' =>'Selecione o Local da Ocorrência' ,
+             'prompt' =>'Selecione o Local da Denúncia' ,
               'onchange' =>'
                     $.get("index.php?r=sublocal/lists&id='.'" + $(this).val(), function(data){
                         $( "#denuncia-idsublocal").html(data);
@@ -60,7 +60,7 @@ use yii\widgets\MaskedInput;
                
   echo $form->field($model, 'idSubLocal')->dropDownList($arraySubLocal,
                                     [
-                                    'prompt' =>'Selecione o SubLocal da Ocorrência',
+                                    'prompt' =>'Selecione o SubLocal da Denúncia',
                                     'options'=>[$model->idSubLocalbkp=>['Selected'=>true]],
                                     'style'=>'width:300px'
                                     ]);  
@@ -87,7 +87,7 @@ use yii\widgets\MaskedInput;
     <?= $form->field($model, 'hora')->textInput(['maxlength' => true])->widget(MaskedInput::className(), [
                     'mask' => '99:99',
                 ]) ?>
-    <?= $form->field($model, 'periodo')->dropdownlist($arrayPeriodo, ['prompt'=>'Selecione o Período da ocorrência', 'style'=>'width:300px']) ?>
+    <?= $form->field($model, 'periodo')->dropdownlist($arrayPeriodo, ['prompt'=>'Selecione o Período da Denúncia', 'style'=>'width:300px']) ?>
 
   <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
   <?= $form->field($model, 'comentarioFoto')->textarea(['rows' => 3]) ?>

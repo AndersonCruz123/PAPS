@@ -177,15 +177,21 @@ class UserController extends Controller
         $model->confirmarSenha = "";
 
         if ($model->load(Yii::$app->request->post())) {
+                    $senha = $model->senha;
                     $model->senha = md5($model->senha);
                     $model->confirmarSenha=md5($model->confirmarSenha);
             if($model->save()) {
             return $this->redirect(['view', 'id' => $model->cpf, 'arraytiposusuario' => $arraytiposusuario]);
-            }
+            } else {
+                $model->senha = $senha;
+                $model->confirmarSenha = $senha;
+            return $this->render('update', [
+                'model' => $model
+            ]);
+        }
         } else {
             return $this->render('update', [
                 'model' => $model,
-                'arraytiposusuario' => $arraytiposusuario
             ]);
         }
     }

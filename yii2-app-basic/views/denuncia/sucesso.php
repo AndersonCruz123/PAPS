@@ -29,30 +29,21 @@ $this->title = 'SOS UFAM';
             border-color: transparent;
             }
            
-           #policial{
+           #sucesso{
              max-width:100%; 
              height:auto;
-             height: 250px;
-             width: 250px;              
-             left:40%;
-             top: 300px; 
+             height: 360px;
+             width: 450px;              
+             left:42%;
+             top: 150px; 
             } 
 
-            #chat{
-             max-width:100%; 
-             height:auto;
-             height: 250px;
-             width: 250px;
-             position: fixed; 
-             left:55%;
-             top: 120px;             
-            } 
+           
         </style>
   </head>
 
   <body>
-    <img id="policial" src="policial.jpg">
-    <img id="chat" src="chat.png">
-    
+    <img id="sucesso" src="sucesso.png">
+     
 
   </body>

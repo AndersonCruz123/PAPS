@@ -166,7 +166,7 @@ if(Yii::$app->user->isGuest == false && Yii::$app->user->identity->idTipoUsuario
         	    echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
+            ['label' => 'Denuncie Aqui', 'url' => ['/site/index']],
                         ['label' => 'Entrar', 'url' => ['/site/login'],
                             'linkOptions' => ['data-method' => 'post']],
                 ],

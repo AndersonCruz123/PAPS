@@ -39,7 +39,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
         return [
             [['cpf', 'email', 'senha', 'confirmarSenha', 'idTipoUsuario', 'nome'], 'required','message'=>'Este campo é obrigatório'],
             [['idTipoUsuario'], 'integer'],
-            [['cpf'], 'string', 'max' => 11],
+            [['cpf'], 'validacpf'],
             [['nome'], 'string', 'max' => 300],
             [['confirmarSenha'], 'compare', 'compareAttribute' => 'senha', 'message'=> 'Deve ser exatamente igual ao campo senha'],            
             [['email'], 'email', 'message'=>'Este email é inválido'],
@@ -50,6 +50,33 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     /**
      * @inheritdoc
      */
+public function validacpf($attribute, $params)
+{	// Verifiva se o número digitado contém todos os digitos
+    $this->cpf = str_pad(ereg_replace('[^0-9]', '', $this->cpf), 11, '0', STR_PAD_LEFT);
+	
+	// Verifica se nenhuma das sequências abaixo foi digitada, caso seja, retorna falso
+    if (strlen($this->cpf) != 11 || $this->cpf == '00000000000' || $this->cpf == '11111111111' || $this->cpf == '22222222222' 
+    	|| $this->cpf == '33333333333' || $this->cpf == '44444444444' || $this->cpf == '55555555555' || $this->cpf == '66666666666' 
+    	|| $this->cpf == '77777777777' || $this->cpf == '88888888888' || $this->cpf == '99999999999')
+	{
+	$this->addError($attribute, 'Insira um CPF válido');
+    }
+	else
+	{   // Calcula os números para verificar se o CPF é verdadeiro
+        for ($t = 9; $t < 11; $t++) {
+            for ($d = 0, $c = 0; $c < $t; $c++) {
+                $d += $this->cpf{$c} * (($t + 1) - $c);
+            }
+ 
+            $d = ((10 * $d) % 11) % 10;
+ 
+            if ($this->cpf{$c} != $d) {
+				$this->addError($attribute, 'Insira um CPF válido');
+            }
+        }
+    }
+}
+
     public function attributeLabels()
     {
         return [
