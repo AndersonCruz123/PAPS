@@ -37,8 +37,6 @@ use yii\widgets\MaskedInput;
 
     <?php $arraystatus = [1 => 'Aberto', 2=>'Solucionado', 3=>'Não Solucionado']; ?>
 
-    <?php $arrayPeriodo = [1=> 'Manhã', 2=>'Tarde', 3=>'Noite', 4=>'Madrugada']; ?>
-
 
     <?= $form->field($model, 'status')->dropdownlist($arraystatus, ['prompt'=>'Selecione o status da ocorrência', 'style'=>'width:300px']) ?>
 
@@ -100,7 +98,8 @@ use yii\widgets\MaskedInput;
                 'clientOptions' => [
                     'autoclose' => true,
                     'format' => 'dd/mm/yyyy',
-                    'todayHighlight' => true
+                    'todayHighlight' => true,
+                    'todayBtn' => true
                 ]
         ]); ?>
 
@@ -114,7 +113,8 @@ use yii\widgets\MaskedInput;
                 'clientOptions' => [
                     'autoclose' => true,
                     'format' => 'dd/mm/yyyy',
-                    'todayHighlight' => true
+                    'todayHighlight' => true,
+                    'todayBtn' => true
                 ]
         ]); ?>
 
@@ -123,7 +123,6 @@ use yii\widgets\MaskedInput;
                     'mask' => '99:99',
                 ]) ?>
 
-    <?= $form->field($model, 'periodo')->dropdownlist($arrayPeriodo, ['prompt'=>'Selecione o Período da ocorrência', 'style'=>'width:300px']) ?>
 
     <?= $form->field($model, 'descricao')->textarea(['rows' => 6]) ?>
 

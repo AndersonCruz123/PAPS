@@ -233,6 +233,7 @@ class UserController extends Controller
             $cpf = new User();
             $cpf->load(Yii::$app->request->post());
 
+            $cpf->cpf = str_pad(ereg_replace('[^0-9]', '', $cpf->cpf), 11, '0', STR_PAD_LEFT);
            /// $usuario = User::find()->where(['email'=>$email])->one();
             //$usuario = User::findOne($cpf);
           //   echo($usuario->cpf);

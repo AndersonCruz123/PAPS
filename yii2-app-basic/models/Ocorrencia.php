@@ -56,16 +56,16 @@ class Ocorrencia extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['status', 'data', 'hora', 'periodo', 'detalheLocal', 'descricao', 'idCategoria', 'idLocal', 'idSubLocal', 'idNatureza'], 'required','message'=>'Este campo é obrigatório'],
+            [['status', 'data', 'hora', 'detalheLocal', 'descricao', 'idCategoria', 'idLocal', 'idSubLocal', 'idNatureza'], 'required','message'=>'Este campo é obrigatório'],
             [['status', 'idCategoria', 'idNatureza', 'idLocal', 'idSubLocal', 'idSubLocalbkp'], 'integer'],
             [['data', 'dataConclusao'], 'safe'],
             [['descricao', 'procedimento'], 'string'],
             [['comentarioFoto'], 'string', 'max' => 500],            
-            [['periodo'], 'string', 'max' => 6],            
             [['detalheLocal'], 'string', 'max' => 120],
             [['cpfUsuario'], 'string', 'max' => 12],
-            [['imageFiles'], 'file', 'extensions'=>'jpg, png, jpeg', 'maxFiles' => 4],
+            [['imageFiles'], 'file', 'extensions'=>'jpg, png, jpeg', 'maxFiles' => 4,'wrongExtension'=>'Somente jpeg, jpg e png', 'tooMany'=>'Até 4 fotos podem ser anexadas'],
             [['hora'], 'validatehora'],
+            [['periodo'], 'safe'],            
         ];
     }
 
@@ -77,7 +77,19 @@ class Ocorrencia extends \yii\db\ActiveRecord
 
             list ($hora, $minuto) = split('[:]', $this->hora);
 
-            if ((int)$hora >=0 && (int)$hora <=23 && (int)$minuto >=0 && (int)$minuto <=59 );
+            if ((int)$hora >=0 && (int)$hora <=23 && (int)$minuto >=0 && (int)$minuto <=59 ) {
+                if ((int)$hora >=0 && (int)$hora <=5) {
+                    $this->periodo=4;
+                } else if ((int)$hora >=6 && (int)$hora <=11) {
+                    $this->periodo=1;
+                } else if ((int)$hora >=12 && (int)$hora <=17) {
+                    $this->periodo=2;
+                } else if ((int)$hora >=18 && (int)$hora <=23) {
+                    $this->periodo=3;
+                }         
+
+            }
+            
             else $this->addError($attribute, 'Insira uma hora válida. Ex: "14:45"');
     }
 

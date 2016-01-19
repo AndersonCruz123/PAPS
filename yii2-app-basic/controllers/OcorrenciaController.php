@@ -240,6 +240,13 @@ class OcorrenciaController extends Controller
              //   }
                 return $this->redirect(['view', 'id' => $model->idOcorrencia]);
             } else {
+                    list ($ano, $mes, $dia) = split ('[-]', $model->data);
+                $model->data = $dia.'/'.$mes.'/'.$ano;
+                
+                if($model->dataConclusao!=null){
+                    list ($ano, $mes, $dia) = split ('[-]', $model->dataConclusao);
+                  $model->dataConclusao = $dia.'/'.$mes.'/'.$ano;  
+                }          
             return $this->render('create', [
                 'model' => $model,
             ]);
@@ -267,10 +274,6 @@ class OcorrenciaController extends Controller
         elseif (strcmp($model->status, 'Solucionado') == 0)$model->status = 2;
         elseif (strcmp($model->status, 'Não Solucionado') == 0)$model->status = 3;
 
-        if (strcmp($model->periodo, 'Manhã') == 0)$model->periodo = 1;
-        elseif (strcmp($model->periodo, 'Tarde') == 0)$model->periodo = 2;
-        elseif (strcmp($model->periodo, 'Noite') == 0)$model->periodo = 3;
-        elseif (strcmp($model->periodo, 'Madrugada') == 0)$model->periodo = 4;
 
         $model->idNatureza = $model->idNaturezabkp;
         $model->idSubLocal = $model->idSubLocalbkp;
@@ -321,6 +324,13 @@ class OcorrenciaController extends Controller
    //             }
                 return $this->redirect(['view', 'id' => $model->idOcorrencia]);
             } else {
+                list ($ano, $mes, $dia) = split ('[-]', $model->data);
+                $model->data = $dia.'/'.$mes.'/'.$ano;
+                
+                if($model->dataConclusao!=null){
+                    list ($ano, $mes, $dia) = split ('[-]', $model->dataConclusao);
+                  $model->dataConclusao = $dia.'/'.$mes.'/'.$ano;  
+                }
             return $this->render('update', [
                 'model' => $model
             ]);
@@ -446,12 +456,13 @@ class OcorrenciaController extends Controller
         	<h2> 4. Natureza da Ocorrência:</h2> <p>".$model->idNatureza. "</p>
         	<h2> 5. Data do acontecimento da ocorrência:</h2> <p>".$model->data. "</p>
         	<h2> 6. Hora do acontecimento da ocorrência:</h2> <p>".$model->hora. "</p>
-      	 	<h2> 7. Local:</h2> <p>".$model->idLocal. "</p>
-      		<h2> 8. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
-       		<h2> 9. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
-          <h2> 10. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
-          <h2> 11. Procedimento:</h2> <pre><p>".$model->procedimento. "</p></pre> 
-        	<h2> 12. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
+          <h2> 7. Período do acontecimento da ocorrência:</h2> <p>".$model->periodo. "</p>
+      	 	<h2> 8. Local:</h2> <p>".$model->idLocal. "</p>
+      		<h2> 9. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
+       		<h2> 10. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
+          <h2> 11. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
+          <h2> 12. Procedimento:</h2> <pre><p>".$model->procedimento. "</p></pre> 
+        	<h2> 13. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
 	        ";
 	    }
 
@@ -465,14 +476,15 @@ class OcorrenciaController extends Controller
         	<h2> 4. Natureza da Ocorrência:</h2> <p>".$model->idNatureza. "</p>
         	<h2> 5. Data do acontecimento da ocorrência:</h2> <p>".$model->data. "</p>
         	<h2> 6. Hora do acontecimento da ocorrência:</h2> <p>".$model->hora. "</p>
-      	 	<h2> 7. Local:</h2> <p>".$model->idLocal. "</p>
-      		<h2> 8. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
-       		<h2> 9. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
-          <h2> 10. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
-          <h2> 11. Procedimento:</h2> <pre><p>".$model->procedimento. "</p></pre> 
-        	<h2> 12. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
-        	<h2> 13. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
-        	<h2> 14. Foto:</h2>
+          <h2> 7. Período do acontecimento da ocorrência:</h2> <p>".$model->periodo. "</p>
+          <h2> 8. Local:</h2> <p>".$model->idLocal. "</p>
+          <h2> 9. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
+          <h2> 10. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
+          <h2> 11. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
+          <h2> 12. Procedimento:</h2> <pre><p>".$model->procedimento. "</p></pre> 
+          <h2> 13. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
+        	<h2> 14. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
+        	<h2> 15. Foto:</h2>
         	<img id='foto1' src='./../web/uploadFoto/".$model->fotos[0]->nome."' alt='".$model->fotos[0]->nome."'/>
         	"	        
 	        ;
@@ -488,15 +500,16 @@ class OcorrenciaController extends Controller
         	<h2> 4. Natureza da Ocorrência:</h2> <p>".$model->idNatureza. "</p>
         	<h2> 5. Data do acontecimento da ocorrência:</h2> <p>".$model->data. "</p>
         	<h2> 6. Hora do acontecimento da ocorrência:</h2> <p>".$model->hora. "</p>
-      	 	<h2> 7. Local:</h2> <p>".$model->idLocal. "</p>
-      		<h2> 8. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
-       		<h2> 9. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
-          <h2> 10. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
-          <h2> 11. Procedimento:</h2> <pre><p>".$model->procedimento. "</p></pre> 
-        	<h2> 12. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
-        	<h2> 13. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
-        	<h2> 14. Fotos:</h2>
-        	<img id='foto1' src='./../web/uploadFoto/".$model->fotos[0]->nome."' alt='".$model->fotos[0]->nome."'/>
+          <h2> 7. Período do acontecimento da ocorrência:</h2> <p>".$model->periodo. "</p>
+          <h2> 8. Local:</h2> <p>".$model->idLocal. "</p>
+          <h2> 9. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
+          <h2> 10. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
+          <h2> 11. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
+          <h2> 12. Procedimento:</h2> <pre><p>".$model->procedimento. "</p></pre> 
+          <h2> 13. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
+          <h2> 14. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
+          <h2> 15. Foto:</h2>
+          <img id='foto1' src='./../web/uploadFoto/".$model->fotos[0]->nome."' alt='".$model->fotos[0]->nome."'/>
         	<img id='foto2' src='./../web/uploadFoto/".$model->fotos[1]->nome."' alt='".$model->fotos[1]->nome."'/>
         	"	        
 	        ;
@@ -512,14 +525,15 @@ class OcorrenciaController extends Controller
         	<h2> 4. Natureza da Ocorrência:</h2> <p>".$model->idNatureza. "</p>
         	<h2> 5. Data do acontecimento da ocorrência:</h2> <p>".$model->data. "</p>
         	<h2> 6. Hora do acontecimento da ocorrência:</h2> <p>".$model->hora. "</p>
-      	 	<h2> 7. Local:</h2> <p>".$model->idLocal. "</p>
-      		<h2> 8. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
-       		<h2> 9. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
-          <h2> 10. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
-          <h2> 11. Procedimento:</h2> <pre><p>".$model->procedimento. "</p></pre> 
-        	<h2> 12. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
-        	<h2> 13. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
-        	<h2> 14. Fotos:</h2>
+          <h2> 7. Período do acontecimento da ocorrência:</h2> <p>".$model->periodo. "</p>
+          <h2> 8. Local:</h2> <p>".$model->idLocal. "</p>
+          <h2> 9. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
+          <h2> 10. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
+          <h2> 11. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
+          <h2> 12. Procedimento:</h2> <pre><p>".$model->procedimento. "</p></pre> 
+          <h2> 13. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
+          <h2> 14. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
+          <h2> 15. Foto:</h2>
         	<img id='foto1' src='./../web/uploadFoto/".$model->fotos[0]->nome."' alt='".$model->fotos[0]->nome."'/>
         	<img id='foto2' src='./../web/uploadFoto/".$model->fotos[1]->nome."' alt='".$model->fotos[1]->nome."'/>
         	<img id='foto3' src='./../web/uploadFoto/".$model->fotos[2]->nome."' alt='".$model->fotos[2]->nome."'/>
@@ -537,14 +551,15 @@ class OcorrenciaController extends Controller
         	<h2> 4. Natureza da Ocorrência:</h2> <p>".$model->idNatureza. "</p>
         	<h2> 5. Data do acontecimento da ocorrência:</h2> <p>".$model->data. "</p>
         	<h2> 6. Hora do acontecimento da ocorrência:</h2> <p>".$model->hora. "</p>
-      	 	<h2> 7. Local:</h2> <p>".$model->idLocal. "</p>
-      		<h2> 8. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
-       		<h2> 9. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
-        	<h2> 10. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
-        	<h2> 11. Procedimento:</h2> <pre><p>".$model->procedimento. "</p></pre> 
-        	<h2> 12. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
-        	<h2> 13. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
-        	<h2> 14. Fotos:</h2>
+          <h2> 7. Período do acontecimento da ocorrência:</h2> <p>".$model->periodo. "</p>
+          <h2> 8. Local:</h2> <p>".$model->idLocal. "</p>
+          <h2> 9. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
+          <h2> 10. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
+          <h2> 11. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
+          <h2> 12. Procedimento:</h2> <pre><p>".$model->procedimento. "</p></pre> 
+          <h2> 13. Data conclusão:</h2> <p>".$model->dataConclusao. "</p>
+          <h2> 14. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
+          <h2> 15. Foto:</h2>
         	<img id='foto1' src='./../web/uploadFoto/".$model->fotos[0]->nome."' alt='".$model->fotos[0]->nome."'/>
         	<img id='foto2' src='./../web/uploadFoto/".$model->fotos[1]->nome."' alt='".$model->fotos[1]->nome."'/>
         	<img id='foto3' src='./../web/uploadFoto/".$model->fotos[2]->nome."' alt='".$model->fotos[2]->nome."'/>
@@ -1186,6 +1201,10 @@ protected function generateTableOcorrencia($option, $dataIni, $dataFim, $dataIni
 
         if ($model->load(Yii::$app->request->post())) {
 
+        if ($model->validatedata() == false) return $this->render('relatorio', [
+                'model' => $model,
+            ]);
+        
         $searchModel = new OcorrenciaSearch();
         
         if($model->idLocal!=0)

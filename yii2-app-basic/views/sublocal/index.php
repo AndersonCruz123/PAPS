@@ -28,6 +28,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'Nome',
             'idLocal',
+            'latitude',
+            'longitude',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

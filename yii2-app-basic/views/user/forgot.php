@@ -65,12 +65,15 @@ $this->params['breadcrumbs'][] = $this->title;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
+use yii\widgets\MaskedInput;
 ?>
 <?php $form = ActiveForm::begin(); ?>
 
     <h2>Informe o seu cpf que enviaremos para o email a sua nova senha</h2>
 
-   <?= $form->field($model, 'cpf')->textInput(['maxlength' => true, 'style'=>'width:180px'])->hint('Sem pontos e dígitos (., -)') ?>
+    <?= $form->field($model, 'cpf')->textInput(['style'=>'width:180px'])->widget(MaskedInput::className(), [
+                    'mask' => '999.999.999-99',
+                ]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Enviar', ['class' => 'btn btn-primary']) ?>

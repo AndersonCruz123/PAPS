@@ -172,10 +172,11 @@ class DenunciaController extends Controller
             <h2> 2. Status:</h2> <p>".$model->status. "</p>
             <h2> 3. Data do acontecimento da denúncia:</h2> <p>".$model->data. "</p>
             <h2> 4. Hora do acontecimento da denúncia:</h2> <p>".$model->hora. "</p>
-            <h2> 5. Local:</h2> <p>".$model->idLocal. "</p>
-            <h2> 6. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
-            <h2> 7. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
-          <h2> 8. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
+            <h2> 5. Período do acontecimento da denúncia:</h2> <p>".$model->periodo. "</p>            
+            <h2> 6. Local:</h2> <p>".$model->idLocal. "</p>
+            <h2> 7. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
+            <h2> 8. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
+          <h2> 9. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
             ";
         }
 
@@ -187,12 +188,13 @@ class DenunciaController extends Controller
             <h2> 2. Status:</h2> <p>".$model->status. "</p>
             <h2> 3. Data do acontecimento da denúncia:</h2> <p>".$model->data. "</p>
             <h2> 4. Hora do acontecimento da denúncia:</h2> <p>".$model->hora. "</p>
-            <h2> 5. Local:</h2> <p>".$model->idLocal. "</p>
-            <h2> 6. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
-            <h2> 7. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
-          <h2> 8. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
-            <h2> 9. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
-            <h2> 10. Foto:</h2>
+            <h2> 5. Período do acontecimento da denúncia:</h2> <p>".$model->periodo. "</p>            
+            <h2> 6. Local:</h2> <p>".$model->idLocal. "</p>
+            <h2> 7. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
+            <h2> 8. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
+          <h2> 9. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>            
+            <h2> 10. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
+          <h2> 11. Foto:</h2>
             <img id='foto1' src='./../web/uploadFoto/".$model->fotos[0]->nome."' alt='".$model->fotos[0]->nome."'/>
             "           
             ;
@@ -206,12 +208,13 @@ class DenunciaController extends Controller
             <h2> 2. Status:</h2> <p>".$model->status. "</p>
             <h2> 3. Data do acontecimento da denúncia:</h2> <p>".$model->data. "</p>
             <h2> 4. Hora do acontecimento da denúncia:</h2> <p>".$model->hora. "</p>
-            <h2> 5. Local:</h2> <p>".$model->idLocal. "</p>
-            <h2> 6. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
-            <h2> 7. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
-          <h2> 8. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
-            <h2> 9. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
-            <h2> 10. Fotos:</h2>
+            <h2> 5. Período do acontecimento da denúncia:</h2> <p>".$model->periodo. "</p>            
+            <h2> 6. Local:</h2> <p>".$model->idLocal. "</p>
+            <h2> 7. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
+            <h2> 8. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
+          <h2> 9. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>            
+            <h2> 10. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
+          <h2> 11. Foto:</h2>
             <img id='foto1' src='./../web/uploadFoto/".$model->fotos[0]->nome."' alt='".$model->fotos[0]->nome."'/>
             <img id='foto2' src='./../web/uploadFoto/".$model->fotos[1]->nome."' alt='".$model->fotos[1]->nome."'/>
             "           
@@ -226,12 +229,13 @@ class DenunciaController extends Controller
             <h2> 2. Status:</h2> <p>".$model->status. "</p>
             <h2> 3. Data do acontecimento da denúncia:</h2> <p>".$model->data. "</p>
             <h2> 4. Hora do acontecimento da denúncia:</h2> <p>".$model->hora. "</p>
-            <h2> 5. Local:</h2> <p>".$model->idLocal. "</p>
-            <h2> 6. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
-            <h2> 7. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
-          <h2> 8. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
-            <h2> 9. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
-            <h2> 10. Fotos:</h2>
+            <h2> 5. Período do acontecimento da denúncia:</h2> <p>".$model->periodo. "</p>            
+            <h2> 6. Local:</h2> <p>".$model->idLocal. "</p>
+            <h2> 7. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
+            <h2> 8. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
+          <h2> 9. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>            
+            <h2> 10. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
+          <h2> 11. Foto:</h2>
             <img id='foto1' src='./../web/uploadFoto/".$model->fotos[0]->nome."' alt='".$model->fotos[0]->nome."'/>
             <img id='foto2' src='./../web/uploadFoto/".$model->fotos[1]->nome."' alt='".$model->fotos[1]->nome."'/>
             <img id='foto3' src='./../web/uploadFoto/".$model->fotos[2]->nome."' alt='".$model->fotos[2]->nome."'/>
@@ -247,12 +251,13 @@ class DenunciaController extends Controller
             <h2> 2. Status:</h2> <p>".$model->status. "</p>
             <h2> 3. Data do acontecimento da denúncia:</h2> <p>".$model->data. "</p>
             <h2> 4. Hora do acontecimento da denúncia:</h2> <p>".$model->hora. "</p>
-            <h2> 5. Local:</h2> <p>".$model->idLocal. "</p>
-            <h2> 6. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
-            <h2> 7. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
-          <h2> 8. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>
-            <h2> 9. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
-            <h2> 10. Fotos:</h2>
+            <h2> 5. Período do acontecimento da denúncia:</h2> <p>".$model->periodo. "</p>            
+            <h2> 6. Local:</h2> <p>".$model->idLocal. "</p>
+            <h2> 7. Sublocal:</h2> <p>".$model->idSubLocal. "</p>
+            <h2> 8. Detalhamento do local:</h2> <p>".$model->detalheLocal. "</p>
+          <h2> 9. Descrição:</h2>  <pre><p>".$model->descricao. "</p></pre>            
+            <h2> 10. Comentário sobre as fotos:</h2> <p>".$model->comentarioFoto. "</p>
+          <h2> 11. Foto:</h2>
             <img id='foto1' src='./../web/uploadFoto/".$model->fotos[0]->nome."' alt='".$model->fotos[0]->nome."'/>
             <img id='foto2' src='./../web/uploadFoto/".$model->fotos[1]->nome."' alt='".$model->fotos[1]->nome."'/>
             <img id='foto3' src='./../web/uploadFoto/".$model->fotos[2]->nome."' alt='".$model->fotos[2]->nome."'/>
@@ -300,6 +305,8 @@ class DenunciaController extends Controller
                 
                 return $this->render('sucesso');
             } else {
+                list ($ano, $mes, $dia) = split ('[-]', $model->data);
+                $model->data = $dia.'/'.$mes.'/'.$ano;              
             return $this->render('create', [
                 'model' => $model,
             ]);
@@ -326,11 +333,6 @@ class DenunciaController extends Controller
         elseif (strcmp($model->status, 'Verdadeira') == 0)$model->status = 2;
         elseif (strcmp($model->status, 'Falsa') == 0)$model->status = 3;
 
-        if (strcmp($model->periodo, 'Manhã') == 0)$model->periodo = 1;
-        elseif (strcmp($model->periodo, 'Tarde') == 0)$model->periodo = 2;
-        elseif (strcmp($model->periodo, 'Noite') == 0)$model->periodo = 3;
-        elseif (strcmp($model->periodo, 'Madrugada') == 0)$model->periodo = 4;
-
         $model->idSubLocal = $model->idSubLocalbkp;
         $sublocal = Sublocal::findOne($model->idSubLocalbkp);
         $model->idLocal = $sublocal->idLocalbkp;
@@ -340,7 +342,7 @@ class DenunciaController extends Controller
 
          list ($dia, $mes, $ano) = split ('[/]', $model->data);
         $model->data = $ano.'-'.$mes.'-'.$dia;
- 
+
             if($model->save()) {
                 if($model->status == 2) {
                     return $this->redirect(['ocorrencia/createfromdenuncia', 'idDenuncia' => $model->idDenuncia]);
@@ -348,6 +350,9 @@ class DenunciaController extends Controller
                 return $this->redirect(['view', 'id' => $model->idDenuncia]);                    
             }
         else {
+                list ($ano, $mes, $dia) = split ('[-]', $model->data);
+                $model->data = $dia.'/'.$mes.'/'.$ano;
+                $model->descricao = "aquiveadinho";
             return $this->render('update', [
                 'model' => $model,
             ]);

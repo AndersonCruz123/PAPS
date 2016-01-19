@@ -40,13 +40,35 @@ class Relatorio extends \yii\db\ActiveRecord
         return [
             [['radiobutton'], 'required', 'message' => 'Este campo é obrigatório'],
             [['tipo', 'mes', 'ano', 'radiobutton', 'periodo', 'idLocal', 'idNatureza', 'idCategoria', 'status'], 'integer'],
-            [['dataInicial', 'dataFinal', 'mesAno'], 'safe'],         
+            [['dataInicial', 'dataFinal', 'mesAno'], 'validatedata'],         
         ];
     }
 
     /**
      * @inheritdoc
      */
+
+   public function validatedata()
+    {
+
+        if ($this->radiobutton == 1 && $this->mesAno == null){ 
+            $this->addError('mesAno', 'Insira um mês e ano');            
+            return false;
+        }
+        if ($this->radiobutton == 2 && $this->dataInicial == null) { 
+            $this->addError('dataInicial', 'Insira uma data inicial');
+            if ($this->radiobutton == 2 && $this->dataFinal == null) { 
+                $this->addError('dataFinal', 'Insira uma data inicial');    
+            }
+            return false;
+        }
+        if ($this->radiobutton == 2 && $this->dataFinal == null) { 
+            $this->addError('dataFinal', 'Insira uma data inicial');    
+            return false;
+        }
+        return true;
+     }
+
     public function attributeLabels()
     {
         return [

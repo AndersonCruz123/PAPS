@@ -23,7 +23,6 @@ use yii\widgets\MaskedInput;
     <?php $arraystatus = [1 => 'Não verificada', 2=>'Verdadeira', 3=>'Falsa']; ?>
     <?php $arrayLocal = ArrayHelper::map( LocalSearch::find()->all(), 'idLocal', 'Nome'); ?>
     <?php $arraySubLocal = ArrayHelper::map( SubLocal::find()->where(['idLocal' => $model->idLocal])->all(), 'idSubLocal', 'Nome'); ?>
-    <?php $arrayPeriodo = [1=> 'Manhã', 2=>'Tarde', 3=>'Noite', 4=>'Madrugada']; ?>
 
     <?= $form->field($model, 'status')->dropdownlist($arraystatus, ['prompt'=>'Selecione o status da denúncia', 'style'=>'width:300px']) ?>
     <?= $form->field($model, 'descricao')->textarea(['rows' => 6]) ?>
@@ -82,15 +81,14 @@ use yii\widgets\MaskedInput;
                 'clientOptions' => [
                     'autoclose' => true,
                     'format' => 'dd/mm/yyyy',
-                    'todayHighlight' => true
+                    'todayHighlight' => true,
+                    'todayBtn' => true
                 ],
         ]); ?>
         
     <?= $form->field($model, 'hora')->textInput(['maxlength' => true])->widget(MaskedInput::className(), [
                     'mask' => '99:99',
                 ]) ?>
-
-    <?= $form->field($model, 'periodo')->dropdownlist($arrayPeriodo, ['prompt'=>'Selecione o Período da ocorrência', 'style'=>'width:300px']) ?>
 
   <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Salvar' : 'Atualizar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

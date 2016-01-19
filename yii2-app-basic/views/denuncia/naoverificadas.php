@@ -15,22 +15,29 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Nova Denúncia', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
+        'summary' => "Exibindo {begin} - {end} de {totalCount} items",
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-            'idDenúncia',
-            'status',
-            'descricao',
-            'local',
-            'data',
-            'hora',
 
+            ['attribute'=>'idDenuncia',
+             'contentOptions'=>['style'=>'width: 10px;']],
+           ['attribute'=>'status',
+             'contentOptions'=>['style'=>'width: 115px;']],           
+        //    'descricao:ntext',
+         //   'idSubLocal',
+            ['attribute'=>'hora',            
+             'contentOptions'=>['style'=>'width: 10px;']],
+            ['attribute'=>'idLocal',            
+             'contentOptions'=>['style'=>'width: 10px;']],
+            ['attribute'=>'idSubLocal',            
+             'contentOptions'=>['style'=>'width: 10px;']],
+            ['attribute'=>'data',
+             'contentOptions'=>['style'=>'width: 10px;']],
+            ['attribute'=> 'periodo',
+             'contentOptions'=>['style'=>'width: 10px;']],            
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

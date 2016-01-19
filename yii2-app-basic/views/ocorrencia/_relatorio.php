@@ -28,27 +28,23 @@ use kartik\timepicker\TimePicker;
     <legend>Filtrar por data</legend>
    <?=$form->field($model,'radiobutton')->radioList([1 => 'Por mês e ano', 2 => 'Por data inicial e data final' ],[
               'onchange' =>'
-                        console.log("checkbox1");
- 
+                        console.log($( "#relatorio-mesano").val());
+                         console.log($( "#relatorio-datainicial").val());
                            var radios = document.getElementsByName("Relatorio[radiobutton]");
                         
+                        var divdatas = document.getElementById("divdatas");
+                        var divmesano = document.getElementById("divmesano");
+
                         if (radios[1].checked == false) {
-                          $( "#relatorio-mesano").hide();   
-                          $( "#relatorio-mesano").prop("disabled", true);
-                          
-                            $( "#relatorio-datafinal").show();
-                            $( "#relatorio-datainicial").show();
-                            $( "#relatorio-datafinal").prop("disabled", false);
-                            $( "#relatorio-datainicial").prop("disabled", false);                                                                     
+
+                          divmesano.style.display = "none";
+                          divdatas.style.display = "block";
+                                                                 
                         } else {
 
-                           $( "#relatorio-mesano").show();                                                                        
-                           $( "#relatorio-mesano").prop("disabled", false);
-
-                            $( "#relatorio-datafinal").hide();
-                            $( "#relatorio-datainicial").hide();
-                            $( "#relatorio-datafinal").prop("disabled", true);
-                            $( "#relatorio-datainicial").prop("disabled", true);
+                           divdatas.style.display = "none";
+                           divmesano.style.display = "block";
+                           
                         }
  
                          console.log(radios[0].checked);
@@ -56,8 +52,7 @@ use kartik\timepicker\TimePicker;
 
    ); ?>
 
-
-
+   <div id="divmesano">
     <?= $form->field($model, 'mesAno')->widget(
             DatePicker::className(), [
                 // inline too, not bad
@@ -68,10 +63,16 @@ use kartik\timepicker\TimePicker;
                 'clientOptions' => [
                     'autoclose' => true,
                     'format' => 'M-yyyy',
+   					'minViewMode' =>1,
+
+
+                       //'' => 'M-yyyy',
+
                 ]
         ]); ?>
+</div>
 
-
+<div id="divdatas">
     <?= $form->field($model, 'dataInicial')->widget(
             DatePicker::className(), [
                 // inline too, not bad
@@ -82,6 +83,8 @@ use kartik\timepicker\TimePicker;
                 'clientOptions' => [
                     'autoclose' => true,
                     'format' => 'dd/mm/yyyy',
+                   'todayHighlight' => true
+
                 ]
         ]); ?>
 
@@ -95,8 +98,11 @@ use kartik\timepicker\TimePicker;
                 'clientOptions' => [
                     'autoclose' => true,
                     'format' => 'dd/mm/yyyy',
+                    'todayHighlight' => true,
+                     'todayBtn' => true              
                 ]
         ]); ?>
+</div>
 </fieldset>
 
 
@@ -140,27 +146,25 @@ use kartik\timepicker\TimePicker;
 
 </div>
 
-   <?=  "<script>
+  <?=  "<script>
 
     var radios = document.getElementsByName('Relatorio[radiobutton]');
-    radios[0].checked = false;
-    radios[1].checked = false;
+    var divdatas = document.getElementById('divdatas');
+    var divmesano = document.getElementById('divmesano');
 
-    var datafinal = document.getElementById('relatorio-datafinal');
-    datafinal.disabled = true;
-    datafinal.style.display = 'none';
+    if (radios[1].checked == true) {
+    	divdatas.style.display = 'none';    	
+    }
 
-    var datainicial = document.getElementById('relatorio-datainicial');
-    datainicial.disabled = true;
-    datainicial.style.display = 'none';
-    
-    
-    var mesano = document.getElementById('relatorio-mesano');
-    mesano.disabled=true;
-    mesano.style.display = 'none';
-
-
-
+    else if (radios[2].checked == true) {
+  		divmesano.style.display = 'none';
+    } else {
+    	radios[1].checked = false;
+    	radios[2].checked = false;
+    	
+    	divdatas.style.display = 'none';
+  		divmesano.style.display = 'none';
+  	}
   </script>"
 
-  ?>
+  ?> 

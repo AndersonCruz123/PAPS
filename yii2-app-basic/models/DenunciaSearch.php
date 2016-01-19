@@ -19,7 +19,7 @@ class DenunciaSearch extends Denuncia
     {
         return [
             [['idDenuncia', 'status'], 'safe'],
-            [['descricao', 'detalheLocal', 'idLocal', 'idSubLocal', 'data', 'hora'], 'safe'],
+            [['descricao', 'detalheLocal', 'idLocal', 'periodo', 'hora', 'data'], 'safe'],
         ];
     }
 
@@ -57,13 +57,19 @@ class DenunciaSearch extends Denuncia
 
         $statusbkp = $this->status;
         $databkp = $this->data;
-
+        $periodobkp = $this->periodo;
         if ($this->status!=null) {
             if (strcmp($this->status, 'Não verificada') == 0)$this->status = 1;
             elseif (strcmp($this->status, 'Verdadeira') == 0)$this->status = 2;
             elseif (strcmp($this->status, 'Falsa') == 0)$this->status = 3;
         }
 
+        if ($this->periodo!=null) {
+            if (strcmp($this->periodo, 'Manhã') == 0)$this->periodo = 1;
+            elseif (strcmp($this->periodo, 'Tarde') == 0)$this->periodo = 2;
+            elseif (strcmp($this->periodo, 'Noite') == 0)$this->periodo = 3;
+            elseif (strcmp($this->periodo, 'Madrugada') == 0)$this->periodo = 4;
+        }
         if ($this->data!=null){
              list ($dia, $mes, $ano) = split ('[/]', $this->data);
             $this->data = $ano.'-'.$mes.'-'.$dia;
@@ -73,6 +79,7 @@ class DenunciaSearch extends Denuncia
             'idDenuncia' => $this->idDenuncia,
             'data' => $this->data,
             'status' => $this->status,
+            'periodo' => $this->periodo,
         ]);
 
         $query->andFilterWhere(['like', 'descricao', $this->descricao])
@@ -81,13 +88,13 @@ class DenunciaSearch extends Denuncia
 
         $this->status = $statusbkp;
         $this->data = $databkp;
-
+        $this->periodo = $periodobkp;
         return $dataProvider;
     }
 
     public function naoVerificadas($params)
     {
-        $query = Denuncia::find();
+         $query = Denuncia::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -101,23 +108,32 @@ class DenunciaSearch extends Denuncia
             return $dataProvider;
         }
 
+        $databkp = $this->data;
+        $periodobkp = $this->periodo;
+
+        if ($this->periodo!=null) {
+            if (strcmp($this->periodo, 'Manhã') == 0)$this->periodo = 1;
+            elseif (strcmp($this->periodo, 'Tarde') == 0)$this->periodo = 2;
+            elseif (strcmp($this->periodo, 'Noite') == 0)$this->periodo = 3;
+            elseif (strcmp($this->periodo, 'Madrugada') == 0)$this->periodo = 4;
+        }
+        if ($this->data!=null){
+             list ($dia, $mes, $ano) = split ('[/]', $this->data);
+            $this->data = $ano.'-'.$mes.'-'.$dia;
+         }
+
         $query->andFilterWhere([
             'idDenuncia' => $this->idDenuncia,
-            'descricao' => $this->descricao,
-            'idLocal' => $this->idLocal,
-            'idSubLocal' => $this->idSubLocal,
             'data' => $this->data,
-            'hora' => $this->hora,
             'status' => 1,
- 
+            'periodo' => $this->periodo,
         ]);
 
-/*        $query->andFilterWhere(['like', 'periodo', $this->periodo])
-            ->andFilterWhere(['like', 'detalheLocal', $this->detalheLocal])
-            ->andFilterWhere(['like', 'descricao', $this->descricao])
-            ->andFilterWhere(['like', 'procedimento', $this->procedimento])
-            ->andFilterWhere(['like', 'cpfUsuario', $this->cpfUsuario]);*/
+        $query->andFilterWhere(['like', 'descricao', $this->descricao])
+            ->andFilterWhere(['like', 'hora', $this->hora]);
 
+        $this->data = $databkp;
+        $this->periodo = $periodobkp;
         return $dataProvider;
     }
 

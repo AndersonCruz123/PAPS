@@ -26,7 +26,7 @@ class OcorrenciaSearch extends Ocorrencia
     public function rules()
     {
         return [
-            [['idOcorrencia', 'status', 'idCategoria','idLocal' ,'idSubLocal', 'idNatureza', 'dataInicial','dataFinal'], 'safe'],
+            [['idOcorrencia', 'status', 'idCategoria','idLocal', 'idNatureza', 'dataInicial','dataFinal'], 'safe'],
             [['data', 'hora', 'periodo', 'detalheLocal', 'descricao', 'procedimento', 'dataConclusao', 'cpfUsuario'], 'safe'],
         ];
     }

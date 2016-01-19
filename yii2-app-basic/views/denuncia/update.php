@@ -8,7 +8,7 @@ use yii\helpers\Html;
 $this->title = 'Atualizar denúncia de número: ' . ' ' . $model->idDenuncia;
 $this->params['breadcrumbs'][] = ['label' => 'Denúncias', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->idDenuncia, 'url' => ['view', 'id' => $model->idDenuncia]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Editar';
 ?>
 <div class="denuncia-update">
 

@@ -24,7 +24,6 @@ use yii\widgets\MaskedInput;
 
     <?php $arrayLocal = ArrayHelper::map( LocalSearch::find()->all(), 'idLocal', 'Nome'); ?>
     <?php $arraySubLocal = ArrayHelper::map( SubLocal::find()->where(['idLocal' => $model->idLocal])->all(), 'idSubLocal', 'Nome'); ?>
-    <?php $arrayPeriodo = [1=> 'Manhã', 2=>'Tarde', 3=>'Noite', 4=>'Madrugada']; ?>
 
 <?php if ($model->idLocal == 0) {
     echo $form->field($model, 'idLocal')->dropDownList($arrayLocal,
@@ -80,14 +79,14 @@ use yii\widgets\MaskedInput;
                 'clientOptions' => [
                     'autoclose' => true,
                     'format' => 'dd/mm/yyyy',
-                    'todayHighlight' => true
+                    'todayHighlight' => true,
+                    'todayBtn' => true
                 ],
         ]); ?>
         
     <?= $form->field($model, 'hora')->textInput(['maxlength' => true])->widget(MaskedInput::className(), [
                     'mask' => '99:99',
                 ]) ?>
-    <?= $form->field($model, 'periodo')->dropdownlist($arrayPeriodo, ['prompt'=>'Selecione o Período da Denúncia', 'style'=>'width:300px']) ?>
 
   <?= $form->field($model, 'imageFiles[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
   <?= $form->field($model, 'comentarioFoto')->textarea(['rows' => 3]) ?>

@@ -8,7 +8,7 @@ use yii\helpers\Html;
 $this->title = 'Editar: ' . ' ' . $model->Nome;
 $this->params['breadcrumbs'][] = ['label' => 'Naturezaocorrencias', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->Nome, 'url' => ['view', 'id' => $model->idNatureza]];
-$this->params['breadcrumbs'][] = 'Salvar';
+$this->params['breadcrumbs'][] = 'Editar';
 ?>
 <div class="naturezaocorrencia-update">
 
