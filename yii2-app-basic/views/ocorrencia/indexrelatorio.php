@@ -20,7 +20,13 @@ $this->params['breadcrumbs'][] = $this->title;
                                   'status'=>$model->status, 'idNatureza' =>$model->idNatureza, 'idLocal' =>$model->idLocal, 
                                   'dataInicial' =>$model->dataInicial, 'dataFinal' => $model->dataFinal, 
                                   'radiobutton' => $model->radiobutton], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Gerar Gráficos', ['printgraficos', 'periodo' => $model->periodo, 'idCategoria' => $model->idCategoria,
+                                  'status'=>$model->status, 'idNatureza' =>$model->idNatureza, 'idLocal' =>$model->idLocal, 
+                                  'dataInicial' =>$model->dataInicial, 'dataFinal' => $model->dataFinal, 
+                                  'radiobutton' => $model->radiobutton], ['class' => 'btn btn-danger']) ?>
+
     </p>
+
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
