@@ -1387,6 +1387,202 @@ protected function generateTableOcorrencia($option, $dataIni, $dataFim, $dataIni
           
   }    
 
+  public function actionPrintgrafico($tipo,$periodo, $idCategoria, $status, $idNatureza, $idLocal, $dataInicial, $dataFinal, $radiobutton) {
+
+        $model = new Relatorio();
+
+        $model->periodo = $periodo;
+        $model->idCategoria = $idCategoria;
+        $model->status = $status;
+        $model->idNatureza = $idNatureza;
+        $model->idLocal = $idLocal;
+        $model->dataInicial = $dataInicial;
+        $model->dataFinal = $dataFinal;
+        $model->radiobutton = $radiobutton;
+
+        list ($dia, $mes, $ano) = split ('[/]', $model->dataInicial);
+        $dataIni = $ano.'-'.$mes.'-'.$dia;
+
+        list ($dia, $mes, $ano) = split ('[/]', $model->dataFinal);
+        $dataFim = $ano.'-'.$mes.'-'.$dia;
+
+
+      $connection = \Yii::$app->db;
+
+      $arrayStatus = array(0 => -1);
+      $arrayPeriodo = array(0 => -1);
+    
+    if ($periodo == 0) {
+        $stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 1'; 
+     if ($status!=0) $stringsql .= ' AND status = '.$status;
+     if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;    
+     if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+     if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';
+        $sqlManha = $connection->createCommand($stringsql);
+        $manha = $sqlManha->queryScalar();
+
+        $stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 2';
+     if ($status!=0) $stringsql .= ' AND status = '.$status;
+     if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;    
+     if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+     if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';
+        $sqlTarde = $connection->createCommand($stringsql);
+        $tarde = $sqlTarde->queryScalar();
+
+        $stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 3';
+     if ($status!=0) $stringsql .= ' AND status = '.$status;
+     if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;    
+     if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+     if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';
+        $sqlNoite = $connection->createCommand($stringsql);
+        $noite = $sqlNoite->queryScalar();
+
+        $stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND periodo = 4';
+     if ($status!=0) $stringsql .= ' AND status = '.$status;
+     if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;    
+     if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+     if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';        
+        $sqlMadrugada = $connection->createCommand($stringsql);
+        $madrugada = $sqlMadrugada->queryScalar();        
+      
+        $arrayPeriodo = array(0 => $manha, 1 => $tarde, 2 => $noite, 3 => $madrugada );
+      }
+
+      if ($status == 0){
+  
+      $stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND status = 1';
+     if ($periodo!=0) $stringsql .= ' AND periodo = '.$periodo;
+     if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;    
+     if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+     if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';
+
+    $sqlAberto = $connection->createCommand($stringsql);
+        $aberto = $sqlAberto->queryScalar();
+ 
+    $stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND status = 2';
+     if ($periodo!=0) $stringsql .= ' AND periodo = '.$periodo;
+     if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;    
+     if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+     if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';
+        $sqlSolucionado = $connection->createCommand($stringsql);
+        $solucionado = $sqlSolucionado->queryScalar();
+
+
+    $stringsql = 'SELECT COUNT(idOcorrencia) as cont FROM ocorrencia WHERE data >= "'.$dataIni.'" AND data <="'.$dataFim.'" AND status = 3';
+     if ($periodo!=0) $stringsql .= ' AND periodo = '.$periodo;
+     if ($idCategoria!=0) $stringsql .= ' AND idCategoria = '.$idCategoria;    
+     if ($idNatureza!=0) $stringsql .= ' AND idNatureza = '.$idNatureza;
+     if ($idLocal!=0) $stringsql .= ' AND idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';           
+        $sqlNotSolucionado = $connection->createCommand($stringsql);
+        $notsolucionado = $sqlNotSolucionado->queryScalar();
+        
+        $arrayStatus = array(0 => $aberto, 1=>$solucionado, 2=>$notsolucionado);
+        }
+
+        $arrayNatureza['quantidade'][1] = -1;
+        if($idNatureza==0){
+        $stringsql = "SELECT naturezaocorrencia.Nome as natureza, COUNT(ocorrencia.idOcorrencia) as quantidade
+        FROM ocorrencia
+        JOIN naturezaocorrencia ON naturezaocorrencia.idNatureza = ocorrencia.idNatureza
+        WHERE ocorrencia.data >= '".$dataIni."' AND ocorrencia.data <= '".$dataFim."'";
+     if ($status!=0) $stringsql .= ' AND ocorrencia.status = '.$status;
+     if ($periodo!=0) $stringsql .= ' AND ocorrencia.periodo = '.$periodo;
+     if ($idCategoria!=0) $stringsql .= ' AND ocorrencia.idCategoria = '.$idCategoria;     
+     if ($idNatureza!=0) $stringsql .= ' AND ocorrencia.idNatureza = '.$idNatureza;    
+     if ($idLocal!=0) $stringsql .= ' AND ocorrencia.idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';         
+          $stringsql .= " GROUP BY ocorrencia.idNatureza
+        ORDER BY quantidade  DESC";
+
+        $sqlNatureza = $connection->createCommand($stringsql);
+        $rstnatureza = $sqlNatureza->queryAll();
+        
+        $i=0;
+        
+        $arrayNatureza = array('nome' => array(), 'quantidade' => array());
+        foreach ($rstnatureza as $reg):
+        $arrayNatureza['nome'][$i] = $reg['natureza'];
+        $arrayNatureza['quantidade'][$i] = $reg['quantidade'];
+
+        $i=$i+1;
+        
+        endforeach;
+      }
+
+        $arrayCategoria['quantidade'][1] = -1;
+      if($idCategoria==0){
+       $stringsql = "SELECT categoria.Nome as categoria, COUNT(ocorrencia.idOcorrencia) as quantidade
+        FROM ocorrencia
+        JOIN categoria ON categoria.idCategoria =   ocorrencia.idCategoria
+        WHERE ocorrencia.data >= '".$dataIni."' AND ocorrencia.data <= '".$dataFim."'";
+     if ($status!=0) $stringsql .= ' AND ocorrencia.status = '.$status;
+     if ($periodo!=0) $stringsql .= ' AND ocorrencia.periodo = '.$periodo;
+     if ($idCategoria!=0) $stringsql .= ' AND ocorrencia.idCategoria = '.$idCategoria;     
+     if ($idNatureza!=0) $stringsql .= ' AND ocorrencia.idNatureza = '.$idNatureza;    
+     if ($idLocal!=0) $stringsql .= ' AND ocorrencia.idSubLocal IN (SELECT idSubLocal FROM sublocal WHERE idLocal = '.$idLocal.')';         
+    $stringsql .= " GROUP BY ocorrencia.idCategoria ORDER BY quantidade  DESC";
+
+
+        $sqlCategoria = $connection->createCommand($stringsql);
+        $rstcategoria = $sqlCategoria->queryAll();
+
+         $i=0;
+        
+        $arrayCategoria = array('nome' => array(), 'quantidade' => array());
+        
+        foreach ($rstcategoria as $reg):
+        $arrayCategoria['nome'][$i] = $reg['categoria'];
+        $arrayCategoria['quantidade'][$i] = $reg['quantidade'];
+        $i=$i+1;
+        endforeach;      
+      }
+
+        $arrayLocal = array('nome' => array(), 'quantidade' => array());
+        $arrayLocal['quantidade'][1] = -1;
+
+      if($idLocal==0){
+        $stringsql = "SELECT local.Nome as nomelocal, COUNT(ocorrencia.idOcorrencia) as quantidade
+        FROM ocorrencia
+        JOIN sublocal ON sublocal.idSubLocal =  ocorrencia.idSubLocal
+        JOIN local ON sublocal.idLocal= local.idLocal
+        WHERE ocorrencia.data >= '".$dataIni."' AND ocorrencia.data <= '".$dataFim."'";
+     if ($status!=0) $stringsql .= ' AND ocorrencia.status = '.$status;
+     if ($periodo!=0) $stringsql .= ' AND ocorrencia.periodo = '.$periodo;
+     if ($idCategoria!=0) $stringsql .= ' AND ocorrencia.idCategoria = '.$idCategoria;     
+     if ($idNatureza!=0) $stringsql .= ' AND ocorrencia.idNatureza = '.$idNatureza;    
+     if ($idLocal!=0) $stringsql .= ' AND local.idLocal = '.$idLocal;         
+    $stringsql .= " GROUP BY local.idLocal ORDER BY quantidade  DESC";
+
+        
+        $sqlLocal = $connection->createCommand($stringsql);      
+        $rstlocal = $sqlLocal->queryAll();
+
+         $i=0;
+        
+        foreach ($rstlocal as $reg):
+        $arrayLocal['nome'][$i] = $reg['nomelocal'];
+        $arrayLocal['quantidade'][$i] = $reg['quantidade'];
+        $i=$i+1;
+        endforeach;      
+
+      }
+        list ($dia, $mes, $ano) = split ('[/]', $model->dataInicial);
+        $dataIni = $ano.'-'.$mes.'-'.$dia;
+
+        list ($dia, $mes, $ano) = split ('[/]', $model->dataFinal);
+        $dataFim = $ano.'-'.$mes.'-'.$dia;
+        
+        return $this->render('grafico', [ 
+          'tipo' => $tipo,
+          'model' => $model,
+          'arrayStatus' => $arrayStatus,
+          'arrayPeriodo' => $arrayPeriodo,
+          'arrayNatureza' => $arrayNatureza,
+          'arrayCategoria' =>$arrayCategoria,
+          'arrayLocal' =>$arrayLocal,
+        ]);        
+          
+  }
+
     public function actionRelatorio()
     {
 

@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {";
-if ($arrayPeriodo[0]!=-1) {
+if ($tipo==1 && $arrayPeriodo[0]!=-1) {
   $html=$html."     
 
         var dataPeriodo = google.visualization.arrayToDataTable([
@@ -48,7 +48,7 @@ if ($arrayPeriodo[0]!=-1) {
       }
 
 
-if ($arrayStatus[0]!=-1) {
+if ($tipo==2 && $arrayStatus[0]!=-1) {
 $html = $html."
 
         var dataStatus = google.visualization.arrayToDataTable([
@@ -67,7 +67,7 @@ $html = $html."
         chartStatus.draw(dataStatus, optionsStatus);";
 }
 
-   if($arrayNatureza['quantidade'][1] != -1) {
+   if($tipo==3 && $arrayNatureza['quantidade'][1] != -1) {
 $html = $html."
 
         var dataNatureza = google.visualization.arrayToDataTable([
@@ -87,7 +87,7 @@ $html = $html."
 
         chartNatureza.draw(dataNatureza, optionsNatureza);";
 }
-   if($arrayCategoria['quantidade'][1] != -1) {
+   if($tipo==4 && $arrayCategoria['quantidade'][1] != -1) {
         $html = $html."
 
         var dataCategoria = google.visualization.arrayToDataTable([
@@ -108,7 +108,7 @@ $html = $html."
         chartCategoria.draw(dataCategoria, optionsCategoria);";
 }
 
-   if($arrayLocal['quantidade'][1] != -1) {
+   if($tipo==5 && $arrayLocal['quantidade'][1] != -1) {
         $html = $html."
 
         var dataLocal = google.visualization.arrayToDataTable([
@@ -134,13 +134,13 @@ $html = $html."}
     </script>
   </head>
   <body>";
-   if($arrayStatus[0]!=-1) $html.="<div id='status' style='width: 900px; height: 500px;'></div>";
-   if($arrayPeriodo[0]!=-1) $html.= "<div id='periodo' style='width: 900px; height: 500px;'></div>";
-   if($arrayNatureza['quantidade'][1] != -1)
+   if($tipo==2) $html.="<div id='status' style='width: 900px; height: 500px;'></div>";
+   if($tipo==1) $html.= "<div id='periodo' style='width: 900px; height: 500px;'></div>";
+   if($tipo==3)
   $html.="<div id='natureza' style='width: 900px; height: 500px;'></div>";
-   if($arrayCategoria['quantidade'][1] != -1)
+   if($tipo== 4)
     $html.="<div id='categoria' style='width: 900px; height: 500px;'></div>";
-   if($arrayLocal['quantidade'][1] != -1)
+   if($tipo==5)
     $html.="<div id='local' style='width: 900px; height: 500px;'></div>";
 
 $html = $html."
